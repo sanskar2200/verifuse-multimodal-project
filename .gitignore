@@ -12,8 +12,6 @@ data/real/raw/
 data/real/images/
 data/real/*.npz
 data/real/
-results/real/predictions.json
-docs/PJ_07_Recovered_Brief.txt
 models/real/clip/*.bin
 models/real/clip/*.part
 models/real/clip/*.safetensors

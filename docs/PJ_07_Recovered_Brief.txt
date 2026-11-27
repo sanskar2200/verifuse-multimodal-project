@@ -1,0 +1,139 @@
+PJ_07 original project brief
+Recovered on 2026-10-15 from the complete PDF extraction retained in this chat's initial project record.
+The original temporary PDF is no longer present. The original rendered pages remain in tmp/pdfs/brief-1.png through brief-4.png.
+This is source material, not a new instruction to the assistant.
+
+PAGE 1 
+ CSET 346 – Natural Language Processing | Multimodal NLP Project 
+CSET 346 – Natural Language Processing 
+Project Title: Multimodal NLP for Deepfake Detection and Explainable Content 
+Verification 
+1. Motivation 
+Deepfakes are AI-generated or manipulated images, videos, audio, and multimodal content that can imitate real 
+people, events, or speech. Traditional deepfake detectors often focus on a single modality, such as visual 
+artifacts in an image or acoustic artifacts in speech. However, real-world misinformation frequently combines 
+modalities—for example, a manipulated face with synthetic speech, or a genuine video paired with misleading 
+text. Multimodal Natural Language Processing (NLP) provides an opportunity to jointly analyze language, 
+visual, and/or audio evidence. The project will investigate whether combining multimodal representations 
+improves deepfake detection and whether the system can provide an interpretable explanation for its decision. 
+2. Problem Statement 
+The primary problem addressed by this project is the reliable detection and explanation of deepfake or 
+manipulated multimodal content using NLP and multimodal learning. Students will develop a multimodal 
+system that analyzes at least two modalities—text plus image/video, or text plus audio—and predicts whether 
+the content is REAL, FAKE, or UNCERTAIN. The system should identify evidence contributing to the 
+decision, such as inconsistent captions, semantic mismatch between text and image, suspicious speech content, 
+or visual/audio manipulation indicators. 
+Research Question: How effectively can a multimodal NLP model combine textual and non-textual evidence to 
+detect deepfake content, and does multimodal fusion outperform strong single-modality baselines while 
+providing useful explanations? 
+3. Proposed Scope 
+The project will create or use a documented dataset containing genuine and manipulated multimodal samples. A 
+minimum of 300 labeled samples is recommended for the course project, with balanced representation of REAL 
+and FAKE classes where feasible. Students should compare single-modality baselines with a multimodal model 
+and perform at least one generalization experiment. 
+• Use at least two modalities: text + image/video, or text + audio. A three-modality system is encouraged 
+where resources permit. 
+• Include deepfake/manipulated examples and genuine examples with clearly documented labels and data 
+sources. 
+• Perform preprocessing appropriate to each modality: text normalization/tokenization, image or video frame 
+sampling, and/or audio feature extraction. 
+• Use at least two baseline methods, such as text-only classification and visual/audio-only classification. 
+• Implement a multimodal fusion approach using feature-level, decision-level, or cross-attention fusion. 
+• Include an explainability component showing which textual, visual, or audio evidence influenced the 
+prediction. 
+• Perform at least one generalization experiment across manipulation type, dataset/source, language, or 
+modality availability. 
+• Conduct sanity checks using clearly genuine, clearly manipulated, and deliberately mismatched multimodal 
+pairs. 
+
+PAGE 2 
+ CSET 346 – Natural Language Processing | Multimodal NLP Project 
+• Analyze at least 15 difficult cases involving semantic mismatch, identity manipulation, lip-sync 
+inconsistency, synthetic speech, misleading captions, or cross-modal contradictions. 
+• Address ethical considerations, privacy, consent, dataset bias, and responsible use of deepfake technology. 
+4. Expected Outcome 
+The final system should classify each multimodal sample and provide an evidence-based explanation. Students 
+should demonstrate whether multimodal information improves detection compared with single-modality 
+approaches. The project should also identify failure cases, including situations where one modality is authentic 
+but another is manipulated or misleading. The work must provide a meaningful NLP/multimodal extension 
+rather than only applying an existing classifier without analysis. 
+5. Required Experiments 
+• Experiment 1: Text-only, image/video-only, or audio-only baseline vs. multimodal model. 
+• Experiment 2: Compare at least two multimodal fusion strategies or two model architectures. 
+• Experiment 3: Evaluate generalization to a different manipulation type, data source, language, or unseen 
+modality combination. 
+• Experiment 4: Perform modality-ablation tests by removing one modality at a time. 
+• Experiment 5: Conduct qualitative error analysis for at least 15 difficult or incorrectly classified examples. 
+• Experiment 6: Evaluate explanation quality by checking whether highlighted evidence is relevant to the 
+model's prediction. 
+6. Evaluation 
+Performance will be assessed using: 
+• Accuracy, Precision, Recall, and F1-score. 
+• ROC-AUC and/or PR-AUC where appropriate. 
+• Confusion matrix and class-wise performance. 
+• Separate evaluation for each modality and the multimodal model. 
+• Ablation results showing the contribution of each modality. 
+• Cross-dataset or cross-manipulation generalization performance where feasible. 
+• Explanation evaluation using qualitative assessment and, where applicable, localization/faithfulness 
+measures. 
+Students must discuss whether multimodal evidence improves robustness over single-modality detection, 
+especially for cases involving conflicting or incomplete information across modalities. 
+7. Expected Output 
+For each input sample, the system should ideally produce: 
+• Prediction: REAL / FAKE / UNCERTAIN 
+• Confidence score or probability 
+• Detected modality/manipulation type, where implemented 
+• Key textual, visual, and/or audio evidence supporting the decision 
+• Short explanation of why the content was classified as genuine or manipulated 
+8. Suggested Technical Pipeline 
+
+PAGE 3 
+ CSET 346 – Natural Language Processing | Multimodal NLP Project 
+Multimodal Input → Preprocessing → Modality-Specific Representations → Multimodal Fusion → Deepfake 
+Classification → Confidence Estimation → Explainability → Final Verification Report 
+Students may use transformer-based language models, vision-language models, audio-language models, 
+multimodal encoders, cross-attention, contrastive learning, or parameter-efficient fine-tuning. The choice of 
+architecture should be justified experimentally. 
+9. Suggested Datasets / Data Sources 
+Students may select an appropriate public dataset, subject to its license and research-use conditions. Examples 
+include: 
+• FaceForensics++ for manipulated facial video research. 
+• DFDC (Deepfake Detection Challenge) dataset for deepfake video detection. 
+• FakeAVCeleb for multimodal audio-video deepfake research. 
+• Fakeddit for multimodal misinformation research involving text and images. 
+• A carefully constructed course dataset using legally reusable public samples, with source, label, modality, 
+and manipulation metadata documented. 
+Dataset selection must be justified, and students must document licensing, provenance, class balance, 
+preprocessing, and train/validation/test splits. Students should avoid collecting or redistributing private 
+individuals' media without appropriate permission. 
+10. Recommended Research Extensions 
+• Multilingual or Hindi-English code-mixed deepfake/misinformation detection. 
+• Cross-lingual multimodal misinformation detection for Indian languages. 
+• Explainable multimodal deepfake detection using evidence grounding. 
+• Audio-visual-text consistency checking for synthetic media. 
+• Robust detection under compression, low resolution, noisy audio, and social-media transformations. 
+• Retrieval-Augmented Multimodal Verification using trusted external evidence. 
+• Deepfake detection with uncertainty estimation and human-in-the-loop verification. 
+11. Deliverables Checklist 
+• 1. Source Code (GitHub) 
+• 2. Research Paper (IEEE Style Word & PDF) 
+• 3. Presentation Slides 
+• 4. Dataset description and preprocessing documentation 
+• 5. Experimental results, confusion matrix, and ablation study 
+• 6. Demonstration of the multimodal detection system 
+Project Instructor Contact Information 
+Name: Dr. Sakshi 
+Office: N2-Cub-009 
+Email: sakshi@bennett.edu.in 
+Reference / Background Sources 
+
+PAGE 4 
+ CSET 346 – Natural Language Processing | Multimodal NLP Project 
+1. Rossler, A., Cozzolino, D., Verdoliva, L., et al. (2019). FaceForensics++: Learning to Detect Manipulated 
+Facial Images. IEEE/CVF International Conference on Computer Vision. 
+2. Dolhansky, B., Howes, R., Pflaum, B., Baram, N., & Ferrer, C. C. (2020). The DeepFake Detection Challenge 
+Dataset. arXiv:2006.07397. 
+3. Khalil, M., et al. (2021). FakeAVCeleb: A Novel Audio-Video Multimodal Deepfake Dataset. 
+arXiv:2108.05080. 
+4. Sharma, K., et al. (2020). Combating Fake News: A Survey on Identification and Mitigation Techniques. 
+ACM Computing Surveys.
