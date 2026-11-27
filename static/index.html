@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171e24">
+  <meta name="description" content="VeriFuse — an explainable multimodal content verification research workspace.">
+  <title>VeriFuse — Content verification lab</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to workspace</a>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+      <a class="brand" href="#verify" aria-label="VeriFuse home">
+        <span class="brand-symbol" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M5 8h7l5 14H10L5 8Zm12 0h10l-7 16h-7L17 8Z"/></svg></span>
+        <span>verifuse<span class="brand-dot">.</span></span>
+      </a>
+      <div class="sidebar-label">RESEARCH WORKSPACE</div>
+      <nav class="nav-links">
+        <a href="#verify" class="nav-link active" data-view="verify"><span data-icon="scan"></span>Verify content<span class="nav-arrow">↗</span></a>
+        <a href="#experiments" class="nav-link" data-view="experiments"><span data-icon="chart"></span>Experiments</a>
+        <a href="#about" class="nav-link" data-view="about"><span data-icon="book"></span>Project notes</a>
+      </nav>
+      <div class="sidebar-insight"><span class="small-cross">+</span><p>Look beyond<br>the surface.</p><span>Text + vision + explanation</span><div class="signal-lines" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+      <div class="sidebar-bottom"><span class="lab-tag">CONTROLLED RESEARCH DEMO</span><p>Built to explore evidence.<br>Not to establish authenticity.</p><a href="#about">Read the limitations <span aria-hidden="true">↗</span></a><div class="sidebar-version"><span class="status-dot"></span>VeriFuse Lab<span>v1.0</span></div></div>
+    </aside>
+    <div class="page-shell">
+      <header class="topbar">
+        <button class="icon-button menu-button" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="sidebar"><span data-icon="menu"></span></button>
+        <div class="breadcrumb"><span class="breadcrumb-home" data-icon="grid"></span><span>Workspace</span><span class="slash">/</span><strong id="breadcrumb-title">Verify content</strong></div>
+        <div class="topbar-right"><span class="connection" id="connection"><span class="status-dot"></span><span id="connection-label">Connecting to local model</span></span><span class="avatar" aria-label="Research lab">VF</span></div>
+      </header>
+      <main id="main" tabindex="-1">
+        <section id="view-verify" class="view">
+          <div class="page-heading"><div><div class="eyebrow"><span></span>EXPLAINABLE CONTENT VERIFICATION</div><h1>A second look.<br><span>A clearer signal.</span></h1><p>Bring text and image together. Explore what the model sees,<br class="desktop-break"> what it predicts, and the evidence behind its decision.</p></div><div class="hero-stamp" aria-hidden="true"><div class="stamp-icon"><span data-icon="layers"></span></div><span>MORE CONTEXT.<br>BETTER QUESTIONS.</span><i>01 / VERIFY</i></div></div>
+          <div class="research-banner"><span data-icon="info"></span><p><strong>A controlled research demo.</strong> Models learn from synthetic shape scenes. Predictions are experimental; unfamiliar images are marked uncertain.</p><a href="#about">How it works <span aria-hidden="true">↗</span></a></div>
+          <div class="workspace-grid">
+            <section class="card input-card" aria-labelledby="input-title"><div class="card-heading"><div><span class="step-number">01</span><h2 id="input-title">Add your content</h2></div><span class="small-tag">TEXT + IMAGE</span></div>
+              <form id="verify-form" novalidate>
+                <div class="field-label"><label for="content-text">Text or caption</label><span id="text-count">0 / 3,000</span></div>
+                <textarea id="content-text" maxlength="3000" rows="4" placeholder="Describe the scene, for example: Two blue circles on a light background…" aria-describedby="text-help"></textarea><div id="text-help" class="field-help">This benchmark checks the color, shape, and count in a caption.</div>
+                <div class="field-label image-field-label"><label for="image-file">Image evidence</label><span>JPG, PNG, WEBP · UP TO 8 MB</span></div>
+                <div class="dropzone" id="dropzone"><input id="image-file" type="file" accept="image/jpeg,image/png,image/webp" aria-label="Choose an image to analyze"><div id="upload-empty"><span class="upload-icon" data-icon="upload"></span><strong>Drop an image here</strong><span>or <b>browse files</b> to upload</span></div><div id="upload-preview" hidden><img id="preview-image" alt="Selected image evidence"><div class="preview-caption"><span id="preview-name"></span><button id="remove-image" type="button" class="icon-button" aria-label="Remove image"><span data-icon="close"></span></button></div></div></div>
+                <div class="sample-head"><span>Or start with a lab sample</span><button type="button" class="text-button" id="more-samples">Next samples <span aria-hidden="true">→</span></button></div>
+                <div class="sample-grid" id="samples"><div class="samples-loading">Loading sample collection…</div></div>
+                <div class="input-footer"><div class="model-field"><label for="model-select">FUSION APPROACH</label><select id="model-select"><option value="feature_fusion">Feature fusion</option><option value="late_fusion">Late fusion</option></select></div><button class="primary-button" id="analyze-button" type="submit"><span data-icon="scan"></span><span id="analyze-label">Analyze content</span><span class="button-arrow" aria-hidden="true">↗</span></button></div>
+                <p class="form-error" id="form-error" role="alert" hidden></p><p class="privacy-note"><span data-icon="lock"></span>Analysis runs on your local server. No external API required.</p>
+              </form>
+            </section>
+            <div class="evidence-column"><section class="card output-card" aria-labelledby="output-title"><div class="card-heading"><div><span class="step-number">02</span><h2 id="output-title">Understand the evidence</h2></div><span class="small-tag" id="result-status">AWAITING INPUT</span></div>
+                <div class="empty-result" id="empty-result"><div class="scan-art" aria-hidden="true"><div class="scan-orbit"></div><div class="scan-center"><span data-icon="fingerprint"></span></div><span class="scan-pill pill-text"><span data-icon="text"></span>Text</span><span class="scan-pill pill-image"><span data-icon="image"></span>Image</span><span class="scan-spark">✳</span></div><h3>Every prediction has a story.</h3><p>Add content or choose a lab sample to reveal<br>the signals behind the model’s assessment.</p><div class="empty-capabilities"><span><i></i>Model assessment</span><span><i></i>Modality evidence</span><span><i></i>Local explanations</span></div></div>
+                <div class="loading-result" id="loading-result" hidden aria-live="polite"><div class="spinner"></div><h3>Connecting the signals…</h3><p>Encoding content, combining evidence,<br>and computing local explanations.</p></div>
+                <div id="result-content" hidden aria-live="polite"></div>
+              </section><div class="workflow-note"><span data-icon="route"></span><div><h3>Two inputs. One transparent process.</h3><p>Encode each modality → fuse the signals → inspect the explanation.</p></div></div></div>
+          </div>
+          <footer class="page-footer"><span>VERIFUSE / MULTIMODAL NLP LAB</span><span>Trust begins with a closer look.</span></footer>
+        </section>
+        <section id="view-experiments" class="view" hidden><div class="section-heading"><div><div class="eyebrow"><span></span>MEASURE. COMPARE. QUESTION.</div><h1>Behind the predictions.</h1><p>Live evaluation results from the locally trained research models.</p></div><button class="secondary-button" id="refresh-experiments"><span data-icon="refresh"></span>Refresh results</button></div><div class="research-banner"><span data-icon="info"></span><p><strong>Synthetic benchmark.</strong> These results measure performance on controlled, generated examples. They do not establish real-world deepfake detection accuracy.</p></div><div id="experiments-content" aria-live="polite"><div class="card content-empty"><div class="spinner"></div><h3>Loading experiment results…</h3></div></div></section>
+        <section id="view-about" class="view" hidden><div class="section-heading"><div><div class="eyebrow"><span></span>THE RESEARCH NOTEBOOK</div><h1>Context is part of the answer.</h1><p>What this project investigates, how it works, and where its conclusions stop.</p></div><span class="chapter-label">03 / NOTES</span></div><div class="about-grid"><article class="card about-intro"><span class="small-tag">PJ_07 · PROJECT OVERVIEW</span><p class="institution">Bennett University</p><h2>Multimodal NLP for Deepfake Detection and Explainable Content Verification</h2><p>VeriFuse is a runnable research prototype for comparing text and image signals, testing fusion strategies, and making model decisions easier to inspect.</p><p>The included dataset is generated locally from simple colored shapes and contains controlled visual changes and caption inconsistencies. Its purpose is to support reproducible experiments and demonstrate the full workflow.</p><div class="about-pills"><span>Text + vision</span><span>Fusion comparison</span><span>Explainability</span><span>OOD evaluation</span></div></article><article class="card limitations-card"><span data-icon="shield"></span><h2>Read the result with care.</h2><p>A REAL or FAKE label describes the model’s decision within this synthetic benchmark. It is not a factual verdict about an image, a person, or an event.</p><ul><li>Unfamiliar uploads may be outside the training distribution and return UNCERTAIN.</li><li>Highlighted words and regions show model sensitivity, not proof of manipulation.</li><li>Confidence and probability are model scores; they are not guarantees of correctness.</li><li>Real-world use needs independently sourced data, stronger models, and external validation.</li></ul></article><article class="card methodology"><div class="card-heading"><h2>From content to evidence</h2><span class="small-tag">THE PIPELINE</span></div><div class="method-steps"><div><span>01</span><h3>Encode</h3><p>Extract separate representations from the text and image.</p></div><div><span>02</span><h3>Fuse</h3><p>Combine features or model scores using the selected fusion strategy.</p></div><div><span>03</span><h3>Explain</h3><p>Inspect token and region sensitivity alongside modality scores.</p></div><div><span>04</span><h3>Evaluate</h3><p>Compare held-out metrics, ablations, and out-of-distribution cases.</p></div></div></article><article class="card dataset-about"><div class="card-heading"><h2>Explore the lab collection</h2><a class="text-button" href="#verify">Try a sample →</a></div><p>The sample gallery uses the project’s generated dataset. Training, validation, test, and out-of-distribution partitions are kept separate by the experiment pipeline.</p><div id="dataset-summary" class="dataset-summary">Dataset details will appear after the local server is ready.</div></article>
+          <article class="card dataset-about"><div class="card-heading"><h2>Project deliverables</h2><span class="small-tag">BENNETT UNIVERSITY</span></div><p>Read the research paper, present the findings, or download the complete project. Add your student names and IDs to the editable author fields before submission.</p><div class="deliverable-links"><a href="/downloads/VeriFuse_Paper.docx" download><span data-icon="book"></span><span>Research paper<small>Editable Word document</small></span><span aria-hidden="true">↓</span></a><a href="/downloads/pdf/VeriFuse_Paper.pdf" download><span data-icon="book"></span><span>Research paper<small>PDF for reading and printing</small></span><span aria-hidden="true">↓</span></a><a href="/downloads/VeriFuse_Presentation.pptx" download><span data-icon="chart"></span><span>Presentation<small>Editable PowerPoint slides</small></span><span aria-hidden="true">↓</span></a><a href="/downloads/VeriFuse_Project.zip" download><span data-icon="download"></span><span>Complete project<small>Source, models, results, and documents</small></span><span aria-hidden="true">↓</span></a></div></article></div></section>
+      </main>
+    </div>
+  </div>
+  <div class="toast" id="toast" role="status" hidden></div>
+</body>
+</html>
+

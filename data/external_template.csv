@@ -1,0 +1,7 @@
+id,group_id,split,label,text,image_path
+scene-0000-real,scene-0000,train,REAL,This image shows two yellow triangles.,images/scene-0000.png
+scene-0000-fake,scene-0000,train,FAKE,This image shows two blue triangles.,images/scene-0000.png
+scene-0216-real,scene-0216,val,REAL,The scene contains two blue squares on a light background.,images/scene-0216.png
+scene-0216-fake,scene-0216,val,FAKE,The scene contains two red squares on a light background.,images/scene-0216.png
+scene-0288-real,scene-0288,test,REAL,The scene contains one yellow circle on a light background.,images/scene-0288.png
+scene-0288-fake,scene-0288,test,FAKE,The scene contains one blue circle on a light background.,images/scene-0288.png

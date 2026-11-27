@@ -1,0 +1,3319 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<<
+/Producer (pypdf)
+>>
+endobj
+2 0 obj
+<<
+/Type /Pages
+/Count 6
+/Kids [ 4 0 R 13 0 R 31 0 R 35 0 R 45 0 R 49 0 R ]
+>>
+endobj
+3 0 obj
+<<
+/Type /Catalog
+/Pages 2 0 R
+>>
+endobj
+4 0 obj
+<<
+/Contents 5 0 R
+/MediaBox [ 0 0 612 792 ]
+/Resources <<
+/Font <<
+/F1 6 0 R
+/F1-0 7 0 R
+/F2 8 0 R
+/F2-0 9 0 R
+/F3 10 0 R
+/F4 11 0 R
+/F5 12 0 R
+>>
+/ProcSet [ /ImageB /ImageC /ImageI /PDF /Text ]
+>>
+/Rotate 0
+/Trans <<
+>>
+/Type /Page
+/Annots [ ]
+/Parent 2 0 R
+>>
+endobj
+5 0 obj
+<<
+/Length 10338
+>>
+stream
+q
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+BT /F2 7 Tf 8.4 TL ET
+BT 1 0 0 1 304.25 20.88 Tm (1) Tj T* ET
+Q
+q
+1 0 0 1 45.36 733.4 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F3 17 Tf 19 TL 38.7135 0 Td (VeriFuse: Multimodal Image-Text Consistency Classification) Tj T* -38.7135 0 Td ET
+Q
+Q
+q
+1 0 0 1 45.36 700.4 cm
+q
+BT 1 0 0 1 0 21.6 Tm 97.071 0 Td 10 TL /F2 8.4 Tf 0 0 0 rg (Sanskar Patidar \(S24CSEU1513\); Dhruv Bhoi \(S24CSEU1516\); Aishani Mittal \(S24CSEU1545\)) Tj  T* 47.964 0 Td (Yana Sharma \(S24CSEU1523\); Nainika Upadhyay \(S24CSEU1524\)) Tj  T* 39.5178 0 Td (Bennett University, India | CSET 346 Project) Tj T* -184.5528 0 Td ET
+Q
+Q
+q
+1 0 0 1 45.36 686.2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 1.2 Tm /F3 10 Tf 11.2 TL 242.035 0 Td (Abstract) Tj T* -242.035 0 Td ET
+Q
+Q
+q
+1 0 0 1 45.36 575.2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 99.25 Tm /F2 9.75 Tf 10.9 TL .206824 Tw (This paper evaluates separate text and image models in two image-text classification settings implemented in VeriFuse. A controlled) Tj T* 0 Tw -0.046103 Tw (synthetic benchmark tests whether captions agree with simple colored-shape scenes. A real-media subset from a community mirror of) Tj T* 0 Tw .58125 Tw (Fakeddit tests prediction of inherited source-community labels. The synthetic text classifier uses train-fitted term frequency-inverse) Tj T* 0 Tw .65235 Tw (document frequency \(TF-IDF\) features and logistic regression; the image classifier uses pixel-derived attributes; and feature fusion) Tj T* 0 Tw 1.135641 Tw (adds explicit caption-image comparisons. On 144 held-out synthetic pairs, feature fusion reaches 100.0% accuracy and F1, while) Tj T* 0 Tw .451 Tw (text-only and image-only F1 are 47.6% and 54.8%. It also reaches 100.0% on 144 count-manipulation pairs withheld from training.) Tj T* 0 Tw .79725 Tw (For the real-media subset, the text model uses TF-IDF and logistic regression, while the image model uses frozen CLIP ViT-B/32) Tj T* 0 Tw .243553 Tw (image features and a separately fitted logistic classifier. On 1,415 test posts, feature fusion obtains 83.4% accuracy, 0.645 macro F1,) Tj T* 0 Tw 1.97055 Tw (and 0.852 ROC-AUC. These results concern different label definitions and are evaluated separately. Synthetic scores measure) Tj T* 0 Tw (controlled consistency; real-media scores predict noisy inherited labels and do not establish factual truth or image authenticity.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.36 561.9 cm
+q
+BT 1 0 0 1 0 1.2 Tm 10.8 TL /F3 9.6 Tf 0 0 0 rg (Index Terms -) Tj /F2 9.6 Tf ( multimodal classification, text classification, image classification, feature fusion, TF-IDF, CLIP, dataset shift) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.36 526.86 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 1.3 Tm /F3 10.4 Tf 11.7 TL 95.186 0 Td (Introduction) Tj T* -95.186 0 Td ET
+Q
+Q
+q
+1 0 0 1 45.36 456.66 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 57.2 Tm /F2 10 Tf 11.2 TL 2.82375 Tw (An image and its accompanying text provide related but) Tj T* 0 Tw .25375 Tw (distinct evidence. A caption can conflict with visible content,) Tj T* 0 Tw -0.111111 Tw (while a social-media post can receive a misleading or satirical) Tj T* 0 Tw .565 Tw (source label even when its image is unaltered. A system that) Tj T* 0 Tw .887143 Tw (combines modalities should therefore be evaluated against a) Tj T* 0 Tw (clearly defined target and dataset.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.36 341.66 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 102 Tm /F2 10 Tf 11.2 TL 2.715714 Tw (VeriFuse was developed as a reproducible course project) Tj T* 0 Tw 4.075 Tw (with a controlled synthetic task and a later real-media) Tj T* 0 Tw 1.244286 Tw (experiment. The synthetic task labels an image-caption pair) Tj T* 0 Tw 1.864444 Tw (as REAL when a generated scene matches its caption and) Tj T* 0 Tw 2.324444 Tw (FAKE when one visual or textual attribute is changed. It) Tj T* 0 Tw 2.472857 Tw (isolates cross-modal consistency but uses a narrow visual) Tj T* 0 Tw 4.658571 Tw (grammar. The real-media experiment uses a subset of) Tj T* 0 Tw 1.95375 Tw (Fakeddit distributed by a community mirror. Its labels are) Tj T* 0 Tw .745 Tw (mapped from source categories and are not independent fact) Tj T* 0 Tw (checks.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.36 237.86 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 90.8 Tm /F2 10 Tf 11.2 TL 1.045714 Tw (The project uses modality-specific models in the real-media) Tj T* 0 Tw 1.1225 Tw (profile: TF-IDF with logistic regression for text, and frozen) Tj T* 0 Tw .41 Tw (CLIP visual representations with a separate logistic classifier) Tj T* 0 Tw 1.151111 Tw (for images. The synthetic profile retains its own text model) Tj T* 0 Tw 5.528571 Tw (and pixel-attribute image model. The weights are fit) Tj T* 0 Tw 4.51 Tw (independently because the datasets have different label) Tj T* 0 Tw 4.5 Tw (sources and tasks. This paper reports each experiment) Tj T* 0 Tw 2.357778 Tw (separately and does not claim that the scores are directly) Tj T* 0 Tw (comparable.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.36 156.46 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 68.4 Tm /F2 10 Tf 11.2 TL 6.816667 Tw (The contribution is an implementation and held-out) Tj T* 0 Tw .36 Tw (evaluation of these model branches, two fusion strategies per) Tj T* 0 Tw .414444 Tw (setting, and an account of where each evaluation can support) Tj T* 0 Tw 4.458333 Tw (a conclusion. The synthetic experiment tests controlled) Tj T* 0 Tw .968 Tw (attribute disagreement. The real-media experiment measures) Tj T* 0 Tw 1.868333 Tw (prediction of inherited dataset labels. Neither demonstrates) Tj T* 0 Tw (general-purpose deepfake detection.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.36 41.46 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 102 Tm /F2 10 Tf 11.2 TL 1.0175 Tw (Three questions guide the evaluation. First, can text-only or) Tj T* 0 Tw 3.765 Tw (image-only features solve the synthetic consistency task) Tj T* 0 Tw 4.023333 Tw (when the label is defined by the relation between the) Tj T* 0 Tw 3.074 Tw (modalities? Second, does concatenating modality features) Tj T* 0 Tw -0.02 Tw (improve prediction of the real-media source labels over either) Tj T* 0 Tw 1.5425 Tw (branch alone? Third, how does class imbalance change the) Tj T* 0 Tw -0.0175 Tw (interpretation of a higher accuracy score? These questions are) Tj T* 0 Tw .291429 Tw (deliberately scoped to the available data and implementation.) Tj T* 0 Tw .563333 Tw (They do not ask whether a post is true in the world, whether) Tj T* 0 Tw .512 Tw (an author intended to deceive, or whether an image has been) Tj T* 0 Tw ET
+Q
+Q
+q
+1 0 0 1 319.64 504.96 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 23.6 Tm /F2 10 Tf 11.2 TL 1.213333 Tw (edited. The synthetic benchmark is used to isolate a known) Tj T* 0 Tw 4.64 Tw (relation; the mirror dataset is used to test a separate) Tj T* 0 Tw (weak-label prediction problem.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 319.64 401.16 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 90.8 Tm /F2 10 Tf 11.2 TL 3.7 Tw (The distinction also informs the model comparison. On) Tj T* 0 Tw 7.145 Tw (synthetic scenes, the visual vocabulary and caption) Tj T* 0 Tw 3.03375 Tw (vocabulary are both small and the contradictions can be) Tj T* 0 Tw .88125 Tw (represented as explicit attributes. On real posts, captions are) Tj T* 0 Tw 3.83 Tw (unrestricted and the image content is diverse, so CLIP) Tj T* 0 Tw 1.736 Tw (features are used for visual transfer. The same name for a) Tj T* 0 Tw 2.231111 Tw (class does not make the two tasks equivalent: REAL and) Tj T* 0 Tw 3.901429 Tw (FAKE have different operational definitions in the two) Tj T* 0 Tw (profiles.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 319.64 384.46 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 1.3 Tm /F3 10.4 Tf 11.7 TL 83.4964 0 Td (Literature Survey) Tj T* -83.4964 0 Td ET
+Q
+Q
+q
+1 0 0 1 319.64 303.06 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 68.4 Tm /F2 10 Tf 11.2 TL 10.016 Tw (Fakeddit introduced a multimodal benchmark for) Tj T* 0 Tw .988333 Tw (fine-grained fake-news classification using Reddit posts and) Tj T* 0 Tw 10.07 Tw (distant supervision from source communities [1].) Tj T* 0 Tw .135714 Tw (Source-derived labels are useful for dataset classification, but) Tj T* 0 Tw 1.715 Tw (they are not equivalent to independent verification of each) Tj T* 0 Tw .051429 Tw (claim. The real-media experiment follows this distinction and) Tj T* 0 Tw (reports its label mapping.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 319.64 210.46 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 79.6 Tm /F2 10 Tf 11.2 TL .968571 Tw (CLIP learns image and text representations from large-scale) Tj T* 0 Tw 2.018 Tw (image-caption pairs using contrastive language supervision) Tj T* 0 Tw 6.245714 Tw ([2]. Its visual encoder provides the real-data image) Tj T* 0 Tw -0.05875 Tw (representation in VeriFuse. CLIP is frozen in this experiment;) Tj T* 0 Tw 1.584444 Tw (only logistic classifier heads are fitted on the local corpus.) Tj T* 0 Tw .42625 Tw (The text classifier is instead TF-IDF with logistic regression,) Tj T* 0 Tw .984 Tw (so the real-data system does not use one shared encoder for) Tj T* 0 Tw (both branches.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 319.64 129.06 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 68.4 Tm /F2 10 Tf 11.2 TL .526667 Tw (Image-manipulation research has also studied visual artifacts) Tj T* 0 Tw 6.65 Tw (directly. FaceForensics++ evaluates manipulated facial) Tj T* 0 Tw .234 Tw (videos and images under a different task and data regime [3].) Tj T* 0 Tw 4.268889 Tw (Its target is not the same as either controlled caption) Tj T* 0 Tw 2.701667 Tw (consistency or Fakeddit source-category labels. Its results) Tj T* 0 Tw 1.685714 Tw (therefore cannot be inferred from the experiments reported) Tj T* 0 Tw (here.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 319.64 47.66 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 68.4 Tm /F2 10 Tf 11.2 TL 3.541667 Tw (The three references frame different technical questions.) Tj T* 0 Tw 4.794 Tw (Fakeddit provides multimodal social-media records and) Tj T* 0 Tw 2.338333 Tw (fine-grained categories, whereas the local real-data profile) Tj T* 0 Tw 2.41 Tw (collapses source categories into two labels for a tractable) Tj T* 0 Tw 2.055 Tw (classification experiment [1]. CLIP provides a transferable) Tj T* 0 Tw .525 Tw (visual representation learned from image-text supervision; in) Tj T* 0 Tw 1.028889 Tw (VeriFuse, only its image encoder is used and its parameters) Tj T* 0 Tw ET
+Q
+Q
+ 
+
+Q
+q
+0.0 0.0 612 792 re
+W
+n
+1 0 0 1 0 0 cm
+BT
+/F1-0 12 Tf
+14.4 TL
+ET
+1 1 1 rg
+n
+54 710 504 23 re
+f*
+0 0 0 rg
+BT
+/F2-0 8.4 Tf
+10.08 TL
+ET
+BT
+1 0 0 1 215.0112 716 Tm
+(Student names and IDs\072 \133complete before submission\135) Tj
+T*
+ET
+Q
+
+endstream
+endobj
+6 0 obj
+<<
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+7 0 obj
+<<
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+8 0 obj
+<<
+/BaseFont /Times-Roman
+/Encoding /WinAnsiEncoding
+/Name /F2
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+9 0 obj
+<<
+/BaseFont /Times-Roman
+/Encoding /WinAnsiEncoding
+/Name /F2
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+10 0 obj
+<<
+/BaseFont /Times-Bold
+/Encoding /WinAnsiEncoding
+/Name /F3
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+11 0 obj
+<<
+/BaseFont /Times-Italic
+/Encoding /WinAnsiEncoding
+/Name /F4
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+12 0 obj
+<<
+/BaseFont /Courier
+/Encoding /WinAnsiEncoding
+/Name /F5
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+13 0 obj
+<<
+/Contents 14 0 R
+/MediaBox [ 0 0 612 792 ]
+/Resources <<
+/Font 17 0 R
+/ProcSet [ /ImageB /ImageC /ImageI /PDF /Text ]
+>>
+/Rotate 0
+/Trans <<
+>>
+/Type /Page
+/Parent 2 0 R
+>>
+endobj
+14 0 obj
+[ 15 0 R 16 0 R ]
+endobj
+15 0 obj
+<<
+/Length 10540
+>>
+stream
+q
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+BT /F2 7 Tf 8.4 TL ET
+BT 1 0 0 1 304.25 20.88 Tm (2) Tj T* ET
+Q
+q
+1 0 0 1 45.36 651.6 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 90.8 Tm /F2 10 Tf 11.2 TL 8.233333 Tw (are frozen [2]. FaceForensics++ focuses on facial) Tj T* 0 Tw 7.682 Tw (manipulation and contains a dedicated manipulation) Tj T* 0 Tw 3.011 Tw (benchmark, so it is relevant as a boundary case for the) Tj T* 0 Tw 5.885714 Tw (terminology of authenticity rather than as a directly) Tj T* 0 Tw .08375 Tw (comparable method [3]. The project does not reproduce those) Tj T* 0 Tw 4.5 Tw (studies or claim their reported performance. The local) Tj T* 0 Tw 4.296 Tw (comparison instead asks whether lightweight, separately) Tj T* 0 Tw .414286 Tw (trained heads and a feature concatenation improve prediction) Tj T* 0 Tw (on the project's own partitions.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.36 547.8 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 90.8 Tm /F2 10 Tf 11.2 TL 1.6775 Tw (These distinctions motivate a conservative use of terms. A) Tj T* 0 Tw 3.904286 Tw (source label, an image-caption consistency label, and a) Tj T* 0 Tw 3.906667 Tw (forensic manipulation label describe different targets. A) Tj T* 0 Tw .761 Tw (system can make a correct prediction for one target and still) Tj T* 0 Tw 3.34875 Tw (fail on another. The paper therefore calls its real-media) Tj T* 0 Tw -0.05 Tw (output a prediction of inherited dataset labels and reserves the) Tj T* 0 Tw 3.94 Tw (term consistency for the controlled synthetic task. This) Tj T* 0 Tw .566667 Tw (avoids treating a broad FAKE category as an annotation that) Tj T* 0 Tw (an image itself is forged.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.36 455.2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 79.6 Tm /F2 10 Tf 11.2 TL -0.064286 Tw (TF-IDF represents documents by term frequency weighted by) Tj T* 0 Tw 2.885 Tw (inverse document frequency, providing a lightweight text) Tj T* 0 Tw 1.8 Tw (baseline [4]. Logistic regression supplies a linear classifier) Tj T* 0 Tw 3.97 Tw (for these features. VeriFuse uses this baseline on both) Tj T* 0 Tw 3.15 Tw (datasets but fits separate vocabularies and classifiers. Its) Tj T* 0 Tw 5.521667 Tw (weak synthetic text-only result illustrates that caption) Tj T* 0 Tw .073333 Tw (wording alone does not expose the relation between an image) Tj T* 0 Tw (and its caption.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.36 438.5 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 1.3 Tm /F3 10.4 Tf 11.7 TL 94.4736 0 Td (Dataset Used) Tj T* -94.4736 0 Td ET
+Q
+Q
+q
+1 0 0 1 45.36 423.8 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 1.2 Tm /F4 10 Tf 11.2 TL (Controlled synthetic benchmark) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.36 343.4 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 68.4 Tm /F2 10 Tf 11.2 TL 4.598333 Tw (The synthetic dataset contains 864 image-caption pairs) Tj T* 0 Tw 1.722857 Tw (derived from 432 procedural scenes. Supported objects are) Tj T* 0 Tw 1 Tw (red, blue, green, or yellow circles, squares, and triangles, in) Tj T* 0 Tw .187273 Tw (counts from one to three. Each scene has a matching pair and) Tj T* 0 Tw .013333 Tw (a paired contradiction created by changing a caption or image) Tj T* 0 Tw 1.125714 Tw (attribute. Labels encode this generated consistency rule, not) Tj T* 0 Tw (real-world truth.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.36 262 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 68.4 Tm /F2 10 Tf 11.2 TL .50125 Tw (Groups are separated by source scene. Training contains 432) Tj T* 0 Tw 1.438571 Tw (records from 216 groups; validation and in-distribution test) Tj T* 0 Tw 2.018889 Tw (sets contain 144 records each from 72 groups. A separate) Tj T* 0 Tw .012857 Tw (144-record test with count manipulations evaluates a held-out) Tj T* 0 Tw .844444 Tw (contradiction type. The split prevents a scene and its altered) Tj T* 0 Tw 1.771667 Tw (counterpart from crossing partitions, although all partitions) Tj T* 0 Tw (share the generated visual grammar.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.36 91 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 158 Tm /F2 10 Tf 11.2 TL .54 Tw (The renderer uses a light background and draws one to three) Tj T* 0 Tw .768571 Tw (non-overlapping objects, with color and shape selected from) Tj T* 0 Tw 2.37375 Tw (the supported set. Each source scene supplies a matching) Tj T* 0 Tw 7.053333 Tw (example and an associated mismatch example. The) Tj T* 0 Tw 3.664286 Tw (construction balances REAL and FAKE labels in every) Tj T* 0 Tw .15125 Tw (partition. The mismatch can be introduced through a changed) Tj T* 0 Tw 1.08875 Tw (color, shape, or count statement or through a corresponding) Tj T* 0 Tw .04875 Tw (visual attribute change. Since the generator defines the target,) Tj T* 0 Tw 1.36375 Tw (labels are internally consistent by construction; they do not) Tj T* 0 Tw .395 Tw (require annotators to judge whether an open-world caption is) Tj T* 0 Tw 4.088333 Tw (misleading. Count contradictions are excluded from the) Tj T* 0 Tw .884286 Tw (ordinary training, validation, and test mismatch patterns and) Tj T* 0 Tw -0.12375 Tw (reserved for the separate manipulation test. New scene groups) Tj T* 0 Tw .944545 Tw (are assigned to that test, so neither the exact base scene nor) Tj T* 0 Tw (its paired variant is reused from training.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.36 43.2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 34.8 Tm /F2 10 Tf 11.2 TL 4.457143 Tw (This design makes the synthetic benchmark useful for) Tj T* 0 Tw .474444 Tw (controlled checks of feature extraction and fusion, but it also) Tj T* 0 Tw .177143 Tw (creates a direct relationship between the label-generation rule) Tj T* 0 Tw .783333 Tw (and the six comparison features used by the fused classifier.) Tj T* 0 Tw ET
+Q
+Q
+q
+1 0 0 1 319.64 696.4 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 46 Tm /F2 10 Tf 11.2 TL 1.78 Tw (Accordingly, perfect held-out performance is evidence that) Tj T* 0 Tw .164444 Tw (the implementation can recover this constructed rule. It is not) Tj T* 0 Tw 3.388571 Tw (an unbiased estimate of performance on natural images,) Tj T* 0 Tw .621667 Tw (where object boundaries, occlusion, paraphrase, context, and) Tj T* 0 Tw (ambiguous captions are substantially more complex.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 319.64 681.7 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 1.2 Tm /F4 10 Tf 11.2 TL (Real-media subset) Tj T* ET
+Q
+Q
+q
+1 0 0 1 319.64 590.1 cm
+q
+BT 1 0 0 1 0 79.6 Tm 2.418 Tw 11.2 TL /F2 10 Tf 0 0 0 rg (The real-media profile uses the ) Tj /F5 10 Tf (ams-99/fakeddit_9k) Tj /F2 10 Tf  T* 0 Tw 16.514 Tw (community mirror [6], pinned at revision) Tj T* 0 Tw /F5 10 Tf (2ba956a67d2bab34de97b25d71af520ab3fe1e6e) Tj /F2 10 Tf (.) Tj T* 2.592857 Tw (The import retained 8,585 records after auditing supplied) Tj T* 0 Tw 2.514286 Tw (image, text, and source identifiers. Mirror partitions were) Tj T* 0 Tw 1.315 Tw (retained after removing cross-partition overlaps. The mirror) Tj T* 0 Tw .316667 Tw (does not establish official Fakeddit split provenance; this is a) Tj T* 0 Tw (subset evaluation.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 319.64 497.5 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 79.6 Tm /F2 10 Tf 11.2 TL 1.399 Tw (Source label 0 \(true\) maps to REAL and labels 1-5 \(satire,) Tj T* 0 Tw 4.294 Tw (false connection, imposter, manipulated, and misleading) Tj T* 0 Tw 4.418571 Tw (content\) map to FAKE [5]. FAKE therefore combines) Tj T* 0 Tw 2.228889 Tw (distinct community categories; it does not mean a post is) Tj T* 0 Tw 2.33875 Tw (proven false or that an image was manipulated. Training,) Tj T* 0 Tw 2.09125 Tw (validation, and test contain 4,799, 2,371, and 1,415 posts,) Tj T* 0 Tw 1.737778 Tw (respectively. The test set has 278 REAL and 1,137 FAKE) Tj T* 0 Tw (records, making the labels substantially imbalanced.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 319.64 326.5 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 158 Tm /F2 10 Tf 11.2 TL .29 Tw (The data audit checked the identifiers available in the mirror,) Tj T* 0 Tw 4.098571 Tw (including source image and text identifiers, along with) Tj T* 0 Tw 1.77 Tw (supplied exact image and text hashes. It removed 61 rows) Tj T* 0 Tw 1.54125 Tw (before retaining the reported 8,585 examples and found no) Tj T* 0 Tw 1.405 Tw (checked cross-partition collision after exclusions. The audit) Tj T* 0 Tw .426 Tw (does not establish that related posts about the same event are) Tj T* 0 Tw .21 Tw (independent. The mirror lacks original Reddit post identifiers) Tj T* 0 Tw 10.794 Tw (and documented sampling and split provenance;) Tj T* 0 Tw 1.348571 Tw (near-duplicate events and overlap with the frozen encoder's) Tj T* 0 Tw .95 Tw (pretraining data remain possible. For these reasons, the data) Tj T* 0 Tw -0.05 Tw (are described as a subset evaluation from a community mirror) Tj T* 0 Tw -0.08 Tw (rather than a reproduction of the official benchmark split. The) Tj T* 0 Tw 4.178571 Tw (three partitions retain their mirror assignments, and all) Tj T* 0 Tw 2.68625 Tw (feature fitting and model selection are constrained to the) Tj T* 0 Tw (training and validation partitions.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 319.64 200.3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 113.2 Tm /F2 10 Tf 11.2 TL 1.85375 Tw (The test prevalence is 80.4 percent FAKE, compared with) Tj T* 0 Tw 3.69125 Tw (80.4 percent in training and 80.2 percent in validation.) Tj T* 0 Tw 5.66 Tw (Although the proportions are similar, a majority-only) Tj T* 0 Tw 4.58 Tw (prediction can still appear strong under accuracy. The) Tj T* 0 Tw 2.22875 Tw (training split contains 941 REAL and 3,858 FAKE posts;) Tj T* 0 Tw 1.3625 Tw (validation contains 470 REAL and 1,901 FAKE posts. The) Tj T* 0 Tw 1.427778 Tw (held-out test has 278 REAL and 1,137 FAKE posts. These) Tj T* 0 Tw 2.658333 Tw (counts are used when interpreting class-specific measures) Tj T* 0 Tw 2.817778 Tw (and the majority baseline. They also show why a single) Tj T* 0 Tw .87 Tw (aggregate value cannot summarize the system's behavior for) Tj T* 0 Tw (both classes.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 319.64 85.3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 102 Tm /F2 10 Tf 11.2 TL .010909 Tw (The dataset is not a balanced sample of verified true and false) Tj T* 0 Tw .61 Tw (claims. The combined FAKE class includes several different) Tj T* 0 Tw .777 Tw (source categories, and the source's true class is retained as a) Tj T* 0 Tw 5.576 Tw (source annotation rather than independently confirmed) Tj T* 0 Tw 2.971111 Tw (ground truth. Thus, the supervised task is to predict the) Tj T* 0 Tw -0.075 Tw (source-derived binary mapping. The evaluation cannot isolate) Tj T* 0 Tw 1.1925 Tw (whether a model responds to an image-caption mismatch, a) Tj T* 0 Tw 1.435 Tw (topic, a subreddit convention, or other correlated signals in) Tj T* 0 Tw 2.5775 Tw (the posts. The label mapping is documented explicitly to) Tj T* 0 Tw (make this target distinction visible.) Tj T* ET
+Q
+Q
+ 
+
+Q
+
+endstream
+endobj
+16 0 obj
+<<
+/Length 164
+>>
+stream
+q
+0.0 0.0 612 792 re
+W
+n
+1 0 0 1 0 0 cm
+BT
+/F1-1 12 Tf
+14.4 TL
+ET
+1 1 1 rg
+n
+290 7 32 18 re
+f*
+0 0 0 rg
+BT
+/F2-1 8 Tf
+9.6 TL
+ET
+BT
+1 0 0 1 304 13 Tm
+(2) Tj
+T*
+ET
+Q
+
+endstream
+endobj
+17 0 obj
+<<
+/F1 18 0 R
+/F1-0 19 0 R
+/F1-1 20 0 R
+/F1-2 21 0 R
+/F1-3 22 0 R
+/F2 23 0 R
+/F2-0 24 0 R
+/F2-1 25 0 R
+/F2-2 26 0 R
+/F2-3 27 0 R
+/F3 28 0 R
+/F4 29 0 R
+/F5 30 0 R
+>>
+endobj
+18 0 obj
+<<
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+19 0 obj
+<<
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+20 0 obj
+<<
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+21 0 obj
+<<
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+22 0 obj
+<<
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+23 0 obj
+<<
+/BaseFont /Times-Roman
+/Encoding /WinAnsiEncoding
+/Name /F2
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+24 0 obj
+<<
+/BaseFont /Times-Roman
+/Encoding /WinAnsiEncoding
+/Name /F2
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+25 0 obj
+<<
+/BaseFont /Times-Roman
+/Encoding /WinAnsiEncoding
+/Name /F2
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+26 0 obj
+<<
+/BaseFont /Times-Roman
+/Encoding /WinAnsiEncoding
+/Name /F2
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+27 0 obj
+<<
+/BaseFont /Times-Roman
+/Encoding /WinAnsiEncoding
+/Name /F2
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+28 0 obj
+<<
+/BaseFont /Times-Bold
+/Encoding /WinAnsiEncoding
+/Name /F3
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+29 0 obj
+<<
+/BaseFont /Times-Italic
+/Encoding /WinAnsiEncoding
+/Name /F4
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+30 0 obj
+<<
+/BaseFont /Courier
+/Encoding /WinAnsiEncoding
+/Name /F5
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+31 0 obj
+<<
+/Contents 32 0 R
+/MediaBox [ 0 0 612 792 ]
+/Resources <<
+/Font 17 0 R
+/ProcSet [ /ImageB /ImageC /ImageI /PDF /Text ]
+>>
+/Rotate 0
+/Trans <<
+>>
+/Type /Page
+/Parent 2 0 R
+>>
+endobj
+32 0 obj
+[ 33 0 R 34 0 R ]
+endobj
+33 0 obj
+<<
+/Length 14831
+>>
+stream
+q
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+BT /F2 7 Tf 8.4 TL ET
+BT 1 0 0 1 304.25 20.88 Tm (3) Tj T* ET
+Q
+q
+1 0 0 1 45.36 742.2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 1.2 Tm /F2 9 Tf 10.2 TL 91.6265 0 Td (Dataset Partitions) Tj T* -91.6265 0 Td ET
+Q
+Q
+q
+1 0 0 1 42.86 643.4 cm
+q
+0 0 0 rg
+BT /F2 8.5 Tf 9.4 TL ET
+q
+1 0 0 1 2 86.7 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL (Dataset and split) Tj T* ET
+Q
+Q
+q
+1 0 0 1 102.8 86.7 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 4.4474 0 Td (Records) Tj T* -4.4474 0 Td ET
+Q
+Q
+q
+1 0 0 1 140.6 86.7 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 6.9782 0 Td (REAL) Tj T* -6.9782 0 Td ET
+Q
+Q
+q
+1 0 0 1 178.4 86.7 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 6.9782 0 Td (FAKE) Tj T* -6.9782 0 Td ET
+Q
+Q
+q
+1 0 0 1 216.2 86.7 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 5.7128 0 Td (Groups) Tj T* -5.7128 0 Td ET
+Q
+Q
+q
+1 0 0 1 2 74.6 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL (Synthetic train) Tj T* ET
+Q
+Q
+q
+1 0 0 1 102.8 74.6 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 11.2 0 Td (432) Tj T* -11.2 0 Td ET
+Q
+Q
+q
+1 0 0 1 140.6 74.6 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 11.2 0 Td (216) Tj T* -11.2 0 Td ET
+Q
+Q
+q
+1 0 0 1 178.4 74.6 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 11.2 0 Td (216) Tj T* -11.2 0 Td ET
+Q
+Q
+q
+1 0 0 1 216.2 74.6 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 11.2 0 Td (216) Tj T* -11.2 0 Td ET
+Q
+Q
+q
+1 0 0 1 2 62.5 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL (Synthetic validation) Tj T* ET
+Q
+Q
+q
+1 0 0 1 102.8 62.5 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 11.2 0 Td (144) Tj T* -11.2 0 Td ET
+Q
+Q
+q
+1 0 0 1 140.6 62.5 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 13.1 0 Td (72) Tj T* -13.1 0 Td ET
+Q
+Q
+q
+1 0 0 1 178.4 62.5 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 13.1 0 Td (72) Tj T* -13.1 0 Td ET
+Q
+Q
+q
+1 0 0 1 216.2 62.5 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 13.1 0 Td (72) Tj T* -13.1 0 Td ET
+Q
+Q
+q
+1 0 0 1 2 50.4 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL (Synthetic test) Tj T* ET
+Q
+Q
+q
+1 0 0 1 102.8 50.4 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 11.2 0 Td (144) Tj T* -11.2 0 Td ET
+Q
+Q
+q
+1 0 0 1 140.6 50.4 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 13.1 0 Td (72) Tj T* -13.1 0 Td ET
+Q
+Q
+q
+1 0 0 1 178.4 50.4 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 13.1 0 Td (72) Tj T* -13.1 0 Td ET
+Q
+Q
+q
+1 0 0 1 216.2 50.4 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 13.1 0 Td (72) Tj T* -13.1 0 Td ET
+Q
+Q
+q
+1 0 0 1 2 38.3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL (Synthetic count OOD) Tj T* ET
+Q
+Q
+q
+1 0 0 1 102.8 38.3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 11.2 0 Td (144) Tj T* -11.2 0 Td ET
+Q
+Q
+q
+1 0 0 1 140.6 38.3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 13.1 0 Td (72) Tj T* -13.1 0 Td ET
+Q
+Q
+q
+1 0 0 1 178.4 38.3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 13.1 0 Td (72) Tj T* -13.1 0 Td ET
+Q
+Q
+q
+1 0 0 1 216.2 38.3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 13.1 0 Td (72) Tj T* -13.1 0 Td ET
+Q
+Q
+q
+1 0 0 1 2 26.2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL (Real train) Tj T* ET
+Q
+Q
+q
+1 0 0 1 102.8 26.2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 8.35 0 Td (4,799) Tj T* -8.35 0 Td ET
+Q
+Q
+q
+1 0 0 1 140.6 26.2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 11.2 0 Td (941) Tj T* -11.2 0 Td ET
+Q
+Q
+q
+1 0 0 1 178.4 26.2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 8.35 0 Td (3,858) Tj T* -8.35 0 Td ET
+Q
+Q
+q
+1 0 0 1 216.2 26.2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 8.35 0 Td (4,720) Tj T* -8.35 0 Td ET
+Q
+Q
+q
+1 0 0 1 2 14.1 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL (Real validation) Tj T* ET
+Q
+Q
+q
+1 0 0 1 102.8 14.1 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 8.35 0 Td (2,371) Tj T* -8.35 0 Td ET
+Q
+Q
+q
+1 0 0 1 140.6 14.1 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 11.2 0 Td (470) Tj T* -11.2 0 Td ET
+Q
+Q
+q
+1 0 0 1 178.4 14.1 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 8.35 0 Td (1,901) Tj T* -8.35 0 Td ET
+Q
+Q
+q
+1 0 0 1 216.2 14.1 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 8.35 0 Td (2,370) Tj T* -8.35 0 Td ET
+Q
+Q
+q
+1 0 0 1 2 2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL (Real test) Tj T* ET
+Q
+Q
+q
+1 0 0 1 102.8 2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 8.35 0 Td (1,415) Tj T* -8.35 0 Td ET
+Q
+Q
+q
+1 0 0 1 140.6 2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 11.2 0 Td (278) Tj T* -11.2 0 Td ET
+Q
+Q
+q
+1 0 0 1 178.4 2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 8.35 0 Td (1,137) Tj T* -8.35 0 Td ET
+Q
+Q
+q
+1 0 0 1 216.2 2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 8.35 0 Td (1,413) Tj T* -8.35 0 Td ET
+Q
+Q
+q
+1 J
+1 j
+0 0 0 RG
+.4 w
+n 0 96.8 m 252 96.8 l S
+n 0 84.7 m 252 84.7 l S
+n 0 0 m 252 0 l S
+Q
+Q
+Q
+q
+1 0 0 1 45.36 640.4 cm
+Q
+q
+1 0 0 1 45.36 623.7 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 1.3 Tm /F3 10.4 Tf 11.7 TL 72.2228 0 Td (Proposed Methodology) Tj T* -72.2228 0 Td ET
+Q
+Q
+q
+1 0 0 1 45.36 609 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 1.2 Tm /F4 10 Tf 11.2 TL (Synthetic modality models) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.36 528.6 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 68.4 Tm /F2 10 Tf 11.2 TL .531429 Tw (The synthetic text branch lowercases and tokenizes captions,) Tj T* 0 Tw 6.574 Tw (then constructs unigram and adjacent-bigram TF-IDF) Tj T* 0 Tw 1.481429 Tw (features using training captions only. The fitted vocabulary) Tj T* 0 Tw .9875 Tw (has 93 features. The image branch extracts 15 pixel-derived) Tj T* 0 Tw .174286 Tw (features, including foreground color, shape, object count, and) Tj T* 0 Tw 3.698571 Tw (simple component statistics. Each modality has its own) Tj T* 0 Tw (L2-regularized logistic classifier.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.36 424.8 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 90.8 Tm /F2 10 Tf 11.2 TL 2.792857 Tw (Feature fusion concatenates both feature vectors with six) Tj T* 0 Tw 5.988333 Tw (explicit comparison features: color, shape, and count) Tj T* 0 Tw 5.4 Tw (contradiction; contradiction fraction; all-attributes-match;) Tj T* 0 Tw 1.957143 Tw (and known-attribute fraction. The resulting model has 114) Tj T* 0 Tw 3.06875 Tw (features. This design exposes the relation used to create) Tj T* 0 Tw 4.406 Tw (labels. Decision-level fusion instead blends independent) Tj T* 0 Tw 1.4675 Tw (modality scores, with the weight selected by validation log) Tj T* 0 Tw .8425 Tw (loss. Vocabulary fitting, scaling, and classifier fitting do not) Tj T* 0 Tw (use test labels.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.36 298.6 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 113.2 Tm /F2 10 Tf 11.2 TL 1.954444 Tw (The text branch is intentionally a compact baseline. For a) Tj T* 0 Tw 2.3725 Tw (token t in document d, TF-IDF weights a term-frequency) Tj T* 0 Tw 3.69 Tw (value by an inverse-document-frequency value estimated) Tj T* 0 Tw .844444 Tw (from the training corpus [4]. The vocabulary is then applied) Tj T* 0 Tw .0775 Tw (without refitting to validation and test captions. The synthetic) Tj T* 0 Tw 1.09125 Tw (branch learns a 93-feature vocabulary from its own training) Tj T* 0 Tw 4.422222 Tw (split; the real branch allows at most 2,048 word and) Tj T* 0 Tw .623333 Tw (adjacent-bigram features, uses sublinear term frequency, and) Tj T* 0 Tw 6.045714 Tw (discards terms occurring in fewer than two training) Tj T* 0 Tw 2.611667 Tw (documents. These settings reduce vocabulary leakage and) Tj T* 0 Tw -0.08 Tw (keep the real text model independent from the image encoder.) Tj T* 0 Tw ET
+Q
+Q
+q
+1 0 0 1 45.36 150 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 135.6 Tm /F2 10 Tf 11.2 TL 2.985 Tw (Each classifier maps a feature vector x to a class score) Tj T* 0 Tw .81 Tw (through logistic regression. In the binary case, the estimated) Tj T* 0 Tw .091 Tw (class score is computed with the logistic function applied to a) Tj T* 0 Tw 3.308571 Tw (linear combination of the input features. The coefficient) Tj T* 0 Tw 3.51 Tw (vector and intercept are learned from the corresponding) Tj T* 0 Tw 3.96 Tw (training partition using L2 regularization. Regularization) Tj T* 0 Tw 2.9275 Tw (controls the magnitude of the fitted weights. For feature) Tj T* 0 Tw .1175 Tw (fusion, x contains the concatenated modality features and, for) Tj T* 0 Tw 2.791667 Tw (the synthetic profile, the explicit cross-modal comparison) Tj T* 0 Tw 5.803333 Tw (vector. For decision fusion, separate probabilities are) Tj T* 0 Tw -0.113333 Tw (combined after each modality model has been fitted; this does) Tj T* 0 Tw 1.6975 Tw (not allow one branch's representation to change during the) Tj T* 0 Tw (other's optimization.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.36 46.2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 90.8 Tm /F2 10 Tf 11.2 TL 2.158571 Tw (The six synthetic comparison features encode whether the) Tj T* 0 Tw 2.68875 Tw (caption and detected scene disagree on color, shape, and) Tj T* 0 Tw 1.08875 Tw (count; the fraction of those attributes that disagree; whether) Tj T* 0 Tw 1.36375 Tw (all known attributes match; and the proportion of attributes) Tj T* 0 Tw 2.754286 Tw (that can be compared. The image representation includes) Tj T* 0 Tw 2.01 Tw (foreground color, shape, object count, foreground fraction,) Tj T* 0 Tw 1.15375 Tw (fill, and RGB/component statistics. This branch is based on) Tj T* 0 Tw -0.105714 Tw (image pixels and simple connected-object measurements. It is) Tj T* 0 Tw .371 Tw (not the CLIP model. In the real-data profile, the frozen CLIP) Tj T* 0 Tw ET
+Q
+Q
+q
+1 0 0 1 319.64 718.8 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 23.6 Tm /F2 10 Tf 11.2 TL 2.47625 Tw (ViT-B/32 vision encoder maps an image to a normalized) Tj T* 0 Tw 5.52 Tw (512-dimensional representation, and a separately fitted) Tj T* 0 Tw (logistic head maps that representation to a dataset label.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 319.64 704.1 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 1.2 Tm /F4 10 Tf 11.2 TL (Real-media modality models) Tj T* ET
+Q
+Q
+q
+1 0 0 1 319.64 646.1 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 46 Tm /F2 10 Tf 11.2 TL 1.165714 Tw (For real captions, a word-and-bigram TF-IDF vocabulary is) Tj T* 0 Tw 2.26 Tw (fitted on training posts only, with at most 2,048 features,) Tj T* 0 Tw .295 Tw (sublinear term frequency, and minimum document frequency) Tj T* 0 Tw 2.57 Tw (two. An L2 logistic regression model is trained on these) Tj T* 0 Tw (vectors. Regularization is selected by validation log loss.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 319.64 475.1 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 158 Tm /F2 10 Tf 11.2 TL 3.348333 Tw (For images, frozen CLIP ViT-B/32 produces normalized) Tj T* 0 Tw 1.72 Tw (512-dimensional visual features [2]. A separate L2 logistic) Tj T* 0 Tw 3.158889 Tw (head is trained on these features; CLIP weights are not) Tj T* 0 Tw 5.295 Tw (fine-tuned. Feature fusion concatenates the visual and) Tj T* 0 Tw .91375 Tw (TF-IDF vectors and fits a third logistic head. Decision-level) Tj T* 0 Tw 5.168571 Tw (fusion combines text and image probabilities using a) Tj T* 0 Tw 1.45 Tw (validation-selected text weight of 0.05. Standardization and) Tj T* 0 Tw 3.897143 Tw (fitting use training data; validation selects settings; test) Tj T* 0 Tw .946667 Tw (records are excluded from selection. The validation-selected) Tj T* 0 Tw 3.464286 Tw (real-data decision-fusion weight assigns 0.05 to the text) Tj T* 0 Tw .294286 Tw (score. The default classification threshold for reported binary) Tj T* 0 Tw -0.054444 Tw (predictions is 0.5. This separation is important: a held-out test) Tj T* 0 Tw 1.536 Tw (score is meaningful only if the test labels do not influence) Tj T* 0 Tw .018333 Tw (vocabulary fitting, feature scaling, regularization selection, or) Tj T* 0 Tw (fusion weights.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 319.64 326.5 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 135.6 Tm /F2 10 Tf 11.2 TL 3.692 Tw (The evaluation reports accuracy, class-specific precision,) Tj T* 0 Tw .56875 Tw (recall, and F1, macro F1, ROC-AUC, average precision, and) Tj T* 0 Tw 2.944444 Tw (log loss where available. Accuracy is the fraction of all) Tj T* 0 Tw 5.93 Tw (predictions that are correct. Precision and recall are) Tj T* 0 Tw 2.355556 Tw (calculated for the FAKE class unless a class is explicitly) Tj T* 0 Tw 1.091111 Tw (named; macro F1 averages the two class F1 values equally.) Tj T* 0 Tw 6.184 Tw (ROC-AUC measures ranking across thresholds, while) Tj T* 0 Tw .901667 Tw (average precision summarizes the precision-recall curve and) Tj T* 0 Tw 5.212857 Tw (is affected by the positive-class prevalence. Log loss) Tj T* 0 Tw 3.018 Tw (evaluates probability assignments and penalizes confident) Tj T* 0 Tw 1.31 Tw (errors. None of these values is a calibration guarantee. The) Tj T* 0 Tw .43 Tw (reported probabilities are model scores for dataset labels, not) Tj T* 0 Tw (confidence that a claim is true or false.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 319.64 189.1 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 124.4 Tm /F2 10 Tf 11.2 TL 5.013333 Tw (The evaluation follows a partitioned training protocol.) Tj T* 0 Tw 6.683333 Tw (Training records fit the TF-IDF vocabulary, inverse) Tj T* 0 Tw 2.024 Tw (document frequencies, any standardization parameters, and) Tj T* 0 Tw 14.3325 Tw (classifier coefficients. Validation records select) Tj T* 0 Tw 4.043333 Tw (regularization strength and the decision-level blend; the) Tj T* 0 Tw 3.28 Tw (real-media validation log loss is also used to select the) Tj T* 0 Tw 2.592857 Tw (recommended model. The test partition is evaluated once) Tj T* 0 Tw 3.065714 Tw (after this selection. The synthetic in-distribution test and) Tj T* 0 Tw .805 Tw (count-manipulation test remain separate from the real-media) Tj T* 0 Tw 2.16375 Tw (evaluation. No joint training or shared vocabulary is used) Tj T* 0 Tw -0.125 Tw (across synthetic and real records, because such pooling would) Tj T* 0 Tw (change both the data distribution and label definition.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 319.64 40.5 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 135.6 Tm /F2 10 Tf 11.2 TL .67 Tw (For the real-data feature-fusion model, concatenation creates) Tj T* 0 Tw .011 Tw (one vector with text and image features, after which a logistic) Tj T* 0 Tw 2.264444 Tw (classifier learns a joint linear decision surface. This is an) Tj T* 0 Tw 2.12 Tw (early or feature-level fusion design. Late or decision-level) Tj T* 0 Tw 1.2275 Tw (fusion keeps the text and image classifiers independent and) Tj T* 0 Tw 1.33125 Tw (combines their output scores. Its text coefficient is selected) Tj T* 0 Tw 4.115556 Tw (on validation data and fixed before the final test run.) Tj T* 0 Tw 1.042857 Tw (Comparing these strategies helps distinguish whether a gain) Tj T* 0 Tw 1.362857 Tw (comes from joint representation fitting or merely averaging) Tj T* 0 Tw 4.855714 Tw (already trained predictions. In this run, feature fusion) Tj T* 0 Tw .292857 Tw (outperformed late fusion on accuracy, macro F1, ROC-AUC,) Tj T* 0 Tw .514167 Tw (and log loss, but the result is a single split estimate and does) Tj T* 0 Tw (not prove universal superiority of feature fusion.) Tj T* ET
+Q
+Q
+ 
+
+Q
+
+endstream
+endobj
+34 0 obj
+<<
+/Length 164
+>>
+stream
+q
+0.0 0.0 612 792 re
+W
+n
+1 0 0 1 0 0 cm
+BT
+/F1-2 12 Tf
+14.4 TL
+ET
+1 1 1 rg
+n
+290 7 32 18 re
+f*
+0 0 0 rg
+BT
+/F2-2 8 Tf
+9.6 TL
+ET
+BT
+1 0 0 1 304 13 Tm
+(3) Tj
+T*
+ET
+Q
+
+endstream
+endobj
+35 0 obj
+<<
+/Contents 36 0 R
+/MediaBox [ 0 0 612 792 ]
+/Resources <<
+/XObject <<
+/FormXob.203f3e83f094cb39df52f465856a438d 37 0 R
+>>
+/Font <<
+/F1 38 0 R
+/F1-0 39 0 R
+/F2 40 0 R
+/F2-0 41 0 R
+/F3 42 0 R
+/F3-0 43 0 R
+/F4 44 0 R
+>>
+/ProcSet [ /ImageB /ImageC /ImageI /PDF /Text ]
+>>
+/Rotate 0
+/Trans <<
+>>
+/Type /Page
+/Annots [ ]
+/Parent 2 0 R
+>>
+endobj
+36 0 obj
+<<
+/Length 6302
+>>
+stream
+q
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+BT /F2 8 Tf 9.6 TL ET
+BT 1 0 0 1 304 18 Tm (4) Tj T* ET
+Q
+q
+1 0 0 1 38.16 750.2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F3 11 Tf 13 TL 153.561 0 Td (V. REAL-MEDIA FUSION ARCHITECTURES) Tj T* -153.561 0 Td ET
+Q
+Q
+q
+1 0 0 1 38.16 466.456 cm
+q
+535.68 0 0 279.744 0 0 cm
+/FormXob.203f3e83f094cb39df52f465856a438d Do
+Q
+Q
+q
+1 0 0 1 38.16 457.956 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 1.2 Tm /F2 7.3 Tf 8.5 TL 81.325 0 Td (Fig. 1. Separate TF-IDF text and frozen CLIP image branches, with feature-level concatenation and decision-level score fusion.) Tj T* -81.325 0 Td ET
+Q
+Q
+q
+1 0 0 1 38.16 426.04 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 1.5 Tm /F4 9.5 Tf 11 TL (A. Feature-Level Fusion) Tj T* ET
+Q
+Q
+q
+1 0 0 1 38.16 373.04 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 41.65 Tm /F2 8.35 Tf 10 TL .985195 Tw (The text branch encodes captions as train-fitted TF-IDF word and bigram) Tj T* 0 Tw 5.322544 Tw (features. The image branch maps each picture to a normalized) Tj T* 0 Tw 1.54775 Tw (512-dimensional vector using the frozen CLIP ViT-B/32 vision encoder.) Tj T* 0 Tw -0.035175 Tw (Feature fusion concatenates the two vectors before a joint logistic regression) Tj T* 0 Tw (classifier.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 38.16 319.04 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 41.65 Tm /F2 8.35 Tf 10 TL 1.93459 Tw (The joint head learns from both modality representations. The text and) Tj T* 0 Tw 4.155764 Tw (image classifiers remain independently trained baselines; the fusion) Tj T* 0 Tw 1.148855 Tw (classifier is a separate model fitted to the concatenated features. Training) Tj T* 0 Tw 2.17645 Tw (data fits the classifiers and preprocessing, while validation data selects) Tj T* 0 Tw (regularization and the recommended model.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 318.64 426.04 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 1.5 Tm /F4 9.5 Tf 11 TL (B. Decision-Level Fusion) Tj T* ET
+Q
+Q
+q
+1 0 0 1 318.64 383.04 cm
+q
+BT 1 0 0 1 0 31.65 Tm 2.329545 Tw 10 TL /F2 8.35 Tf 0 0 0 rg (Decision fusion retains the separate text and image logistic heads and) Tj T* 0 Tw 1.343951 Tw (combines their scores after prediction: ) Tj /F3 8.35 Tf (p) Tj /F3 6.68 Tf -4.175 Ts (fused) Tj /F3 8.35 Tf 0 Ts ( = 0.05 p) Tj /F3 6.68 Tf -4.175 Ts (text) Tj /F3 8.35 Tf 0 Ts ( + 0.95 p) Tj /F3 6.68 Tf -4.175 Ts (image) Tj /F2 8.35 Tf 0 Ts (.) Tj T* 0 Tw -0.046969 Tw (Validation log loss selected the text weight of 0.05. At the fixed threshold of) Tj T* 0 Tw (0.5, the combined score maps to REAL or FAKE.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 318.64 339.04 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 31.65 Tm /F2 8.35 Tf 10 TL 1.72584 Tw (The models use different modality encoders: TF-IDF for text and CLIP) Tj T* 0 Tw 2.941156 Tw (ViT-B/32 for images. CLIP\222s image encoder stays frozen; supervised) Tj T* 0 Tw .850845 Tw (logistic classifier heads are fitted on the project training split. Both fusion) Tj T* 0 Tw (methods use the same held-out test data and label mapping.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 318.64 295.04 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 31.65 Tm /F2 8.35 Tf 10 TL 3.1102 Tw (Feature fusion combines representations before classification; decision) Tj T* 0 Tw 2.096661 Tw (fusion combines predictions from separately fitted heads. On this split,) Tj T* 0 Tw .307336 Tw (feature fusion has the higher accuracy and macro F1. These scores estimate) Tj T* 0 Tw (inherited dataset labels, not calibrated probabilities of factual truth.) Tj T* ET
+Q
+Q
+ 
+
+Q
+q
+0.0 0.0 612 792 re
+W
+n
+1 0 0 1 0 0 cm
+BT
+/F1-0 12 Tf
+14.4 TL
+ET
+q
+1 0 0 1 38.16 241 cm
+q
+0 0 0 rg
+BT
+1 0 0 1 0 2 Tm
+/F2-0 9 Tf
+11 TL
+(Evaluation protocol) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 38.16 199 cm
+q
+0 0 0 rg
+BT
+1 0 0 1 0 30 Tm
+/F3-0 8 Tf
+9.5 TL
+2.991111 Tw
+(Training data fits the text vocabulary\054 feature transforms\054 and classifier) Tj
+T*
+0 Tw
+2.797714 Tw
+(parameters\056 Validation data selects regularization and the decision\055fusion) Tj
+T*
+0 Tw
+0.742 Tw
+(blend\056 Test cases stay held out until the final comparison\054 and every baseline) Tj
+T*
+0 Tw
+(and fusion method uses the same test set\056) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 38.16 165.5 cm
+q
+0 0 0 rg
+BT
+1 0 0 1 0 20.5 Tm
+/F3-0 8 Tf
+9.5 TL
+1.923 Tw
+(Accuracy\054 macro F1\054 and ROC\055AUC capture overall correctness\054 balanced) Tj
+T*
+0 Tw
+0.944 Tw
+(class performance\054 and score ranking\056 Because labels are imbalanced\054 REAL) Tj
+T*
+0 Tw
+(recall is also reported\073 accuracy alone can hide weak minority\055class detection\056) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 38.16 132 cm
+q
+0 0 0 rg
+BT
+1 0 0 1 0 20.5 Tm
+/F3-0 8 Tf
+9.5 TL
+0.841778 Tw
+(The fixed threshold supports a direct comparison\054 while class\055specific results) Tj
+T*
+0 Tw
+0.696 Tw
+(expose the trade\055off hidden by aggregate scores\056 The observed minority\055class) Tj
+T*
+0 Tw
+(errors motivate collecting more balanced\054 independently reviewed examples\056) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 319.64 241 cm
+q
+0 0 0 rg
+BT
+1 0 0 1 0 2 Tm
+/F2-0 9 Tf
+11 TL
+(Reproducibility and scope) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 319.64 199 cm
+q
+0 0 0 rg
+BT
+1 0 0 1 0 30 Tm
+/F3-0 8 Tf
+9.5 TL
+1.820364 Tw
+(The experiment uses a fixed split\056 The image branch applies frozen CLIP) Tj
+T*
+0 Tw
+1.860364 Tw
+(ViT\055B\05732 features and trains a logistic head locally\056 The text branch uses) Tj
+T*
+0 Tw
+1.2232 Tw
+(TF\055IDF word unigrams and bigrams\054 capped at 2\054048 features\054 with logistic) Tj
+T*
+0 Tw
+(regression\056 Fusion comparisons use these same modality representations\056) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 319.64 146.5 cm
+q
+0 0 0 rg
+BT
+1 0 0 1 0 39.5 Tm
+/F3-0 8 Tf
+9.5 TL
+2.732571 Tw
+(The synthetic benchmark tests controlled caption\055image consistency\056 The) Tj
+T*
+0 Tw
+1.213333 Tw
+(real\055media subset predicts inherited source categories mapped to REAL and) Tj
+T*
+0 Tw
+0.3368 Tw
+(FAKE\056 Since these labels answer different questions\054 results are kept separate\056) Tj
+T*
+0 Tw
+0.2032 Tw
+(Scores indicate agreement with dataset labels\054 not factual verification or image) Tj
+T*
+0 Tw
+(authenticity\056) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 319.64 103.5 cm
+q
+0 0 0 rg
+BT
+1 0 0 1 0 30 Tm
+/F3-0 8 Tf
+9.5 TL
+0.422222 Tw
+(The mirror\055based subset also constrains claims about population coverage and) Tj
+T*
+0 Tw
+2.193143 Tw
+(split provenance\056 Broader evaluation should add documented\054 independent) Tj
+T*
+0 Tw
+1.5136 Tw
+(labels and test generalization across sources before applying the method to) Tj
+T*
+0 Tw
+(real\055world verification\056) Tj
+T*
+ET
+Q
+Q
+Q
+
+endstream
+endobj
+37 0 obj
+<<
+/BitsPerComponent 8
+/ColorSpace /DeviceRGB
+/Filter [ /ASCII85Decode /FlateDecode ]
+/Height 940
+/Subtype /Image
+/Type /XObject
+/Width 1800
+/Length 91833
+>>
+stream
+Gb"-VLURstf(f2._jPM]1XC_eJn"ir`IO+mc>q#ekF<eiP,'3CJga/&&<NEGj=ElC^;)$Ql2%R?]=Bd?M[n:fTrLjhIJ<Rh(:Uld]=Q>VF*@#!]DDR+5Ct!`Jfk>N+:*QA#_F0)Jfk>N+:*QA#_F0)Jfk>N+:*QA#_F0)Jfk>N+:*QA#_F0)Jfk>N+:*QA#_F0)Jfk>N+:*QA#_F0)Jfk>N+:*QA#_F0)Jfk>N+:*QA#_F0)Jfk>N+:*QA#_F0)Jfk>N+:*QA#_F0)Jfk>N+:*QA#_F0)Jfk>N+:*QA#_F0)Jfk>N+:*QA#_F0)Jfk>N+:*QA#_F0)Jfk>N+:*QA#_F0)Jfk>N+:*QA#_F0)Jfk>N+:*QA#_F0)Jfk>N+:*QA#_F0)Jfk>N+:*QA#_F0)Jfk>N+:*QA#_F0)Jfk>N+:*QA#_F0)Jfk>N+:*QA#_F0)Jfk>N+:*QA#_F0)Jfk>N+:*QA#_F0)Jfk>N+:*QA#_F0)Jfk>N+:*QA#_F0)Jfk>N+:*QA#_F0)Jfk>N+:*QA#_F0)Jfk>N+:*QA#_F0)Jfk>N+:*QA#_F0)Jfk>N+:*QA#_F0)Jfk>N+:*QA#_F0)Jfk>N+:*QA#_F0)Jfk>N+:*QALeN\C#CcdT!.^ZR/euhNSj/D=!!%holVc-tnGERt!!%Ot?5JYoL?Hl%!!!#co=B0g2EZJ8!<<+]$EqWE>N,Ca"98FP<-V\DVE^e=bhSij56(Z`kU@1g<,,/.!.`:VM)D40TJQfP!6Agk;5mH7!WW42[#CqD'+1a<!!!"Kd()iHjobYan->M"c@gf7'EA-KB/D/<WAstZ!.78RRPUY15Qq,fn0P3Z<,,/.!!$BSWocu'-r9pE!.7J(16n:A!!'gT1oWJK$49`4!!(pJ]M,0a"98Gk4jRoh7"YOU!!",I2!KpEr]C/\!5LT4e/+rH"TSN.%^4#SC/+a/JDeM)egR/&!WW3+'MgpG7*Q#<!"^OrnS*:V;ucoKT^f6>lM4op!!%O2k_fKB!'iL870*Agi&&^UU(jO+!!'jrAsl99#ljr:9KKXPWDNZr!.p'A-ia5IS46j"!!!#1Te?`Q!!&p2gD?\O"TSN.13^l?C/+a/J0<=I2+ii8!!!R@oL/c\!8o^1U&Y/ncjbD#!!!!YNP6e@!!%+.?PEJ?!)B:B$31&+h9ZrA!!%Puk_fKB!'iL870*Agi&(;)!!!#G%=M(R!!#!<^*is]!-CS8'EA+5:89HL!!!#Tckcic!.`P^MZNkY5WA=(!<<,X2#<pH!!(@TI8KtE!'#tP-ia5IF@0CL!!!!oUFurS!!(j%(Bjd=JCE_?!WW3c2tTN>!!(q6qP!ri!721';#gRr3/tX#!!!"@6XLN-!!#ch0+%[Z!8Z!<"TSOQe*)\kC%leiL<oh]IHC7'F(r;WP-nM_Dqr3:h^GD*oj3p'2Qp[OJ*C]O*oNR-WtN!N;7gBMj19/pX/@k9SG6[FgV8%"Nqp8e2uR-uZrm!5Z0p^40,F@N^(UHp[rRUG:##:Y[W]j>W4/DUkKQ[AVRfh"DM)e4/%O[hA9oR1QDnYJ(WC,G=$+ThPPXm4g`oO3rhl>\aq&h0oc=$GdH]!Uo3Tu1?Rc!;f1Ne_Zps_c>t.MXEVfUpW)o+0eBNG&De[^L*^.W1HgEq@X?>Z!^0g:%Y87.bU%3,dc"c$JJ6XD`p>&hH8D1Rke;[OIeBuQZlaH4RE>/Csckcj"Mj!530,=:]r_g%FPfmelMp_3e\'oAY@E"i6mf'+LWE5#.XP12UB/A`.^3`)q/YoY->-iKe[m=L2=)Rr>G:L_oqp2`%]jJ1(/=P>f*/o$*\;P:P(3D%PjA:-5S>^rck_fN,[;5f)YZ5_ZW6`n:qk!ON'7,2_p-g4VDr:<*_oH2pmuP3Hn5!\a2srbT4P&nl\T$67kIAiNVuAgRVE2u9H)kA/rYG8'r6*%`IQZ`^PFoaq(q2Q^Y\h_@'cL30Z;di6Vp(%2jkOLl:@[/_NDUc<eL<6cI8N87?del4Xbp>,*D$,MA+`:.r9_c"McXePH4+F9U37XRd<b&\d\tX*Mc$WjZ1nNE6)X9I%[Es8M$eKZ^*o(LSHk)`>?P8\>ijr)-gA3jchjFC4hqKkMi)\+L54U!5Ph*%:7jI`*&'Ec++(j@F4>*BH*N0OUHs$K0D(oZS^tnoO`bgCq<UPbH`<s7>HZYlHd81/@93u?:@jgNFoT:qa@AaCMG-EF'MoDlC&V;?m$S7/s,bGgRse//@$%cIneP+VU;$STh&l6RN-iNn]N+L;O!hiJ)f+sQm"/!oR2d\PQP1,'"FX,iNFZ>igRI:LQ^&kt2Po^l]^:V(q>`=P0.ME5H,b4>rof8p4V^l1`4GnF[9KWdb1CEqQKQ(+e`k,<^U!n/=)H`1^90nI\nK'/Go'lgQE)t1)YUf?Yj+'r"/ItH-DE.#.#F6HXa1CMnK.)l7E+l%']4>sa08c=Z&%,HA"V$6N@7W/G1\2=@kGEG?-oQ5P=+G'jbY+Q0++N&]HsW/&l?>k?hOG&/\7kG0$LA;hr13]]U$+>(d)uA[h$hjjj%#A.b8M%m>IE_<W+3;B3F6_5Bs^<aGCF2pGCdE^lPBQn[q:_]fJmOGWmk\3aV1,IjB',$^\&b.jafEI\cNs3*2[)ci;L9l/eWse4&K)g+HOAl/Iup#7hp"[ItS$f'1jPU6_.#q7<i2;n3)'7F1(dK58K^-)]'r%R#&Y,Nk*"-#D?5UTerrUHeXuI,g@>l2MGG("o4W3^kBi0+',48fF[AA21ZEoCfJt>@&aZ_n6aU[?J`rRerg$:&)TXq!dg;gNW+Y3dYkt_WC5cC1pq%MUcA]Fpk8`%lnk%^%d%6oBfUne7mIQmBS_.^&R$2P@rs<rq])EMtJgUiZ$MRS]W`K<1['\#Qjjs5T3X>gfZ30;Dc*eUq6)G=^UOq-)!27qk@eMJ=cL(c(kb%(Z#VTpN,>>Mr\o$.[B18?i%2$lk:sl-@Im]mI:%s`NJ%<8^$_`KBb;[,4dUc2!Znnm80HdD=^3$Wmc->L54<d;*TlDB%)c)jY*HRPIH,*cSS'kVkR>G6")]=Fc&j\?PH?'PVh:$h.g7(Y%6E`jW:2j7EqW[17*](bKg(K*E"=--9U$_lSi9^j?A?Zrq+OG/#dsf'sD1d"\2jGK=mjUGp\<hPKFP)5[P3rQa7L3Vuf6,=4u#Mn6!(BN0lRL/be75?Sl%!:oh=/W8+>Hg+DZ<'n+OI'c$#C=4_l2BT:(t,:Su0<p`_iH1uF:Y7IY^938<d09UNlnn-8J0h8?@F)KkmT/5m%$4W_qVM<E00/=WbB/A_OMkX7M@b^<`^7ptZ'Uack.%o3ABhk54W:p&3Ma]1_'g(FK7E,'q=.au=\Cs["6M%%Q'Ft@>elLBS;6+9XmsiI(CS/`Ng7dEFfo&nP_`(p:Fn#q3JkkEq*%F`6:BU]H;'9/ghn<]NiaDA<I;2FS'"(X85a0%%^1b)!TN6J<.1-"PDIp4[MseoU:O_SeIdtZlMsBEp[Hls^l\CHm^oLCZ48+/B<A7eV6K'Eb4G:BOM^<+\\oc2/o*s"D0'3Nb2t(gGk.bZ6gU``_aBWnWhd7)"hTYmMP3NaLLqY:1fI:OY-T`e_\T*N$BW!L5ZJ+qO],A@?=->0W:7]"-?6[-e]J>?(O1P)jGsSA!9Fd=8Pp_06^*o'Y:NCq;:o]PEs,[,#2E,POP>t:n>e=Q[l?D;h?Sm`Qd.=uM4I-3_+()XBo>BEP@35N>3Ib1XT=7qXY>2:Y]`%1=Fc8+`3p#[]lCpN)06QU6Dk@G_Fdi4":SYsu0/`[i`?J1k:7q-K>h@ulUK4;`*n,KuO^Ii#VJYd_eGfJmX.n<c/j!.9hkj.cn_CICS>&&5-DE.#.+T]hj_NJ_>4B59OWm#eG`Oc[U8'sMp"NoHJ%:rW0p6YK0_`1l^9pmf7sRF1I?Z^q$TaPcEi;+"4:q_g7=hhuoYXumq+E$5[WaX#(;"Ra!NFt=c#6#Z.j5Q%<la=f[Q=6b4m@mYnT*"qpHfD=qn0o-_RG+d*fp+l?RT10r8shbK+8[WR*,ARnu\Qnq4DscA`(/nC9a54md?/39"*qI3:a+p%8j1TeieefN<Mr)M>P(9cBr7Y8+gjOF4huq;Y(t<rVPEn3OeHHmRD>V9L3#":_G6lRWTL8qE<R!Mp>Y9_L0ttG"pE(_q6EEeFl,g09t>_a6JQeG!W%s9Fd>cbD?RNK"`Xp(+m-/;3V%,ERWG2p"OYjmD".YGgu=s-cE("BGqtcSpf#$(+f@#hEt_\n$B`AfH4Kl0k5%7H9K;2-qdTZ9&omHUH0.1:Ruj-CmObmens7/dadYl=,^=Ren`l-D2eB&hak'h/iV[M\sKYd<48%ei7BRGCC[:<Obr:[!fHr>VYf:kZ-L@W&=\*q`@Em7n,;nSbNbgtMh_>.5?$<D-sS(/j,__,bmiri:?@l`.SlBE(%;?S;':"jmbI]3!l'2$hglkFWf%o]aYeQLk,6\kVKcI>oL77+!,_Eu$RK+VXP'tuI&Y@L&TU!:D0hg6I6R5qIF]4JIJ:I$*'4ZJD/;/'!:"K@QB+/9H_slBWTTH'?Kf5XWO'g@(lIsXpSrsri\,%hg7WjY[5%$$Cf/HI^W_'Y(U%?ggEWcJ4bo&s'6ZP=9(A[%VnAZ`74+`^$7PWFU9XpODr:<Soi-DQDmM+.BZ5;h]cTI]:0j*+n^(qDVeWgXRE6Ja7:.l1O:++7B6'q5>u"A7'D+_EeB*TCB)]j^-?SH1;I0-BKa'!_QR@4/oKGO0I8RO([9K^c]>&gd[e\"rDqf-CeBXP>QJI=$ahAYY(m9@)QE8pWFWW%FN#b$[:.:Al+0$@\ohM?=O.XK_o1<!;obj@XqphB$9g+ie*^.W1g9kGj;<B[_S!D03CYh9jF_ZBUj=a@\mK4R*q/#Y.W36blXA24]4sSRs)U5kT;Oo!fd2)tN6r+9a7bOldf>@QF/0W,`No"#>-!`WlSG8r7rqfcT-hk<NepUDJT,)Mu:PHqik<oLG6sgX!Sb_:JECG=Y4!C2Cmo"HRTZt2aO_RV@DF;El*d&R(q9=,sA`nO6V.!_/nG(,O3OeHpgqK\.S^uq=FntOe=J%QGqK[.U3_f$hTYeF%Ep]0`:X=puE\Zn.-.C1hT6`-/ZM2^#Gs\=>$leCn#EPm5U/n0Za%]JOJ+I+])$T=fC=ZshgAgVqb,ao,X&F:JqU^=1eTQ5Q5]qrX6sgX)XM8s.qrTJ5O*V3PDdJ9(FAHVq[Fl?:1Z`EDEq]"M@s(Ys`P[YF9?[q-e@A5Wp>!(UaD7V9B[^bLbk]H!558Wc05?g;$TaQN6KP1fU&oY80++N=fM?.Tefh:drN3#Hme90!rW$g/74Zl+YBC<N$;9LUWH746Q;YPHBrj6*Ta-Y&Mm\Y(3k`k/[ah@iHhuKdjjf?tmk`tHq7ln`n-arN5'iB]hYYis3__c(XNB3pGoEO#<*,^_og3e8eEV/;L@+-8PP9SC[sp('_#,e%[9@ZR(IbH$`Ioo,W9jc3e1G"5"k>%W%Xh2>M,huWkrs?ng?nX<((^:#ab8=5MjjYa0^M.o8J_mBO.J0]Og>fUO1"/4EM';fr_fu%'KPHQ7/N^5b[&Sp4;B>ASJ)ab'7E_#7HTfOgEB5?XZQ9?^,u)dU1o+-2Z'628itU<E5#\keU5tWB@jD5'63P7p-7E6(q2Ws?XGYafoN`B]hnMSNB4$\HOLdapA<C63__>qhPo"$D'(Zb>-*'*T1d?)/4H[9jYcUaHmR;9![VXF`.$7(5>`gmq-oAq-rtKenBkb;3WI@&:6@!hMZSd\^?E&`Y;8uL`ej\XA#Ct0/(ag8?:O>5U#/E4V+DI6:NCsaf/pa=]=q83<`)(RJ,A[4(CF5D]@CiWf6h;^`Ri-<3gHU0jf*<q!d^Ro$Dc\/PMB8QHEglV)`haepI1WtJ2[;!K>pS>hr`p`)^:?fI!VMOjsq>C)e\Iq&`9_GBYJmDm*AqH*4AXHWkkVrXA7AcgDt(fG4%GTpA<C63__>qbk:luhl_(lb_=-MOH&C;F8WC`e4$YAA>Nf9;<FX:",Qd]Km?>CQp5I8M0^E0Nk.&JFXgF/I-(qAW(rIpk_fM"c+[lDn$4TO^6\CSg?FNMI<%R=K>=H#&*D494r<UMaA6i+DV]B$H(U?@[[VJs](cJT6)X9I%[AE,-\?l_.$0=jO!O'RHp#uOYF#5Rm8fr^bG=USjh@Z,&("oqFRtN@k.?qUs236JO.81Xp\og3S%#3eY267\GmC=#_JUObRtqj9#FfYJr#q1:T=;<mXA0j%q:Y]?'h[OGC8L$@Ff8&6bbYd'p6[LuB2=E2@m?NtIJ<`Y7upH:]Cbpc75#@X@btaYl,-?&WmamZ0:KYO<P252`g!YCb4Z&N+%lnimir`nllS,ZnlF.cC_kR#OHcV'7HU<t$7HZ9c'-qT6Ot6/5(@kMB4!h%8o_8n^Yc.5lh'Fb`9N7EHBNXRk&"7plF$"h?<e[i^Jp)GX4MF:+6,591qD'T=aD/PgqMrZfY[S^V1rE.;]9fK%J#*Gjd@)<:F]-C!I[ff'b/mk;fhqBjm-.;3F^tVo)`pqBThVNH=,/3<Im."!,_EuV7nN^UUg>5?FG#MfIb&/Mb7On<`CVRYs'bc>?p<Z/[!3&I@K*R$2Xgc\-JYKr?h80e!pB:k>K8'*UI.H6N-W?lWTh<Cu1?*#sGQTla8O_aAoLJ:62#.B7>nXTK5N=TJ$X#M1-P[kWa)c.edWEMoI&Y:#soDVHC2V?anR5qEt_+IAocu]uO<("1t4)H!3G\=K"?]4:q_g7=h7Ghn8XZ=+?e:7noFdZ1HY,=3T3#XOHFPj^qlLTa,8;0.ME5Gp_l/TWtlj4s]^aG!:#VBZ5;hmCZDo](m!cIdN']gik#ak9J#CV)Nm%H)0]Ls3u,So_HZ`(Th-/lE:o&EW4BBkIJ#"lA)@F(7IIhA3h^+a=e(3Y"j[594>:sFc&jY?PH<Lm>FS"PB6V=.ef<,?Sq'=SU/[-Ml*$kEnWI1,O[eHiZ$MRS]]E1lC(Rq\t#^L-g6Hi8c*>dI.NkXlJ*]Or@9hlW-80T[jm%P4A+U.h<^%\oDn:Q7E(B&Vi+`m(QanfSqj8:'XN'?0([u=55/k`f<9U";4pl/o:CXd2bn`!V".(*S,]JNOuROAZ8ogtOrYam!>Y>ZEOY;iDuGFb0*TOJ1uX@JNuget2f<c,F6?l^+%9,!,#ci)"dF]:UA7I33gRWA/fAL!7K<$UV=.H&N-YkG.9^7rZT++t]N$]Wb`)gb`Aa.l3gHW9,E7E"e)`t$4@*<g8D<r@S#?Y.bQi"EmQY@S.e=Q5Ds<]9maTLqW'_(LTtY2XhH>]LrI/%9c6!fO=&5,r\b[E>Q$i-#C2uj4a%\X8qL#@pg?a`(^37DA%P,)<Fc%4^pI2tp#X;qDf4iR'<$#b"o0;nQ;RYsVfR<8A'"(pBoBf/bJ$o'Dns=[5BT;"/>P&g4l2#8/UL#6aF_Y$jAS9>_j/%3RTl=#BjhDQ^qc]s0lF$"8Fk4FrS$uj4.rKJZB$OaqIZg[*OX]LP!_TO@`c#07o)(#Ws//,]^DAA,TOdF#>5+7]j8O[dWS_3eDPShSIsn)^XABA[pQP9hikEi@ZoiYt]6NFl<]u2O;)V)8=rsjuPgu7GSc%#igNW,,](`^mDpT8A.ShP?N(?p`'D+]o!!&Z2qP!ri!,rj);#gRrk_?f"!!!"h7UHi0!!'U(0+%[Z!2n3\"TSOQDWlu[!!'fKoL/c\!2(;-U&Y/nE#O.%!!!#_L;#&9!!&NY?PEJ?!4njW$31&+VpQ:a!!%Oek_fKB!5N=@70*AgTH!a%!!!"<)LYH_!!)5;^*is]!1ZMc'EA+5\tLba!!!"sd2)rd!.\tNMZNkY^hNF0!<<+m)u?9/!!$sVI8KtE!9f0O-ia5IS46j"!!!#1Te?`Q!!&qE(Bjd=J8XS/!WW59C%Ogp!!&Z2qP!ri!,rj);#gRrk_?f"!!!"h7UHi0!!'U(0+%[Z!2n3\"TSOQDWlu[!!'fKoL/dB%NRVgi8^f%)g?S66DJb*2Jq/baGLG]4[5r#F-j%4^4'95hWa=M40(4*<j5h]+uNSr5(?_-"7tS6m*PdmI&6+7caiH6@>'V,kCI.)0Wna.dJ<SpSu\ACp[%5dp4s>%QUJ7H2-fQ%o\bk\:I<^oZ5uLYK?tEgO"FMJ=XN<6eo0H0)_o%l\IbZmdgqEQg#C]YWpFh1gksL5d7O3kY=V1a5!WHhYkC'NkODp'c!NNtbmKG@obfo<<o9%3'rfSYQD"i09_J>QPSG.Gb98J4IU0tLWRM#g<+u&-V'a)DSMB]AY9,lQXN?$=oc/9UTLOrn\^o4&q/ibmRefDFjB\/G3!,M%^*nBQk_kb0gTGO__3+F45+_Z<oWIRJS2qH-)Cr,4ZV=d`EpPRCRF`UW!.UXp$<WemjT8S)RW]WZ??C4*hega16eOYOhGV[\csRR?/f2`G\^OghNlm=iT/]cY"7te<oV=a[*eb#K5+NXZ7(N"DbfkoF'AsW%U@9mIPo92h2[Sm?bD"T&LW53fnSHYjjd??=?PK_`o#ug>b1850ec&n=@G""MZ>[HSU#C@KS)8],IZZ!5[kG=0pHc?Pa^6^NmD-A\%Qu8)X@FFdSknOh,uL8H$Zk=X"F,X7."$ufW1+<W("qU"%S1f(^*ishoL/cgj/1(`"m`4-QUe`rn&Wi?[I8V;VmFC(ff*gYSM7a!h0,ugX'bFM[KFR!IO4lgg0*"@@^TBF]q3\c`2"S7>/".5;>gt,2XT.0^;6>oG=PC,\pT-jEbXV^?)<d3nF5$?Q#G>uTRHjf`G;rKgOH+ndmfl5Y26h?\>\R\T:/PKp!_TP`qEV\mZ3r%X'GU`"j8cb6Q._/qXp>e'0;qrheAIH/UNq)AGd6bD;IgX#8UGT95,YUj@M%SCtj/ER<n8^iQJuS=)K5"BBMfrGc&\g<22n.65?,aGd^2q_(.JD?pDK%*i`'a*W,)kEQ/2#(J1sX4855JR/4nD*<l,hS6,k6.J9#m6HPE1;<:t'JGIY`ed#^b+^;Tk_c"c(A)eo!oqgqn=c]>KB/nJC!:U,>;>?NL^1a5KESR!.DXm4FobNmth<6iVj0pKqOi=T[O9oPP4EK(tla8:p,3!]!BaDS5m#SG.mWdjI-n/`f`N.V&%N[:LK02BhFBuD>IJ82(fV^N_encWO>P&bUo#q:/<K)^dC#Bh"n%r(oFW!%(VfS1Ka3Nfl8gm+KHKNJmCpSeQRmO*5M^NG?J@(t&$<X7_]!j4Lk#F8S=c6j_Q^sUg)`$ujY?U_u8H)tj:7JR+Y8TLDg*]gIKnc-K2=<5Ii_3JUASEPh3pZ;*e&DmLF)I=_fL`6r\B?#*Knc-&b5Z%`2_JCKC6SQDG;4@?(ZVC;O\/WV/mF:bF7lE$SN\#<5ITl:C>tQfN8Hb[gppLoBfG&V5FsW'DQ5siHEnf%]5c$V+ZXP?@HK+DdsLl.I!K?SO;llepTU2-8`IPPoL3<pQV'hA(KmqS/m*#S84H:AR<RoR0iM`.[A4G!+.'.`@Pbip*i`'aa\Bme81$l!-FJVfbCQEQW?Y2YAF5>-WjSQBU_>D47$B"mftM.T!skrP/Ioe_6ahHgRT%KmA)eo!oqgqn=c]>KB/o1W!:U>D;>=6[I8QK7P4`9mVg+:L5aFjl3,8$9*=$t^^N<M=)S^_EB&'dFl6>4S0pruJ("j[?BAE$_;c4C6g8oDPG4JC&%]OaJTs@%f<k[U<j=oX3N2KkI6@E^%nM#mQDI'MEkL#K+)<kG:>4Y\-ZpsFaM+OMA6dL-^?dqgWB:V@<Nf,9'VLZ%H0+(f0;Y0/I.m8:P,jq8kqMp_%V$^+)jtBqO/0)Zj`nK%AcNppD)hj\ZA]BcQNgV@]If@T9`fG/,`aWSF;KDZ?mUY5QFgYMaFgkU*/%+nWjJOd<Nr<4k9V&k!D:u.AYAEGXoFm^LjM[TYMYruAg`&iE_!L\^j[WJ8c,XFE,kiBCI'%4528nMPj_O<bDa%S$'`0m+lXMfsHOL9$(F^*I26qBp_-Cd/q2APC07bC3a4qJjHN7IhYP#`aH-"R?=`__gB<65"`D&/[j0B`H\Bf-D<rq4oqP*I6MsmFuZ1!LR:I5G/gr7-BnPHQ'cb&p=`g0%D2ju7n\CF[17Dta+1'fD9T?>Hhms=>bPc]:nGl/i=fM]1q?eJ>P78J&T1Ds$BZM2^co2Y(al_en[%^LN_d?13a7*4`41EY0aNEa9=9q`9A`N(pr5jIQk!Yu-/CJ_6_K=JPL\900Kl)^u[rPQ(qCYrKrI@8r5Ip)YtaBM[Rf5kiQQBjZuP5damr1n;^AnC88QN]qIE8\d#7;B9$[;]^,42#q*Y$>6J+QLMHeQ,`'65:H)Xk1C:K;*gM!ODP='sI9R3HV0]_Wo/%DT)CeEc(P>NGj?TGpK\[(FW4cI"RIAO,tV:<gdJ>(ZS=rocEPVaJRT+:&QB"gpjE!W1=$HXEZ=gU::^omVCDMChDgg[8*O-BkHsBR%7kLnl5[7LqY9bbi8N`O.81>m#u*ie7,\e?T`0&iL(2af4i](G0%4B2sQrg<F7X#OgGpg!EkP5;g)?*Qi3(fbH:s4;WD[*k:c`*EQqXl7^ajP\(1C1\*Z1d^.fJfGtN#2\Y#?^Q'bgulGPJ#fb_&Foi\1hlJpmSRjfJ&oL/cg-0hk"krnGn/'3Yq]8`CE.r;h6OmQqnm`PK>mCRc5L:[$9UF3@D8_:fLs0ENFjthE\+dNM&Ze'-QoAtSmqi.$q.u7@iF!F`?+&AJn+"K5:1@`NkB!kf*4YsnQ,:DIlP!aF3.BIEoIj=Xt/D#&Pe@[3a3KaE<Vo\mL6#YCii07B&e9`)1@[0M$Y?j0VB&#h$8(M,`EYEg^QMO5s\`?V9;*,!o=n,ZX7<'Digt-@Qb#r8VFWssqC@b_uSS'qQ<<.9"^*n@[U!M-LgA;S:`F<8jGR42Dd37PJbJp+MIoKW'ehW.P`6i$L3%M:!b"h9mZ<pKJ]f<q)0BS"s4cR4"Q@I-i1[I9\YYSoQ`]]*;jX*kO-<IK6n]XMs7H9\Q(+GLE\9R[Y$:l1c;8>MNNZ[E,4!D'*DR(&!DP)=lrf*+>DTVUKCS1U'1@dL3+$G(a_D^iQFG2l"m$.Et^rKA`h8Q4kf8[,H4C'p=B2rWt\]<&mSlTjEU0!UApE.Knj7?D_o8`ch&':M,N>,DPg:<>6%kQ=U?e#!:Q$/0UT!91)Q;u$gD2t<9o,dd<<('U:r-Cu7(*jjJ26q3l+ZI6HA#[3GP"QkH(U\;aOVP(=;\\sLa*l4$;_Dt-=soL+V)I4bfm/;s?Nkt8k_m<uSEPl7//C.%LVhT1LY\gYXKob?D0p;?XCY6F&Jp>Hi2k$!-p+QO/%Lhkk_njmGZ8O:m#/S^[;"91)V6`>/Si*n9WhoKigGkoMoI@-/5dnhEUi>='TbBPU4<CrAn5qJ\N9#PhgDo57Z3k]ens67pD^KUj/.OtnB$W7C:1HU@=L=^8cIUaaFpL9,^[Z8OhZ"hR&RD&+$XVlFkJ]l=]C[+dan#b:G!WYocZ>;Viej]`jdsj`.<bG]q:V/k.cMXI-jBebJ%XV&*N;uX7MX[2%&dr2-Pb5\V5`*bG<WXf$5])-MVa8op7paaeS^,Fq,Y.I8T=^Cp*#.R%92DR7L1.[J;H!c8/.$'O%1`$6O>`0<.Dm(,h)+2_-]lqmbsja^=5Sqd?Lr[4H>1EMo04i/4&PAZ,3G-!+!ul&-<.f,uWXNH:1"hfE>C8kcBuFlJfbU+^8D6E-$(=)XsdeBo'9/BI`?CM:g#g.'B3%j!m:hP*NS]T_*kMC'WMN>=[p<a/]iAVUXpZ?'k>+U_:d<3C[?o@7DT.9s"NcjA1q*BB8.F<W'LcM]ui1S)*il'a3deQ*1TolB`e#3D/qf92u=EoSc2DV^.r8.OHiUp.EbmYrK3@%r)LdB^ah23GoA5qMl,EK=Z1OV?gqFu#[\>dWhkoUOtX?bmU,nkcI3Usqocc7%a;>AHYKA=1kR!m)aLlAO@VJ;!cnE?DLZCGsf:/hCn[=sm5'1pd!1bg&"<?PH\;0+&doZnE>A<O,p^lk^1&Il_B%TjIWqDcCCpp\k7VeQ:fUi_D3GO;6G-AZ,3G-!+!ul&3]Fa%lU0)8O;'5KcEU2gWK!lg7c1ad&r&4S+F'7BKK:ol9NebnQ7#qP&MJ0iM`Jb<)??op`]K>BfLhN"=`$mlo7Rd^o/Yq9f*\8]GdeS0B<37a9:ueE!O:Yis\C0UDM0bLT7ERP4+['\,g?F8N-1`J[H?q>S)C)n*qNZPTfC=7809kn/A"A"MD[FR@Y,VR-5'+-K!8)C_t0[(_[`%a6mSqn/b@N?96)HJG780^HGdg`qq<-s42LR<n7['=JiU@-uOYV5,h)@')j=Wca_oqT.A1"`pd\H'".dIgIB_4Qc+-O*^j5ogS71A;f&UY3B4ogl/X9Upt,Ns4_JP5/["]Tb[Eun?GCYU2a82\;Q'cih9B@iTd4+`\M:V;7iCa.rl5AXdBO6MX77HdsAZi-n0$,7GIJSV&FG_ICiamoGTnJEcdg"=e0g"'CC^t9q`9A`N(pr5jIQk!nLn&2Ek[AAq`][#EKr_Fg`io7;B8q/Toe>;9dO1Q`_+-h-)]plS`;7B3uS]=Ku&3:7]"-lk"Apc+\J(CqU=aV+$GRUF4B&T%CB6,#)*V+U`u$=MM`R.A7!*Sl2@RbK<Pjb$ie5dF5V:nJgs)%6I@Q50l4G[B(_:l9@FqI(f7PjcI%^)HWSRepGr:T=Jpoc652iVi`1h7dD!bm_FjQ3;m%6q?>&"kVH\rW6&CJC>>Y#dr+VUDdhH<NVd[lcW_lcQDi8Ek_/3+6hTS;s+GXl`0oc*M#?O-ZcGLn>:-1+Z8P4h>\cbLA>I^^!_FYu\M"lq!"u;Vm6"p;f5.VS?'q1A[8&"59C9J%Mu*q3(PPoRMo*LIm>K\$Q)kc0S&L#E7^>A&[>[?'P,fE)?tV'L>XVgI-3LOtqki_e*j6h]8iqIK2_$YKVlj($?6;t2eY^[A(7uS!C;(un,pnbK:-A,>I#d&EKi/m,-f.Mtm[u3?`:YDMkKQ*^bMlO96-"T=)n]Ie8c=YOAhRK`nBj%a#`po]d+E%Y5A49*gs]VW%Js[jYtc2'e-rW"%2hD/kq/-<+@Y#&R1%Nr-H_>B))4^KN2IILmNNJ'^&L>u_u-@;0)b?(L9cED>ICHck3>Z&N@f0p,::[""n(UuA[UtiI%pG;)ri!&'6b?DZ>PVJ,KUtYp:Z6XdWi)b,H:M9NLDDB+]#Lg?e!B==h8dWPb<`22(qq6;4TUnjt'[,pm433YZ%2a*bsIc.J8h21CE8J/*c^D.J9#mU<-p5MoIo1KIU;t&)#r"C]9V)3uMgr8Cj-]Ihrmp)5]%oXj@l<O!WKrc*b#1=YD(EMMEE(cH,i.`KI<*K?&HbbFI90mTLBK&TO_9bRMdRm#SI$HG"830.Caen'\1VQ]1Pph@$,W,pnbKBn,9/427_:HD`MN::utrgd,9]!1^B0a1c0#Hr:AeB:LmRcFo>&7fjh#k_fL[MV=mmAtePoJ0`JX"TX=2*^"2hGLXZ3ApJhNIT=/CJChupkBG(!0@:R>gdGL+dnt8i5]Z(H!e<Wj>fgm;D$Zb+G/F/gl\:@j*qj:m!.I7A'Q=_6d7d'`#lr)@0+%^#36f&G/QAuPK8q$WSDkST7\_UD\;@pJ!$IZmMZNkY5WA=(!<<,X2#<pH!!(@TI8KtE!'#tP-ia5IF@0CL!!!!oUFurS!!(j%(Bjd=JCE_?!WW3c2tTN>!!(q6qP!ri!721';#gRr3/tX#!!!"@6XLN-!!#ch0+%[Z!8Z!<"TSOQe*)\k!!#8CoL/c\!8o^1U&Y/ncjbD#!!!!YNP6e@!!%+.?PEJ?!)B:B$31&+h9ZrA!!%Puk_fKB!'iL870*Agi&(;)!!!#G%=M(R!!#!<^*is]!-CS8'EA+5:89HL!!!#Tckcic!.`P^MZNkY5WA=(!<<,X2#<pH!!(@TI8KtE!'#tP-ia5IF@0CL!!!!oUFurS!!(j%(Bjd=JCE_?!WW3c2tTN>!!(q6qP!ri!721';#gRr3/tX#!!!"@6XLN-!!#ch0+%[Z!8Z!<"TSOQe*)\k!!#8CoL/c\!8o^1U&Y/ncjbD#!!!!YNP6e@!!%+.?PEJ?!)B:B$31&+h9ZrA!!%Puk_fKB!'iL870*Agi&(;)!!!#G%=M(R!!#!<^*is]!-CS8'EA+5:89HL!!!#Tckcic!.`P^MZNkY5WA=(!<<,X2#<pH!!(@TI8KtE!'#tP-ia5IF@0CL!!!!oUFurS!!(j%(Bjd=JCE_?!WW3c2tTN>!!(q6qP!ri!721';#gRr3/tX#!!!"@6XLN-!!#ch0+%[Z!8Z!<"TSOQe*)\k!!#8CoL/c\!8o^1U&Y/ncjbD#!!!!YNP6e@!!%+.?PEJ?!)B:B$31&+h9ZrA!!%Puk_fKB!'iL870*Agi&(;)!!!#G%=M(R!!#!<^*is]!-CS8'EA+5:89HL!!!#Tckcic!.`P^MZNkY5WA=(!<<,X2#<pH!!(@TI8KtE!'#tP-ia5IF@0CL!!!!oUFurS!!(j%(Bjd=JCE_?!WW3c2tTN>!!(q6qP!ri!721';#gRr3/tX#!!!"@6XLN-!!#ch0+%[Z!8Z!<"TSOQe*)\k!!#8CoL/c\!8o^1U&Y/ncjbD#!!!!YNP6e@!!%+.?PEJ?!)B:B$31&+h9ZrA!!%Puk_fKB!'iL870*Agi&(;)!!!#G%=M(R!!#!<^*is]!-CS8'EA+5:89HL!!!#Tckcic!.`P^MZNkY5WA=(!<<,X2#<pH!!(@TI8KtE!'#tP-ia5IF@0CL!!!!oUFurS!!(j%(Bjd=JCE_?!WW3c2tTN>!!(q6qP!ri!721';#gRr3/tX#!!!"@6XLN-!!#ch0+%[Z!8Z!<"TSOQe*)\k!!#8CoL/c\!8o^1U&Y/ncjbD#!!!!YNP6e@!!%+.?PEJ?!)B:B$31&+h9ZrA!!%Puk_fKB!'iL870*Agi&(;)!!!#G%=M(R!!#!<^*is]!-CS8'EA+5:89HL!!!#Tckcic!.`P^MZNkY5WA=(!<<,X2#<pH!!(@TI8KtE!'#tP-ia5IF@0CL!!!!oUG"+r=h6Uui-Dbp0M$fYq*s3FLZ_51BZ2oY;:"D@rHXuNN)rL?4D.3V!04SP:I6`igk"JI&-oa!lM3[MQ<+_<$%l3%Sq5s>E-Rs4J.=?J0C&@,P)2<F2pWR-;Fg9\%:^D\%!SAS0\4),Mg@Rmph*(0nb;slJj)<C7e/Gs4AR-9>FF4^omHJSF=q3pkDpGD7IgQj@i\Y[GG$ql!Y8[G2"DLo4j&Hd>g@1!#&-B[_DN4"Ck+l.ZnKSoRp!'>j5gALjU]HHS.TD82;uj-1YeF<o9CAq^*r6JM+i3T:Vso+]S1,V-.r8gAR&T,kr5q\5K:lr>g"4P7hb="a?4sn0K:o]%(Dg5GbkYC01qCC7K7T1,RblZ[r@?+aTa^VZhgCi^R6tV0j];tUF^'u*HB)&B5&H6L0J:ccg:c"Mg@Ra:iq00:Vn4ineSCU3S=D1AS>H#o6J4q>jI;or^buNGP\&*5>3J#pI.5pJ;D1$^8U3*$F.qo--?*XcZf=5%'5T#E/gI2#.Pe.qP$ZuR5Ojr?9piO/83Hqif&#W8B]@9gmQ$Q\NL4H;>qP=B9)sO1^O8>OLK1gL<0Y0,?+H59YZuQq_;CXiC*[,4??.(LbmU",k[jD\2/q.[6^J^U7Ml>U=/E\57%ERaBQ/D[q#TrO`>eHcfYZ8EO7Caq4iSkp]JC+EM>,Oq1F8>l0=1Qr]jirI8Q0_YOm+l:Vsn2neSCU-eSLOA40dhkr5q\5K53eBTrZp>"5$ec9t574i<hIdf.OJ^*n)rcWbi2#541gE/d''#.TE%.+1<V0j[.5?SlH[MZsrFd6OBY8tPpC5&^6g(t_@8_DV08)rMY2U.G1Ja*7asIF4^]0,dsb70A7X-qWi.3kXc+@?;o.(9Z%.f`3tqh\Tl#c)fTZnHpT]AO2O>LbmVM.uBs4\2.34h\jfXKdLndb>5tt;<0<6UI2<fDPAeAoZhoE="r#<%3#);JONp&;!<h#kJ!b0>CI1hM'?ls)BFtME"dXsUj)NB]Rl!SB[G*B%4q@MJO3_.4SL-BhXZja8/-=WfBA<4J=Gb\,/(<)itY8[7>$?/BOK4(%2AZ5jLHr.n<T]"6))G)\426a"5H:O'^;1e(p@>A0,c\>70AI^BV<]g--q!2LU[1,$kc"c_DOA")rN(>U.Fb>a*7b$IF4^]0,dsb70A7X.!b5R3kXQ%@?;o.(9Z%.f`3tY(I`X_5K54@k_fWSIF5j)0,c827EKUXdbucB$%kX.[r@<:aTf83^*qDkq_;En6shcak_fW\IF1<R01qi5Oq)F+8Ji_1]S1-C82e7XoL4o!foPY1-MjH&6XM[Sk_fWPI8TRjQZRJq:Vn5Oj=OW36a?`1U+_Drc@1^R0[U[G)Z$1Z7:.lJk_kVe^8/YNIM)jA,&cEY*KgkN'7E`RGP5OZJr.3Td*NR</Gc)l6=5s>pE^j:nrkau'R:)<k`BV2S*5bS]sAg@'hn6gK8.*R@*oc"'`+Qb\M*4:QCigrU<$QK7YbLVgdGK`l(.biY@+(X)Dq(T",jm,T[4M*0[IL>Z(XI=r\#(inV;K<rqq)12p,a?me+uiSHlf"P&J'=rS2nZ(PO@up,lhJ8SlWb-=)@bRq<)9[E]kSOe%i?hI=1Qmp7JYI<Q@>>[ZpodehS41<o/]q+JCt\4X_p*P[uJjS$9B@5jAG@;$t9o/<9VK"#hm2S`#fl&/G,\i0G"=QWK%AP2r(-P+al<ZLC_B#H+01P)J&?IEtKmdrq(+qoQY^8P**cah6PAa6^`ol=`rA(]Va,H"K"jOm3!g@[=AdBKKj3O,tdR.Sh5S2MluU\WS9g#a6q\8p;,VWY)E.sp@LV%p*B:PWH_guS@H-oIgDZ_)t`*edjrjH&GO;6@tUcO\@*I8N(%@n-)ZSQg:>dMLI3p$NapUAEA(Qa:TF-rn=a("&`4.-HcPmXrR?Vp5&/CSh&mYCq25L,H*VM61F-Un.MHZm\ePV>6Zf`g,$(1-KP=>hNU]?^f@2n8q2Z^eOgrMc)pR5Po.sk#'329)`MY(Y,`pnbhnSf,(jp1htk`FaDm6I:#tFf=T5iMs=7@2!R%cAU_6T,PE3BFmJIJ1Dd5hS\=gu$<8dgs7W95#EPF!kQ$(aGJq!-+1sFPGg!:!_46UQ4bamN:pWUba@jd#CiY#W@Son$)H^l[hWq<#]X(jD4*>b>IJ%Fq%mqj2b?O9H8h\Ge0+AFfLL^MBjR9f225L,UTDiCCKq&f]k_gcENp3D9$e^`]F/Ua\&YlGd0=I$j+N\W$0,d=+9F(^rU70RrLQ8#&c&5#LbT&<_9%]t%pALAn7-uT/a/n(+j3IVm1\7E#T3`Es]]Ib[@()q"3N_)Np[GjG9oMa&/6=KaLS5HTjXi!pcA/;bZ2nk6EF4qKdZ`?[s"]X%c3a,34[`Z,jen6T."0M$TJ*<:rA/9,F<`C;p1F,j]-3ZqP5=.$l19e_B`@2HbP_(1,(D%D[V5?rj/:-Vf+m>\QttLJOE&`-Cu8=-C"L*9.f[P:-&Y`<3piF*mQZ).lt65i"6K<GMkSd%ihc"3&JMpDgQ?"F;uT[Kb1H):FMb!b=3UQcR(pkTDYM!-:S,8LY0RBQSUUTRnQ1Y#m.JaR=)Zm>Lr@ju@9fI*3A"hp>,gr[eG1WZ3Xi.c/8spWlnX/m)L%K-6rrC#8q53)n@6p`Y,Y.X/mYNt=!gLKUV*ds\]EFuDWO?smQRkB^;=Egm:0DTWol)-p:ChVs81V%`^L8:Cp\J4b.])J>P/g[e!fXs6K'D*ZeA$_b&&&``]ZFGF6Q2ebV61ZB'Sa!@m?=WP!.nV(U)Z=gggNBjQ!s&25DV+TDiCCKq&hKm#+b9KcI.jo]_:F4NaAI-?-l3.lNWkg\/ssQ2][mbET3^?64]ef[U5EUYa2N_^Cms)k=*V/U=Rp5fl'm"IqGm8aVVX\mq:=Bc25@qP*CjJt3KFoQa3T$eFIq@L%<Y:$NfL22so*e#Jc5CXm4P2_q!oh);ss5,tJ3<N!6(.:ISG9.uOZgp1MC_&)"4(3pXoX-]sCVKPm:T=c?nA&EJ=HA\EKF&=E/Gg!:?_/)iTE`serFcWQRb.)KGRa:O_m`OD`UJE,tOFOoCnV;N_,&]m#46%!I"34(m[`Ef:=a<@m8nDSQL*)@IV*)A8kJ#ZaFNmir].DhhOmF&o..<.e]MFUD;]`>$^KDYMc+-dg#&dRZW:m4CTL20r)rN%bpI2&)4dl9@0CpUQS=j:tP\M]/A2U2T?e#$O%])(7M[r%D'"M5/lHP:f=S,&6CtUBN+nE5EHFNH@k:R_N,eEE^9sCu5]aK6c:GTc3La;UTVr\(tF)J7>^8NCOcW_,&(dlu)n9CF(q0)Q<j!mqZSihAa`pNZHeo#p8Q2g"*OcsF;h,I*!$C8ff]^rq(laOTqZUEpKoXRVS4_+F>Fl_=up/8?qD4o*eo&J7>[ms2^Bmbm*:\dZN3HW-j;q86NVnm+BGO.ODX68QI(TEBE2stYEq:+@T^]"DC2>cKW,ZQ!l8@4o$F8qrFrQi7S/mX7+'qaTiFUG+_)gSDRol]$_>e>8o`k5m&%$n)A/XatEh6M+iW\5#7;n&l&;nm[iR.92ae*!]7Zh[1Sq[]=[02^KVo:*_"eFrb+q\^@MO.)TciU&dU_H?cu,"_%Bfs_H`3$[nCNU'?,51fZ#m*DN.0R,5=cSK+@rBL:W0$VaR"5Mtt^*kk7-aTHEAKHPq'6NPu;GDibY,6=)Mg@/$U!tFY24Je-]?*LZ5Q104eJg9dV/!J;cbDnUo\IZLSk^L`(]/[[p?T3U8Nube1!/(GHIK$:+%YH%g.\a#LYh:0W)oBpF$sh.cY7[@g3bC:UG&W=r?DDZN,67+T@pkLNTT&VX%8q_2QC-#8CAD\bVedjK?)K5.a=cZ:3:C<3U@FP68S)`WlHf'HaR3e+KD<(4?n#cK%a.o@VG\H3DM]/3kXS+^L4LI><+:bPWj9U2sE@3XnXGcX])/pq>/+-$bfuO2Kg&og=RfPLYB7Lf0M:dIjnK#Xhs?JS=r>OG$0!J4_ln?Ao*T0gN\c4e'ucDk7]nhk1p5s<Hhp,T#8Q;H.QGPGkU;u2.OgeIjmJ"+3=_saiAg,C.M-45Q/bf$99Kteeb0O$9;?cl-L7>C6VYb^cuMgbLk7;q[g0),`+Q3MnZ.[nH=+[McO^Nrl@orhe;Z\p8&tuUXo.j*LdA$qTq=[(\K6kClX=rk;b+I=SkmJ:%Uk3WIG8@aYF(*l_(M>?MEI0)cBWD*rC69XL=:[`pJ/cI"QF<WbK^*3>Vp]SQ8aGO_4=M(0,q3>-u_jkLSIE<&nKZpIWoBq23cZn#<0VFk2KCdbudmrWTVch9'I'T,FSG1<m=Lg7$@YefofY!EI#_1RQl[B?;'%A!8MIc2/"hs+P`/s7oEdZ^7uB44moncX"gSI[MTu-NBDaPJ::7>dnaK:5L$`q@(I)<LYQ-1tLX=T1`0mn4ofL^.C5u9g8!';F>acqrqJM;91a`X1g"4Peka^b4E?GLSLB^"TEn).RY:Uogct:IF6Y>f2]lk[l;LRS3MJVSGbrRg!#5m)ml#@W=Q\;I8LM2_<-R+I%F8d_']"X3&KE^f:7[e7eB-mf5#:5@ZBLVI.c.a\P(I+c,4q@,.seTg8'Z&\i9*5=$,mNnL'6]7bHLZF#Tnt.+rCmoA[0Il6>9W$<0`(Uj=igSdddR2ms572pI3B;hqj[qA7B,dWJ_C\U%@uaqPXa]UV0.rmqHqmaAM"*_&Wg=l*>Xd,pl(U/"rcO_RV8qqlhk\7kQtlI%?KIiiid$%8SC3iekB[mn>P[Kt&,Rti@]V7m$mCbiA=GR;WkW\CC$Y`j!g%<.MlqkDT%T$2Z[Q['9c:=-!o8i7?(^7+W*0C%LE-U!%<^A$qH6$=;/C>Mm['@NU.\nL1Pos]riO*&pLST,`BfF?P1YgeHbdCuQ7R:'YqCd-0ZH,1j(<&c_iT%BKh7Rm#=qi1OB.2r1`YcRZueJ8@KrS4p*DdOtlZ!k\8P@dF%WO$b=p):QBR^S[Lj:C7im9aY_"*r^O]5pX/OnsufY[kIejbC@kh1q#G9Jp[D=tS!GW\aV%(Y+ghjn+/nf;i-Nn`75K%jN=o/8m+<BZ'Olf#ub4V<aTE5BYr-h[BDZV&P[=FY\FT,a;[_^N/?EA*7;YRNMLm]^c#O^/IV'\:b>f;GM(k"kqrWUE3`.F/^Vt')GoLc'&TUPE5U8e<$9GIeoCV'QQsqW\6t%'lq$Wo"6X@i@$':JX_.5(=j;h3bYV"h>7$4GO.QJ\F[L#^Kr8R_>aGaip'`jm&rK/'.igMGI0$gmHZq'LtI*He+/)boVleC\37#U'9.t7MlO,u"34(E]2XZCr$?*%kVm80\o"qE5*.AJF70#^?V+aWo9XX"F$kAbHF'kFe[/b_c8]qDN3W=?0,?;A:c\3p5],1sd+J?0Q]#.]Gpc!e<:>FlRVq5/Q,]AS94'4J5n\s8&U]nR(+F@te9Nojff=8YDatR_=j"Xf.-qr<$*ERZPW5Dli,QbdH@PR$&r63JiW#K-I*Rm4(:tmhafidr<##U?D>X)Tf`3u,\1^G`l,i:iJ!ieMk6.p`U/Y%q8#n)bqk>-lE[ha4lGtP^Z-g3sm?TnpmFH\__sMd]f50+l;gnIfmFC)<9!VSaON8BJR:*!)]q^!QDdVsV7`=H\SGEUOTr5c<iV'qH9JeN!0.L]nl__['-Ao\gc:Hrc\Tgik_Z.8M<F)t[n'd$hJYT,B74PiUgk$6Os8,G"?_,``I*R+22Ka3c:RPd1I)"rrs3,`>_.1KNk?fZU5-W,=71RYr&pCS9a;6U[;4S),C[!=HA$Js-bERJIc@*f.FW+mIC$("(*em^CQFGEooP3ob`hhhHA[gt#h\0mgS2=/]r+,Xd[;)bkb/p-!o4`&N9jb/aRe2lM^\X4l]Zj73n="M<A8IA5X*2+"onN!FP<Zfgk'Gln*UE4]c_[WqW7S2UDitQKPE5U8+_jP$Aj?7;4:4(rB[mn.;,-.l[$pQu0C%LEV_WhTD::Re9P%3Z^7=N"fR;/T>PAt!jssd(hLf28^/9<TNb"(@",T-VRgGDWco]qtodUXAO,2'D3@umdqbMo?oL8GPJ'MBCQF]E5##V?>bKdY6SEsGO(cjs3giqgi`J,D`SuPG%Y%]2M2t&jO$2Mj*<I]J"oQ/>:l;+"bV"WSbkf!!I(QD4#7F!JT:S%O?S)r1jG4'DEeJku/AMejOn37(Kah\g@dMLHE@(,3+3GkI#m8eH!5>:*GBZ4V0CRmeacBrNTqEj-jhlkpdrRSYN.lS?pRS5B$ZYp_n*B\NA:\dY_2,:#%[1:@VEKps;VQX+I?bW\?:f4r5qrA5_.LK[fQZiQS:RQ@qg<H88?*;ZA^Z@tPJRbblci.0A?PH%n^\abTORCGDqNlIAE_au`01n):Ek%RdTeG]].&ShOYM$59fM*t:p"@r`Z?'Q@Mc=Jlmb6[h7Fd/03qOA6lGAgV]:nV=O1\Jd6.5(Zblg[fkah."HBedp8&XQ]S<atmc)8EBqP%0D5:=`]MKKF,kOMgHl@^a`cgZdRql%89<_[U7dn8o>>dQuQrpBTC1`q8E1k`\)k<m``DI9_qf>$1E*-hO6IA>ST%6pfIk_n_20O*#1S1[j;q<88gdsDp8nQF^PVpN*^:Khi^&in*aaB)j,[QVVoZ>cju=T2e=Z-4n:kC00i;`>P9qQeK+QZ);:0&gpl2@n+fII>O^V]mcm\#m3PLimr#k>M/N5`5Kq(Ca5/\j$#U?fk5,3C1-g.+OQeh778mLVB]gUR]I00'"(kpA*N;7Fa>dX"IQ9]puZQ-"$1G;<O%\SHkTZP%fF%Z'euK%_^>>;6MakreT3SSl:-Tg7MU)H)5jcF!_eCe/&SUI?W8ahl`p*XIE1ecbE@_&k8nVY(O`KS[(5>pW4+@]_AHbrUXg$-&!g-lL`otc0>_ilFT.&kKH/73P/;;@K1SadNA(G/5iV7N-WU`DKG:*'9sJZqG[AkiluN:N)SlY3pF](X#Gc-QnES.pF\BQqtD*(8Q`Af?W?3?fpX8LZqPB;H*:uUVHprC\AJ.K#3e/WXnXGcX]*:pJ(Zk#gjd%:8_-_+mM^94^ZWrMFm6[r;iP"Caj@]6<KI0/9&d<5("og>T<U-9oOVJ(k+0MOr4PpPoh!Sb%Stc#n6"-lK-ZY1s(ZPA\kCRf4a$I-j#hdJ`SoL<9Bh?9.Iqmo1dhf;md-j$R7AF`"PrpK#-+YaA(?eRI8R1;3L'p+0RM3I@PsUt]uZeN2TZu=cVX?Q1>_"s/na&[2"l"D,)_[J??t%#RrnI<nZ&hJ:MARhP@,gL^!hC,Y;3rnLtI3Ke+/*u3OdX,?dqmE:K4U59@Vj@Gfu_Q#m1^#[r@<:aTf7(#^t+-o48@KSA$DAi-o#IhK#MI)BA%<PRdY3<#U&1(PPrSMu#W`I9G%=Q$QoS>d@Zi'*]L%DrDW2U'M\6U.Oic%;@rH/=/nfOZ`8)"2YmjqP%\geY\D4X@3"c6Z:(cRt%4e)CY5HI@o]:XD-]e97P%p["O!caBQ0/^*nSf^1\.,=[T4'.*Ep"5k5&8)Jf2DM/(l4,B\m&`N(oQ])1F.oij3g/H>[L:VRe1c``V"+$Dj0=Mo"R87+2Mk_o:$c[AsF`g+RC;UT,PL*d<k7,Gd<oL0?KoL4u%b8N.;0?S<lKTJ<I_H81&o<*^qaB'SVKYu-tI7*t_fo&!X_FWhJ%ac(%)#Bu@cZ<IEZuMqO^QdMgR%Xfg&!=>?%=M(V%=QVLpp,X5m#//S_EO,1:`/Lt*&r8EA,fEp<,2&lJn9H+;UI_k/,;fBRZ0CW\7s!4c]9ZXaPj!L)BAB<a`Cg0U;)rVC.Q2a;<0<66XLNn6XLPifoP5-aWYp2Ks;+%L-*K?Mj!8;jBR2Vrq&au+Aq2O>XMj45snunk1PgW'$2;B!emlh'S\]jk_i?BqNB>+,s-/m$%kX.[r;e);$7>V;4(u\Q:iKYj9ZO?3`$[]+JUS^^$86KMr&P!@?;8c/R4KQZDFBg!'EYV'ZnUK/=/%8Gli])%MXXZaQSO[YPJn1-"J4j(9U4]g!\NK!aJ3%'M6W"N#*1k-VtZG5[h0TN4p_5W\;b,67*mpi>VQe#TEQ68:'u>]V(?KJ\kLo$H!lpoL5`\I>Rq91(ed>f?b=&d*NRtd^(%U"bl"D'ZN11)"&NA01rqC9;s:^lC@qg#)OOBi>VU87UHl/5[P5ffoP5-aWYp2Ks;+%L-*K?Mc-bTP!f0o&dF@?DrDW2U'M\6U+joB/=/m;aV-(]FeD,CmY'G`1#/1T^*n9p953iJOYC_TGmi6N(Ic]t(PR/.A%>!J8=i(TX90cS,F[in157l3d2++TI4:0S,n^Eb+`H<XqP"66qP#[iIOpgV%`oA4ao0U0A"B=CE#V$i(C_)TU?&j<V5:pp_SBaD/R1YM'L>)n'^")0jV#ZiOse6Cc6Q2_8FDNC)=%^-3hciTU4GX<PW\]:oHlI&"*]j9E".4m":]cV,WbfW?AOi3r#p>@#^t+9U+[E5oL6lC?_Y;g9LRaS2=s<L2"X5!kj6?7+VK4NTV4"W=S,#aKt_5.oDHP[95XQc\p=1%&soK]?CXB4a_BiUFDBWY6s=K.C:!@$4+%n2db:i#e8<g`o>g/,nhtV>c8f,'*,a2IaSRhu]NLq*<r;ls\*UQUq8g[!D>K2B>cmf`<LS(P3:?EmX&4)q\Doi*dTNmlY;U=S^@0+^>mJPqMpuDh0;V%Vca`m@d2,6uckfEON34>gM]+#)OqWqk.+M;.7U49EY10sSdr%OD]7':Orq=$\]gkbB[q[]jL5B7hbb,7cBRS9<V_>\a]u@P*f0bS#j1U1C)Yr(<Sj1Z%k_fWjcQeGJHqqCRF`54>G3_fMFYD%6^Z75oBd]"OWCpgJ=hfAlrmFqI?nYZhFm6JSNOoUbRp*CH>L]4?DO2PPZ?Pi=bmRTj.T<O'aNh=8[bJc:2iH4$/[o5mjED\,nTrmbP1[t/D-sr%MqgjsMN&+<3:#]?7:-`p6XS?NR9&ntP.mlG67t8!l&/G6V/+$B*,@M1U5N&hQ@U"Oad3rqfRMoIV$re(!nA+#s6rUtc3)+:1!fXBTlp;"V<gO6)Xf\6ddtKuM8!X7o%[!+-?Nt5m_q3YQ^m2A3?9O/D<b#eF!MJN2=>cLo[rs/pAKa])g.9BO1KE4d8Sr&eG)pbNq)/7dhc=@>AqB;q<!+$`b<ckUJc6hKiR]W7ne6866fM(bF8Rd@F2M;gjGj[M]uiuMn1gqC0j9U(H#%1-&93J>X#3ck_l<O`r,::>\%A.J(0;^<+#:02-\q?gdJiES6O%q'q3[U^ZUY:&q*XUo=RPNT"TkSqJ,!310O":IMebas,B,6Rs3Mlo0D=gK*t[q,g/fdm_a575H6=sJ)s/O_%TGjBiD6`".9/N<pi+q\k'6p2d0,/d!b+*@J:W3dTm*=bDj\N'WTYbmV^4N6cShBg\8j.SHk0R=-j(c[`EXXHc_r!cBO!E<2nQVQhk^a[k$O-T0D^j[7)]beSBEb[#o[3ccFFY%A3DjQ)9^&=)QfZND%i=Q.qW6XP9o8U#TePPg^:YIObX7pTTWtHH(QuP2VS&+11DcaeLHtqlSlPl[PkdWg=\pg%l_"SaA1W]GsqQ_j3>USqK.AqFK&W/PB)%H.HHXW1L0+UF+/7X*hf[EiE;LmT3^MSHk.<FeNKN<^S7YOIIA2>nC/18V0MCX@C?Y%TK1J3>ST3G5]uTR4:^&R;Le/pFA1F-hJg-s7^<9kVR7[GtXpXK.8hEC>L01<k)?)eQ[3P<Ut#(NKPj+pId!m](\JH"n__+U7TIr?PNJNbe>J_A1FpX-f[W=Vg0G`F'k/Hb)'j_U\ge?p)IetIAf8$mo=-UR@sOSc^ZK9YHh7<Jb;Is<A1OJPtQ/pTnj!uf'3g(0orle:OUX#0E54XH?]8J`U;qN^@T,pq/Q;g,G%+IW=QK$2.rZBK>)#])D,NKs'kE%V<bS?lS+tsR<n2.mkZS]/br%Pai;<#2D81H;0IE%Cji&sOU4`o*a'$j/Dm[TgYO(eAk3PprHsW1FSNf-*lC1,+(b>15Fi=sa2gn"o*^k"+R>9A<'hp03JNfgFrL5sMk+iYne./dIlQT^\G).PM4H(%oC:=K$C&iIG4UaaUJ+MTjJubMEqV(V'q#T7djC<g%*=P^HOaDpFjJj>lXYq?,<$q1a79[$VTf$7P,`3?<bX+_jmM!-g?cudbEoBf-53dL$C0T4ePhK/%U7d%85VPCRjBgA96k,%Vo'!KW\QSbO!`.WZZV>iD1dijb)c+6:p2FLZK/9<]4.PjDs=@s1=]#P0Q?A8fjF`DSYs_89&@-%DC'3U#F\*,3S(0I9r:`Y.X>M=H'.VU$(lUU^q=[6\1]+MF7+dA+/OFJqi[;irhHC..X@FEjerBET.[=iMcXghaX<-_o<*^l-6%A1pd8HdU=>8rc[P;C(PSCYKj7+A7B*0>+)qf1AMUd!Q*",c9qR+i2ou?VCtVHNs6-HR@B!`+.^N4_/1q9t?M/XTT9')=M\`GKCp_(''8#oB&31oDb\)?$MjM2k\n$b#CtrIskib&[R8^,']?Z&KV>,jg(iIZ8c:#PTI8Q8DTtK9:8M8+Q&^!1rZ)f]\RW_WEJ<NU*j9KPFf'dSHiKIcL0?=lfo#]7[qln(G#93]Pru!6,?C<oe;H4fpO;jOTVbC-<j*+'rDqlsO]63q(SZZ54,rLP'OQto<I#d(.KTY@cT']OIG8WV;DTK<nj%#NUjO-uiY?7\s-uTud\PE*(mbWT:Z@CmeK@R.8jY#VkdTB8fDVOm_pX_l4#aM@;VHWR4`fFm-Pf"nMX7Z^7ql8N]YM/X@0[/YN1Pbqu8bEi^]+1F*mO10[mMk7,[d?.+oZJaXW[X]*&5m20J(l7[<`6MSO(%+O$fY4XZ0&hmjuFf,W`tt!AF7haDqa!fMt[/f?CZo[e*"ooZ^7tWA<V?pWe/;a5*YdW<Jjf:=/^BJrss!2i<^eLI8Tc,@/H\JO@dcImZ/0<SGn4I7e]?NVVE85%i](8A/-&+Ob#E>]Q!P`q__PNS%I1?.b:dYMhSrmNA*:UVpB_d3VjD%/qmRFGBF1\&DZHT^8T#o?X@h0Q^Y[#ajG7Dn#4@s<GQJbp<\2s4g-jZ%3P42,o+[/A7^l+qrun$Xa:P5bt+O8C)C)eA6LKc^4@Qm_NgT7V\K"cmGS^kjo5EHT"8M-+f4YKag+d/,"?!>Y("CmV6eAfXIq63B#;W"ohLdL_^BjYs-KFABAP$g,ZSAJ^X5tjI154c8#/T-K^tEPo*8B@*dmhImcNEUaW)]4;QOnBrP<juofL)GEd-&`.>\MR0.tRU]G<9)Sj2TA1$gS^R<fmtj`K/<DB_Z0W[1lPBKk+3X;#^P;S8t\nd[udp$N)thM,iGo!.>maI=s23H8!R_V/jR$^PR)VbLND3tQ\:n^_j>ZM!@>PJ15!$GXl=`^rK8J*deMaa^d3Mj3a+\dhlSG2&`kS)mr`<GZ4Fk`Aie7UHl/&D4]F2.Y.ATDRY;+fBf5QdL4YW[[[4goCX2%')Kr1/'T)`D!tf//A<Q28W*q2"'X:B0pR%cha@O0E5Y?LR#"!iL*?0>fVh&cFWpf@OHobo9qJ_n3LEgD8/s1/[Bap0$1K8@/1"JkMICTKDIt!"j8h?Wmk."/5W3MK8q&!r-!ej<.b(;f#[H]A>)t(kqHM(C`,3U>--K#gr.L2K]t=4Cn3J4j?Kuc>>qn@/)ti!;C]a'RI3Onp2s\B`(:nNL)P.PW%M8dHAc#Bp9BkY*BoE^:.l%7O<rF*kmam]fHPOkn\[*D/`/*^,?N[7n&LN(oe[._k$dkQ16%dHC%GaPA>NV@DS)-8]nT=I[8h+<;<L6=?X?mto@n*:E?Ln<'*LW/L022[-Z@HaDC$B?%ZJ%Lo:-IQeRMapC9s/p[9E6`oh4R5LJQ!Nb`;B5%Mu;)OB:<YjVo7%I`C"]<ls73ID9a/k#/mnhil3P"\Hup=maabRC#REqP*J7_"L3r+d8Mrg`N^2Kq.jj>XnHVWM\GmEN^8d19C%g/^BhHihhUPX3>#rYdhbL?Sq39&9U<YPL'*"(,(/_WjCDDo3FnIY2dN7+'_!\QkRC)H-Majpn08YG!9[$o*F+E*1?j*drfEC&'pb'f-l+!DV\h#R%8;"Wi;R39mj]F$e[.JPOU$Ip1rCD)g:9uS]iH2=du3jPMP<W=FYso\VZkC#r?eY3a%q_d(9bc`:tTTaUd+J"Ei_j,uolC9cKK>eS5rDqe`DpUC:;mqPWlD=6=Q]LOT%EeBS0:6Di;^8GfX?]XR,]dTfP:%m-"WQHOS+:Iq>%?0*\L>qTHq[CMecIsiep;%N7VZB?k>YCjBKO#7/3hNW<2Yqna:P-Qckkq%+XG5^"*=SnW!GjXa6iP/Q0hIrDkldi`SP#npR#:U%?G6-jpd0T^A@WD"_3pDPHBEHp)V1qZip2b_r654Io(NPqo(T!SkI)N^5+;ca:4+0ul='6sF6==eqS\AdmeKJs"E1,&KU)#E^;K^`J9c]7sj2Q;Aaj#/2[%o\:T%BKhL(F-T`\3@;O/IFO\TI91FfCDl7=;8sdk@>r#jRalb+6nSI\Wg>`kMD?ei<EIYYW$@368qrVp!fgq):t-h]WYF=MGV,0!R2\@Er5j+[[A0@>R$^N5Xp;I%i05?S5I[:6h]r;AD--_NpnOLRo8&EXV%.Mq)R5`cBf2l[CR9dT:J.Mq;j$9WR@=>mKu`jGi:bX#02ZX.2A"lF`?]9tCfhs,pPdD>KtFk,jT;q)?1b+$Ot^EYEL?+);@F]IEHBPL'_P(n,[*ptd5B7K(e:Zbk7]G8i<R]L>`A8/RaNc(?gI$BL5pcBS@lg^Q]#5u!rY=>h3\Gtu7fUFut(#]*k4)D^R1ci*A@;93HYaQ_IrV4)G!R`a!kW:?eJ@6NdWXa9^^3B:X8MoL11R>!3q()PZgMoK$Ck_l=#ouk*^b?eVD3kC>)>e)<7De(V=\37#U'+H&U74#b[*'8$8BUm<%pf$A1pDt*LdF*C`Cq6oPh0-e@E+RQJ?G!U+H+WitdAj+Z]fl/_\$tD4Qm_opod`/rV=u#nQ5c&tbU@B<mJ;ep=21N8_tLc6j9Q"OSJ/X(W6+U[j+B.-mj1mF40oPhAiAZcXG9TAPombHnambkAbf9>b-t-8:rG+7)bXhOYL^@AqH-AD:Y/t3l"Tbhqn$.U(-0$R*<m?FWn$_7rMPE&$b,u`J6`D@kBloErT;!UIMF.hYI89$q6XO1,rC$III^En<@05]@)cCuF!VoD%ZFqiF5j'C(g5,F\jJ]e>5&c2p17:;Pau=^..ub=Aa@IO8+%8gaY,Y(Go)RmY.shoQb:Y0a!bk'q&DQUSA=heW?IIsrS/JJ",372cU(Ci^*qNr'@g':p-ju0*L$D&UF&>]#r$5A1Z,fTr@5-U#cuV`4+5MdWrmdt1pVT+\*?+C?I@p6*F6^`c!;e<O.WuHq9tMdE-ko4-5o)3Mb:5t1XA!Qegst1on0]$hlP1<pRr8?V2JDlQJ@\XA+Ah9$Wh5GfrCC?->U*X%H[OOF.%=pMUlP8jauU[\*s3/iQCn1[#h=-9:5W*#q7B+eDI6Z>q2%EJMQmDq<'A9-i`WrG_018XBG,"WmIuVgrm*p1@O@3\UNkXl7HP)EInegHc_MjcE)[RIet@b?ju\<bL_`7S='?Qh'-]&d?Yq#!Fu60If0e_]#hl=5K5:QD3DMXX&<HLeHO,TI^`pI]H*(BhfJRgEN+4l2,8,?VU*?F)h+0Z@(DLhEnI[IeAK"Fp#b"oS&cNL\_2,[pJ.)>?Og;3(A62XoL8Gp>N9W%j;m.3Xa=ShV>QW.`E^Mhb^j3>jrE\d2`lNN7`"X)$<:n!mYeX@>\XK'X#uA;"fd1PVfPob_'GS;XkUR'e`O1143.hU2;/qT,/5SB32KEWm_^<6jUjB61f,6dgl@uJ7UHl/&D4]F2.Y.ATDRY[TTCtn=ifj_(T!R@U706O^8P/?FjJMmIs)_Y:QE*[b%.o`e@:Dk];iTDorH;G+g>8tm.<_6QE*B/^1^\Q^\fJAIG(%!mHNgqhJL=:fg"b?<AJ@"4g-jZ%3P42A^R,.GH#+nTh:;UnlM*25pii@*C#bl8ER0X]nRIRo.e<ie+9>k,sQ'IYZq;+GL3iQe/ufUIi<JOpj1Wi=m_s]U+l/dXa:Q$r$c3<O9odlZN#BCV"%$E7AdDXa@3CG7,F?jXm[Q7&j*E4`qXGlpAI3V>:MSr.`I?lY-UlmW6:8RH*W=@;8/_Ld\O&^apr,:Vn3K<AFch@-0hk";G(hPcf&5h2"TuMb584GfjF;Q$E('DXcgOp>oJ"@g\)VL&l(2_*hs_BNr;K0]nXbr;?MU9Ms?P9Z80R[/6/)`J@n+0"]r^e>fg3rJS($cN^]t;8O8^s`bDN5Kg)T$&*9)?E\MOW;?1e[2"(!iX&3dqZB>a['c<+(;No2P-#Ya04Q,?8Sku`?(PP'V[P(5^RIok/rcf;/j:i%23M$&A<)ZOk;jlAV%H[Q5E.^mfjiJrPX*(W)'9*f'kh5Qc>//32('9DPD"^:bYuc\lIF5F-Ieb'FFunO0'7TqR[Q(jYQ`AfCccFEpInil`DU3+D7)L*p;9r/eZNR_O'K"njFDBQSPgfBd)Y,d9IHJ=RT7.Z$@^O?J?PGd>jM%SU'96,cmu%BB`YEMTpI24K1E0k*23lR;;5D'YI8PnCC:<KZH-j(.gm>Dhqi=307BPb:Ms?qtqQ+-DK`7/7>e>9Z=KU.1k5Y:kP=JE>cX/a!dkAK/r7KGO]T#OI3Ufpi:76DKe<tS;*IUcf%=M)!3r?HP?N0)J6B8cnMDD?'U+[EeJa/.G?+6qD\HZ-<hfAQaqMq)I_aG2q^8V$VY/r/Z=m.O7;Nn7N$<:h'AbL?6\*ogbh&7`C9%@bpoc-@;MS+p@P<!U<p:\?kIHC95U^MTJ":]cV,Wbh55@2(eK0kU4kl8ucI=Fb(,n(mq1U<LUffYaPT&&J\OO+&[KEO!Jf^oYkfMhqWgDC?rf2+g&,s^\-RVnQK^%ZE'NA8GMKtQT]r:%E:/l@iNHdFU/FS3oSS/bb.d:b@oFnO#'aA95`:!lBMb>DR;`W,bK;+X-)R_LVVX)\%9_f)!^+$4Zmj;Z#X?.A`J\ODNfp-N+a;GkQBM0#"R`[4c&**9=lcbU:XjqU&iq-!q5qe_br)]0!*;)f"j']/i^1]R,GScT!S\u=*)730QK>u\=S/+<@9h/WlE"`H9Ha3FI#p+ITH)J,Y$.^5P_*IS6;`-r*CcpcnMcKq:pkH>u2(Ym]QMo%Dp;9)S6MrL;kU?q&8U+a?CfPb1:\gX)'/dcOsqXJmJ*F70/kb=)+(NgG'./UQ<kY&-)p03o=/deMMMo+5`I_9!+7i-:d\u9,d73.(7b'pK=q@`.Nr>)9(Mo'2lU@@l[+0QL9d7'U\0'ZP\;+I=<ZC`Y(^'$N,^P-CcU2V$^.(oNEa6NnQFA\s0M`MVZe5>G(m,q!80>W\$DdaQq.%H#E$?,t@nTr"l?.<TPU5hYYFVMD8qmhmR9<]Z7>F:-t$E'SU_V;hS]O#PI(NgY-W+44D*JH,gI]asm''tGQ(8dd`_J/5.nFj%-Y8?!A7@f/cl<&.*8"kjHT.>c4"?U)-Kk]bFE#Q;9]`%0:lNMKS;5^+G3Yl#N;<Xb@k=VI%_2d/d@2c^*S;&X'Du]\(HGLV-e7n-@N^Xb,'Y5^i\WZ/LYTrjGR"d4#VkK$cgV83M?>rCNFW.iiA'm^cKeCMsXsEiVm"kTUVP/pbC$;;\p9,RA(YmD,SVAc^=EID1To64K.uCtC4(>sYC$;:1)S.?0rThMi"a>&cVkK#0(1#Eekb@ud;i_[Q&j$N7`I83DGdXm*7A0qOGL9Liq6ej^5@-"Q#iP^"c=75mE6%PFV<?sKUO\tkdm[[KoHi-%q^kK/(PMt=7H*W@5@-"QTSki??.?.CU5hPVANs6/I0k)8ILFWO7H$LR;0_uiO4Oalkb:g>(Nh:?W2%^.q9,WVlbk)m(`:;B$e'@4ZdD48#$Z2s=8_m%dU,4F0B`Res'b)q3&8!Rq>&J1Ena5@`WhIgU?q.\UjmLg\7;k_+K3q2@2^522S(<d@(S&6TAPb1p#G^s-5cUj4-,X1p(cbu[LrOHH<tJ.$.@JA$!m0<rsQWZX;7/T@:068/PP3Bc:/V()XPm@?h*=214T7I]q>\[rkm#k=hHoMYlaLEo5`SSOT)[MUl2OZ>E^r)&j$LaA&!_3I,!?<U/6K%]'([Dr*&-a+0QKVT^G&24;L<hGH>2b8N>d,$KVTNhf]6J;>,/`E-XHq0kb!N6,9b__DM8YCiiOQ_5:M&5JJB>lc8;p'D<Mk*_Qh)/'_pIAH@;FH+C%.fRMYHdm_s?Xi(!TM&cfgfPb1:5Bf#s.+DY.0)CGi^D?V1a6Vi+VX6V74;L3eGH;q#oXru1AAWi\Np<?Mmd9B1U"Z-@>aF#NTOGThB`b]Kd7'`5gN?AM5JJB>lc8>Q9VL0ifQj"YMXt"UKK1\K0=OB;q-U]8]4dVE3m8E,itjccJg'3%,Q"Taq#&Rh7A0pTG0sChq$l.e5@-#@gYD`TjA-Qk%UB9/aRO:48l5NiG@hY&Dc_1MAqr[6KR=;@^NC#N?Z`k-e6q/d.Y[dRM&h:hIgc'nL]?"PS;,YLZ$<f"`Iujsa^(,O?G6<**<lN\o)4RHei<g)>15p6#.o(V:!!@C=C9-n2I8%@$i*!(cJu]A4QIHtR<Z9UU-Bk.q8uh;jedq;!2't9.+Fn`(Bjd=0H"L+`mI3U!)Nus+K0iD$31(a)pS_JUPf0RTFs^[:]ju;!!'enS.QT.(Bje(-&dGK#.c2_!.\uI,;>-1$35TK(^327FAW#<!8h`b?lWGd!!&9<$A'2[U&Y/n^>Y$d34^L<!%MCk"?"Op!<<+I_\n#FFAW#<<5L$hC7pId!!)eK1BQV#U&Y1lKM`<15SjS(!:UG1"NJhX!<>q&UEHLd/d_RYi#BrIN2):4!2'ro5u7Yh'EA-K2k1Hs7i)=/5UDA@TE_tU!!%Of3$U,;/d_T/8f.^t%<PGI!!(nq7UR3A'EA,u0FECMkb8%W!5@EN^c8nR!!"KW'Eg;?70*AgI)?hQEHG%X!*$f`#\p#j!WW5qL,/nkkb8%WW.\"Ze3FfR!!)KtB*?6%70*Bb$)8WAJM%90!8ngA#`PO:!W\l+7R9iQ>nd8=^c.bq(e5AG!'hihJtN=Z-ia6tD`AsqN\1Y=J4^X^5n.p5!!!#VE(44T>nd8=PqWPs)X*mq!!'alN5.Ea-ia5s@2&i%cp[s8!.;[%JT5d/!!$!8-jXR\MZNkYpkCR+j633;!2tQJ&C`r]"TSPl%;,g`d7"'9:^Nm>W.?Q.!!(prc3TB(MZNmO&k5/`"'lT@!5LO`&K""S"TUe6N.R],\gROYJ8[Cl0TIam!.[ZY"[NT>;#gRrhf)%m**j6Y!0o5FJf<jI!!!#5iJbQ3\gROY.Ua"o2:+bm!!%Da)1cdL;#gSq_C,\)TSijO!;M:)!orL=!!&sN;%V5B(Bjd=n-s"5`mI3U!)Nus+K0iD$31(a)pS_JUPf0RTFs^[:]ju;!!'enS.QT.(Bje(-&dGK#.c2_!.\uI,;>-1$35TK(^327FAW#<!8h`b?lWGd!!&9<$A'2[U&Y/n^>Y$d34^L<!%MCk"?"Op!<<+I_\n#FFAW#<<5L$hC7pId!!)eK1BQV#U&Y1lKM`<15SjS(!:UG1"NJhX!<>q&UEHLd/d_RYi#BrIN2):4!2'ro5u7Yh'EA-K2k1Hs7i)=/5UDA@TE_tU!!%Of3$U,;/d_T/8f.^t%<PGI!!$s%cNQ9Q0S1na!.[ZY"[NT>;#gRrj4oP@B*:]N70*Bb$)8WAJM%90!:WbFj\S\W%&/X]!2'r/6;Rbi'EA-+4QOjSTo/sPTFs^^:]ju;!!'e<3Af[XU&Y1lKV9"-5SjS(!74P1K7kia!.[ZY+@-HY;#gRrEbM])70*Bb#pUapJM%90!$$n:C)XZ3!!"KWa94BI70*C=duZrA7i)=/5UDA[TE_tU!!$sJMJ/s870*Bb#pUjsJM%90!0ft`%6;!J!!"KW-j;KT70*C=WlUmb5o0\)5UDAgTE_tU!!#h(3RiZEU&Y1lKY\DQ5SjS(!6Usj=r(BX!!&9<`.AokU&Y2/m`;*Q7i)=/5UDAsTE_tU!!'5PEi=uE70*Bb$%jk/JM%90!:5CZC.EAC!!$!8kR2-uMZNkY]:au6(L7^T!0o5BK,WsJ!!'goaIrs6MZNmO&dDiB"'lT@!*Bmp<$cW`!!$!8W!mF6MZNkY9-K'?M(T,8J4^ZM5n.p5!!$C='N'S370*Bb$%k(5JM%90!()S`l3)3+!!$!8BFS^LMZNm/O<B<>$=+>G!0o6SK,WsJ!!'f.jA9K`MZNmO'#nid"'lT@!18B_l=>!6!!$!8-k:!bMZNm/TH]0N'jVLR!4=MNK,WsJ!!",YaJ$tUMZNmO'#o&j"'lT@!!Ein'P4"s!W\l+#'`rH>nd8=kkR?NV22tj\gROY.LGl(n)**[i)h/XPNeeA!'oS^i0G>i,Ntj%!2q/>j1UNj3EV17HSSk@!!$\kO)N.6n-WG8!!&;Z5O]&+JqIX&\L5ip!<@X\A:.#[Kl?1L!!&t9cOlgs$7l)Js1km+Qq$>7!!(rB>O[%'$kuQ`Ke<]4J4b21#EhI5JbaGQ/d_RY4JY_m-j"uQ$35TKHlEV07Ia,"Vbt#R!!)L.5KTVg+'fQ\!1!?477/-R?u^9c!!$C:E[XUH(Bje(,sD_LM5'Ks3GF^1$35U?;++h&\gROY.e.\TaN*K&/TX*M:DX07^p1tS0F_;%!!&;ZgdOS:gL)7J;#gS-%"*4>-DQJ#!2't.L5SGspak'3PV*:CJ-41f@5>DB!!"LBMo$HU;#gS-E-+sEN%PG;J4f%"0F(kt!&XO*?3]=80o0tE65i:Scp[s8:l4_IU,LL0H!u>"BtI1qp11`_!:(#<4ou]pq[\c@ML_@X!W\l+\gU84IYJJ#FAW$=(@j9b3*aQ)#XB8L;#gSq65P>iJpM<$(Bn2LmYN:OIuj]mO[]p.FAW#<<'hCTC$;8kS;&!jKH,+KJOL@Y!'hiP;4*(j$G]MpU4>[o7M.n-;#gSq65P>ikb8%sL#XLf.<JDi"C2]A!0to"@2c^*!9`:5$!<8qBlmgVH8(tZJ)9Fa!!&sN/dg(S70,@N+.ie>.<qJ^%s]"FAAV\u\gROY.\Vd;1iuRp%`&_jYcNA97RCD_i@_'YiT[':!2tQ'$Id?j!B:+89>KNg3$<2oE\F%JK_`hcUNB?5!)u9$Kk]bF!1\SW-"(]n)3BqIXiZ5W8f%X25UCMLR"d4#^^2u*!Z'u!J:o=cA\h-:FAW#<<'hCTC$;8kPfL$AYQ[83,SX,AUPf0R!57s/VkpugRdF648OFuWD=^WDqO^`(<39#>O7[GhNh-RQi#)P](BpHo\gUqoresF)U37-E1eJPf!5OW;Mk:dLU,VZN_`RR<mm"5'e8<!gib-#\HjK,AbI@);H4LM]C05+skb8'A7i)>F_<3NZ+.p$)+FT]M/d_T/*L55@XjBLX$]D&BkYPS"Q$Nt4&Fq!OEQ-72:0t0qmo@7iW`VLH.q>.CTo/tK*aKJa"ol2JaJ0i9TSijO!(l'4obGs`>r9"Y0WfiubSYj#iq8(&SmTeqR'UVhJ(J?XVuO.kSPtknL3s\Pd%QX>jD%npMcsY>kb8'A7i)>F_7)-*;:LU-Sjqt=!!(Z6HP\9;Pa3[fkBa&0h#,>3F_%m!13'J?XbT\XXAlr?o'jcUZ>q!LI1c$IZp>JlOB,R-\gRR?d7"(?TSki9>nd8=]WuJm*Be8%9Qm%/O";i1B)I[5+$:H'F7Bbm4,Z1L>e.[0OYLRFVd7!*YFfIdlE,*crC0MpHonNE`qV3%\,*=<]s#<,%N%:fhS[Adb<174>.4NB`2t+]XT/+j/]+9//Qn]Kr;<C?T&OCt:0k6<DX224<,M9Z$?c>F/YZ#+Y*0['e@kr`s7TO=`LFEl&iT);fIT3TXL<A<.LeJ:Ngt,A\%q1W2IV##HOaKr>nhf(cp[t>TSki9>nd8=]WuJmD:uIl/9U?+U`7)#raTU@o0Z1Fh"QkE&Y&J6en3A4@sCtV:TI!sbT,3B]=rPC=eGLu`HpsqCu)5.I^Z33K?O/seFn`Oj:%VAAGWeRm^N0kbpJ3@?LVg>9j"%7Sq@kJ(Bn1MFA]ghHl/%Y7I;V0Bp:4W!.Z(-l(XaOBopX5C,CdrhA^1u/iW2]poIM;H*=s"IhKNQHh_j@X<mH/p`ERTE:hp#3N!W0KcaKAc9?[@6-6H9^T?$6DTg1bEumDm<CY@H^8a,?nXA7Mi\OYRKsg;#B:H2GQ(2^a[XD>a]R2g0_;hG_Frq?@OV?&I]e*kImrRefen<.i($`0_Fne@2;9=Di>NFTjenZY!k3ZoQZT]Np#;M5k$G[#4U4=iB73.(7$31&WgI3XBBe@e=`e<"Ln'Z^0oX?QZ@k[fQD?Io"kq*NGjV0:#roK&!(N00@amiQZ'BJf-$WbD!S^U&BTiITL^kqZ'@\rqgjHN\Nqo^GAV_;bjeS`o+:>EK@>>?WN6[f[d,H%a!\lYBRBBUU$;66n/X)6/YK^]u"34^L</"he%[QkXO'Y5[m!3g8UrOPjjXDfU5-6'UUQ;X'NcdY`TE;Z5rrdKR4nk1sM^f[jJ48k]:'*l\EUSf],;m]?^YM4'4a?&,%0A<Yri:+k[_kVPV[DL\a7]kOU:Yo8eLV.pl?[K\g\@XYIq5.G<@XQ<(3Q:c.S$P:%49mU$/dfB$kb<SZcp\t//d_RY/DET<U6B,ACXoi-OnfAXT4p1O_!uLBS*gtQdVd2fHb!)l(i-VGU7X6McVQWM`0:GbfAbsHj_+)=Qg&DeWm08p2I3E;SgEPKZU=.BHD\o5ks$pVk;9^&VQEW"cU!MbMZU*a\gUqoFAYQ%MZNkYT.d[L$.?B@T^f@!L&4BJL^,6p^)h^mZX:-76b5+u>PSeP?1dekN,!nuXDN1[SD'fqhKI:Z^M7uJGP$iL7isX7^77p!6^,$oj(9kTlVP?%%lnWHk'f<pR2p<Dp*n<.Z>+VS3N'^D2Jmk/GRe1&>nhf(cp[t>TSki<>nd8=pesSW+J%h4a\E]Hdl`t$cX".gWIDJ9K-tKhF84^XkAk$WT;1:nm&Z`Vrg.&=74"ee"NJd&D]u#0hmBGs<R!0LrEH*&E]3krn$VWU>efl\bEL@uaRe$PC<uPOUJ_WW`8GC"[QYis#;M5k$G[!Jm@r;>'D`-.Un<,,dLGS?npZ;(o&-Q_fV,4U.<X\cj,^Taj4gbYWRX,fg\"ga0!ib4>aVDGW2Xe@`6]gkY8TNrM`M2N'EA..;adJ?Sa3]KP,=dMoc=%\R4Gb(T"MS)>Hi)>f)P^ICHmN*-dU!3`B80ubB9/_p)bla\*hgS:,1To'2h?C.:OISCq'"ohZ#?)9`1]$U\s+LmHj9p?dpMUIJ_Sr1&\l$DY2eX^RI(Clt&3=K<OS)+8;h?[W8tY3_/#Ta3'8!AhEOf[7skt&>"Lk7i)>:"fcanjPc<[/*e]dAh78hs.FrBJ'o&rqt8u!%H[3s>P8n`/2Op%jkG&X]a"d]6d\?iJhH=:FAW#<i(jrMJp4AAj5,DAC:Ed3R;RGU4Fd=tVq!$"Nd<LbnD;('5L*F^^EZ^JKcRpI:!RIcMrpPC//.5S/(Bt@GM/O=7osTk[Hir-B+sH\@\3IX8jE*NSt(s%HCFV/4A_6O^=l1omkkjC=k^fhkH8(&R4H#r@+rqBjM]BZDm=S+G!YY^[@-pR1;u&l/M-U1[7skt&>"Lk7i)>:"fc`CX]:6gK_BoTKT<`$oEX]@$+%%/Nh!YU9u!9(i59%.[>PebIlVejb.h!ef7/t#IrnQ"TSki<>nd8=pesSWTUtIT\ok3hM['OpW?[=m][4usH/R=fh_fVMo@)ue>PB/cAi&:49Aa!i8>]6#i>m8Z?[OnRge@G[[*R[rhdBT`5mR?NnuGS/5Q@iYg1^4,Lm,,MLJR]Lg?,J4#gYeqUPf2X!`ckrPrn`J@taPEga+V&qk'<OoS8J3m1Zn>b[._D:9<6D]kQeH]Si*O%5\!YMqS>?e5>G(!!'fa_*6I$If=BXg?l#RUj`5jM\!P%pXsc8CGemY)):s.R7h,:IlkDYoX%'H`95V7OajF]TR'"Js"W!+rV7H_??OZD2t%YZ80.Lpm8b<0X=%%9SDVRo[Scp.e'^2<JFciZrk:ha^K1j\O5%$?o(nm^[UnR1T7n:IJ$hjQo#I"7#\)W^QZH?@AP^LprVlb4ZhM3C'2LEmcd8HMY5#HZk,_>acU!MbMZU*a<P,4!A_f98i%em&.d`lXVgK61<dnRH*58i\PGim[MuFA3_+#5p6$,soTo/sP!<4KqXp9$p70+f4iF?GsjPdE>`?c%Y;gt1M6;Hc(C?g#fioSLS#EHo1CG^m3;s(47UgME%>mHk<VgMZ2ntV*8X#0113c^,$s3iOfF7a7VB8(Qrp%PKFs7LN0M!-+h*:85#p)X-rS4DI*0AaoI*;$$(J";iDZl_>CDF*e+3LfaB)>1rG``H&A\m\,-G!4pdRV^S#rTLdB#.s*(o2e#ONN-*aSQNTK<j-/Upe/*a\^,R!_R47``dANP<m::5pFX7WH7`9l=oA2obA;AE4;p;&nII35M`(=?EeA9SA(!hB]6ZDC5L8QX5Ke2=3-Y2fan*J,`LPp?G7#C:orQ\/(NgG'-ia8:T>Kc;0F(ktJFXC<<bdt'dQSK)\m'YEA_i@K=qB,s!W0&8lGtEP0&P.oP!3c<H]\/tRS=9_]V*MJAeuIKBs.=RCU`S,?5NRl[nX96,1eZ0:Q_u/m\30OZ;c$".a?#!)q8TXopoB1a2-dX<NPZg&>+C&r6"ChrL?O3B7<sfT)5$ebNmX@raTU@UUs9tjr`+toN/oX\nK@GPI8as[Z=M9=rDEZ8"khB!!*$JI'*]qcp[s`:Z5epcIj^O0"[Z]<;c[U5H7/bpZ?dUpDuM)^[lug.5E6LoM,22qP:QQ-0sGXb6iAqmlGh?YGc!JW\*dNIhh:WHgpg0SB\a*Af`oYVu5Y73b)bQ(6<q2r71Z2H>)X)hF3,ZXh0I5/hDFZFMeUa0n3VMc=o:OH(Uij\<?0$*7.`#o^ncp.\44s]jZ\fg7s#YU@Q"*msc3%YBZF==?Q)n=n5lN48739'@0NF;=Wl!(U"FWS[ibkXDR_+rqpU;2srj(XB'CZ4,@7_b;!ncP.)7&XP?)<DB,d:$Jj1OMV1a0\0c,OpoIKTB,BC6D4>lAIe.$&rMsOoH>P^(R6:(<@BMf=XkU4nbe*(=$u9-\ee8FU1Pl(dDHsqUju`kZ+4QU?HhWs>nM!2rVVH#DGOKReFmG&.Slbpi$?^c'H1?^EEf(t<BtHM]/a1QpT6>#A\DC"&htM;@dR=0:JH$<If7Q*IU&^FUn?MQSoA='a'fPGC[/\c]/O,+so86/sY>A;T\=t?(I[mfFhV(/5OLBg\,%K]P<Eo34'Di3/,UY3L]i@gIn"T1_#KeK$df0$AdbM]KD10RnU1^[den3JWlAW\tjco>IW54a8OcV&j`:b4K?_pPu2L9!PPoK#e0>l@Qm[%kh/:$cT]KG1\/(Ds1r8'GNPfpBH%\,L3-W[8):/:%<B"FKFhQ`FH;7[2R,H$H"PuG%BqS?8+mQPmV_m<B8OLhAs[I=Y0pM]lb7F.SjXe07MjI&=!U@Lm4rNk_(h*?*[K.C;8(ObhL0VNE>G#NY_DNB_Dq63$HU&Y2/IgVh6_&RPo!6S7;=P<WH(cZp6r,K'/aI`_:3(r,.]p3SUcKY%ZKB1@Bjt2q/?G2i3`JWFG7G9M`DgL/*i_r=f.ILL6^MCKqlM\:7#P@<qSM[.T0)A$(<r+g<p3N3/`lqO9Vj,k'NN].DACkYDdQ^R/Y5R827B;/ee/m`#lB1HI#>SU0o&RdU0!f76NH][!/h5@b/SA:n5#X]E_!uJLXh+8rEN-+!IbV5nISSqL=sYM;;5)=/;>tde+liRoN=B7FD>iHc@5,9+qP]81^3*VtQ[,WM?.@fTQe+Zi#*%'.M\US@E6#HT8J_O1!<,po>Rr0SMZQ_Hg;h?5dh^'Zd'@`-VO`n3cWg)`Ogbgl0LnkU4*.[XoF;j*-Z@gboShsbnO(LFE__rR>4gm02U@LAQh9U=I3kb;(Nm9#PP0^),H!/Y;p+I$#$8+7oU.VVjm+jhL.lu-(L<N@s8=Ugb$=`8rC>s3`Qqn+TDdBMTf`4A\BK,oi/r1]cIpC;\h;\^/m1E:nWu]k!UQQ,9+,9Xqt4[^Z]]p1UIW%9fO!G,pF6WE5C)2DnVjqLEVKK\s8%'T5-5mR1q&a`qi9LEK@*-R[Rq,*9clCSSR#3Ab(3al1:sLOZr5/gdJ8'soQTh?HdY=`!.b+!51bDnkb8'AVtRAnqju,`Iae)Papm3So8.;N,4F:\++7?II_Vu1a&O$AHMTtb\gRB>kP/(8]VD"GV2IMcq'5jKFO?<bPKW9d[9Ie$c`)%aH!.)oEk83cQ$iAf\Mbc2oUf0`a1u]`m%T*A=/Y-<g5#)R+',Hj6Yl4u?aYafNh.\<3FXo6qGo4SoN(rY>o.qf-)+QZD:^"<5H"%<7O>n7U7,Y/enV\N\p;u$0"QJo:3i2Oab,(L^.SAEf/l.R?*sB8Y0?PX[VcOR(H&qtmTjqaV!6Tt.Lk+f^#SsJkb9^00Lc3G+P>1-f7OCnU&^FUp9Corpkd05*?01cWSREDjI+2&f!T:a$g4_NeY_5R<9iF>gcn=/cYj`F.;La>oV(rdh9uJ\7?+M3^V4P7B63kgIC&\_,@+7uHLbOc_;f!i,,1:.GDE&US0DnMr;.7Mb489=4=m;@cd?N8!%VB]]V:Qe>o2n\.mlP!nRnteTQ\^/.os809&I3nD""hp\[[!8hC\OFi.i'5jlbG.C_tp<BD6akXs<)CA=pK4nWe=_U/U2*d!kr!:9-.RejL<sq1g[S!!'j4p:25<5SjTs4QVWh[9Ie$Qd9*(kNd&GLedM[lW7M3j`LI?ICc>;PnV3_=sBl/Fkrn'hcAI=ru]iu\t3-!AQU%cB[5;SElnVoeam2q[BDLUS2O!/mE2!snd=q/]'.F,-fb[Nla;*;r&8K(G*/PQe<+d/pqco3hp*m<ETr[eNUi!72b`bsj_QR$>nZmpdp%%^0;iJh1og:XQaJUDXAoml0)GLfK;&TppE)Lo\R$5#;l+eWI-Z#T_>RSY-i[DIqXRpVc!l%C,tsr?.'R!!jM][=c`A!%<Se/@G#>GD?Je3E;,fN>IAkBOdm[RA@>kNn5d2\eY(pD[MZQ_Ho#Jn%USd=?`QgguoXARB5UpXLrMrGbBg8e`dm*lH`TFke"iX9gB(#]WX4JNbe*<(+KuJ'jpFa&;i,Ld=0433H5PpeZ%j'i&^&17@cIrBrcp]VFcI;31o\>^i2fg(*4>X^7qi78qhVgJ/hX^Q)8rm>h<k!31D4)I%0<2Ek1!eC^q1YZk%\>dij7b2Kd,+IFSteuPJ#uO[_VA^H$6EK`S_($bgGe%:&"bCc4+I43=>=YSgrq:]p[I^6Z^/baqm]6cZ!q`K%pd]CZW;oCf3MRm@TAg:Y<9GkmFBh$fo)0=l0Z*Zaslot09]=L2NA8`(QFC=nTqqg4N9o.F]Y8[9:,If>'YN4FjVd`kW?E?41?SC'EA..:\f&p"<1V\JF\ph<j()\7r&SV=)RNsa`IE_H]J$o9pP0KW9a#Jm)RG%l]O0[]j6"bZ2UoDJ+Qb8/h1C*R-eoIZ$brUmTLkmhF3,J%6E\h.)2D'i(==ik5=4&>EcS2n*HcMn)d]Qf<3>Vdj]QeabrC?6oohJjta-e']-*]XLM0jJRb=#fA(e_:TI"Ne$Ol_CA_3b,M6:$Cq@`p(\leUUcL*fjn'iL<m)rdmU"MZ;>/)Ylp,^@ViUHL<pB:(4'/QA&?%5He]N7&U;GcgI<<k\rkfQf!.\HUr`fuM7Mc6$4QVWhf5_7@%5?JsejiMCB\*mn^.$]k0jhJ&:Wq&^rr$]?pV..6m(;DbI>/e+G==_`R9`co\m\+bf%iNmgu-ZHOfc3jm5oV`qZqJ^;,cR=??OY*kHBc@+;QA)O,2@ohWUL\.;dj_-p4N]a&O%8BAFu9pUV@M[$CC`rM$iV`PX%K(JjPh<PudCL^.[dOS[/?SaLR]S@tGS3qA3_XZiggn+6!P1h`L@BA#b@**rF'oC\lV/J?B5Cn/7?HMqs^O-qV,/H%[P\u8]V=q/=6U13He1i%PHmL=Y,SoFDianL8a?NBpUjG`<T6V^Dq1b)=-<4hVdRo][>7D2uPQS'briIYE;r3L^&r:TB1m@QMT:D`^%%qAQ=!.mr@F$0XF>nhh[3*)J>qbBn7m0&@Rm.ZDR5KqC-^$CRu>%j&fm+IRD3hDI73H4UYcdD3r^()eK\egG\3cW/EENdNrDaX3Q7Gmq>U>E&c^5K^4U$eA/S&E6ZF8u#ANmU)9n7R*r70*C=s#AV_TBN!LPfL&W9HAGn]cL+?n$E3[#f_"R:7OGD>mp"KCGg<mP?rAoZ-:P.C\l?N6Y[]?pToddl's<meK\p55e<m)/$JE9/(Uki';(O(I,2$?SG6O3H5A6+V2KZpLG:7Y!5Z[c*rJDB"e[u<Q,1flI@M'<f'PHdnB(9K%j1haG+6/>qqnH/MdJicP-C9\FAZK;lp%YLhR73WcQ-rqp?h>8MF)RbDZ4k-(JbB&IIi;<rDfTil(UAC]Y9<HMq>QoWc:u^?.?bVN)9TU#WC!$i$Z)a!9J4%%#1inB=55-\bO>aFlk70)"KP;m0'DH^3EQ.TPYM4VUZVDqUY22HDJYC>:9&c^NINLp"H,m>WCbV(Hld/R(V%9bNAuU7=A;6o"(dH4KeE#D_YP.L+ZZd5E&G?!!kL.p#%4/-ii@KX:18UQYn&XRJ:XJ:B.7.nU?2'J#h)WbIVQMP)&GL3?@[5K,k,pM[JXnT@PdsJ%fi-o\cm!a7J6AnXTNiRid"mk$A*HO,NFS;Dh_)O>5lFpF]X@j_NGX05\^\`H"sAVaZ5De@1_;cpc9N3@XrkQT+lDAn13X:<'aj>nd8="9dn6n.T(AJFY[#!k&ZQ0)G/5b8<eQ7Z@)Mj%Z0GZi'X:MY.;amZa+]];?(#o6g7;dq9s1rcHPT?3A,?nU1TFUl5)XnfGB@co5IAG,t<_W,tn'Ii+p^!"`t:lbQA=;#nc!=:*VH:qNZn;Q"*=]_241F\eSimT%=)^0.!(\_WmmTi>snT&&++2Jh(3:D`uB<\naEgr7#2Ul5)Xnt*JWrHgKa2kWe?%V3sUh>^oB$33>q=n#\bdd=]=K-ri2H"rK'88T"r3qOI+nr7-FFAW%\Zf&)$J3-!-.-uX?$31)(B>JZ&8b6"aC)Bt?f\`8<W9$QldIPXQ!@Z9Ga%??KQOREr^X>OkKe<]4!;pKGF$4;^;3Zhg$:&kP4B;M3IFCV2q(#b#;<X_S!5O(b44idUA5]7Y;,Z,8)0033fdgA)O0.(dTgmLa:8t"oNh)B_G@dBZZh5=n7D&HT8b9k70tkfmP\KuWF^gqdY*f4eU92#)B2"])G[4ol>Y;EDE@na3&<D)%rkmfZ;nm2+\Sg0?;:C#Do^mj-\`C_J5Hi7Hf/#dq]U66$VpsDC2N!@FOuMhmd\b'XDjkc_'[q9bRVaJuVhsMN\!HdDXb/555^?Bl<W\Ai/h5<u?.;a8U&Y2/Io\Y_4*0Lag=VgY)Fj*VI.H(c4(:h5Z#a8B`l4d5gp$[;OH;B38u%bjqiAnqdsml6B&9),9)Q=LkHt#0ki;nY/uLhGFjXAE]10deYK>S7EVJFH;+WX7,rFkN3c+A=*J[CGIu=KU>Id2J4FZ^=n`uR19>jP6rF>[6(Vd-,Q6gHT\+="hnEB9BJ)%^2aIF!7C,AZ[VJ3]o76NkZMkGt0:nH3tPlN(X(R=3Yc9W6M!!*#)i45HYoC!tYIVTkZY?fJ5ib'q+X^XoCUnQbpIH4Tbo86/Wg@pPb9?Ac5gb:3,1,`:Id#u5kdJMK`.u-We^OB8`\obhbrS(AlMM_#j1173]\Q--2e5=]%jl@4BWSY-`io#[QkJtnUL:'\@cteI2p<i74Nep3H0)ElVD@ptf!6VY+YnB<9=^=u^ra.Tie@t.@!!'fa(-L3tpWPEpDi:6C9U``rpc6Tl$$4$Q/PF6P(_N6B3B[0-kt>S?a.;oQHPb[JA^9bm73c<+[@;?Sq)JEFc$QfHSPhtcloLfP-R`"Q^>C@/_r4N1?f,kH*rW5"d=#OA2=fP)J1_0oGnrMC![oY8M]/doFA_q0MZNkYs&nhr:Z!s>o.8@A'Bcd8,Rp4oV@7hC$2QEDj)3#62,\h:;.;HNf;rIpbFIIdMs@K?^Gk>7=MiXj5<dqqO>a[=Qi>^BpDuNTZo<?ode*^^c"`Q+->&92)(DGdg6O%6hLGH!?Q%Ros&drC%6jNJUPf1MSct1?!(u/!7?+*?\u:&)70*C=s"&DtVsg$XZZ>]q``]/D,u5K!oG+]hIqp.#0+IL8kbJ"bf5C077@.lF?))+#Pt!K&'DhAB0kJ2dX^UUDatC8Qo,_mArHhe'`/G#.M]-m/<^7H)TKET'.fkkQkb@N^Ui]K2U5K'Q!<63k>Yj65:L(ObINCX^M21ms9O1UX4F6FQc/RV*Vu9l_E]aVB(Hm9HY#qb"I\Z?pI&u.-]6/>N7C/#F'mEorrD2O]H07$;7?'ER/"he%:n@iOPlOG@U<Z4E"TSQ%Zf&CNjFsWb22o[2IT$%)b!b49ID0LEj\EW:D2)@a-:Pj"b8Ce]]MLUNHK\/r`QoD8k),cAS\"%!*"RYT75GGq(H3r!YZ&/JhpL%-<8RT$dhfFHoSDrp>.]emcIj`%FdLt\gb"+1$:&kP4B;M3V2IAR>nd8=ps4QTHAgBd<b`I/GK&^NfC"H%1CkJ+dO6Fd2L5+a4lYYS;:EIcP8CA;2\hWBDqle<DVN+BU([!3DW0Ut>'CWY`,tb8prTutHFoj6gZG%G7O>1nT!^*Ge<EC;`33Vr>BNT*F3:[':!B!/A`&W(CUVi0fsPQ_9^D*KjfKSq]62Ih!@Z9Ga%??.FAZ\GMZNkYs&nhrn(tt&Ypgp3Nem(i1fR41E8l73g?>!M&qm]M)(W/^Q.*e!>$@n6eCkoJ[/5`M`0>8JIjoG!rp]a\71Z!"&D^ud=S(ubFQkMnr8H+k-I,gmV,>J(Jg*4mR`t_>k-$#i)TD>SZ=.C8*eX)$FXljj>6eFJJF]dbX?:js:1D4r=tR@D,>6o+;m,3tpcPlBU:FO_YLek-5-NUmS%1bjmWS2NU%nH3mC]$C-gJJ@gG^b.8cNe]O0b1,E-lKIb%]H`UKZ]fYkC3b:R\1%c%E\mp#?UA#f^Z=/O(mXs,&FDB66uN!8p)BSa.FS2E>dH`/q0WEHG%Xb-TU&nlfosm5@+2F<.T'kJ=Qoqno3+#koF+qCqN9B>8m9):p<[e<EC;2!]?+nnl?<?MkS.1.(k7K>DL%IOCKD>eg$+7am$#kHBSMHS4'[>HCN1Sf)#"ofE\mmQOIkI.tH%'=OeB]4eue$QkU97(jM&cpd>[/d_RYr+E!M4f?CP.LBmW\8]\ND2Pu$e$R*[6G@?Wd7"'acVhg+_3=$3CmLa%\-k6:X%($$rHXA51S;7+ZVn]>FZU*<AB!-g3qR:\cIt3b#H<Ug_l#$oa<s9dh4@&2?IW`C[7R:GLJOMb.H8I([I6+ddX2_:V_nYO[IA`o&bU<@65R$_\gROYn=QQ&oc,BohrktQ'4roTZoe070:R-=8,$`E0hHh"Wa3t?!@Z8la3*,<]D!=076`(NARr-#1`p=9PI\G+_l.Y.%=JV.X7#6:5L*HF/lNai^1l#pA(&^e3N)O+ZqVOiDtJ/IF0?aNZk&=tNL:q;k+'-5V>o2:bn@sGY>a_bXCLGSoNg.J`,'ilr3;iG-d<<'`:PgOPC;T!q"<Re$_CGPi,ocoDpRG[Y)*>-=Lqg'ET$UPh_spSYFcZEm9/`JI6JM^k)0%*`hcXM*7pqN!3rYDh1(eSEiN60\nr*N:&k%:dhd%:Z#2e0bA>cd6Ypp#F-B@uZ^5OY0)-i2hKu%mO$R4q)TD>S\7SsfaD(5AO.K]9Y?m.Fd>Fn#PqM>MFAW#<i'0l*lT%dJ;9=m*QUSh>bASjDVcVlj-KJt('tPdnj]UbKGqHLu;T#GIMq@5A%\L&2Ed4t(k+Gd3O.E]NS#5_V[UmRneuiXTk/$*>4`maml*]:<ppPJ2q5^rAg63Q5B3:Eg0tXbfa]f:J^81e/m5%g]V2_#pVX-Em;KfpYA*:RdN/L=H\RG4U+X(^0\GN`5Ds'prEL)tp/o=D0C%:fAaU?6r:?e7pf:ZVOo#Rf%\!<(.lIGUP3Hmp9]O:D5rPXYOF2c(uGOpHu4\OVBBW[S+,@cqhAFA?bqf'HOUmfO@RWM.B2L3-!6RTge`I6pOg`gAP5Bj[5Fj/&Ui[1qlA,6ZO^P\;@\$"J2:d!G!"+T+=pW/j>RqacS&5PUXU7P^Lj0(o@BLPmpM`M2N'EA..cT:68YUR.3!9IAH=F&ocoh#[gQ>Y?ST/^E0)DUdY]a*E>gq!HP.ZImuV2j8uQ*Y40<i^-&Q,BB?q\ZiUU6$/Y*^4l+TOUlXXol&MMYl\BZD@NuHc_3'R`>);f/'2sfh6UkR*m^'BR"V@q8UD*?S'[?B4P7>DW0W1;+ZnTakEK3r&fGJKXp!LlDB'[UH9]+e>qsc<p?*NnZg1\[)XaLGp_*Cb^B?*ojD]6QS'b*4b*F5r)Ki5rXH>Gou*0_1173]=fb*XW+jt+nr',>Dqmp5PPO8%0>lKiG3CeOHUca#*#"6n?1a\kRdo"H1iuSbTo/sP!<63b>Rr_](BpHolPqDcT"In!@FWH%HhA%b/mU+W?Fk:*gR1,M%IMMhaJ3C_b*ur'X50Y.p(;,S<o)5o`qRqXq.[YpZ)B0smYd^LoH2g9VQ]u"IEt#sosXX@aJAY/O.Xl0RP76*eDd&NEY5RuQ,B@-T>":eE\n0UCb+rflRnNVf8/P`\NO<WoZIGY;n)C=S+^Hthg)FnY9@A/`KV#PY6TE$\oc?@fOXBHh/C#`@/8qJg6>@3UK[Yg=P\gVNpeo!r,DG\`Rf=hZ:BC[G]Y%\7?+rpSmMlsd7#(0/d_RYr+DRA4kLHS'S,bUF0%KMmcs-42f@EIT.&USGUpPMT:)O4D^&`;fdlJL[Ha@?o?Ea52(Q0('f4#dS8?Sq5h)F0^SC7cZ?_c#^kq[:?'9q:(/ot$q#l,6bL(.YIH\pCT64L:m6^=4rC2WhZsV"HfnW;/Ct%gLnbp1^LlI?dRC?qS]Tl^>ba382"abU-FA`"El1a>1EV[t06JCW=?2A?OhL#$Be)'GZ9@j[k2lg(JR[?)fAYb^-C0R#!H2mD!I:[)YraTLU2>F1sGV.-PAf&.#j)XUIE@$\:jKEF3ooJJrfRt+*cN?%_:[ZYL7!Z7"NpY;:i0a(Q]mTX'Y<c[4DqX6a(7eBZ:UkKCRcfrXfk6HPO7R3cFA^&V!!!.eFjBYf;fkk:b-TBuo(p$$pIkP-n&*X-P&>[0]V6%*bFL:kZX)A*jT7\FX7#4)f-ab9H-belm[SNMc(,%ZP7l;5lYk>JbcP#.qX:dBdt<g]NFMaAfu1YKq`MS>oAK-t,r!BW!f_SfhQ-$HVD0ln<,!$k=#d/5e"qslpDpEmjLL1$gU+R^dfcq=9b[Br*AM-AlE+L^Hcdrj+&W(+>Tkh3K']4$?8[A=Kk\ctU/U5,(/OjJd6/k!d6"h@eS3L7AX@k81O!ZjQJ![t\+$=M\'184Pnm>WN(lh\2Ik]Dc'BA3I971hPVFWf!5W9<F$8.i>nhh[/9S%qeZrtjmP<n#Dm#_hU7;`gH^OX"mCZ%#UIIsbXM8o-oUj+@M`8iS#^NK=l0We/kbh+E[mJ;do7!D.\TRXt0":+mVYh@Yd5.)5G[;Vl/ufm44a4kWnaDUhIP,\%R^I(:r%8XlGmn#?hQ-%sWa#>HTB>I;[-ol^D;lZO[\n%Lo_eBo@XH,h)h%26A*qk$Xh2b/RW[tu\DulAIk%)84/^1QC?/ANpfa&>/fLN<3c*f7R`uHPmba>F?FtBcC.-:)Ktij4o7`++pT)Q,48`G"?'I&n!!'iIWH15T&R?*$ngnpb9`K,+\'7"lIIKf,HJrIReVKU7$Wm3ZF(ANJ=Sn]D>9(Uu[9@`ra`/5EXe/OYDTZ;o9:sgOhb3jJGP=D`)g"d%cS$?9;SsonnAij^L.D"6Y!n[="cp#.H4?8V&Xt=a3-b"G=L_%b)&).iT+@L(ke8%]]N&1Yl\ug8?.>qBR5fG#r=6MuT"P$9;#/)%$eK2N@=.k%7HL"!Qfp%Q[I<>FAgQpFkin#ZD0j.p)m*C'.Hg%4mCGsZI+=1j(8`ggM^AlSVgUmZ_!&mDY$AMG;mZ7`C6>c\A,@f[]hY'3A`qRZ5>E.SG05$R4#`'n/hFLW-D!>JU2/K(R`uI[1lY:%)4$h77%6F0hMnn)PNoVQXO]@+bWfa^neY(CkdtMR%jW,UE`alp7ak+Aa^Y(d:ED$iMf.@]9.]J"-CplW%D$fSXG8E3]61TI@2&93i_tRi:IlpUjpg'O^J4RIPmdREMD!$g'``blZdcN,m"d8$5^AYV<aN=Xs4c\,>BNTrZo<@!NWY8MqF8CMk7s9'>NM@K(9HA-AELQcB.A[,GN^npe"5n@>P:P+V21O8?Fj"rj3!Auf"U=Q9tN@N4s]Rh9p8=4kMCZ/k);7N.aeR/`To:uPdr;&T=sspMEI:3N`Bd-,9D:/Q9F6je5=]5XYN*VQ9K6B.A^q:7(Hd;Ko^^sh+^QTe(p?8V2h-"jq#Njd(S/)a"L[2c_BU\M4"U003Z!$B![0S5/Xa$)V"0=>8OtY:aFVc@8t\?m9.',:JG!!7f4_oYB[d%:AGX"M&?u8loVLlc1Y<m]2joIC#+31][ap#(6$k^J#7A99:*r#O*U\H\GHaWO9)R[\,Kjc2<`D.jn_]`Zh>[T*3F_:ABW8t?Ur'.(bf^^JHK[GD%T^PF,j4XN/^UN\om0gThE-4@T2aL[nkfOldN`EM<U"0qlJ\\9e:e<eCW<`RQ>AlejV_ad'd5l`I8Pc1g!FS^NI/U=ZgTQTnDc=<88tkfK3TuNkKf&s0>6Z>hq<obNtsIDI4&uc<U">[rdY!4M+41FD:8np\DkU>Yq20-aE6%j8)el*7l>gIF%ok^+G3paqtinJ7,_5\K:*n/dajh<]a?R]QBoAs0:H<NW5\p\)`ZMYN6O52n=#mcSGs@Z;3n8%B\Ksds!CT,S$Djk/sgs*`TSXH)nB,[I77nBnBILZ1HSS>>JP9.3<]V^*D?rHOh4=VMt:2,.?P#mt!T?id=)HkaKa/KXQ^T/%3+($N/OZ9>u>2mPplq=55'uN19c=REI%-oC\RTa3P(6p<5R@[R75A@LIiZpDH2.REHOPK==!lrdN7I-S@g])()f&=J['k`ZIBmC#Zc?<>rj3/pM_OWAU+@`QV[Z`\iY<]4Ah)2E_9/0BuNnWtqM__G?m(*.?r<kY%8gb?r6\)GT8h%NV`q;6eC-gI,WKC_iYu+Yiq@l.^E5^3Efuh)hB/<,Zd*[;-StP*`<,TKQ?-[#kZo_qt2S:EScOD;1gSkL=.@"nL6-8,!sEkSXtr,aPY&U+`*#&9B1o%/]_BFCBCElU"oi(Hm!A[('hh\rHQC1D[_(cSkOcFnb^DVS-l[@c9EBmTmS=>O/G+@YJC(ola2S;9#O7!!JeAcLkR,FAW%\j&fILf&GJmmQN=MjAZfDjRDD,/seu8,O9/A(QkuEM1[20oX+sA(Msf:=$K'q0)_N.1:/[6s/>^hbNHimLJOG.IIr>-aS=A*a1Zfl_P>!'C5q8jUO$e4QDp][NJ@a"E\tf_W!]k\?7%"j4+CGk78KG"r<3T"SZ>qoXkU9SR9fIKnY<;fcc,%KqMB9Z//Jt<>ef>`Irt.<W*Y,KD,rcc3c2Gk/Lg14;05[TVuQf#)s;P:'3u<&ni0[9)X)F8p1/Xn)4+S&3$8ap_4V*U4KjSn=CHR='pXH[9@UZt[Ij4Z1eh2ecDId6BY13D6)F:3l%7JTj8'85DVCYh:]#H9(IsMJ]R9;opDQcd`NN8[`J?VTZ=^fD0lmj9[!p1VEL6X=Iqi<D[W@e&\9%+FI2C_0\O0%QS<L(I1UbWf1:uc71FL/c/(\^f:R#eg]RTCIO_lsemd"_4o(37g(I],D!!%Sh\K:Z:(BpHoNg6FF3aTpdh`CBN14JZ^TWZ;b]D:>@l#c^pX"r@p7CHiV^X4p--Hof1Bm99M?T.9YO7(JiA!6QYWj[7+/9O+%QS'2K1/tl"a55G*'X<,12@mu\<1(:3Hfi*u;eif0->%/I@t=L(]nZhrpSNii3.+8HX%]2`%NNi>d4IG'C(iJP]edgtU3H(=r_h+rMjN`WatEpHni5NTrh9XAM]^g):Kb""ogR4;AfpSe;05[TVuQf#)s;P:'3u<&ni0[9)X)F_\a+HS[Hr2aY:t4%OZ%CFR$gT6^,;/.Sp<aN5L*RN&Y!%-EElWCScd$Z\TRqGI:!AoFA_ikS)^Bl1\*fW8dgAKR%_3YeADB"+$JW_3Vlls5"C+mi`U[G4a$Voq_jeD?E]tWXBjMOUDLX_fqn_ITCc(#dqRL3TDP-;DdF2P*]rab:MoIJ\RORk2kQ<n^*pSVs'pup!'p$nXp72=70+ft@jPLjAp2Sd$XS>Z>C0kU='bI;P6[)AH@OP@F8l,Bg;Kf'j!&"0L]qB44]8IhipNm!mAB"22N#O9EU('s#C?5+^J:89qWfc!(>j&_Z'W+nPJ2s4?c/Xb[Ha2-ejRgJiOVZK`ji#*2=Fdhs0hjug9li=,@\S,.!+OjEIGh&CKj9`X&dCr*Icl[?7h$eaqtinJ7.DB%t:72!`0rY9#)4dm%V\SDQ)&=C>na6Qeu$dhQ&7Y4(OUG0p+2=enj%aISLhB8M!Tu_3.<6NM:dOD;/RblLk#b*>B#`]61TC]`uWfl1olgBC;]<*Z^G$=T#CC>@uXX"0+i/loY"9oC?'$eQ+s5R^mdkig";oCYi4l>$`#YFn<bbbnF9):#!C/pSR>G&MZjdbo]-Z.rQ.5,Z\5&7/hKdqlj0-Z,57=m9[,5CZDq=ikFU$T/!W"\u<e:N)9TU#WC!$i$Z)a!9J4%"Dkou/m;@rVc305Y9RMOHY<-#7:3d>I!h90,AK,0&B()S2Z7W\p00JZ$lh("6&2&^,%JU,7noSW?'sL?!sr+c%`\/^;PRs(mojg.9HS]BjDjQ6I2<Xl+$(7hCJa]DET//(/6OUVYe2Ubo(?YqcZDl#.2MeJl`R33-Jl:]9tSNDMop0u:<F,@(@0=/A*g$bk6ru#0'`!<@oNF.JrOh7pk^U15^=>"!F%7aM^%6GU&Y2/J"5i@:NTG6b2ZS1fE,@.;<X_S!5O)SlbQA=;#nc!=:*U]?.;a8U&Y2/J"5i@:NTG6b2ZS1fE,@.;<X_S!5O)SlbQA=;#nc!=:*U]?.;a8U&Y2/J"5i@:NTG6b2ZS1fE,@.;<X_S!5O)SlbQA=;#nc!=:*U]?.;a8U&Y2/J"5i@:NTG6b2ZS1fE,@.;<X_S!5O)SlbQA=;#nc!=:*U]?.;a8U&Y2Ob6B\M/qJ(,pk^U15^=>"!F)4T3XT.,!!%E"+@bpI$(U=t:NTG6b2ZS1fE,@.;<X_S!'okE5,V9'p#%4/-ii@KX9<?j0'Xj,;#gThn"RPH;9njm-b:]+j`.@)Ck45(.!/;d!8u^&]re'"lbQA=;#nc!=:*U]?.;a8U&Y1d]Ims3NcM9-5LDn#.$%ja?jh'R8"khB!!(>Ne4:M>>Ru:XMZQ]ra%F,_kb=)((Bjd=n*He;Co!Te_,#/M!6X>($.o;be5>G(!!%O%MNFTk!`0rY9#)3i)j?@Qm3o29oG(XG!!%A?M^%6GU&^FuYnF8E\u9\s70*D(/%R,[J1_0oGoS=8>G-m8#@/#D!5.=&9<\E--ii@KX9<@Uk:m9We6W1t7:4G2!<B>O\gTn*/dajh*%M%on@smE7]fJd@Kl8i4C&X$!';[:K$m(r-FtT*j`.@)Cr)_u$!l%5Je:FYd7"'9Ybs8R-X@EuU5K(L*lgmg(Ao/9O@H?*85]!o>nd8=HRc@LdR@Rk\gRP+i,B!)SGr[(r<K^/UK6FGl3.$G4C&X$!+jMG@4&Q6!%6]D$!:Ft"sg!ACC55!I74qU!'h]L;4*1m$GZs->QPZW^]B9bKd2[_,_lT'Le;bd!!&6L(PS:@U&Z0b,:6f$!?[<2(HI.R;#eD]70*Bb#$hpTU5K(l#joqY#>N!3o`&b4p:pHcQU"(gr.V&,!W\l%\gYcj(Br_:*&I[($L1GU$@*J1-8Y\7dmX9;:^12>Atk1bE"n>%J-j.:f(bcONhUIo\gROYb+O[09QX,3NhZQl/k8\[8@5(,R1ilQ7H$JB-ia7iTSpZ\FAW$56Q-,[WkA=&'LhN<70*Bb#$hpTU5K(l-C6d9OVA'8YI\DgrtI^-FAW#<PX-+>RHU@F*6UL)!XKL7.*P'q"TUe*FA\DsgP(6a1Xebn=C9/@&YLVb-qluE"TUe*FA\DsgP(6a1XebnfLX(.&tg:09b2<l70*Bb#$hpTdWV<lm*'QK!!""!mi$ldkb8%W."a,Z1XSVl!'jA+FX8@9.==As"TUe*h@9obU[VD_UZa5>-ia6lUV-@n*CW6?70*Bb#$hq?To/sP!-<B%i_i;*-b:]+!6Usm_DH@3!!$C:,=>];.==K!"TUe*5)]J5U[URRUZa5>-ia7o0fZnDNl#"B;#gT\iD179NPZh:4qkT"R4\gH!;)52Dn.b>N2):4!2'bXL4")?Gf>=aqMHm4!!)pd*Q:+f70*BbL<kK8dO5MZ-]5X4MZNm/!9*=?n:3+u!.Zj&n"S</PfI>_$22Y<(Bjd=JOLT541Zg?!6XeDF@R7'#:;sg=*.:>!"^-_I2%!L;#gT\iW#Rr-%?Lt*R9(_0PtI"MZNm/TV@J+'jVLR!/1Pd39QmM!6NHUR4\gH!),WuFZ?r\!!(.Ii'8pU#nE81rm"1R"TSO7,*4i!>nd8=AHZN@(@iXc.f,,Bns'NH&FRba;#gT(53f)qcp[s8:^/.'2Pr7nU&Y09<4FiMF3m>V!)Nk%2E%Efkb8%W+QTJrb+jjr!2'aTC2?RTcp[s8J48u$;2*Cd!<>q#,;_<U1?bG4!5N?JU["P2!W\l%`b'$\A^EjH!.Zrsp/.+%70*Bb#"(.(VD@A0!!'goW1s]mMZNmO$jL3X9P)R>!<@X%:e,A^/d_T/1)PbN0pP$@"TSPr66NZ\\gROYb$ak\``*.J'EA-c&TuT0kb8%W."cLU)cIVr;#gT(?X0)B0'K#0!%<KY()p0iFAW#<TE+8U`R.*T!)Nk%/N0I]kb8%W5T.4_e?\;4!!"F"nJ*!A)0A^U!2(CuW7B6`!<>q#,:b[L1?bG4!'jPsIFL=AU&Y0AK)l]+;]0[S!!&ZSl=e8d70*Bb#"'gtVD@A0!!'eXW1tM((Bje()%<7lR*)([!WW4u+cr.R/d_T/1)N*X0pP$@"TSPJ6le,u>nd8=AM@k.@k**`$31'rN,(5;K.[K2J2.rmq7kaE#l+fh!F6B>!8nT1*t:!:-ia7i@$hXi9h,o*!kKc[!.]e)C66e2!<>q#USE?U3ej2+5SjS(!-#t426c;=!!"F"ED`C;*i$uAUPf0R!0i6^CS9$C!<>q#_kB>44U.;t7i)=/!-fjqY(!+'!W\l%#!r@GJ;c'IM_5>:!+6@J=.dl/!<>q#"/,^45fT+`72H+-!:UcA=)ZJT!<>q#US,D?6agV5d7"'9!.;Qfegki>!!&8"-n+#COmO#9FAW#<!$<nHoa4t=!!$Ra$4?Q?A7L?$>nd8=^]t9W]g<M=!'hE\JqC6RfpEpK(Bjd=n,\/DYL#]=!)NlpTO;S-2J,M,70*AgI)$lU.s+Vg!0k;JLlJAB\gROYJ.EL8HA*sY!.ZgA"gKeI5o0\)!:U#A=Kg(?!<>q#UEDIl1?bG4!!#2j&F1(B-ia7i?k``Tcp[s8!.;R"JQM'0!!"F";%SsX(Bjd=n,[/)?D38Y!2'`i5u7bk'EA-K#FlBNKe<]4J2.rF5oFcA!!!!@E(8b#\gROYb$YndA^EjH!!%D^)1blQU&Y0AK2E2E5o0\)!:U#%"C@d[!W\l%dmcV:qp^6j6GDcsUPf0R!;M'sl4plY!!(.Ip*_?Mq$t4VnpOV-(Bjd=n,ZhE.s+Vg!0e).;,G>\*R#5g4o#gu'EA-K-Zi4hcp[s8:e$O9613Rqjg0_=M$;?V>nd8=^^"sYYL#]=!)Q/#7mZ34Vm/u;V2GBT!;M'sl4plY!!(.IlmRZ<l:_sbUNB?5!!"+f7D2#("TUe*60b0f06Jrj>nd8=^lIWQ?D38Y!2,8NNe3(]#]1KVMZNkYpjb!^'tPdn!6PSs.#<r1j5lmt:iH?Y9G[j4!:U"pe15W<!!&5qn1GXM1l'GPMZNkYfF)!7.s+Vg!0e(W;%QS=HD*s+FAW#<!$BQV]g<M=!'hED;$7kE'EA-K7d-RQTo/sPTFAC[!fel?!!$COFA]6g70*BbLB""kU+"fN,`U5@!<<+I5Ss)#>nd8=A^EjX%!5>H!!'X(MgC(0$35T3kb8=e\gROYJ6gMj]g<M=!'hED;$6u,'EA-K0'K$9To/sPTFAC[Jq5N]!!$CCFA]6g70*Bb#$hqZ5SjS(!3cjBW)r2W!!"F"/rF&0MZNkYfEGR1.s+Vg!0fbc753(W!<<,dJhH='\gROYb+OY:)!I[o!!%1.(\J,@'EA,Ecp\NTFAW#<!5"n^HA*sY!.ZigU'Lt7-ia6t?-l$R65Ke*5T+Z@"9VpD!!'eekb;CWMZNmO%([j=JM%90!+6Ub;6S>8!<>rN"hWumALl[8:Mo&t2&lF3pJpN<b.E/\/1u2'c_cb4c>(+iMZNkYfEY^3.s+Vg!0fbcFa*GsV3kQkX:Q6IHkc<&65O4W#ljt`JhH='\gROYb+O[X4b*$1qRf7h<,),)`VMkPQGJ#&jZO3e-t?!P!!!gW;6S>8!<>rNH<o#Ba,]?(LUK_i2;sAp$!e5F!5L5NU0aOO!W\l%\u9O-OY5o:>nd8=^b4iF?D38Y!2'aIFjYg<[jFe@>Gjpf5H@;%>e*.[aJe`.'5ud>iji/D=h.!s)),Otbo<"4#*#WZ]B+e_lW"@/4_XJ`LBVn_D"2oXak?<h?b9G&8s\'tNNAh\@I)K6*P-_uV;ZoP*Srb*EU/W*g3TV+*TuBYcC?oJ/Tka'H>PjG=C8")^TD`M2m-N9B(5:Xb$48>B29lJ+!rn%=Q'51C*(d-a,7:jT0ITd(M1es!!&6R(\J,@'EA,EfVj^?k@B)46OWYJpQ''K[dVpaUl.]am.&Ee&MA:2hkl;?JGsaiK52loQoN?=[Q6##hq:Hmma(a.@X\"JIeI'r>;n54ejWZA?2n?PHL>ukgGQt51eJPf!!'52\u8]oU&Y0A__,4Op[5H8CGjSHU%n:h_4?E=k5OJ#3b$7PPoH5WF5i`roQ>Ls&V'`>d?7"Fo9LrV-LTU"8'^AFkNIo/iSLYaE].pdph=g?o5:-[F0]5dY1i_skb>JR`en-\s"Z-HpTEMMHOo[c%iI</cI4hJYI8c=4V@DlMMIKpoRj?aAhR=;(3o)lg%oQsaOt/V=A0NBbR"7Le4(8I$=+>G!+jfZM[g^i;,1rWTt>d9`;[[8oMu9HhUt?tnjT*b](^^Rcob&uT0@1Us'=.L)KtJp:JU02Dl>SKKDaL(W7L1'?1e(&F_)BFZu*F&1Ztr;$`c*t-RSi#665Fqqo66]\(%*(%k?W[4X)7SY1JC\b*WhB!2tl0l4plY!!(0G9,F^,Vkoon@dSL?bX[\*bN\IsW%5V3e3b%So]OApouV2PBD^RTNN_=@e7^D2Cu2m35A+g$oQPK+Y8aq%hH'L!l4N#)9V8fXh"fDOX(T)'C*3@t=W'HO70*Agm"-kT'tPdn!6VNd(]F*;:$%Vfiqlmf4E<8_5BD;1/a]F!ViH,lU30YZlgNRWBqUt[B(AV[];Y6WI/5g0qt7nLA,82A`r,JS0"PcOp@l<1e!?Z+dis88^:iBHdH=:HaH-//Y;T[N0dcr$E!X%R=6Q@Y!%9)!>r6-6=;g5=&)+tTMjDMB'uO4u.F1Wpr`Z#^I!>VI%BU)23rP'k>/*cJrI)*>'D^NSNNZd4UV-0/B\Mqthq:GPj!Tm7oZd0,C:HnTrNK`oZ2WU&dF&*`mYA+Zd7"po!WW3*U5O>O/d_T/1.'_aa%`*VUKg4-*nj$LM`U12puCb4jaB`a46Q?6WIGddo\aVc\u8\Gptsssase:=D:?ha^0@V"/h0#4SA08tQ<<au;2O"R55UBXmo:/=rjPpL3G%l<NHA%;S,`Q)J`rh7To/sPTT%6@d@GW-^\@U?Ole6%p8B\>n<(WB<S`!4*3%2N3cs/(AR3ib8(u^u)R\t$;I92UhF1533\I=Xn5Yjb?.AWf7eK<9;oDDaCj5>Qql!tPcWtYMJZSTps.\!Z:C=N,-4^t=Vft]Mm.lLJYI:s!qo\!_h3=P_s.jCSn\\VC-t?!P!2)$WW)r2W!!"DlZsE<LBgK_Beh3R"f1N%?^/4(ZeI2DY*hd/_HZuYX/@[KMjuiH?ahLnkGkUJqs1@L>)jdoH3.9r-okP@:*p":+U;kf(n,=m*3DQ##^Yo)CnP&8ULt<^%_tumg[!Xr>hi,slDd=eD^45e-Od_9)?/DSbh@jm9TQk.<5lY#]cK*Xdo(-bT\p:hRpU=5"l8NOL%kfG='EA-K7fGW!p\c2ASaUq'ce(C-G0f#.jkeg7ceSdN,c$N`OC3\iTn^)3'UrQ*n%JH2#Q[8q0tm><H]Na)9BaV3nG[Ak7Yt06U="oiR]iMg*m[=t*_E.#rTH?#Gr)3=(QAd4-ia7=Omq76g:V:Gmjii*S;WE!1c8[_9j9OUpNq%7Qi,1=C9H=$_'H:mSr8IuT/JF,4P[+PL&?\;`B=pKLQ2[Cju7ec8H5f;4cKm,b/Fa$.TC=#1.fc*fAkPZ>NQ/'Ejo]*>7gA7S<BAM$l9;8M_aDt!!&TV/fGIF;#gSY,N6233-+(f<nhNlrEc&Prk8/8X#4SEZK%ga>='rfrTa2%@jb9WTDbC#ebll`T=eJ$Mf&VeI"1[fH"%Xk/h/q]2l"Xd.t/sYrS`3b.,:@XXmD`nrjP<<2p@PhaHDO'$Y;^%2t=NR+)\BLS(B;'(cbp"r1R#Jhu*0-5J::!IWiPZU*[Wg2>BGRmIn@`qjY"^q3MWX9,%6Lqt4]OhI>d:Gn9@LMn)R(70*Aggk&cf.cd<(!-j5*\L9<2D*j4BX\4e7!WW51"hA;Ga@-+0n-j>7Fen,CeoK0r%tD/#\L7FXJ6S+n7YP(]!!(=f(Nj&b0)bEhGV3@:qVf,'[r-RXHf<uArk3X2:V^&3+V,7#PN>1b$31(a(?D2e+Vt:^^ba&#S[W\7cJSU!PE<PMo]n_CRlYn&_Y:;4a@-+0!8N021b.R\!!%6J\S+;L5CU,HkFhS7V#NsHjPTmsUOT?6ako9sR+&58N\E]hj>u@r!!!":5qX&jE_uf:4G-lQFs%S)!!$sGEm^hIMZNn:)<@Nr"1]f[!.\:8MaiD*'EA-Z+;]_Pa@-+0!8N021b.R\!!%6J\L?f0/d_RYi"kCJ;'?_Z!5LD37:?FA;#gRr[icKH$FqPb!1lJ/$9O?-!WW51"hA;Ga@-+0n-j>7fR[9A!!'eda@2jj/h6jbe,g+NGdUI(LdAoDNOneD\26%Q.-s2O9)#B8mmha#<l/X,ipgH8-i>7b'?tBbnJsp4G=MPnp2_jTn:pY=7!3/W%*BgR'hI0W7sS:.>SM?((T%"/^\=M:5k4UYD=(Oa\$%d<f)El^'Ag%iPH.TYKV'cn,N70Dh>0WXm7o8@4-5BKrMncPd9b0r4FTY%q\IHD/%/dB50QHJcZ%!eV/Ut&[8"I[/uVu6-8*8,/da\%MphR(httf-^6PYnTm6Laij?*;S8!;<>7jV:l+Y;/.;qYb-"WfY?prhf1$'iBE`(J?>a4YXrSEV/Jn+I@nL29MLb.M?%#mtU:NNSYJLfP@\L9nL'_N[t$3n>F><!tl@Nu\C*QU\6Ib!ocBJ5S]PkgBB/P]NN/FH5.F0!OQ^>4RTBYrL<3`kB8#sV'Z%<W'!OGcF;jJ$b2lM#b7(Nds`U'X%Xkj6S`'7PH;a,XC]i<P'Ua@.OuY>R/cU0qAh\qOXg/N.WH;)c+k=iZ!bXoJ"jY,SP8CO\R[GJ2%YZ1$:_p3,i)8MfKIB6afo.,D*']cZVF,D%\cM0k00enu(dVPgu\_PY''&%O)1LK9hF+,?_$?k_f@Net3sa@/albsdu$?;mOelJQY\[dDjI>^VuF1lg@SMphPRdehEu0X@I&-m"Ym\&E&s(Faj_e(cQbe(DH;\S/i!&KrTm0.$P?5\8Fs*()=s/\?($UR;K*=/_7-mbGp;+185l7Ho9On,6oQ"Q0B8IUbl#Rdbr](%KF8'7M(.Jm=NapF:;0-40t.;7CM'oj[Mm0"P]QT&uU?]iQl]K*KS)Fr>8okTOfS0c,93kgo)h78<Bc<iM9g3@2",<oK:ro4=XSpZe%':Am\3np.snP%RL\3VVdURh9;t*t#-BgS$rn</muojHgr7'aG6kB\o`g4*>UTDGL'm]CtUBB?>4A%NX/Ln/0i.=oYTCh^A>LP)Ice.O`"a[Bu:X&<uub>[!Z+G,(FoT&t3k\A&J#(PN4;Qf(?_/K@,1)Jn`"m;LKJDjoR+l)HVAeo,6WZLb^$EmC7>&Whp2RP_]ENRXZ^^YZ>7lcOA91Y_ScLIE^oBp%ZCq-?oS$KU1.mFqi)SLh+e:75NSb8>[L5&tVXkXdOFg$1GAp[8R47<e.P?+F!*G5L.%>p6gZ.62hTk083)qI\!2]Ij:EDqh^6fntHT:NB=D?T!t(U--LcrJ"S,\&_!dKj9j'pE];U\.Nika,l2`q^f3DSZK\`pTA9BY?a0g@D`l0k:JIOU/)leC=p0tVu@q6BAL+Hq5on*2E_8fhri:UXAC-acJg/Hgub1(kB,ot4t@cRS2%eFHh>;7SI1bWm*RE<NMcMWT02o5;l6iVBl//AVmau:X]dru6`&jc`BP]L,8[3R<PS:']b$--e8NDsI>_@[=3*fZEj&@a@\R6A/a=+3Yukg+a[IkQ5?"7FlD/@\KUch,J'hHa"^8cgkLSb;.@Ec,Xd?1o'9H"YbUTl`Mk2tX>c.690lbh%h7?q1`lUX96`p$&44MGfTC=XN&\0=GYPPpSm=gW-b5A-,/P]N^<t%f!F1YM$hhI>Q64r9OE$OW`NZf2rg9kR;Kc6r6f;oEA2]rpMFlWAL)`CB]3OenD1%fS@b7h5:pXWpkX^#/.::<iqPan>uY1N#/71\fmM`AmP0"PK7B)U;U!I!qf;t;scQ.75Z9Njh:9)#B8mmh^J,]Zbs+W'f'E`$0e(T#D?M0oVI7,>^7jJ#,uGO;c)M_8,;]Lna]9$-=?ZeK]f4+,'G`RUI=la^]Nl]6cQ>J6ogTJ7NHCa&+\P1N/&k'OU@<cZTqRl9Li1(C43D?o3>.#qPsmT9ADO7kn2jJ%)j0'Z[%U:rrH8tC;Aq%DJ=\qOY87?+\OInlFef/U$,?C,!9`g%B]dBdI]<(]d+mEjJ[?2+pL[KmaA5(7IGp[ALck;c7K=ij*n*Bu+(LQ%i<mL[H.,9dpm<4sC@KojAErJ"S,\&_!dKj9j'pE];U\.Nika,l2t4aV9$-*pnUAfVsX\=lVWIc<o;UpTB-(R>nYd>_A><iD-ApY2P@'6idqqk.Xm5u7<'fA>?6S)eM?Z:1B99?Q#lL\@4].^>:t5(.Z33OR+YTB0CoG!TJ,gR^cIV&.q#IAMU%e,jYf7+M1^?3lBme8NDsI>_@[=3*h0F&*ueJf@RrE"'9jJ5+e,C3TY^\SciCMH.ctD<b^LC:=2nF4';TcbE[;-RlHGdE:!DG&3d)D:X(,E^+6i]OCD,1ACd=X3#'m5&-THCLPWA*S]a.?LhOB(14H:p?^0YP?AZBd?:e>N,Fb@XHd+rB\<ag]2S`lZK1e[Za@:(U(NNG,-'L\p-M=2U4,H^l<E>D^-XGESU2"F'&8;SKk&1mKC.I#/$iNb.Wr$\DN`V"n<iNCcYM!hpD;YlDbk]6T't1RH1/)p<o!uI5IbY(=5QtL:=g8qE;iP?6"<)qg8]1q%/KpRd?F3@gmcNnR#?jXHhYUQaOZ'h>-r+B5)WZ&,'$OKebda##`2g9Dob@qMd4b5a@3(L:Ej.t)c=(`%(Rc!Lg624=8h!:p-M=2U4,H^l<E>D^-XGESU2"F'&8;SKk&1mO[/!%FMI,8I^BnX+rBnkE`(^<(\JM`;<lr#aHtgSe1DY-/rBcU(T%"/^\=M:&/)OPhiNcm(:gBIOGd$"Sj^9q2kk3K(iiJ!&@j4FYPPpSm=gYC7K%sGe@3LfI>(pj3qjoj-+FP0$ce?e,([g(l$h1OrFdj;6n[a`jJ'@W0'XtJU=?_$OY=P1W*;69>SIK4/kYl=Id]dR+XD)*^EFEd/TO]q+W#8iSPP\SoW/#dU%lfd%23&(Y2J8dC$!??=tt^%S%j?8nFLS!-0r!N[d3P:NuIu"_C'hX1\n/ABs"rWh0Iq'^gc'm*S&KXjVrD;<Z$44ICjeu^fgX/T<%qan(%G6Q.f7(jc#]lkO*sMFrZrTlBWL5"3<on5ieY7%NFW:A*a*[CG,m4Xrb['0c0f+H]>QoeQ:$3pM)33=Kt^b0"IW[[$@Rj(uJS_f4)^]M^EhaC'E3d[+pft`PBg;kpn^],cA'WGMr:&LWC<6?T>d;klB6Q\,>4aj1$2(>O%Lq.IPJg^6.9\Q]kW!(I\CfM`Nk7TZ<(ppTq':(s'76+@e&a1-7s(jJ!g.+r:]k#BE[p6S=hsnZ!=/8'u?M^(^\,%]=7%H!%%8;tFL;f6a=-]WK(cd<3h2\0%JMlBWJ?Nh/@_3I^hA5J3-N]*b/i\Qs5Q,S7MbPJ[TNm+?VKqq?sZS>um8jJ$CpD_sm8)Ns*jBXi@2(I^=EU'VpF>/>=q/[se60ea*8NW6$HH.dn"o`K-eF83#H(EYhdId-\>;s,h65?2H6e,SM_eP;Y3?<]U"_eEtF]Y)C3?Ddbmh7D<^H)\LWpfW!*d4KK6Ntb+]Nh4fs-FkQ&K3ZpJ@08Z9CqZHhmDV?9eH7gP;)R#cRN`OWadHBjAoXdTE`$0e(JX[LeI&ISBXoErMLe!IdjMoBo]n_CduM$.W36<cmQZ#pi[:@Blp#+\pAL&E^!J+GG;u^o?*mY),t%P(*i<0,Q6%K8a@5&TjJ#BZ)sFP:li$0c0*ZI"*lsJ%Wek!1@H=01^+SnYX>k7JKTB3:#el<[oGaQ"Ok9Oh>PH^nCB#B@C]<:PU`,lgYLp?`(6EN)^$O>ahb:2@en3aHIE!#E0Poa-`?.$R+`m\F0@aU<NuGGD5CHu0n8-4XD98boABk/RAo^LiJW/]&I_/e<[-WEb8X]6S:5Ajq4%9"<2j1o=4E0*Mf5>r1Ya$[Tlbht\'5)'<NL;hWi7ManYMT'K'l-cad-UT>pU(0Bgj(T$dO^e1XX:BSUh"Qf4Q5;->P]6JSiEWd/(bZ?\joa#HKB5d3<&j;)f9p3Q[8YuhlFq\FWW[7p:WsCa"h2B%.1U2rWc4kXIL].L=8XgT@[^mg3(K/FmI-j.BQ<?D*@^NLAYN<T"k3<msh4Z>.STu[-O'1amV8YMHgqoT;nO*Z-QX_?Il+#21Bd>pYD\3qU6ZqUa6eZo^W\8\L?f00'_N%_37$*H+57=AK[o/5gIqce-"="pI8)2r%p@H\Yoa:\KlPTC?8E!hn>+U3HD.07H]4:W]-'R'pUt".Xb1aV&T74-M7pf[mLpuh79IC.`"`8=M0aUEl%%EO3o!V\S/k#X&bTm7rmPk>kPl2F1'58I0(b<`Nipm!I][dD0psV+JlO7@GGb8d9d,3;lsL"i9R>^cnC$<r8Tk]p)Q<`r99)c@4P>30asu;XcoSGV+tVaD=4QZ-iX$PKA]do:3H5q4k_[BLXT925js9#&!T7-@,XnMj9>:8\q\HjBo=jnmr!0e7Ljgii:+itJ(C_LHR'JFBT(!"_>)!\<L\/Ie)f[q^Z$fI?XE'[%:emjNE^SRWni%JDri1&Gbpb5fZ6Ki#BEZhLCKjAYuQ%JFYXbE+K*LMcC%qe^"9.U7T4=,]Vl'=\KjkaB^o&+hn@sMCta$qG83:JIdV^#?gkjsS(]XFk+^fAm'go_E[DTFFX:.(&W7HG>V=ZrO+ggqiT!og9WfU;fOs9Q>PHF5^LF8O)6o\qJ,/BS]CiJaCK':)mC>m@DUXq4J,.*t8'b4ShYjX-ql*3L=[*Ysc@btI3UFplf5KP.EiRc:g$71O'_tP:=0:GI4bnNss*3\ce_1?\<,WuHGQ*Q3-!uO\q<e$<T?Pp!MdO0s8))em*Z[=`5oTjIn5B9V>A6TQ.!%mPSumF[l1Yp.KH)Ds]^tWPUbD@_/mH(8WWLP&dq-44K4b"ASX&`nPe#!0M<hY>%sQOleBZR0kq^WN:%I=n>:R/d(9cFC4fUDGh@\sYp$u>CHEp%ep>T)k:HmC%\7#+:I<n@KDf&sUO].uX^[.Qcl7]L)N611&Wq_aiD:G.=@E'L.Z#JUmZ$qh(>j:?'2KD[IJR$^H@=oqSC_^8kj-#<UO>ETm5gGd&e@jJ2pI8*TjeD0[jcWF@U\.Q&IJ8?&np\8gH2*lDI_9:YhRa;j8j2eb5$;*e@C&`*mY.]si"_[sfH8sej?P?_l:S;5+r2im\@hcsm9%Fu'0]a1_W3b@Q_(,$?YL0D9pr%`^0Df7`8qq]BG:FD@0:@=UD@.B.5ILB2kg8PJX!N"jbm0q[4*]>%+5rU)ZGf?2$:"V.Oc7hPbL$>od("CNm]8s+NjL9k*CBD"u-OaV'!3ekCIV!h1eVQAgO@`0i$'`3^fIo^sJ-VA=V,YAJ]b^h1nbTB3?bcI5ihOH1(QFqN;qJQE*_%5CHtMUR#dl>Gh/9Y:Q7n]77gWq!M8`WEZS"8Fj'e/^pYDB79a4^OaNNS@s/)WqEjb4>:0``1FlEoFn&q#rcn2IZ^((l/aQVE`(J?>h$l(K3*EdR(4pfAK[nr5gGd&eCE0Ja$s#$jeAnqjkt[:qPgp;Hbiq^c!N[2ea!oeg%l`CLCC"lX&PkYY?l^K;ZEc)oj$"Z_#EG6T/_pj]"/M*[YVm13A,6"@QP?Gd=dQ^XY@;GEn^9:(Rr-HKf8I>+#haumQ,SZS+uGj-3pXGqX&Vb2B+W!>0XE4;Rb@h9@e"0k3>/?.9E86=o,o-BiQb8ri;Xr(pZJVZ%X\eBbPPLp36Lp\KtU?5n(ZqpZc>qX@+/$c<Ia63.:OpPM1-CiWAN]20/7-I4I1D[aMnlA%_m7iH0e=9oNl=HgDmhAqW82b/nAO17\W.[<SE^*DY54m:c%X=IuTuYP(LgDVie?0i@4Crg#!3jt,&SV>pFop%@Y.!=@E;!9$Cbeh9pb/%tl"7P5$0OGc.[D")2#*A]Y:U($,4)9=h%Mn8c=o[mj"^0K1<XW/<7>!LOQG;&#XhFpPlp\DS\:6Eh7r:G]Z5G2UO(H!YG(n*Xs>h%;h@'N-O?HD6C?t2A9Em]Q$=040eNXGZBe/-Sh.j*>\(>LM>iJf+2if$=,oRGU)Y[h%mFnFn^$[p0Kj(F?5UYi4?]8h%U3$**'\nV\C7<PhSiKej?"u4o!Wbtjaj)c.Dl>)JV`]3;\&,5a"#>^l=Vf1=:<;X]Yn],k>?G--\q]8rp!51Rs2/I0cB\(M=:Dl!,HFRHV8MAGVC"/l8`=j!DiUj>R>YVgrFKMpY;s,em\V$1ilINj9P('SUm6`PW)n4<</m>YCWe-QEd=6C"i$o*GEo\"d72kSdO%Za?Mo#tbU.u1;4PXGe7]BXWJXd$(#BJ,NU2I_(]el1`0,JbR.gH39ek`^Hh$`(s=LN\!DuTTQaB^[[HdcFVC0k;.jeAo\"=l'5nNr8Z"WR'<OGbH5]P</BF_(CuZ@3gBdNm0"3Z9\qRPs87r_fjn<oJkVZ_d0`)bk#?)S5tD=h*drdt"^C:!5fF]_:2U8p1,l\KtU?5n(ZqJ6UgPZh/`B$KuQ6h7BMfr6WRSoSNE/nOT:LIkkA@]`:CMB8PU0fI"N#hBRK\;9=;eY%bP,]*XsEf2(4W4CauIOk+I.Y:]HfUD@Jq>h/iQdsH4KBG"7\b>kE8OV_\p/VY7U7<O`I]@,_;Curu398Q..9*knn9?BW9fOMtANO^G>3HYOHcK(^;^G`b^R^+R_F`f2>#)njD[Ir>`hMPqFZ*QG2qZ#O!jFFrBmGFu1^T(d$(H!cua)Y$Y=+Z\QZ$7G4jarKf=NEoE5$kW@Nn;\7#>b?$_Pc*%j%k!cpS1iqEMk_VIolI1LF/@jgMYf7ch"^c2gtDZ<P?WE4F#l`a`3uXPq&.<L=9jRH3VS#pDJ,P;u49)lc26FIk4Ni5(E6.:'Z3*rC28WYU\rB:nHXQ?H/`>R&L+-c^_aJnWV;Roc>P.rU@pMD5*K:BlDM'LO1<FQ8kW1^iA'M4beD'6c&dueXp^u^2W0\PJs9pk#_%@C3$/;^Y$Ur&U3<1%M'L@ggeCENO^G>3HYOHC?D7j?(5.=9rX>7.b2\m^IKAnW\*XFaK=YI4ajSLf-0C";UPsFcQYudRFagq$;Ck$fj%LU9!Hql(,+b>?a)7,$b9rfa/`7ZnN&^[p7h7Wb#Q3[Na,ihrc>r[ht&#!FUr=]?J!$ig+H\26+_'DERTE@r_nSj]XMa,\"E)K4(@bskKfN"ntd2A0UtmVgFHZt?9\Jb1mYT$VDiDge$khO:RIhoY!KBh+hr22YlMp&S/.*QGLlLVpA\+^-0]lT+D%t\mt:K5XM%,QqM.BpLXY+Y>As7,qAn5\J$M34h5(qq^0/JW_)m&Cp-%fd-@^7rq<mPbl[pS1BoDrUhl7X)@f7K.\^JZ.Cuh=H4*"2RLCN,.Z")_3>a0f03WhB"F&<+E:!\cqeB(.EC?=B(dJBiN^3]lbft@3dp96mV-Me5fPo+sJ8#f"I'!<:-GMBdGIf8Gjr`Gpu>[A4/q-%UJ74_cdEI%EpgTciu-@EI@73&M+3tIor\&&nd#>^G:7o,b\P?%CYT*GmQL;.HS+oR9;q:47>G909c;lr>AI7\k9?dARMS+8dD5?kI:n(iapQ`]/=D<8Oh::YZ5U%;p@/br9Qi\I#fHh"*mNS][sDVhpPmu\#d["$m,?^5@s<G47_%qaZhqVp)^cqS5Z!6R<lQ6EN_^OGMm)1,QIE&sN"9@nm1^;r_`b=*04OfmQRX7)3B8M>n%i+;Yif6Xu`7XmSiq@E<R>e/NEs/-s:kh,p5]fgl@L;'e--]>aOFC"cqTuDr>r(8VlZ,J"*/L;=ScOptMQBI/P[)Yr"95S-Z;$M&t)T\nGM^isgH=f"1:+iPG.gH<<ek`^Hh$`(srfP9F]glDAG3cu.P.a@\^Jd3mS#ChX0O-aDYL'qtIfEG3"[=Z?<$bX_&W7HG>i,IuFtD^K#p6?S&`<I_oGfb\^D:qfB:FkmHLHu'"YBA:^O2jWka5\l:S5C:fk""L3e(5iP:_+k4+Fj$?J%jb9O*>$@aiVTs8@D[i)]a$[q`&"[SL*ss/29([""gU=9.G&:5e+)2o=BXqH'm#5t\n/;2M<jBlDM'kBj#KT792e=$ba(LhclE(9Iph/+VcN2TEA0l/+AIk]bO]Efii(d`Yd0ER.(17fCP5#0qF1jJ#uJZ(pE?>h%bK"9Z2Aq'-\Uo@iiVBM+h#<2in.q$hP+VqV"8"`NM^[9FBG2[S.VjE0Vcm);1RZ5Bkg6LK$,!rLT,aa^D>>esZEWCjDO+r2imo"Y-[m9%Fu'0]a1,/2Zke>JPmL\7.Y'Ig84g$MjWgo90Q45_J5k:bTZEMF;aY?4/XCt-,hc3),[9m7U7hRKA?5T2QHoV_HK9#4.TB=7&HpggZ$kK8h%<iTQe24Q:ErRpie'4sdn9B6"UKhpU/Q/6B!`:'nceebPMS@2N"jW@6a]`((+3D7pp.8%qdYCET*)j15FVZC90mNu56l>YGrFmJiEC#dJ@g,f7XPn[_ja0>Pq-dKgQ4ZQBSrHiZ9g)<[i9qB%(^Nl:1aJn11=mb=DKNs8O)j3_(85!3NMjEpr;'beOU8?qFhX.SCjdBB'b%h+^\[W12Pg)W3]JdGXRSkUO<Mu,"h>,OBWOBNf+h)L`cGKZmVo]W5$*qISg\#VL/m,h2@/V87+l$sj/?h@P%Rnpl7Fe@?lRcT968%F))tU=rM^Ehal8ne?,-23%'#cHu&n",``kW<PP(K4M78&J,r@P:JBW7&6;5L5<@jaATKr`0I(KIJ[<4Fj:<6c7\Wi["SA^trWL8J%P\Qs<W<Br2%]fNW,>3hd6FVOCR!>JE1_Cg<D5f"RHe85V!d3C(gZ+2:IW36?2Hhe$u2WUS^:nbq\:9kC;/eJn'nTZ]'<T2Y2OOi!Sa[Hq_jb3)o1q3"KLNCjrT5"OlMgDSPj/#cMU&$]EQ>bFGnB(9+G9>*_>5R'h=4]XT*U`(W.Ypa3<6co-DZtdaUM`f9\joXp6?:IOU/Cqf,SVgV(Nl%d4gpr?HM-A4[W6`bW-iG388i9fje@XAZEh*?2n/M-"1bA9VclCIU@,.)]Bq_*icc,$$$e>!?iR[jeG79$^5"&pQnQE@m.";rT_t`m'<^bc'U5P$<"k@Y&Wh<7E"g9sIUYYsl6MXAm!r?jHS:_iQ.q3ej_Id\/o>CC>?TY81H'H6-ZW'q:UPeq7GV22%QJq2@UYmkn(#\^O30>0o9YO;Xhpucqm^W@qgLX#+%uCCR>Z!t'\f[^%grU'7,=;QDi^]e`9*ejTqYD/=F?#S2WUSB;ms^Vc:,G@EXDVfTQl^72AP<0[T:&+e_Ijrk&u)(WpH]c&@na?lQ"m9OY90#C.Q/`>1>,DPOMgVPOQ3pG-dr[@RDaTA+.I]-"973p^1m*.l=`-Oc*-#Sn)3BAA*>c?k=pT(626;(Y'fo^-d;$=tR!&(PT-gj5goYTm1s=[e:H)gX!r0)6\@Lh>*5!^6+"5[&@1g7^ZJ8YT(,$N4g;dQ\Z*ij"%LEYL)'R7P;i.eWVNoHK0^26!R6qE(g\Z(70"BO=91aLi;`PHhe>oj"%LEYL)'R7P;i.eW\(@i'u3J*()=c^EFC^I!\*3bF^1(?_OTML$&(bE`'iWSj^9q2kk3KQtVC0Nq!gF&EKRAXnUl;&k3RrYL(k76?E#A\L?K<:Ej.t)c=(`%(ReaL0PFtomXPY_MI4A(#%ACBPp$Z(M18E8`_Vlo&g)h%&-2H_D1S/o`ru:/dc+Wa3,c<6h0pYD=&i1\"Ae@11'W!S+7j4#.C7Di>?T4p^Ob^N4g;dQ\Z*ij"%LEYCp`[W.rGO[sO6q;WjVcpO%gLJHMiT3/1ZPIR>^pA+.I]-"973p^1m*/&@'UZpSDngV(ZsWH1jmA%k@I^bO=j*()=c^EFDIZ1m;?'!\-THmQ33%FWf[V)PmWOBg::a@3(L:PqfZ7)?ZIe1DY-/df?:(PT-gj5goYd>FilYFZGh>K$6/6/(%hoL)YG0'XtJU=?_$WUQ4GJjHcB><#*+@KW,g/rKGtI^GG+`MJ#3*Z#t9odt2]?Qg5^c94aQ\,6pKU.*nT0e*kVi$<>?`4,K9^&3^le8NDsI>_@[=3*hD=6IPhDm\alo)>Cs0g,4%<]sC9p9o)Wc;<IO^KV&bW-O`GQ'0QJhma=^lfOanDq<.r0OUEU:'Q[SVF$9lE4QIL(ih-DH]Kp7<k27CE`tcD1"3;_^)sT?ggqF>B6DT#5'l?XZd+3\qlJJ+NEUKH4Rp:R>K.t5+$PtEBopPb]68@$6(a.K%OM$``k^b[gSe\mJ.e#C$!s]#s)G/e$kJ`h5QTBZkpR:6n03]*'oEH>'"Or0Sf^FJ3u;HNkDK,@[<NN_.FmEmFqf,/K(68,dF/mpL/395IWHs<8TU2$I$mf^pN"Z&hd?8R@EU/[n!7()]lm<J@?X3/2)eB:-PuGLSa49j>:?\*pZrmHQ=glV:uO"@>7/A`q8Q^gZI9Vm$D',]BW]M4[dTTg:,_Q)4CQ7=)Aumr6SEl1g26^RDFGL>9,20!NLVb"hB,`i:9U#=l-ZgR`[+j`*&2]T9_m^Jn`@5XZ8)gbaZ@1BZ`R7tiQ"Yrl,2tlH]M3$9$?HUE93tQX1%B:kr;Mj^M<A3KV-S(q71AbQi&7MXJG7Uq@P59m4p:=jjAG)f@%/0,C*o/^i^lIF".kCi$<>?M`a4_oQDk05gC,;@pea[RSp9,ea+]SbXIk8fI;M2GiC:=I#9T7:b[n;a()[DZPTgN3qONoc/RY>;T.Z9GH00;3IL+>6FKWAlA[h`EaZ7G0']9b0m`Ka7F_So)Wu;TSgBq?;Hgoc(U(\=GP.98;ACt<NOT^?3;r@2F5t3\F-as:is8n57f(+VH]Q8*q)sI^e0P(^_l)4i6RRe'iMd2cC(KVhmnu*Be!#r]5<\PiM`TN3;_m)Tr-UuWcZOToh"T6ob;\br[t"n=)mnfYb>_)+$Q-uI;ZNs>adZ5&fDm:]Md#3;@ALAR;$M&a;`kk-1o4B6X4^?0fa9OM>pK#cme^c+5O)p-//MTsC"KuiEpl,8P41Uh0jrcqBl3_mACKV6$*<_f/\?-I-A.-Ia_:oihc=FFBD_[<`W^N*31eT=@$Ne+n'oTrhIXe-@qYI;=)Zp\1iU;Z9j:[oacrAkf(/HYfrLM1M_-*er*mCfJ:BQ2F80kK/nJC7q4L$3QJI:1l$`%JK"G'/%@-%_^Z@nmkD6=Q&"=j1OX4r%HR'78T(l'@8<-?_96-!'%\?Y1YSAT(B5$2$3cj8[ET66S=(L<D);g1M'2:KBdi3KO.N?HGr9(h.DqfJ08lQRi0mqI$^&!bWVU%;'Hs%5V33,ULQ8,gQ#c#,*Dd8bG\Ld6[jMuqGc`$WLDO7HZ*aEqNH2B.6hlN5#X(\X-?,i"S<!CWebd:!akr8#m0WnR$9_t]NfDgpnHc`jrXa<[T,[II`*LJU#q6Q^N65hpHo1lL-[#5=DHi(&"!%3%F(M+F$gG%(1\S)9O3L_IhM_^`!Xi1t.;2":h"4"Q)H^UC:P?E2B,9=;NiQM'jJiY!;-4\`)43:d=BZ)&[PPcJm%57%eL61Tl)EC6XS!)<.>#W`EQG#eaI6.iSpMR\"O.,,?ShO+C/qA5`Lc&E229tYCqbT)Dh99fhF<!8Heo.D(`I[(4Uf@%/3UQ_N,Ss0_SP+Z9CQp3cp<B>^X1%@dDqA&s@^b\fWm-eX'pI'VipmO?Mq2d4L#l<.q^5Go4K2k:i@%mAD=a>DK-ngl^<BLGHC3*&aHuHoVMBOn1uG8%!g/=Xe4c3t?b1]A/D3"d]0,EG`N-hELcD&m4jWFPD"I)4McO\W.8p22CLq+%(pJ&0DB[>kI9=8EJ?jm28AR:GfU7YD3U'".R4$O0n_3Bg3mko/S<e'dppojipQf^Pq!!na?d?g_4tPX&O.O'FE8mCHY,aHo&TDA4SQm:8Fjc$mr+&:?cZLbAjRVG=qD@RS=aD.L?*3NZH6sZOM0%RthZ4ttW!Zr$d5+[Io2fbVVl\NMp6EN9#EI!bnod:t*]e$/VVR$(CW\3p-P'dTZmDi8jA!3FPMY&L`<J<DPIW*Za;BYoT$KhCaOs2U>a3X#C+Z$mNZq^U*,t%7g<8P>Rl>oT_]1j?XSkf:Z4/n'Yfk\pR!7]/S\N'IQ]%<F3q#:V<a&qfpAOjY!P,.NaO6MMennd%Gu%=A_)ld\l=>,*5BaV;L&BhQHPZ2\>_X6h=sH31R]ZIa/m)8QDN=?[H7g-+j]h#M7VZ/p51o-ZGJ_CjdJg%a/h0ksQ`H&tU^X%(.![sfOI)ZeRW[3]L$ns#P#&i+;_t3)dhf45I=Ft_3+qK%I9"P(%*@`j;#B#FgIW_2%CeZ6lZ,#LA"IJFmsWiejn)!BJi=9]5V!#ArtCGm].>U@[/Mol3?i;godp#BHP0Q8MA2"ZjE4BN9n+Q#,df!WVGE&lE&tc>%9mSNe2f%nfh9m6Vo[sr.4J!'_nWHd&$U$7k-C?9l&-1'-DT\c\h3fYLue2uNW[mNgFob4%9n">=4NC>"H,7&2^nakAE<!p@W'eA9_H_98WaD6BW$CpoN?AZ4F&G'X%fd[g-^cCH1NZ6]_D,(YlRVjA1l"YZ6]9TUuugH&dEB";EPb,1o4B6-a9@"l%J^cDr+eIkLmKSN'5CD`F[r%0>;NQ?rk4k4J;:iT'LDoP?6oR1VT-W_"_u+!P,/QeN<8Gb;[SD3qWG$S<W/,a_K_-l]?o+oCVk%O.3NQU.m<>L+O?f*0aH;\Z!K6mp76:I*eO?aXplLC$pY83MZOKj]kc"_`1(kHDGR6>e.9>n>Ur@7SK8a6m`s:F&C)`E_9qA>/AY[4+d?eL]c@M)`:qEnk^[U(.55Mg&Z'(geR\sm>EcK7o.r`kbPB5Lab)6?o4]T@4P50NfcW/1l)'a]5@G*ahsC5G3]OSAN6gLY(+sQo/d?t-RC?sp?sV>f9SFHj_!1]kiEc'-d(2T<L``afX+;_:`3=f$T6/_]]Y(Z[[X_n-1;0SIO:iOkIQp:Q(g%JKpOEp>,/`\?Z7EM1m3o%!2HGEGbaCsUTF?r^\0O$d[Y8lX-HP\O7=c]jNY:roA85?`<J<DPIW*Za;BYoI`OqqaOs)R>a3X#C+Z$UNl&FB2S[#*hHhPlft7WmjJ!5Jo75-DH*5=Z9jXB[G8Xlfa0Ll$>h"!GiN7HfaqGSogoO;nkr>n5MlmX"B&Bl!:Qbs1\2QF]SX,1;I/2?28/pu/+A+M8_T/1orhjchg8=U8j-7N`[n7P)3d@rDm5AJ4YE=BhrqY`O[G.b3c&mdHP1)2pqoSWr_3:%S/qHOqg2Iug?6JgC6MS097m!BgCu8TlV>[G\82?-*Z`k/n(rtFGpIJWT#)rFKHe;p!`"*cn0TM(X\1Q7I'Ale`9%1sQ9"K1HLN%$jk=U_^fViAs/WZ]:AJE`A^IM`HVjL>j7Uod!1K#%jdnN=&<XM*=;-pW@lm5lm,g,"7cWni[aqLV7-dPrLIFoe_N60lA%Kj(@(.[p-]/Z#2gMb%836@Ap.)X+CL66r+72a2"8+Bh@(o+(K[WnN-$M."Pi67[tQcXM2R:RZ\NS)/MS\Oc$Q]%<F3m5W=/,7*P)$T)q``Ii\qi=hRjd5D3>4dlIRM:]=p=ONO(UjfihIVM/MctN(f(tT$#>_;Ug^,'D7f/h#\S1m>@uXEo0.cHMHs4N8o#J1e^URG7nr74)DV;]"YkIS3K."i#m-HWPOpigN]"E9%T1P&&TFJA-iru/_%P\K-PLJ8(#IJg/.b8Ll?bp[l$<IqM+pI#&:'2kWK2lXI.Wr$%:RGjdCOJ1EI:>JiYDac9L=;l2lWu?*f02*bhd^oH7KX'i1csW:#gt`VJ6_qWrRXeMa3So*_u7UV%6(V,XYb%54i9q0O6!DZ5f8oDZoaiop)@N>Vptr$2ou%q7X&ur3d'XN:<L!@kH-:qjRl9o8f&;Hp\%gr!D`2r0$5k'J\@]8_`S-D2GlRQAMg5eM^PO"0^j[SBAU;7bg1@?=]TRjLeSl9q)coF\Z!WNF,e\X!S:L?/t11j?U4.7b=,,47ba[-7ik+bSg1UIeDeZ\p(Mn\YklV8n1eR_s/DNH2Jq:!3+_a3"]>P+DVj2lW9g.$!kn[-jfGa@5b7i@;S[ThbgUpgf6YjdEBkI\UW*[0]4]3\3D5?)8mg1c`0B1SI+GC*nR$@/]m03f^"dQ/>4$4s6b])PU;Bs,@%8L[-gf`Rp?t3!*SPWo%B$sSe*E!^kq\cp=`;p;ej&BhrO(CPIaMcu0<;A8Qt`jhb;\j&%gTk`h04q=P84#[;X8^7\(\=Y##G.c\"L..rf'$GaH:jL"n;3_'pWQG?N8uu]N(2F<L\7,imgXmBt9c=)*],b_n;'UH':uVW\,osp\%gr!D`2r0$5k'J\@]8_`S-D2GlINAMdu=BZd0^W-Kbl[mJ%,Z?VrCAm*5E,;q9eBN32_SK$a7&"";?/o"]H3tIp-SU><6DFcC$/Jkg>;(l4i6]Z:'Dsi:>3MZOKj]o0%;VLZ5#:^7UP^Lod[Ispi7o*JkCQrJE@D9sfOkNjJ/ZfG*X+/u@_p3o2Wobqg+SBg6`&[X?r&9Pqmr8<HB<opJ?eu)L-*+`/^V0g@'R?GH94S'mO@uA8<nkrMqNiGoM?l/6Q,Vf4hYXCB]Su+hAUIK.UG.`.3ip2&I`2Q9k-Q)-pDQ&gFjCX#]kE6c?bb<Em&Y<83??:\:9nI"&K+=_(QdTtSa;C5=28_2Hh:1!r.[H9[b\:o.tblnDWKulPn$<q&\SjfETb18opZ3<?:h)XI'a&rl1tq=Rrof2g%\,Rm9_6;0@^lnEM.,ITT9bF,C,JJcb,/ln%J[#Ck.^3R>WhZ%-V2lm/7V?jtVt(M9<AB$)8pg7T1qa7Emo&]bScGbN(dT2h@6!1h()m/fGJr=6KK&_ds6a>X#T$e@]014Y%IuaE=WbNmb`Whc9IIGF'kpHr"+V.c`hU.+m;]+*0pKT?=^CN$"ig=g2qqb"]L_B[]V/&;O!rCNGh\fI=5!hQH><NOtLZhpFEuq\qEA2t&b)o(qe*am&2'3&.IImFJs@k:Bp=@AB.ZFKGW+U"#7<[%0C1-/+=s09Ao?&!u*(Uj[_qXD$uZ.:_U/[G-E=CdS$?FGKkU2X`glZY6IG%^L$3#.-_.:g(,0!fL)rOhWseS01Uo6*deMX[p8fCr2-L5A8]TE_>K,jVn;6`V4QSde)@N9r_)=qotQIH]Ob\"U7\gRK(I(Raqd<T=f@%IbBC=U+EM(/*Z?$Ha8k+E83C1Zk_kX5KTQX5M*$M"A=e'4jp>^HPWa?,%J0-lfB0LHSKceJ<>4q"X'A!CbDjW5OYt#rUtZm@T$AqdG"!YL/+<m0ALRSkjR5a,C/lUc_QITn%J[#Ck.^3R>WhZN+!RfP?bJJJXek;cUA^GWRg&8lmPOg@D*E"gWSY?Rl>n`>h$EC9?9PsAH(jVC!KU:\&LZg[TkZK"g38@TlnZnCU`\pMn3YU(,GSsSCcRhMeb?aRNQb7p30!eU=!#F<8dC;X/(9HeBM^aA]Wh/kD]j?Z"4^EP?003\,>[3%NPN35Cm+MEi[sA8Y:IZVK/fE++G7amMl,Bbjn8)L]0%a0tp1]gh=JWC$3;Gd[/)dI,(N_%!^i"#e:8@>Ii>G!g2)5.=3LaH(?f1d#-Y7:W`;&:>Hm5)qFB1X__Dr;D8TmGjVpJFehO@,HmcTS/%CLZqe2&l2>.erf=]IMOV:i?,3dW6nK@C)O&@<:%+5@2Z]aZXq9_:c9L*6SFFuE'qa*[oQY'RIGRT<.Vn$M,>T%]%_5]W83XH`O>2A=+CdFl`'&lOVmktBSW`>iCh!FLZ_OENOS[J<53#2j][JAcmG^fcDnd#+i$;+\U'r8V(e4?L(M+_%#K:c3&k5fW[<Q.BMK#,jYnbL;bN(dTbd*UoRPut3BN32_SWBE?^-^LI487u<@_TUUH,5:_laG!R;AD&Fg<Ep3TlGO*M_2*2OkR8,Lp((2g^,'D7f/h;\S+;^)<WNp@4JqO=+A!oePN_oN!dN.36A53W5Dnr#DSB?a[KVColF!KQ`G1)P_U3!;3M/%kB65I@%?gMQBKq89s9Zp(Z'Z.XA(V\NegpsJT]7geikRrjl^atd@tO;(_qo;E"]]p>^0Wn8M5nk+;a\iE`(`b=>%1"bFZka12kusB\u#OE<#IK9j5g>G)\]Im)?"?PLB*\AW*M=Lae0!@uuTqYg+-5g.-k+r4EL`>1>,DUI)3d:*LL6$P*Xja[K&JjJ%)j0'ZX^b=/&;Ga7!kpSb:YgU\?7SH`)nS+H=N'jLDRS\JW4EdG>9WGQQX]>qn0CU`3(S\=LE)<]=P$+X_9]/9f"p/0d#5Hf]q(3L#*W).;\PK62Q_?7\HE`&&+\Z"DIMu&a[E`$i=_UYXq>$Sd]a1gC)iVqjL?d5^<;-5h)ZhijeHB.dclE,CKTA+M0QU<.FG5g!V`7iuQ+*0pKT<c!Um%_F%IL6;,U2Jp,'oEH>P4ruo,e!HB^&3^le8NDsIEPp,.*@BOPWJOa(#JL[0SgKe$cf2BCk._j71nG6O7r,lE`'Rp(\KA#;-tI_V9V4qKt$so%&-2H_D*MS)rMu^;8fs<UV6S^>h!]57=C)!e5s^[WH1j5i@R7tK4n,kE/Y.C"uqHE'_1ShBJ4iZ(\J_f;;WQ6obDLElJ.S&Gfrn!+Bm8H*2>j*!DXgT7=9GHg<6,07K%sGe@3LfI>(pj3qjm7hXXT!L_b+@a/DgNJ<S&C&`;H+p@9SO;847jodt2]?Qg5^c94aQ\,6pKU.*nT0e*kVi$<>?`4,K9^&3^le8NDsI>_@[=3*h0F&,]m/O'DkBMl6XN!dN.3/LlSna69g07P/^oc%pKh]`m0'lm1:glk]^b>5qs>1>,DUI)3d:*LKCI!\*3bFcjErJ"S,\&_!dKj9j'pEUL1nl%5u(3L#*W).;\PK60)hqjFfngAHT^EFEd/TO]q+W%!#4\:@:r"KR67GYg8.MNi[,]Zc#\+cZ2r/"\.Dob@qMd4b5a@3(L:K$.'56Z[Q;7CM'$H33/M-LbbmJU]OIj,^%)feg5+rBneE`),WP>leM:Ve/We1DZ86EpPd+r<[qHU$6-T?'J"L0W6;a@1N2>a1i)Hdm>U:Vjh-l5#CWVq;!iW1T!6df$bZpS5G"-B@adn[JWT\8T@AoJF#r`Vl>>\L:FMc<G`)#1cY\E/Zis"uq?B'QNU?BJ7+D(\J_f;;WQ6obDLElJ.TQH-9""^cL`rN_u_,!6:1Z,4<,dmH$:fU4,H^l<E>D^-XGEcfRBj^#,_q?j1Z\a/E$TJ2:GmMjDfi\uk_%^&0,CogA6tNYpQ\b1ZDD\%C9I2Xj^!8uX>^fK+"'C^LBTU2Jp,"cEh/L?ikW\mJP2I^GG;fMOjIO36J:ij?+OPeZHsDATQlCuC(R[$6%A:md^?pF-rHUMf$-22_o_J6R'A;S$5EomX97+4sOW'T]QpGd),*V<M]3\$2iMpIQu0WN/VPp\PX5_P(l+(mU!gYa^Pkd8IP_\+P3WQabXO58901Lr"M_NXlFDr1FU]I=8^<F&ArC"TckVa.S-<6/5>HE/aY4#2%1s\L?:;.saG6bGuV]+,WQ;[^J/4Xg5Gq4jC)a]DHdOjJ%mM3o':TT7VV+FUQ7"V:YcP\LSIJV>GC>mmh_MO(7iMnL/u+gp_*7HCA&4%UA84b!eZu3sD7TH?RK$I1"!WW*;7$V8WYk`-&VhL@3Z!]cZY'!K!fuMT7q5:0T6cRAQmm(#e5=m_`9dA?!IlG/&K'0X*p]X-(!dO+`i2OB=-[78)loh:DHLr-/f\'T_.uf"ORoqhhKl\3G%3WnkQ=9u4Ul$*QVZeisdR2Ll.iRu;"ohNPHH!p_Gsa,]_cGl3<)p+;`f<ubmh5NeaT]_C]ZJjJ0<]\]Sks%%Bs!(q6X/uhQhhkIi<(E;c'C'h']MT:K(T(%s%:GfPa38)72U&Y/n:lT+.;#gRr.#V=E!!!#!+Vt:^!.`nH70*AgTGhiJ!!!#ONEd.t!!'#B(Bjd=JDJ:8!<<+m)KJ[T!!(Z2>SI/<!3.1Y"TSOQh8i"c!!&Z1E_uf:!8*99'EA+5WZ`/^!!%Q*a@-+0!2(6N;#gRrfSs,M!!!#!+Vt:^!.`nH70*AgTGhiJ!!!#ONEd.t!!'#B(Bjd=JDJ:8!<<+m)KJ[T!!(Z2>SI/<!3.1Y"TSOQh8i"c!!&Z1E_uf:!8*99'EA+5WZ`/^!!%Q*a@-+0!2(6N;#gRrfSs,M!!!#!+Vt:^!.`nH70*AgTGhiJ!!!#ONEd.t!!'#B(Bjd=JDJ:8!<<+m)KJ[T!!(Z2>SI/<!3.1Y"TSOQh8i"c!!&Z1E_uf:!8*99'EA+5WZ`/^!!%Q*a@-+0!2(6N;#gRrfSs,M!!!#!+Vt:^!.`nH70*AgTGhiJ!!!#ONEd.t!!'#B(Bjd=JDJ:8!<<+m)KJ[T!!(Z2>SI/<!3.1Y"TSOQh8i"c!!&Z1E_uf:!8*99'EA+5WZ`/^!!%Q*a@-+0!2(6N;#gRrfSs,M!!!#!+Vt:^!.`nH70*AgTGhiJ!!!#ONEd.t!!'#B(Bjd=JDJ:8!<<+m)KJ[T!!(Z2>SI/<!3.1Y"TSOQh8i"c!!&Z1E_uf:!8*99'EA+5WZ`/^!!%Q*a@-+0!2(6N;#gRrfSs,M!!!#!+Vt:^!.`nH70*AgTGhiJ!!!#ONEd.t!!'#B(Bjd=JDJ:8!<<+m)KJ[T!!(Z2>SI/<!3.1Y"TSOQh8i"c!!&Z1E_uf:!8*99'EA+5WZ`/^!!%Q*a@-+0!2(6N;#gRrfSs,M!!!#!+Vt:^!.`nH70*AgTGhiJ!!!#ONEd.t!!'#B(Bjd=JDJ:8!<<+m)KJ[T!!(Z2>SI/<!3.1Y"TSOQh8i"c!!&Z1E_uf:!8*99'EA+5WZ`/^!!%Q*a@-+0!2(6N;#gRrfSs,M!!!#!+Vt:^!.`nH70*AgTGhiJ!!!#ONEd.t!!'#B(Bjd=JDJ:8!<<+m)KJ[T!!(Z2>SI/<!3.1Y"TSOQh8i"c!!&Z1E_uf:!8*99'EA+5WZ`/^!!%Q*a@-+0!2(6N;#gRrfSs,M!!!#!+Vt:^!.`nH70*AgTGhiJ!!!#ONEd.t!!'#B(Bjd=JDJ:8!<<+m)KJ[T!!(Z2>SI/<!3.1Y"me$cb1m=];GA,o?(CDTN5;k).qIg=(LIM0[mcY"n(2KDn=?p7VrPQ')n&`2"PV,g#"n70W?A=9c_k-W8bd0'WZ`/^!!%Oaa@-.,loKB=d]=Y;kca/LW0*O3eR"jlDVVs1riOteF2.Ij.4<D%GC>U3g3NhFQ+slO7I<;%jJ"n1jIuVS!)O-8.,^&r%j"`LOdb0U=PVLj]4e=a+$K9pnE%5deG86Mo'"R;m5ZO1"[XCL"TSOQC</gEB98%OM-O#ZUJhi:-kI3UU&Y/n:^sr`i!f3^o\u,T>m=*'egR_B8nOiah29d$eS"82EiNSH>*Jk*5JDNA:"b$gFJYe?Q<f9eisu%.l?=cW\4M.jQ*8lHVci1K<?&;iULqM9NUo4BRW/)V/U_M3a+<5lnYI",#/=(qVeZ1mZ6oZ[nDATR<)1I7n'oUI9oPStGLEQ:Mr1;]<dstjH$T8@[Bi)3gA7j194bSV*]V`XF\eE'0;mj9p"QV;XZ1:dFDe"-n(,[aei7UCjOlWg+-iDM](`FoP8R';7F,;MSC_UkPrdU(h6)AXhR[dc@d@.OBCcf3ph@jCnM=(Kg<9?S'QkKUl14N%+nmn)\MFWjaU+TKCqVZq4EohG!tk8T\:Mk.5N:Wl<?;__epMPE[qQ"oNh=!-s*q(m<cWN&phpp2J+:s5F$tAp6=+-`4/qD;?dARMT!`Y>1#q&/dhg0F9@n'MPU56ZjIuVS!)O-8.,YMt>kH89bO=&$<[fK"6iXE$VTs,6\u.)>DYc\JJJ"+/aHUBH<lj//+$WCn/#_#Yn+PQBno3En]s:D$gNV0!1D[/$?MVgaX(?2IAt<KZUSc7.0BaVk)`7$SWq7Ce!]_8+f#fCgn$?UX\dXn,bPu.)[":L<)KtI3qF8_g%iVn?5B`K37@&>5G..'K1c`8-S[uB!qM^`Bf?*GW[]?1$^/[7qqliYt96)-iPL>Kir(4PWHb91%M)T3]aSKIDA3KL=XP]D'7Qd(>A.L2gABI3GloIP#Dr,c$/DiFjS+Y?h\Bba_@&k?d.j_*;)E;&(gL]jW=h$q9gSZ>NK(h15\MFWj<GRgHHT:Z@=e,dl.)'dTir0';OEp.^4T&m9_u*meDQ^(8dL*#*Dk>@ZY8gqbRpH,^<Q)e9p5B0Io8#K-kG"<Hhj3i!;V,R'3i-:A$N&Q/eH!`9(Bjd=J83.o!G@e\U08&%-[RLRIgWPl;VKe3QaJ9g?bC4%]ZXNeZS#UseSWAq=a8]X,Pom6^Z:m7^451UDT34:[I$+TQ9TT`MY8a%j$7lLIGr=u0$pY8Jb,52Bb0N?GBgT'ma[dkBFcb%]32O-$gY@%ETPejhj*4O44l\\*ULKbVrZg4=[a,#[Vej\GO">UT='jr,24lE]ne$lJ@:5sk:?p!r!Sjp>?kUTI5X<@\*lMB^B]ajTg*tV\#ZQZhWiIEZQXNPTXcidqoQbKg\4ihEK^S6DZ,BH+'!SS4P5IZdrouOf]cRQ.1:5<>]rPPhL3c1iQ#oW!mZ)0SMYeV?Mc"M*rI'=G"/(8Gh(r<N=0tM\L7FX!)u<<$9088/pcRO?('QDb@'AKe&@Yaig=EfN)ST7Pu0WDm.6N1^RSk?380iD:7].)Q9TE\47-HOa+9M=d[iQOd2/2CD:utmp)Q.>IhuJ'-@ZR%Ei*gc,H&bF.MmO&po-Hd>3!7kR^N\c/cE[_[Bd9qBc/XNNcBUV1D]:"Q,Sr$,^WWJ.IGNHB*%1:n*@lP@>+aZ*:X.qH1q0<g0$:2gTK;>n)<;>iRSmL\MFWj8b7Z6E+uft%qm)LerP(Nd?]R`_-/kRg?3gB'm9?KD-<NeiA6naLEFDO1S/Y<4))o-Q`T!iZdrsGUHRs.G++p%j8K/[5qWKE!!(Q2MZV00Q](9[rIN(tJj,B1($W_fZUcFOmQ'(4UitM4jKsMh].$4n7:2>Zj)jgfFkcV=2.pVhT2G(,c'@D`:[$n^**BUtF5ug!=)O0)p)H+:IrF.i=T4o,I"QEiAa?g0cUH`nQYW,gkne27g[ro95'[!)qhDDA]j86mO8Q\%m5Eu3f5KQEkG$O'VG?h]hcih&RP"A!+YBkDA=ouo^]c5H]MUIPVGp/_:G:ofAa\"4^V%I^8TSM[p'^lU..\2bBHWMiO*LFSP_[As=uk?C_tA%3"g%=_g=aJaVOJZV$tme/cE6H/0c,9/XJAIZm'aStb2:NpHs*jCMp?r%KPOi.gW2ea!!&Z1E`'UiiH!=/LJChDq,^i'A/=mf(OK0YO(PS6I9A9R:&??6c9)p!FmsXXN'_B8eJdW4FrHau^4/C#)A!PckG%R6XZ%jD<A#2onk[#6A%[5$5V?fc[jsE*PeW.-Cb`)3h6qgqU)$P%;=GVFF&=G<1uDr(-h,9<gX?tAPZ(Y[:>*lPhl`MerHn/;^UFr_`Q]@Cf_Q0j5DJ__3EReE>B[MRbAP>-ae_ip,r;IZ!/lUS_\k8%F"9<in9af`LJ<*$<lY)n:H%T$.#Vs"G;S*C!PFCs'EA+5WZ`/^S.R@i]l`Y=9HQ9+Y5-OZ's3V;-HoRsrUX&]WGRXP5rQhRDr%u(<pcuQbei1k:?YKA3-2@t>kGnplP3a`cI'/;QtZrpa@.?AmBP-Zo(RsDIW;M;cWR"*U)$P%Oa/PtEJ5#!3SG/Ar5Y.-r7eC#k`B"*cUFtC\Fj)`io.pS*[V,-V>7Jo+NkGk.GnJaH^8h*"tPHN_\k8%F"9<iOGiNeHr?QAD#O(q_^<Luqsmadp%eg(KNo2k!!'#B(Bp=;o".PS>'?st..?`7>PaTG)g8ku06cR<e_7q#9@r%#SX!7&k@NmB2XWOIlfgEWZG,i+jVs-rNfj%g2WOa,J%55,-*+^Qgjet'2T7cr'+J/hQ)tl&r'NS*DVpH=GF,DoU(R-#%_lV%4'DBeRs24CDV_j1X`7YN_iN_D4IH5oF4#doZuUoG:Z0XL`Q;ft?dDrRYMmLe?`.YrIn[p(%VY9\Pg@MO=O0F<SBn.V,N?O/gmiQ.>($i5?^5dQ33I(Q&"g4RpbA;DJ9)cO-NeD:ZJV<N.k'U;8ksM.Tfq<gjIuVS!)O-8.,YMt>kH+:n#FmZI_0cH\"R/hS[P2ac_u^mBf4Aoh7ibOk.^W\e`X&\<3DLc7o(-1PQa>lG9"sNC,aehma-IKr8drp^Am[oeHRV^W0u%UnAOkS/F"s+dei^,<NY/kK&IO),:6nj:4=Sfp.jG65,4t`*&h.=Y+1Yh7kSOfDn#0s=t)I;(@*nkWpEEe7X;:g=^^"@,?@QOY_]igq$O7jZhXoTro;2ubrX$/>PB*ilQ85t`[=Jbb6mo=/jM[C#Gc`Jp*ZkF1ue=iW]VIHCrFS`rU*Rc9\EZW\"P%\ROa_ZCoc0DYH/gp$th-LS4DAVJ6Z'pRUm@>aghd\@d#rTD]fi"!!%Oaa@-,BR,k"$gr1e7#*,b8.'IZnbZYm<6RL*kFm$Is9D_9sj%&Hb\G,L1L+QtFq*Q2eHiBbDn*%5qB3"`g0>D9tSA!:Dl]A.>S'(k-o"34#>'p)!/Qm,`KGiJF&X+qd-2B]Y]j!/arVFdM%K03%>-T+B(QGr6V6B=lRF/1@/5WHghO(;6[@K&?Xi\Zn(,6Vb\3__CCjlG(hgHUTbF2uOZ5tHX"38]?gYm\F%_c.Z`;PNB(U\9IUFM=\#A_%6D241C/s\l*S<@#.\!(Xr<Tu`L++=W2/GKi6hoXe]<;ZB;PPcK\RMG;oE_uf:!2tWW'S*5upD;q$GWl]ZjLW4ilaN]_B,@[EpmqHl6nSfH!!(Q2MZRjU+()a^ei9l%kc+EC7o,_QA@6p%I^9hT^.S1g_#Z157E9nakcNQAG98q>pmqHl6nSfH!!(Q2MZRi0mG=j'*=%Um3e,5hRE9.Hno4-!bmE8^35]mLkbos%HB%^";Gu5)a`A*/1I,E3MZNkY5W.Vs!*nT!ac!@c/Z[d1F-Sf><U2Tim5.Z>-$o?;lZ1C3_S/pK4bc[WpA@@rG6UShE_uf:!2tWW'EA+5Fs@e,!!%Oaa@-+0!+7a+;#gRrW.nOk!!!"B,8UL`!.\h*70*Ag?oN+'!!!"tL0PDm!!%0e(Bjd=J83.o!<<+-2f_aq!!&sP>SI/<!-TS'"TSOQC</gE!!$CcE_uf:!2tWW'EA+5Fs@e,!!%Oaa@-+0!+7a+;#gRrW.nOk!!!"B,8UL`!.\h*70*Ag?oN+'!!!"tL0PF!131Om$8k^U*'IRYMrf%#pgM(+n_Nin#EK(JSc7jiD;MFdSR0ZUqnAie>eY(DOhppEmc'LbTB%tHd:MhEop])hfT'!2?Wo`;.?]AQL1].k'iK^_M_?B(:SL!pk*8umj,0jqrRM=+&\0:i!!#tc/da8bFn#1%=[ee,?dGcL,;gdJ]fnm?\:(j9L4nr.abqMA4XqeTFm)&5`)h"qUpcQ'\*c7]T&i38U.r>V:<&h@GO@[(\\_Qpme7b_ji#jI>[m5/Ru-q&U5nWLPN%sfQN-lm/!7.k(C`?fMW^_*]Ir,?jIuVS!)O-8.(nj5K1?YkUulkC(-F,8\`g,h26s@[b;\XS:/3<1:+pkfW\h0Gn(o_Pq/Ok">24\^7;MQl_j4YWf+p"O>><Au/uL\kU?+U(m`e2\HX)E01jA==?plUS!!!#LOGguVSBOEkjS/GZ8cHo]J*9hF=gUf0^AmE]fTtF*s-Pq(\FY6i*?Z.uG.5YO>h"='kH:W.?$cqrOc'8@!'iF&U@>1=\`h]SQh.ctX\pOYC4d:-#>`!TkItr(McXe<)*FTrUV+_uR>kBn.pBPBgkMC`J+6"QN;!4i(ag@gGtte3IGr?$QN)9f13pB;`J2]Cor)+GZY"NqYN@D7n`?g544']$=T&H"+#h<&\GuGdS>qs@eg/"c^;Bh=:KL.\CY<id4:\n[?##j81@`o@M=.cUG@[u4=WR,<:4;lM9UWA+]p7%`n-.kTa%kf@)Ye3`ghMi?L/4DSA,fD/e^hEhXgD8ZGC.T#4j?"uP"eJ?IFL6ko:QDVYMIVCIf-Q`d.eJ-=mb=D5&&`^qliYYYMTgk*YB2H5=GV3?Gs/Imea&j\$F>#MAiqe3kK(-(;E@D,auD::??R;n4qeEH-42WF!o3^1/Ht+(OofEGI3l!=^h8@S\J=7b#l%!JjQ%]mJ]l:S>u7ObLX(*>6L.R<d$jd$bs3FDXW]dUep_R2fC%,n'OWf/sA-tT?2VKa71G-Z*t=k)djb.;#gRrW.nOk?=f^d<_gban$?UX]+,]7Fair-K4N*DH/8)rcCDZIIf3lD?Jkc](22F5VocF%042IGF,*JYD4Gk<Am+[_E8:*<QIjOnfu(P!V[f+S1F9*84R>%8>f[pf[r&;gVC^)<eCQJlYHkJ6,::a!.FT'6OM;l$I[6L):p"`omCNlqY0CY&gncdlm"NX:_kOPC[E(cIG-hFUh7@*-2iN=9mR&AYXHaq>A\3!4njd_H5sR&;dV<dWm?rl6bMVu^FdB?jC<F3]Jj/b061Z^TXP0\pn4LgeSHb+@A*Gan_Ab?gC8A:d>4NkJl^0=FnIukY]nd&g3.%>kSa=M,1:n$f-juiZl(qHb$q7I3s&%J(%iVn?5B`JX9@!Ii[BiSJd637\b,2"p\db&eI.HWY/\B0BD0q>n58Pn'==^.Ceg'Q7>Eo02!cif7f67)Y"dqGqg&c[pan$TcL\3/Y@P`_]73`k?q3lr^UiGMd4UH;uD8c#MfS<]G!!!#!+W#i6RHL;"C\!uAqNSG%b's9e_WC+;6S0h8'=jI55=J^0.8:?(N(t1UIFN662iE9shIG36fTpI/Fi^If[*_+VosEe6[a,n9ljnBG!FM+O\Gsl^]PPs-b?MB\A/!dR9U(7?m6))"D+80`?^=hN(U)C2Fr<E97VZ.qZ?"u#D+[:0^.n0F=PO?qTN!kJj#_C)03u2h4d6tN=TQ(3H)no"\$Of_Dk,ER:=29be@TNak:W'KG4G:^#P.V^nMBgJZbB^NrUX'F:7MdMDT%5RSg%[S(NJDm_S2:uduXHT#%W;94bqX-f(n"j(GQUqSa6jTf#taQo*=ZV1elL)/]-VDo(6*'Kp>Rlosm<$I+<Mh"Bg3LL)n8L1k(6aCVfV/Y(`rl.FI5K!^3_k[r%`g]Oo>./'V$34r93'>S5R-E$k7CgMmkc^:+]@#OFf1$31&+eW>^+X3>Y4MFhNCSikK"B[OZQ,H'Vk)n5:Yh^uDJ2Ep5EnKjS_`pi4Mh8s^SA_)MPMgr#)f0>eTCW'<9?X@g?FKmCDH-h5+F,eS&`Vl,PDq<(0S^g$'&,gNL\?uK5:+O]:lDr?_I+1.UbF.6gD:#$GW39dTrJ+/u-)XP-?"@q6oKZ!;5%=(&j2,ho!ch/%<f>RILGX/QE`r!rPMaL>:S'_!X*.O'e@+\Om<eX'=h(ACbSR^.MY(j@ikeS['jlIc1Yg8D<@#PMY0#Qg^78nB@-!Q_iH!<ZY<Uk]n,_cXGOCfG>-caN]`fo4V*0*)U+\4dgTo-XmeaNu")'XLeMH90I7?l;PW\un8i)`ea[MsfY)mE/Q]&l^,hTB2&XNah6S8]G!!(Q2Mo)O=F&Cur!(G;(/[FlkrPqN;hp"soB'Z6q7Cr$H/<YjlHO^QmgVk[%JhoRWHgq,^@r0>(8tQ&b0e"]^D=<R-NR<OSrRYpdR%.2br:!g&U`a6qp_e#%cBbAA+2U-ZlqH/?,?(o%bH+^5GO(*FQ/0dhV6sP%aRgco[i%-3If$j0>h#S"ijIO0=/GqYL[2D9rG'X+Jj,sdWLIZ3kSC8Pn4(Y2R8PIo4h[N7PdsGjLVH'Lahh(ROWNpZ>Z_Bq!qQ&PMaU=Pr&oQ*#3-VfXkt0POcsi4ZPK^r(bkp+L+O?$n"R:!eb[OMEu2"7,gY1ckX<K4^4#a,S@!k-^F=T%?!"1ofmi?Fir\Af'J^K4G[0BH%[W*nr?U%#[h4r3lpEB4!!!#LOGguVUA@$!A&>\;d"r)os&)F=beehFCFa]0j6IXTro3(4g@$G<ZRG<4QPPp;q"WOULQ@E&a:qcBp,qEP)P[h$qu<\g+3e-LU9e<,g>61c<m<a7Pd@068os.SeQ(mF5QC98S0_aihme*DqliZ6Ba*4"<d$h@PZD\W.FY+.N#U3Z2]_D"9As&+?Fqe4*B[XYUJT^qC5qh*3t9DKh`i5C\oQj)oS"f,s(,1clg<EZ-F$IYKrpjh4ktt*nBoj[.(5M$7U2FKaQYoWV(p(\f5)m/[MQ+%'JR48rT9`]l4L0&c#Zb0]'"$Xb)7?K/Qu/_jH3C@r(LV=AhqIsc&XC7R`"6]EBabQm&cQD#&HUY$31&+eW>^+X('@C03u1=Iug*TfD;ookB0EiD/9(.'(%3b#EG@3@<q7;P^2)>)P<c&3.&H=9QeA=_rC[A.U&UdB[o=c,s,W7QFD.Tq#&+SGO"=NR6&**cf*UBrU0Q`'jcCDo7McLL.qO0424g>6P#Eg]*+)fl5'h(T!K]&\Z!L'^3/W<>ICe81(/:J3h`10M),s'$]^hYpehKBg[uF)Ytb?9[W78tE%g4f>1j&V37k6M=3K(S8>@c"$^\'?!X$IAi[`ttVC`(?M]NE%(%U[o^TCkqGBC>1N0oN<g%__&a)a9OW1275T5LKn6KY!SO3>\7_r[V457)>egM"bLLbEdG!!!"tL0PF!'ltuW)R\p4X\k\hZU\L#L)oa6bLM*P-c#A./*6$QY5[\GNqXSY:/3<1aXhi8W\h0GS$q`f.61\Kj55JZ:Lof&MAC.7S%j?'1"hAms2C>-]i@-EXe="`dXQ)gEBp,MF84g8CCA_-s-O#8]>t?PT9&fDC$Rh5*<P5kLq@*n_4$hWmH!_O2t(FdDV_j1X`7ZH\S,5k>PfP>nV.64gj>EOeQsTj5C0p5ouAhaZ+cg=9OH_tmCO*sdU_IU>E$(2`)C1TpED5[g8<I@2)@uDJ$2"_o'CYXS<!.SXfeBMP(kR#8s'hfr-L]7k@VK@oVtko0]4=63Xm&^bHL^:a/rgl7A%>>q*Dn6Ek:>-),Fb\Ah"8i]1_;,AS'*eBC_[+Cr8i#n(q5N*j?0c-ia5I<'r8FY:<=#HK<S"<U+,0>s#[QcnEF7>>W[Z<5kZ?Rd'3WhgH&V>L/nUpoIW]8kE`&##?'nAR88LgIfTP`a<uB^;R/RXA[!u:D\Lf3@.VF;[-$bOnALje#+j$&aj&7>B+8!kWa4hnqd2Cil>,m\*?i$<i-qHF;uu0T"]3bJWOXTVL=Y0S32!mS'l`;,^K06rFW?UIBeU+d?msOhfi$p6Ic8lqMgn(E8:)#NUim)A=`R2M:cQ_g$SYIT?'4/;)>!5i/-L/=k$s6,ahlEIe0juG#)7-qu"L$op^)i")6S4\/^a?c6l=jbOQfdV2,LL4@R8/0B0jh:)D)Yd<#*D&X2CRA<qXL>#%^!78gS0amWd.4*>W@N1(qB+t$_)10cG8qYCTR;H.SbcK[;uipb'r)n##Z$b,CUr8l7sMiJqs/U`%W=BS*G(?8+o,;rJ7pfu>H\?)bli(P%j*qtj0hn?G'4CB7O;#gRrW.nOk?<*S%<1LRFV:35"eJdOLY*E-?UN";mRCDV>2qcsspE'#HnWg3LS[pg!mJ?63Ghb8;+;^$II-KtcjL4>.r7u\0DqE90D;0En[_4"lJ+ie/@GfINe]s>[4F$eRI/gUHf.haN:3K,#6l)(Q6EVp0gtmN[.4MB6K,/deZ[BY#=h)Z5#m!\fT13=`<;JXSP#EOYXk#IMbgcIBpODkK-t96rCU[*0^!NM>OK.uCbGq#lGF.-qI-m4N2L*(ID1UGc+3<>[33n&c-8cS,L'^lr2EsXME6h-ZSiM;2?(]NM+fV!U_LBM9MQ05>;j#sIR&ioKWS>cQ[2(Lm-$3;(D=<V@WGC.ll`>#+)a?(u>:urSSs6TQn9"86$C?Z?4KaKU%QKZg/!'-jM!s1i>TU*[\L7FX!)u<<$:%>>rC,%<\<?>E!<A?+\L7FX!)u<<$6\;VI/0dGj1N+$Vs72%4aE?VeNVoLq#CEh+r:C_!.\h*700>P]>nV\a+7`tc6"f]Ao_(+4C#O6F2E,0!"]t-U&Y/n:^sr`!#7UJH1CR?AbDO8Y#6XZCAm;*SHeAo6k9:e!-1p:!!&sP>SI/<!-TS'"TSOQC</gE!!$CcE_uf:!2tWW'EA+5Fs@e,!!%Oaa@-+0!+7a+;#gRrW.nOk!!!"B,8UL`!.\h*70*Ag?oN+'!!!"tL0PDm!!%0e(Bjd=J83.o!<<+-2f_aq!!&sP>SI/<!-TS'"TSOQC</gE!!$CcE_uf:!2tWW'EA+5Fs@e,!!%Oaa@-+0!+7a+;#gRrW.nOk!!!"B,8UL`!.\h*70*Ag?oN+'!!!"tL0PDm!!%0e(Bjd=J83.o!<<+-2f_aq!!&sP>SI/<!-TS'"TSOQC</gE!!$CcE_uf:!2tWW'EA+5Fs@e,!!%Oaa@-+0!+7a+;#gRrW.nOk!!!"B,8UL`!.\h*70*Ag?oN+'!!!"tL0PDm!!%0e(Bo?hhqiX_7<,F1pd])3`[(<@7ZC7ZK!?I+;FJ)'8/+q*(W<Hn$_jAi,1s,MMVT,EZ!a?:pOg":).o1QAm*\ji-h6lahomOl#SuMbNoW],0$(i71g+D&M_]H(I^_[7)W2k\0rOF+sKK[ihD6bLklm`&f3u)6q"sa93`/C&J5Ub:#_n'Lkpj(Bo.`l+sJ4?X@ZY2&J5Te,;!n46psF2N&?HM+sJ3T@\b;&MMR(ELp8:H;+*f?7#\Lk71g+D&M_i^/rGI@Lkq1Z\0rOF+sP$q`'k7M&J6bG&f3u)6q"sqPIN"b+sJ4#>2l94Lkpj(CD%FP6psG]85!2%&J5Te@nksWLkpkC(hnhb+sJ3T@]W.+'G1oh&L2./`^Kt\;\9TR&P&m/Ee2B%'+kfgEHE,*6.#[J<(',B`6g&S;+*f?7#\Lk71g+D&M_i^/rGI@Lkq0OQK+\?QDo[rLkqhP0>Bb`c&%74LcF+InXsQG2(Bdo,3%gM\0rOF+sKM1@2'MhR>QfVLc?<[0E5-q+sJ3T@O-oTRWB%E7R]^56l\?ZCOsWs'+kfgEV)4AJta#3;\9TR&P%K$?(eLc6psF2*"<CQTP/jo2Ba7g,)u`"rbX"5S;;uWLa1cTY;lggb>^kt7)T[RN%@e.F!;eP,*$&@ABd+?=Jd8d+sN%<@qpS;RM-8F&TL2W;esZE^bQW:&J9#9)1r;resqPPLkm;"(gM+l!dcM$W?NN1+q@s#laga_1],"W'+kfgEF]p0CX,6(W"(=X6psG]iMCl]([VB<&6Nut+sJ3@CPTltF)\Xi`aTYp&J6a`%D%"Hp7ft;esqPPLkrsliOJ"i"@9)FLkpkC_o6:B-[cU"<^K2B7)X&'p2Vpo7(mjX&J5W&^X6@M%[*d")^6IM,5O7PMoRJFe/KA>&J5T[1>5C?+X?8(M26tDL]\O^V'5m>zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz!!#9[Gh_c&]&ppaMcY:qR/*@W=n?Z7*N<uDmd;t\bZM6"dB\YN'k$`u?R8Y:kK^65P'&kd4`g/Fn``,MlKj;C6n4Ro^NrG6ng#i!C"A.N?R@Fu4T4;/p90rLIekn259Ib&E"IY=jiPj5`SllS:j^-16\X4FDEOg&a_o>PKq4c?63$jVdks.3[(ara=Lqq-Ho-kSQ6OGra^08^Gf/^jT7a!P\`#KaLpa;*J&ggFo8jLI#c/DXr=_)rM$!_X!!!#7d*gYIE,nk5%s,%cmB8[&q8Si"CS_tnI2/*;?;tX5*+(HRHLfkQ0iJmkh1"kAoetL4&f2Q<2X`XU%K#*/ER>q;8E-A;p5&a'$F?oVpmE<1&Jn_SI7Otb\*c=Y\YEb+l8&1sL0]ReVEeD9-a@hP%96YTBSU]jdL<Yb#ohU:!<<*"!!$C4H1e%EinU(![,pk2rV+'t4>/e.ofIZ05"7RcC1i%`)9MaFZTj4-A`BGH#QfZT%(=]Q@9CH:I81B,Ll;9*qQ9^dO.SU-"inZ]^&RRVr*k^jL@<YL@cF,Eq^2dPz!/?dK]+3!omdc@lmR)&:<opL<CjiG9*Z(+!*'E(3-[Xs.KT,FWdUo:-g\';moBk.rYMKtrffj[fDXX8fbH#DRo^qd#*]!I(rL@21^0N8R#@+_W[C/:n0<4s4k6sA>Z?5Ka>Be=8q:h)*4,YSh^J2q:o\Xi)GLX^fG99"k+[0c=^Lf$S93HS6p8n2q-#pWL6@Ilo8cS,OF=HVUa1pB('2$4akd^huTMfA`<nPQ8=[c?;eF_P`*?d9lh6?39IA:MurO$9c[\Vb\DQ_d-,:Q;W8=.gOc'rqFRmWddYTkM3YH+h*C\T?h5dF/-/\?-'T4&hKD3_1CpP\>0D/!c]>@)#l"$NE(h<fQMK(b!>V4j.!Ei87aH51g&&`Lc!L%9*XjnJ-QT=Rs?%mT=$hDjeZ[)@p_VNt8napQ;#8L%$$S$Q`(JZc.nc\A_bgXIu/X&L!_l@M>?5DA4R,^ja`kOmq^ZKG=!3_1fdE>\2VRKbo`8t,HsO>`?+flueArIiCXoq&]R-?,fhQ20)rV#=)h".^=XA[6<"moAlHaWDj4q7WSl^Nuq*481sJ+jDTu=)Q_60k$:saKqj5RL]E!z5`j7T%s,$>:UA)1XZ/m@<DDN(>I#PNc7bNFa3QXKqR29e$^U1IHu-CF\n9[t3OF(X;>j>,[WcW$pLs6NhUookF-j)>h$`l4<m)O\[X/Aif1<WM'^;[.eFT#F=@Zs"3H"\fbi8:3YMM<dqP(S;Z>CQtQT@,Un*nHjnlL`NCljTN?+AlAEM_5Q>skrGP`9iRoCZCE:J!F?<NYJ<??$3r0(')3A[Z[[n[%<l4!Z[4_o&C%"AMV:h%?%NIeJpHPOa/aH!WE"R3h1\b_G6q5:rkAQ('QGYDo*=1-]^Man(k\%srYBqP'jQ<^4QBp\oYTB7HD<\aS0b8QO9(;Dkqj%Fhh4f(QVP?=1f@7bsU$Ppaj_Ou0:2F?Y$Igta1boS-7)bFPrqZdt\>o&$,-k&ZCsP.51+h^/*rjXYN^NoBa$?a?Inl5D:GDS/"V3WGS@1M3F8/).@*.Ob=^7.qV"pM;6D3`gW17aB\aQJI<l9h<?mOH=?(FoJQtc]e%,3m\uUG`>(=OG#DuDVBM,o'L]%_>9P6HE1S@?hXLRi1%4EjCh7nK4ch8SrobU[PC'/L:$tP<B2k2b=#*kT=5n%DGk@dC[^T*l])t@s+H(_\%LsMGO<sebEg_&.@Z8!Bp7.e42MtIz!!(rM]=V9jBB_jMSnFM%W,+8&AsO.6fkq;5s6t#UI+jb3NUl]$B7J&nm*LT1k,9Ps\ob''.+!J4]^JtkQOqDOfutV]>)G$^HY)s/pBAZWP&e`p8hR>cl&kA2C_GR5M&KpZ..r#XjI,]2_oGQY1!a.5`A;MIeic/Z'BeMR/7!%/6G(Tgc]8g3cms!(cc'0UcN\CIpsQ*&2*H.R?qOVNHr9OrVp5STl$6js/ZH4EK?gVP3B87raLpD#16PrCe-1QWT.@m",:?,R-4nnafem>iIUYcdd+7^1g;HECHU/:4Oh/a>%0(YPpA<N9p)ZBamL_O,6[<j@4_;s'Q+3dm.3b:lW&3?%(U'hK*1($XcO9_HCA75(_M4rck0?,hDd:H5oV-K"Fgi97DU'`\aQG56OJJsK>tES6kK3R&*GCPuj3Vk/KJR%CDn@Ag8V5M`a_9,8>g`CMhfr.]55Xq)cWj/al)bt&kN>,1+mjbWe^"Zg1.f\<&^A_//c38O\QCo6SZ1YAYYaKuK7(lo=[+Mkou?CrJ[!03z!!#!'rO,)%DgqCSqX[.R/M+8PRd]*_(dB6^8ojofF-dm$D<4U0?X-S(bOYOqS+`6(BuCa7!>[1P,2:FsZm)=^Z>H,']$1/C`/N]O]J;^./%**6pH``Aa*,@clr%EXCIKWCML/fQEE=jD1:uS@H?2)eG6FdR8D)7QD>qD(24gYmgWDfTC[W9Heid`%We5HbbI\:Vkf%N$5'b?.UOBD<QgWGobhC!(p%h;?nq6jKclsoYd?#9h_VSFe%o0L(XPeSc#j6X.7d6RshG`GOIW6f0c(X9c2LFFMb0m]k&=*DspD^U13uU-+H[fj_'r_T*qXQaO)6:n&dDqqE8A^lN]6ek<S%3cLoca-6cBl<"[_LBu0;TV39DSPI@QI8&m=75^#PnsFs-'I3Ak891c9iu@jN#%0<m$<i8i;8#PrgT:dbJ<9)LUGIe(2QY`Y\[Uz\<5%lfP)d`?Duq@Mol7q9[gE7RM/,Te["5!IG)KSs)5X:)O`$!AB8]'MG$[h00a]oiDXBek93'0;=!A=TZU"cd'rsY:f+=E6FMkcQYd?Or?SPqqUC3Lo(/-9GO-b+kH?ce/>_?DPdY^6cqg(s\Ds=Ok#-5D"K!15opL$$kb[id.m(et2V[]iZoHlcUY<7OfC`U_O[Ig:DR0;>p.UYqANc^4d2JTZS%,D'?V+LO3-kLDclsoI)*\S,FI#""j^\Pp;a`V6UTZ^tI"1N$Brce+&K,Ns5PlZU0Aj9VqSbc./0/7b%TIYQQ`p(3A8$9dV%os;l2's5=W+9_+OS6'5"NP_0_<JrcH0BA59)k0iJ0GHf"ICtch3TFl@M@gQ!9ijR#]X"4.smF!S<G,5H-,FL3/hGJ+6.6KcN%aiG30!0`sO[2\7Mm)UdDMd<)KjZEsQaM/^HOz!!!-J0r%i/]Ks;U>u=THRk35$#5ZA/O46,22H0=:nS-2<=)X?ei1tY/p)(ubpE*r7>ZA8oqq4VQb;MG_e9p_'TL41fU(,B!a4MFAkXN"QHDnlt8Mp<^cbu)PfCq]]/mc5&5<gU+bT=W!g;IVVmL"9+fmu4;l=_e5G=Q&`d?<WNHE$hLQ(dnfDqsp3omQpp;mmC)@^qOfk37[;8*_+@6OI\tmagmOg;HGQqH>&S6,Z2T)bTQM8'7FTXFebI@S!(DWh9bb4YEbah&69Rf,/(aDR:U1+^JHH-S&\,)'o&<e-AS?'BZRK(T#sEJ,$NiD3ad]K#pT0AR"lMjD6$1T"15Kdp"o,cHh&L(Q6U2<B2kbb9T*_ga_^6c$Lh`bo%pgmuE<\1q*U6D^#,G5I7YmV_41Q2s5iM`W,u=!!!!A.'iS'\'3OilK\@'.IW$Pg"-/M`'kb2I;[k*B)bW#Cc6q6YIhEY9/l8KH@(q;OIs&Hh$6`qoY)%"i';Dk-SDDHY1L7erLs/VJ`H]8D*QBKSs;5(Cg0C54WD=j*Z+Lnh.Ktl03(P[Ffk*r3p.;Sqjp-"s7,Q(1#0hnlfL.DVVO`fW>Dbp"C/(fRC.m0lLhQ&Z*WjQ1X+,o[D%3m`'s?Ro'@oSart&sDL>1kYo+A.lYbPO=4bePd$0VuAAu8L]"U:&<lV-p8G$o#&!HE0ba5Ni8F&jb:7defQ(b.^3^.DkjS7QT`E'a#k$gAHDsa2lUrPn5b+u&0)<tdRkeoJAs7qRSPNLu0h*,53osgs`g`dPseGAM+oQuXJ\"=>Z(]sa<!!!"LTQIhns52M_Z8m'G-n;63`n6l!B&]PEIIHj5^W+.Em95u4g%!1=dCcJ(nFoECf%gSRTn'nfBMVFM:WWdG++Ns\_^(EDl_\A($a#n5_MO39M<hSKr;#rKjSZrT&p*r3rTttY`U2m"\1?dr+:bIQQT=+tbqjR9EDaDKH<WDnm-:k\Vg1SMVp<R:oCMA<)$q`E3d+\!qno<YWQFaPc1cB%Xl5\UM2Q]22_JZU@RdUo7g^BXYhk]6kRfn&6[<j@4_;s'FaQprYo+A.le^1B/QJ!uc/#V+I??uL;A[dSja"-e<g>tFO$e>WKKin66M?-"H=)G,f5PFthd^'=>HU)00cd1$G0hSAa$oA_gAdtKT,Hp*nttI'\ESoPD;HeXQbj9_BR3q5F)J7c%ekCFiJ]Jkz!#Q!p3QbB<inU'k#EC`L]iE\2S5Hpop14EhgWTlQ`'s]PrV#!a9\GBJBh^1]g\07Aa7!XmR@2b*QBRB%5##<Z+A!T89jLCr9jP[2Z^4cI+BAsUr5D),ICoK^i_j>,GkCVsq71IhFu`Lp[ariFihCbYHEGHL8e[b4C6A)1;>Flo-hN;Nn]\sX6+oQ(8Chg'c]S'Z:]>=2k*`j-\>X&>PdYURo).USdo,>kXZgmdb)(2+An@6fMb@ouf'9.M%]m2(Uj9L@l5T%.Y=]UY*M;3^GAtIU[X-LO0'ZSH\YeHOJqA$b<//1aaTZ]B=\h#!oS<UGTfbE[T!IP$b5:BSr(I]'>]fS/UXgYWNE./_>&dEc\m#\lbUVH$d+iZ7p?]PDac]sgOh-XW0E#F0X=Aij+,B^C']t&dq"pXtBecZ`?bC\@VXK)%p8FORMnS0Cf%0"sqiLM9WTn,NFI?6%gIc&EYPiL:a$g)FT3=srGf>DAG9=3![[["A=mp\EB8fDOIK(PPN)FZrzJC2KF5@7Gj*K3curlrb,?cT(f2R`<QPC8L+J%fSh>J"_8jNR()/s]5kbrbZ2mjsqc/'9#,'ij[hS<WcO)2mRjX1.LU?V=?.q2C49qHi;7-'?tO3HWL=G2k::U3bgFXTNu)`KkP)O&,X-.Bg>FKTsDC-^9KMcuTLs6)Dd8,h%GNCW9(UPa#Af1c7F?s)Co^;CQJEVQ$CL3PTr.6FrC2ZXj$:49+(K(2@)R%dcE*HIBI]#mhL67?t@N4YfN[[]P_#4YH#&h^^YS/1B^VBB%^:U<74,AfNtn7VO9aZQ(F[-[Wj%"$WRf.k^+qp2!YMWm;LS]Q3<V0$24UD,+A5Gj*)V=]qRb-QG(fae!!bTKs2ea'ldLC'nUj'X"q$PIA_=\_6m-+g#GEZkWBhMg@"9$!_1]I=?>JC&aBsEb7k/M1tUFcn0U*.ZNR.(C^f.VopQiJmLsDI8A_HS!pi8z!!!!%ASAhVlM3($iC-2c6-"U"7kJ^09:(l\N-6X>$cB-TXV]#BHlD&MDZBb;zJCnCGj.]Hg'P<Z4+0*hbbNlVX;\p.8-a/OO3o5@R3&bK"m6>gA=YJ[33cI3-Kc74TN7M=J@Y=XQ<r`4#zJCnM5ihCW=4?7ELdb&7_)g<A65IFUdWMO`Coq?&c,!%8Y<\Ya@A(T[<bq3df:L0@!TO>q?r/Q!;^QAt6143<<];MR$W[;B?jtTdN2Dhm2]/Tcjz!!"/r<,p=&nnf$Q19sM2G.dhdIVKF"U_DAKr,(0)_XTG1-I'^c=hjRiX#JEYe;.[<[rt)AdC4t#g\05g]-%(Rzzzzzzzzzzzzz!:]+F+"kn,Yl~>
+endstream
+endobj
+38 0 obj
+<<
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+39 0 obj
+<<
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+40 0 obj
+<<
+/BaseFont /Times-Roman
+/Encoding /WinAnsiEncoding
+/Name /F2
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+41 0 obj
+<<
+/BaseFont /Times-Bold
+/Encoding /WinAnsiEncoding
+/Name /F2
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+42 0 obj
+<<
+/BaseFont /Times-Bold
+/Encoding /WinAnsiEncoding
+/Name /F3
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+43 0 obj
+<<
+/BaseFont /Times-Roman
+/Encoding /WinAnsiEncoding
+/Name /F3
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+44 0 obj
+<<
+/BaseFont /Times-Italic
+/Encoding /WinAnsiEncoding
+/Name /F4
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+45 0 obj
+<<
+/Contents 46 0 R
+/MediaBox [ 0 0 612 792 ]
+/Resources <<
+/Font 17 0 R
+/ProcSet [ /ImageB /ImageC /ImageI /PDF /Text ]
+>>
+/Rotate 0
+/Trans <<
+>>
+/Type /Page
+/Parent 2 0 R
+>>
+endobj
+46 0 obj
+[ 47 0 R 48 0 R ]
+endobj
+47 0 obj
+<<
+/Length 18727
+>>
+stream
+q
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+BT /F2 7 Tf 8.4 TL ET
+BT 1 0 0 1 304.25 20.88 Tm (4) Tj T* ET
+Q
+q
+1 0 0 1 45.36 685.2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 57.2 Tm /F2 10 Tf 11.2 TL 2.665556 Tw (The synthetic and real text models use the same general) Tj T* 0 Tw .11 Tw (TF-IDF-plus-logistic approach but are separately fitted. Their) Tj T* 0 Tw 2.835714 Tw (vocabularies, parameters, and targets are not shared. The) Tj T* 0 Tw .246 Tw (synthetic label encodes constructed caption-scene agreement;) Tj T* 0 Tw 1.337778 Tw (the real label is an inherited source category. Pooling them) Tj T* 0 Tw (would obscure that distinction.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.36 668.5 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 1.3 Tm /F3 10.4 Tf 11.7 TL 75.6912 0 Td (Experimental Results) Tj T* -75.6912 0 Td ET
+Q
+Q
+q
+1 0 0 1 45.36 653.8 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 1.2 Tm /F4 10 Tf 11.2 TL (Synthetic evaluation) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.36 595.8 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 46 Tm /F2 10 Tf 11.2 TL 2.114286 Tw (On the balanced 144-pair in-distribution test set, synthetic) Tj T* 0 Tw .3275 Tw (feature fusion achieves 1.000 accuracy and F1. The text-only) Tj T* 0 Tw -0.0925 Tw (baseline obtains 0.479 accuracy and 0.476 F1; the image-only) Tj T* 0 Tw 3.465714 Tw (baseline obtains 0.507 accuracy and 0.548 F1. Decision) Tj T* 0 Tw (fusion matches the image branch in this run.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.36 458.4 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 124.4 Tm /F2 10 Tf 11.2 TL 2.114286 Tw (Table II summarizes the in-distribution synthetic test. The) Tj T* 0 Tw 4.615714 Tw (paired test includes 72 matching and 72 contradictory) Tj T* 0 Tw 2.845 Tw (examples. The feature-fusion model recovers every label,) Tj T* 0 Tw 1.0525 Tw (while both unimodal baselines remain close to chance. This) Tj T* 0 Tw 3.1025 Tw (gap is expected for the construction: neither the caption) Tj T* 0 Tw 4.77 Tw (words nor the scene attributes alone are sufficient to) Tj T* 0 Tw 1.961429 Tw (determine whether the pair agrees. The text-only classifier) Tj T* 0 Tw 1.5425 Tw (can learn correlations between wording and labels, and the) Tj T* 0 Tw 1.685 Tw (image-only classifier can learn image-side correlations, but) Tj T* 0 Tw .0475 Tw (the decisive signal is whether the attributes correspond across) Tj T* 0 Tw .342 Tw (modalities. The table does not imply that a 100 percent score) Tj T* 0 Tw (is attainable on unconstrained image-caption data.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.36 445.2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 1.2 Tm /F2 9 Tf 10.2 TL 55.1225 0 Td (Synthetic In-Distribution Test Results) Tj T* -55.1225 0 Td ET
+Q
+Q
+q
+1 0 0 1 42.86 382.7 cm
+q
+0 0 0 rg
+BT /F2 8.5 Tf 9.4 TL ET
+q
+1 0 0 1 2 50.4 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL (Model) Tj T* ET
+Q
+Q
+q
+1 0 0 1 102.8 50.4 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 9.832 0 Td (Acc.) Tj T* -9.832 0 Td ET
+Q
+Q
+q
+1 0 0 1 140.6 50.4 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 2.7564 0 Td (Precision) Tj T* -2.7564 0 Td ET
+Q
+Q
+q
+1 0 0 1 178.4 50.4 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 7.191 0 Td (Recall) Tj T* -7.191 0 Td ET
+Q
+Q
+q
+1 0 0 1 216.2 50.4 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 12.8872 0 Td (F1) Tj T* -12.8872 0 Td ET
+Q
+Q
+q
+1 0 0 1 2 38.3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL (Text-only TF-IDF + LR) Tj T* ET
+Q
+Q
+q
+1 0 0 1 102.8 38.3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 8.35 0 Td (0.479) Tj T* -8.35 0 Td ET
+Q
+Q
+q
+1 0 0 1 140.6 38.3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 8.35 0 Td (0.479) Tj T* -8.35 0 Td ET
+Q
+Q
+q
+1 0 0 1 178.4 38.3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 8.35 0 Td (0.472) Tj T* -8.35 0 Td ET
+Q
+Q
+q
+1 0 0 1 216.2 38.3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 8.35 0 Td (0.476) Tj T* -8.35 0 Td ET
+Q
+Q
+q
+1 0 0 1 2 26.2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL (Image attributes + LR) Tj T* ET
+Q
+Q
+q
+1 0 0 1 102.8 26.2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 8.35 0 Td (0.507) Tj T* -8.35 0 Td ET
+Q
+Q
+q
+1 0 0 1 140.6 26.2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 8.35 0 Td (0.506) Tj T* -8.35 0 Td ET
+Q
+Q
+q
+1 0 0 1 178.4 26.2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 8.35 0 Td (0.597) Tj T* -8.35 0 Td ET
+Q
+Q
+q
+1 0 0 1 216.2 26.2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 8.35 0 Td (0.548) Tj T* -8.35 0 Td ET
+Q
+Q
+q
+1 0 0 1 2 14.1 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL (Feature fusion) Tj T* ET
+Q
+Q
+q
+1 0 0 1 102.8 14.1 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 8.35 0 Td (1.000) Tj T* -8.35 0 Td ET
+Q
+Q
+q
+1 0 0 1 140.6 14.1 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 8.35 0 Td (1.000) Tj T* -8.35 0 Td ET
+Q
+Q
+q
+1 0 0 1 178.4 14.1 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 8.35 0 Td (1.000) Tj T* -8.35 0 Td ET
+Q
+Q
+q
+1 0 0 1 216.2 14.1 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 8.35 0 Td (1.000) Tj T* -8.35 0 Td ET
+Q
+Q
+q
+1 0 0 1 2 2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL (Decision fusion) Tj T* ET
+Q
+Q
+q
+1 0 0 1 102.8 2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 8.35 0 Td (0.507) Tj T* -8.35 0 Td ET
+Q
+Q
+q
+1 0 0 1 140.6 2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 8.35 0 Td (0.506) Tj T* -8.35 0 Td ET
+Q
+Q
+q
+1 0 0 1 178.4 2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 8.35 0 Td (0.597) Tj T* -8.35 0 Td ET
+Q
+Q
+q
+1 0 0 1 216.2 2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 8.35 0 Td (0.548) Tj T* -8.35 0 Td ET
+Q
+Q
+q
+1 J
+1 j
+0 0 0 RG
+.4 w
+n 0 60.5 m 252 60.5 l S
+n 0 48.4 m 252 48.4 l S
+n 0 0 m 252 0 l S
+Q
+Q
+Q
+q
+1 0 0 1 45.36 379.7 cm
+Q
+q
+1 0 0 1 45.36 323.7 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 46 Tm /F2 10 Tf 11.2 TL 1.004286 Tw (On the count-manipulation test, feature fusion again obtains) Tj T* 0 Tw -0.017 Tw (1.000 accuracy and F1. This result is specific to the generated) Tj T* 0 Tw .328571 Tw (domain: explicit attribute comparisons closely match the rule) Tj T* 0 Tw 2.288 Tw (used to create the labels. It is not evidence of equivalent) Tj T* 0 Tw (performance on natural photographs.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.36 141.5 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 169.2 Tm /F2 10 Tf 11.2 TL 4.38 Tw (The unimodal confusion matrices reinforce the role of) Tj T* 0 Tw .435 Tw (cross-modal evidence. Text-only produced 35 true negatives,) Tj T* 0 Tw 1.12 Tw (37 false positives, 38 false negatives, and 34 true positives;) Tj T* 0 Tw 1.67875 Tw (image-only produced 30, 42, 29, and 43, respectively. The) Tj T* 0 Tw 4.54 Tw (feature-fusion confusion matrix was perfect at 72 true) Tj T* 0 Tw 5.476667 Tw (negatives and 72 true positives. Decision-level fusion) Tj T* 0 Tw 2.751429 Tw (reproduced the image-only confusion matrix for this run.) Tj T* 0 Tw 1.715 Tw (When the trained fusion model was evaluated with feature) Tj T* 0 Tw 6.681667 Tw (families replaced by their training means, removing) Tj T* 0 Tw 3.191429 Tw (cross-modal features returned accuracy and F1 to 0.500.) Tj T* 0 Tw .60125 Tw (Removing text gave 0.486 accuracy and 0.479 F1; removing) Tj T* 0 Tw .6 Tw (the image features gave 0.465 accuracy and 0.476 F1. These) Tj T* 0 Tw 1.81875 Tw (are inference-time ablations of the fixed model, not newly) Tj T* 0 Tw 6.294 Tw (trained leave-one-modality-out systems, so they show) Tj T* 0 Tw 1.6275 Tw (dependence of this model's predictions rather than the best) Tj T* 0 Tw (possible single-modality performance.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.36 60.1 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 68.4 Tm /F2 10 Tf 11.2 TL 1.675556 Tw (The count test contains 72 REAL and 72 FAKE examples) Tj T* 0 Tw .8475 Tw (and produces 72 correct predictions in each class. Text-only) Tj T* 0 Tw .345 Tw (and decision fusion each achieve approximately chance-level) Tj T* 0 Tw .53 Tw (accuracy on this held-out contradiction type, and image-only) Tj T* 0 Tw .275 Tw (achieves 0.500 accuracy with 0.539 F1. The fused classifier's) Tj T* 0 Tw .148 Tw (perfect score is consistent with its access to the explicit count) Tj T* 0 Tw (comparison.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 319.64 550.8 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 191.6 Tm /F2 10 Tf 11.2 TL 3.027143 Tw (The held-out count evaluation is particularly sensitive to) Tj T* 0 Tw .53 Tw (feature design. The training task includes other contradiction) Tj T* 0 Tw 1.47125 Tw (types and the count-specific test uses unseen scene groups,) Tj T* 0 Tw 1.614444 Tw (but the captions and rendered objects still follow the same) Tj T* 0 Tw 1.405714 Tw (finite grammar. A rule-based extractor can identify number) Tj T* 0 Tw 3.422857 Tw (words and object counts consistently in this constrained) Tj T* 0 Tw .961429 Tw (setting. Consequently, success on this test demonstrates that) Tj T* 0 Tw .731429 Tw (the count comparison generalizes across generated scenes; it) Tj T* 0 Tw .25375 Tw (does not test robustness to pluralization errors, dense images,) Tj T* 0 Tw 4.651429 Tw (partially visible objects, or captions that imply counts) Tj T* 0 Tw 2.672857 Tw (indirectly. Future work should replace the generator with) Tj T* 0 Tw 2.688 Tw (realistic examples and independently annotated agreement) Tj T* 0 Tw 4.6 Tw (labels before making claims about practical image-text) Tj T* 0 Tw 3.942857 Tw (verification. Since count and other object attributes are) Tj T* 0 Tw 2.538571 Tw (readily parsed from the generator's captions and rendered) Tj T* 0 Tw 1.152222 Tw (pixels, this test probes transfer to a reserved mismatch type) Tj T* 0 Tw .535556 Tw (inside the same synthetic grammar, not transfer to an unseen) Tj T* 0 Tw (visual domain.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 319.64 536.1 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 1.2 Tm /F4 10 Tf 11.2 TL (Real-media evaluation) Tj T* ET
+Q
+Q
+q
+1 0 0 1 319.64 478.1 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 46 Tm /F2 10 Tf 11.2 TL 4.055556 Tw (Table III reports real-media test results at a fixed 0.5) Tj T* 0 Tw 1.287143 Tw (threshold. Feature fusion achieves the best accuracy, macro) Tj T* 0 Tw .2525 Tw (F1, and ROC-AUC among the evaluated models. It improves) Tj T* 0 Tw 2.751429 Tw (over the unimodal baselines on these measures. Decision) Tj T* 0 Tw (fusion does not improve over the individual models.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 319.64 464.9 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 1.2 Tm /F2 9 Tf 10.2 TL 60.8825 0 Td (Real-Media Held-Out Test Results) Tj T* -60.8825 0 Td ET
+Q
+Q
+q
+1 0 0 1 317.14 390.3 cm
+q
+0 0 0 rg
+BT /F2 8.5 Tf 9.4 TL ET
+q
+1 0 0 1 2 62.5 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL (Model) Tj T* ET
+Q
+Q
+q
+1 0 0 1 102.8 62.5 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 9.832 0 Td (Acc.) Tj T* -9.832 0 Td ET
+Q
+Q
+q
+1 0 0 1 140.6 62.5 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 1.7 0 Td (F1-FAKE) Tj T* -1.7 0 Td ET
+Q
+Q
+q
+1 0 0 1 178.4 62.5 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 2.0192 0 Td (Macro F1) Tj T* -2.0192 0 Td ET
+Q
+Q
+q
+1 0 0 1 216.2 62.5 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 8.8782 0 Td (AUC) Tj T* -8.8782 0 Td ET
+Q
+Q
+q
+1 0 0 1 2 50.4 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL (Majority baseline) Tj T* ET
+Q
+Q
+q
+1 0 0 1 102.8 50.4 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 8.35 0 Td (0.804) Tj T* -8.35 0 Td ET
+Q
+Q
+q
+1 0 0 1 140.6 50.4 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 8.35 0 Td (0.891) Tj T* -8.35 0 Td ET
+Q
+Q
+q
+1 0 0 1 178.4 50.4 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 8.35 0 Td (0.446) Tj T* -8.35 0 Td ET
+Q
+Q
+q
+1 0 0 1 216.2 50.4 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 8.35 0 Td (0.500) Tj T* -8.35 0 Td ET
+Q
+Q
+q
+1 0 0 1 2 38.3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL (Text TF-IDF + LR) Tj T* ET
+Q
+Q
+q
+1 0 0 1 102.8 38.3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 8.35 0 Td (0.818) Tj T* -8.35 0 Td ET
+Q
+Q
+q
+1 0 0 1 140.6 38.3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 8.35 0 Td (0.896) Tj T* -8.35 0 Td ET
+Q
+Q
+q
+1 0 0 1 178.4 38.3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 8.35 0 Td (0.571) Tj T* -8.35 0 Td ET
+Q
+Q
+q
+1 0 0 1 216.2 38.3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 8.35 0 Td (0.742) Tj T* -8.35 0 Td ET
+Q
+Q
+q
+1 0 0 1 2 26.2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL (Image CLIP + LR) Tj T* ET
+Q
+Q
+q
+1 0 0 1 102.8 26.2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 8.35 0 Td (0.809) Tj T* -8.35 0 Td ET
+Q
+Q
+q
+1 0 0 1 140.6 26.2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 8.35 0 Td (0.891) Tj T* -8.35 0 Td ET
+Q
+Q
+q
+1 0 0 1 178.4 26.2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 8.35 0 Td (0.541) Tj T* -8.35 0 Td ET
+Q
+Q
+q
+1 0 0 1 216.2 26.2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 8.35 0 Td (0.822) Tj T* -8.35 0 Td ET
+Q
+Q
+q
+1 0 0 1 2 14.1 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL (Feature fusion) Tj T* ET
+Q
+Q
+q
+1 0 0 1 102.8 14.1 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F3 7.6 Tf 8.1 TL 8.35 0 Td (0.834) Tj T* -8.35 0 Td ET
+Q
+Q
+q
+1 0 0 1 140.6 14.1 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F3 7.6 Tf 8.1 TL 8.35 0 Td (0.904) Tj T* -8.35 0 Td ET
+Q
+Q
+q
+1 0 0 1 178.4 14.1 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F3 7.6 Tf 8.1 TL 8.35 0 Td (0.645) Tj T* -8.35 0 Td ET
+Q
+Q
+q
+1 0 0 1 216.2 14.1 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F3 7.6 Tf 8.1 TL 8.35 0 Td (0.852) Tj T* -8.35 0 Td ET
+Q
+Q
+q
+1 0 0 1 2 2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL (Decision fusion) Tj T* ET
+Q
+Q
+q
+1 0 0 1 102.8 2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 8.35 0 Td (0.807) Tj T* -8.35 0 Td ET
+Q
+Q
+q
+1 0 0 1 140.6 2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 8.35 0 Td (0.891) Tj T* -8.35 0 Td ET
+Q
+Q
+q
+1 0 0 1 178.4 2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 8.35 0 Td (0.528) Tj T* -8.35 0 Td ET
+Q
+Q
+q
+1 0 0 1 216.2 2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 8.35 0 Td (0.827) Tj T* -8.35 0 Td ET
+Q
+Q
+q
+1 J
+1 j
+0 0 0 RG
+.4 w
+n 0 72.6 m 252 72.6 l S
+n 0 60.5 m 252 60.5 l S
+n 0 0 m 252 0 l S
+Q
+Q
+Q
+q
+1 0 0 1 319.64 387.3 cm
+Q
+q
+1 0 0 1 319.64 275.3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 102 Tm /F2 10 Tf 11.2 TL 2.948571 Tw (Accuracy alone hides difficulty with the minority REAL) Tj T* 0 Tw 2.06125 Tw (class. For feature fusion, REAL recall is 0.266, compared) Tj T* 0 Tw 1.917143 Tw (with FAKE recall of 0.973. The training-majority baseline) Tj T* 0 Tw -0.12125 Tw (already reaches 0.804 accuracy by predicting FAKE for every) Tj T* 0 Tw .051 Tw (test record. The fusion model's gain in accuracy is modest; its) Tj T* 0 Tw .748889 Tw (higher macro F1 and ROC-AUC add information but do not) Tj T* 0 Tw 1.776667 Tw (remove imbalance or label-quality concerns. The explicitly) Tj T* 0 Tw 1.1225 Tw (manipulated-content category is rare in the test partition, so) Tj T* 0 Tw 2.373333 Tw (this experiment does not validate pixel-level manipulation) Tj T* 0 Tw (detection.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 319.64 227.5 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 34.8 Tm /F2 10 Tf 11.2 TL .196667 Tw (The confusion counts for the real-media models are shown in) Tj T* 0 Tw 1.521818 Tw (Table IV. TN, FP, FN, and TP treat FAKE as the positive) Tj T* 0 Tw 2.82 Tw (class; rows are source REAL and FAKE labels, and the) Tj T* 0 Tw (threshold is fixed at 0.5.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 319.64 214.3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 1.2 Tm /F2 9 Tf 10.2 TL 68.501 0 Td (Real-Media Confusion Counts) Tj T* -68.501 0 Td ET
+Q
+Q
+q
+1 0 0 1 317.14 151.8 cm
+q
+0 0 0 rg
+BT /F2 8.5 Tf 9.4 TL ET
+q
+1 0 0 1 2 50.4 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL (Model) Tj T* ET
+Q
+Q
+q
+1 0 0 1 102.8 50.4 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 11.8346 0 Td (TN) Tj T* -11.8346 0 Td ET
+Q
+Q
+q
+1 0 0 1 140.6 50.4 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 12.6744 0 Td (FP) Tj T* -12.6744 0 Td ET
+Q
+Q
+q
+1 0 0 1 178.4 50.4 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 12.0436 0 Td (FN) Tj T* -12.0436 0 Td ET
+Q
+Q
+q
+1 0 0 1 216.2 50.4 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 12.4654 0 Td (TP) Tj T* -12.4654 0 Td ET
+Q
+Q
+q
+1 0 0 1 2 38.3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL (Text-only) Tj T* ET
+Q
+Q
+q
+1 0 0 1 102.8 38.3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 13.1 0 Td (42) Tj T* -13.1 0 Td ET
+Q
+Q
+q
+1 0 0 1 140.6 38.3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 11.2 0 Td (236) Tj T* -11.2 0 Td ET
+Q
+Q
+q
+1 0 0 1 178.4 38.3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 13.1 0 Td (22) Tj T* -13.1 0 Td ET
+Q
+Q
+q
+1 0 0 1 216.2 38.3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 8.35 0 Td (1,115) Tj T* -8.35 0 Td ET
+Q
+Q
+q
+1 0 0 1 2 26.2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL (Image-only) Tj T* ET
+Q
+Q
+q
+1 0 0 1 102.8 26.2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 13.1 0 Td (32) Tj T* -13.1 0 Td ET
+Q
+Q
+q
+1 0 0 1 140.6 26.2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 11.2 0 Td (246) Tj T* -11.2 0 Td ET
+Q
+Q
+q
+1 0 0 1 178.4 26.2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 13.1 0 Td (25) Tj T* -13.1 0 Td ET
+Q
+Q
+q
+1 0 0 1 216.2 26.2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 8.35 0 Td (1,112) Tj T* -8.35 0 Td ET
+Q
+Q
+q
+1 0 0 1 2 14.1 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL (Feature fusion) Tj T* ET
+Q
+Q
+q
+1 0 0 1 102.8 14.1 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 13.1 0 Td (74) Tj T* -13.1 0 Td ET
+Q
+Q
+q
+1 0 0 1 140.6 14.1 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 11.2 0 Td (204) Tj T* -11.2 0 Td ET
+Q
+Q
+q
+1 0 0 1 178.4 14.1 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 13.1 0 Td (31) Tj T* -13.1 0 Td ET
+Q
+Q
+q
+1 0 0 1 216.2 14.1 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 8.35 0 Td (1,106) Tj T* -8.35 0 Td ET
+Q
+Q
+q
+1 0 0 1 2 2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL (Decision fusion) Tj T* ET
+Q
+Q
+q
+1 0 0 1 102.8 2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 13.1 0 Td (27) Tj T* -13.1 0 Td ET
+Q
+Q
+q
+1 0 0 1 140.6 2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 11.2 0 Td (251) Tj T* -11.2 0 Td ET
+Q
+Q
+q
+1 0 0 1 178.4 2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 13.1 0 Td (22) Tj T* -13.1 0 Td ET
+Q
+Q
+q
+1 0 0 1 216.2 2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 .5 Tm /F2 7.6 Tf 8.1 TL 8.35 0 Td (1,115) Tj T* -8.35 0 Td ET
+Q
+Q
+q
+1 J
+1 j
+0 0 0 RG
+.4 w
+n 0 60.5 m 252 60.5 l S
+n 0 48.4 m 252 48.4 l S
+n 0 0 m 252 0 l S
+Q
+Q
+Q
+q
+1 0 0 1 319.64 148.8 cm
+Q
+q
+1 0 0 1 319.64 48 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 90.8 Tm /F2 10 Tf 11.2 TL -0.04125 Tw (The counts show that fusion's improvement is concentrated in) Tj T* 0 Tw .922857 Tw (identifying more REAL examples at this threshold. Relative) Tj T* 0 Tw 4.891429 Tw (to text-only, it correctly predicts 32 additional REAL) Tj T* 0 Tw 2.2675 Tw (examples but also makes nine additional errors on FAKE) Tj T* 0 Tw 5.433333 Tw (examples. Relative to image-only, it increases correct) Tj T* 0 Tw 3.83 Tw (predictions for both classes in this partition. These are) Tj T* 0 Tw 1.484286 Tw (descriptive differences for the same held-out examples, not) Tj T* 0 Tw 4.181429 Tw (evidence of statistical significance. They do not reveal) Tj T* 0 Tw 1.997 Tw (whether a post's source label is itself correct, nor do they) Tj T* 0 Tw ET
+Q
+Q
+ 
+
+Q
+
+endstream
+endobj
+48 0 obj
+<<
+/Length 164
+>>
+stream
+q
+0.0 0.0 612 792 re
+W
+n
+1 0 0 1 0 0 cm
+BT
+/F1-3 12 Tf
+14.4 TL
+ET
+1 1 1 rg
+n
+290 7 32 18 re
+f*
+0 0 0 rg
+BT
+/F2-3 8 Tf
+9.6 TL
+ET
+BT
+1 0 0 1 304 13 Tm
+(5) Tj
+T*
+ET
+Q
+
+endstream
+endobj
+49 0 obj
+<<
+/Contents 50 0 R
+/MediaBox [ 0 0 612 792 ]
+/Resources <<
+/Font 53 0 R
+/ProcSet [ /ImageB /ImageC /ImageI /PDF /Text ]
+>>
+/Rotate 0
+/Trans <<
+>>
+/Type /Page
+/Parent 2 0 R
+>>
+endobj
+50 0 obj
+[ 51 0 R 52 0 R ]
+endobj
+51 0 obj
+<<
+/Length 12115
+>>
+stream
+q
+q
+1 0.0 0.0 1.15 0.0 -118.8 cm
+q
+1 0 0 1 0 0 cm
+BT
+/F1 12 Tf
+14.4 TL
+ET
+q
+BT
+/F2 8 Tf
+9.6 TL
+ET
+BT
+1 0 0 1 304 18 Tm
+(6) Tj
+T*
+ET
+Q
+q
+1 0 0 1 38.16 730 cm
+q
+0 0 0 rg
+BT
+1 0 0 1 0 15 Tm
+/F3 11 Tf
+13 TL
+29.8155 0 Td
+(VI\056 DISCUSSION\054 LIMITATIONS\054 AND) Tj
+T*
+60.5055 0 Td
+(CONCLUSION) Tj
+T*
+-90.321 0 Td
+ET
+Q
+Q
+q
+1 0 0 1 38.16 715 cm
+q
+0 0 0 rg
+BT
+1 0 0 1 0 1.5 Tm
+/F4 9.5 Tf
+11 TL
+(A\056 Interpretation) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 38.16 638.5 cm
+q
+0 0 0 rg
+BT
+1 0 0 1 0 64.95 Tm
+/F2 8.55 Tf
+10.5 TL
+0.764106 Tw
+(The two evaluation profiles answer different questions\056 Synthetic feature) Tj
+T*
+0 Tw
+2.777471 Tw
+(fusion reaches perfect scores on generated caption\055scene consistency) Tj
+T*
+0 Tw
+0.123456 Tw
+(because explicit comparisons match the attributes used to construct labels\056) Tj
+T*
+0 Tw
+0.611285 Tw
+(This does not establish performance on natural images\056 In the real\055media) Tj
+T*
+0 Tw
+1.022156 Tw
+(experiment\054 feature fusion improves macro F1 and ranking metrics over) Tj
+T*
+0 Tw
+2.777631 Tw
+(the two standalone models on one Fakeddit community\055mirror split\056) Tj
+T*
+0 Tw
+(Decision fusion does not improve over either modality model\056) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 38.16 581 cm
+q
+0 0 0 rg
+BT
+1 0 0 1 0 43.95 Tm
+/F2 8.55 Tf
+10.5 TL
+0.092592 Tw
+(Class imbalance changes how results should be read\056 The test set is 80\0564\045) Tj
+T*
+0 Tw
+0.767312 Tw
+(FAKE\054 and an always\055FAKE baseline reaches 80\05635\045 accuracy\056 Feature) Tj
+T*
+0 Tw
+-0.049782 Tw
+(fusion raises REAL recall to 26\05662\045\054 while FAKE recall is 97\05627\045\056 These) Tj
+T*
+0 Tw
+3.732025 Tw
+(are descriptive results from one partition\073 no confidence intervals\054) Tj
+T*
+0 Tw
+(repeated splits\054 or significance tests were performed\056) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 38.16 565 cm
+q
+0 0 0 rg
+BT
+1 0 0 1 0 1.5 Tm
+/F4 9.5 Tf
+11 TL
+(B\056 Modality ablation) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 38.16 520 cm
+q
+0 0 0 rg
+BT
+1 0 0 1 0 33.45 Tm
+/F2 8.55 Tf
+10.5 TL
+2.457006 Tw
+(The inference ablation replaces one modality\222s features with training) Tj
+T*
+0 Tw
+2.286606 Tw
+(means while keeping the fusion model fixed\056 Removing text reduces) Tj
+T*
+0 Tw
+0.7477 Tw
+(macro F1 to 0\0564627\073 removing image features reduces it to 0\0564632\056 Both) Tj
+T*
+0 Tw
+(are below the full model\222s 0\0566452\056) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 36.16 455.8 cm
+q
+0.090196 0.196078 0.290196 rg
+n
+0 59.2 259.2 -14.8 re
+f*
+1 1 1 rg
+n
+0 44.4 259.2 -14.8 re
+f*
+0.933333 0.94902 0.960784 rg
+n
+0 29.6 259.2 -14.8 re
+f*
+1 1 1 rg
+n
+0 14.8 259.2 -14.8 re
+f*
+1 1 1 rg
+BT
+/F1 10 Tf
+12 TL
+ET
+q
+1 0 0 1 4 47.4 cm
+q
+0 0 0 rg
+BT
+1 0 0 1 0 1.5 Tm
+/F2 7.3 Tf
+8.8 TL
+(Condition) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 138.784 47.4 cm
+q
+0 0 0 rg
+BT
+1 0 0 1 0 1.5 Tm
+/F2 7.3 Tf
+8.8 TL
+(Accuracy) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 200.992 47.4 cm
+q
+0 0 0 rg
+BT
+1 0 0 1 0 1.5 Tm
+/F2 7.3 Tf
+8.8 TL
+(Macro F1) Tj
+T*
+ET
+Q
+Q
+0 0 0 rg
+q
+1 0 0 1 4 32.6 cm
+q
+0 0 0 rg
+BT
+1 0 0 1 0 1.5 Tm
+/F2 7.3 Tf
+8.8 TL
+(Full feature fusion) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 138.784 32.6 cm
+q
+0 0 0 rg
+BT
+1 0 0 1 0 1.5 Tm
+/F2 7.3 Tf
+8.8 TL
+(0\0568339) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 200.992 32.6 cm
+q
+0 0 0 rg
+BT
+1 0 0 1 0 1.5 Tm
+/F2 7.3 Tf
+8.8 TL
+(0\0566452) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 4 17.8 cm
+q
+0 0 0 rg
+BT
+1 0 0 1 0 1.5 Tm
+/F2 7.3 Tf
+8.8 TL
+(Without text) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 138.784 17.8 cm
+q
+0 0 0 rg
+BT
+1 0 0 1 0 1.5 Tm
+/F2 7.3 Tf
+8.8 TL
+(0\0568035) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 200.992 17.8 cm
+q
+0 0 0 rg
+BT
+1 0 0 1 0 1.5 Tm
+/F2 7.3 Tf
+8.8 TL
+(0\0564627) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 4 3 cm
+q
+0 0 0 rg
+BT
+1 0 0 1 0 1.5 Tm
+/F2 7.3 Tf
+8.8 TL
+(Without image) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 138.784 3 cm
+q
+0 0 0 rg
+BT
+1 0 0 1 0 1.5 Tm
+/F2 7.3 Tf
+8.8 TL
+(0\0568049) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 200.992 3 cm
+q
+0 0 0 rg
+BT
+1 0 0 1 0 1.5 Tm
+/F2 7.3 Tf
+8.8 TL
+(0\0564632) Tj
+T*
+ET
+Q
+Q
+q
+1 J
+1 j
+0.666667 0.705882 0.745098 RG
+0.35 w
+n
+0 59.2 m
+259.2 59.2 l
+S
+n
+0 0 m
+259.2 0 l
+S
+n
+0 0 m
+0 59.2 l
+S
+n
+259.2 0 m
+259.2 59.2 l
+S
+n
+0 44.4 m
+259.2 44.4 l
+S
+n
+0 29.6 m
+259.2 29.6 l
+S
+n
+0 14.8 m
+259.2 14.8 l
+S
+n
+134.784 0 m
+134.784 59.2 l
+S
+n
+196.992 0 m
+196.992 59.2 l
+S
+Q
+Q
+Q
+q
+1 0 0 1 38.16 438.8 cm
+q
+0 0 0 rg
+BT
+1 0 0 1 0 9.7 Tm
+/F2 7.3 Tf
+8.5 TL
+12.9535 0 Td
+(TABLE V\056 Fixed\055model inference ablations\073 standalone baselines are reported) Tj
+T*
+98.9369 0 Td
+(separately\056) Tj
+T*
+-111.8904 0 Td
+ET
+Q
+Q
+q
+1 0 0 1 38.16 393.8 cm
+q
+0 0 0 rg
+BT
+1 0 0 1 0 33.45 Tm
+/F2 8.55 Tf
+10.5 TL
+0.94045 Tw
+(These interventions are not equivalent to retraining unimodal classifiers\056) Tj
+T*
+0 Tw
+0.942356 Tw
+(Replacing feature families with training means can create inputs outside) Tj
+T*
+0 Tw
+2.126763 Tw
+(the model\222s training distribution\056 The separately trained text\055only and) Tj
+T*
+0 Tw
+(image\055only results in Table II provide the relevant baseline comparison\056) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 38.16 346.8 cm
+q
+0 0 0 rg
+BT
+1 0 0 1 0 33.45 Tm
+/F2 8.55 Tf
+10.5 TL
+0.013504 Tw
+(At threshold 0\0565\054 feature fusion correctly labels 74 of 278 REAL posts and) Tj
+T*
+0 Tw
+1.999109 Tw
+(1\054106 of 1\054137 FAKE posts\056 It incorrectly labels 204 REAL posts as) Tj
+T*
+0 Tw
+2.561855 Tw
+(FAKE and 31 FAKE posts as REAL\056 A disagreement with a weak) Tj
+T*
+0 Tw
+(inherited label may reflect label ambiguity\054 model error\054 or both\056) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 38.16 299.8 cm
+q
+0 0 0 rg
+BT
+1 0 0 1 0 33.45 Tm
+/F2 8.55 Tf
+10.5 TL
+1.11146 Tw
+(Sixteen low\055margin real cases are logged\054 eight from each source class\056) Tj
+T*
+0 Tw
+3.371506 Tw
+(They include both correct predictions and errors near the decision) Tj
+T*
+0 Tw
+1.233056 Tw
+(boundary\056 Human review of paired images and captions and systematic) Tj
+T*
+0 Tw
+(error categories remain incomplete\056) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 38.16 283.8 cm
+q
+0 0 0 rg
+BT
+1 0 0 1 0 1.5 Tm
+/F4 9.5 Tf
+11 TL
+(Controlled synthetic checks) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 38.16 238.8 cm
+q
+0 0 0 rg
+BT
+1 0 0 1 0 33.45 Tm
+/F2 8.55 Tf
+10.5 TL
+-0.07357 Tw
+(In the procedural benchmark\054 feature fusion reached 1\056000 accuracy on the) Tj
+T*
+0 Tw
+0.344087 Tw
+(144\055pair in\055distribution test and the 144\055pair count\055manipulation set\056 This) Tj
+T*
+0 Tw
+5.6234 Tw
+(narrow generated\055domain result does not indicate real\055photo or) Tj
+T*
+0 Tw
+(external\055domain performance\056) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 38.16 181.3 cm
+q
+0 0 0 rg
+BT
+1 0 0 1 0 43.95 Tm
+/F2 8.55 Tf
+10.5 TL
+-0.00688 Tw
+(On 48 synthetic examples\054 attribute tokens changed scores more than filler) Tj
+T*
+0 Tw
+-0.033294 Tw
+(tokens \050mean absolute effect 0\0562859 versus 0\0560006\051\056 Correcting a designed) Tj
+T*
+0 Tw
+1.398277 Tw
+(false caption lowered the FAKE score by 0\0569239 on average\073 adding a) Tj
+T*
+0 Tw
+1.244377 Tw
+(color conflict raised it by 0\0569268\056 These local sensitivity checks do not) Tj
+T*
+0 Tw
+(establish human\055rated explanation quality\056) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 318.64 745 cm
+q
+0 0 0 rg
+BT
+1 0 0 1 0 1.5 Tm
+/F4 9.5 Tf
+11 TL
+(C\056 Limitations and responsible use) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 318.64 668.5 cm
+q
+0 0 0 rg
+BT
+1 0 0 1 0 64.95 Tm
+/F2 8.55 Tf
+10.5 TL
+1.238631 Tw
+(The binary FAKE category combines satire\054 false connection\054 imposter\054) Tj
+T*
+0 Tw
+0.464506 Tw
+(manipulated\054 and misleading posts\056 It is broader than image manipulation) Tj
+T*
+0 Tw
+4.07831 Tw
+(or factual falsity\056 Only two test posts carry the source category) Tj
+T*
+0 Tw
+1.238631 Tw
+(manipulated\054 so the experiment cannot establish face\055swap or pixel\055edit) Tj
+T*
+0 Tw
+3.17026 Tw
+(detection\056 Source\055label conventions\054 topic correlations\054 near\055duplicate) Tj
+T*
+0 Tw
+5.453781 Tw
+(events\054 and unknown CLIP pretraining overlap may affect the) Tj
+T*
+0 Tw
+(measurements\056) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 318.64 611 cm
+q
+0 0 0 rg
+BT
+1 0 0 1 0 43.95 Tm
+/F2 8.55 Tf
+10.5 TL
+-0.035194 Tw
+(The community mirror lacks complete sampling and split provenance\056 The) Tj
+T*
+0 Tw
+1.416044 Tw
+(duplicate audit checks supplied identifiers and exact image\057text hashes\054) Tj
+T*
+0 Tw
+2.65388 Tw
+(but it cannot rule out related events or near\055duplicate imagery\056 The) Tj
+T*
+0 Tw
+1.44149 Tw
+(redistribution license is unclear\054 so media and text remain local\056 These) Tj
+T*
+0 Tw
+(constraints limit independent replication and generalization\056) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 318.64 543 cm
+q
+0 0 0 rg
+BT
+1 0 0 1 0 54.45 Tm
+/F2 8.55 Tf
+10.5 TL
+1.60736 Tw
+(The model outputs uncalibrated scores for inherited labels\056 It does not) Tj
+T*
+0 Tw
+0.757106 Tw
+(verify claims\054 infer deceptive intent\054 or establish image authenticity\056 The) Tj
+T*
+0 Tw
+1.708056 Tw
+(real\055data profile has no validated token or region explanations\054 human) Tj
+T*
+0 Tw
+2.45377 Tw
+(explanation\055quality evaluation\054 independent\055domain test\054 or calibration) Tj
+T*
+0 Tw
+1.346585 Tw
+(study\056 Use the system as a research demonstration with human review\054) Tj
+T*
+0 Tw
+(never as standalone evidence about a person\054 event\054 or news source\056) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 318.64 527 cm
+q
+0 0 0 rg
+BT
+1 0 0 1 0 1.5 Tm
+/F4 9.5 Tf
+11 TL
+(D\056 Conclusion and future work) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 318.64 450.5 cm
+q
+0 0 0 rg
+BT
+1 0 0 1 0 64.95 Tm
+/F2 8.55 Tf
+10.5 TL
+2.870612 Tw
+(VeriFuse implements separate text and image models and compares) Tj
+T*
+0 Tw
+9.527483 Tw
+(feature\055level and decision\055level fusion\056 On 1\054415 held\055out) Tj
+T*
+0 Tw
+3.000983 Tw
+(community\055mirror records\054 feature fusion achieves 83\05639\045 accuracy\054) Tj
+T*
+0 Tw
+2.999106 Tw
+(0\0566452 macro F1\054 and 0\0568520 ROC\055AUC\056 Its REAL\055class recall of) Tj
+T*
+0 Tw
+1.43978 Tw
+(26\05662\045 is a material limitation\056 The evidence supports a modest claim) Tj
+T*
+0 Tw
+5.807537 Tw
+(about mapped dataset labels in this split\054 not general\055purpose) Tj
+T*
+0 Tw
+(misinformation or deepfake detection\056) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 318.64 382.5 cm
+q
+0 0 0 rg
+BT
+1 0 0 1 0 54.45 Tm
+/F2 8.55 Tf
+10.5 TL
+2.988175 Tw
+(Future evaluation should use an independently sourced dataset with) Tj
+T*
+0 Tw
+0.705325 Tw
+(documented provenance and event\055aware splits\056 The team should inspect) Tj
+T*
+0 Tw
+2.002218 Tw
+(at least 15 difficult real cases\054 separately report the six original label) Tj
+T*
+0 Tw
+0.099706 Tw
+(categories\054 assess score calibration\054 and test whether displayed evidence is) Tj
+T*
+0 Tw
+2.18875 Tw
+(relevant to human reviewers\056 A dedicated manipulation benchmark is) Tj
+T*
+0 Tw
+(needed before making image\055authenticity claims\056) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 318.64 364.5 cm
+q
+0 0 0 rg
+BT
+1 0 0 1 0 2 Tm
+/F3 11 Tf
+13 TL
+90.6235 0 Td
+(REFERENCES) Tj
+T*
+-90.6235 0 Td
+ET
+Q
+Q
+q
+1 0 0 1 318.64 334.1 cm
+q
+BT
+1 0 0 1 0 19.1 Tm
+8.8 TL
+/F2 7.3 Tf
+0 0 0 rg
+(\1331\135 K\056 Nakamura\054 S\056 Levy\054 and W\056 Y\056 Wang\054 \223Fakeddit\072 A New Multimodal) Tj
+T*
+(Benchmark Dataset for Fine\055grained Fake News Detection\054\224 ) Tj
+/F4 7.3 Tf
+(Proc\056 LREC) Tj
+/F2 7.3 Tf
+(\054 2020\054 pp\056) Tj
+T*
+(6149\2266157\056) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 318.64 313.5 cm
+q
+BT
+1 0 0 1 0 10.3 Tm
+8.8 TL
+/F2 7.3 Tf
+0 0 0 rg
+(\1332\135 A\056 Radford ) Tj
+/F4 7.3 Tf
+(et al\056) Tj
+/F2 7.3 Tf
+(\054 \223Learning Transferable Visual Models From Natural Language) Tj
+T*
+(Supervision\054\224 ) Tj
+/F4 7.3 Tf
+(Proc\056 ICML) Tj
+/F2 7.3 Tf
+(\054 2021\054 pp\056 8748\2268763\056) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 318.64 292.9 cm
+q
+BT
+1 0 0 1 0 10.3 Tm
+8.8 TL
+/F2 7.3 Tf
+0 0 0 rg
+(\1333\135 A\056 R\366ssler ) Tj
+/F4 7.3 Tf
+(et al\056) Tj
+/F2 7.3 Tf
+(\054 \223FaceForensics\053\053\072 Learning to Detect Manipulated Facial) Tj
+T*
+(Images\054\224 ) Tj
+/F4 7.3 Tf
+(Proc\056 IEEE\057CVF ICCV) Tj
+/F2 7.3 Tf
+(\054 2019\056) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 318.64 272.3 cm
+q
+0 0 0 rg
+BT
+1 0 0 1 0 10.3 Tm
+/F2 7.3 Tf
+8.8 TL
+(\1334\135 ams\05599\054 \223fakeddit\1379k\054\224 Hugging Face Datasets\054 community mirror\054 revision) Tj
+T*
+(2ba956a67d2bab34de97b25d71af520ab3fe1e6\056) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 318.64 260.5 cm
+q
+0 0 0 rg
+BT
+1 0 0 1 0 1.5 Tm
+/F2 7.3 Tf
+8.8 TL
+(\1335\135 Entitize\054 \223Fakeddit label mapping clarification\054\224 GitHub issue comment\054 2021\056) Tj
+T*
+ET
+Q
+Q
+Q
+q
+0.0 0.0 612 792 re
+W
+n
+1 0 0 1 0 0 cm
+BT
+/F1-0 12 Tf
+14.4 TL
+ET
+1 1 1 rg
+n
+290 7 32 18 re
+f*
+0 0 0 rg
+BT
+/F2-0 8 Tf
+9.6 TL
+ET
+BT
+1 0 0 1 304 13 Tm
+(6) Tj
+T*
+ET
+Q
+Q
+
+Q
+
+endstream
+endobj
+52 0 obj
+<<
+/Length 164
+>>
+stream
+q
+0.0 0.0 612 792 re
+W
+n
+1 0 0 1 0 0 cm
+BT
+/F1-1 12 Tf
+14.4 TL
+ET
+1 1 1 rg
+n
+286 5 40 20 re
+f*
+0 0 0 rg
+BT
+/F2-1 8 Tf
+9.6 TL
+ET
+BT
+1 0 0 1 304 12 Tm
+(6) Tj
+T*
+ET
+Q
+
+endstream
+endobj
+53 0 obj
+<<
+/F1 54 0 R
+/F1-0 55 0 R
+/F1-1 56 0 R
+/F2 57 0 R
+/F2-0 58 0 R
+/F2-1 59 0 R
+/F3 60 0 R
+/F4 61 0 R
+>>
+endobj
+54 0 obj
+<<
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+55 0 obj
+<<
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+56 0 obj
+<<
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+57 0 obj
+<<
+/BaseFont /Times-Roman
+/Encoding /WinAnsiEncoding
+/Name /F2
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+58 0 obj
+<<
+/BaseFont /Times-Roman
+/Encoding /WinAnsiEncoding
+/Name /F2
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+59 0 obj
+<<
+/BaseFont /Times-Roman
+/Encoding /WinAnsiEncoding
+/Name /F2
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+60 0 obj
+<<
+/BaseFont /Times-Bold
+/Encoding /WinAnsiEncoding
+/Name /F3
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+61 0 obj
+<<
+/BaseFont /Times-Italic
+/Encoding /WinAnsiEncoding
+/Name /F4
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+xref
+0 62
+0000000000 65535 f 
+0000000015 00000 n 
+0000000054 00000 n 
+0000000148 00000 n 
+0000000197 00000 n 
+0000000475 00000 n 
+0000010866 00000 n 
+0000010973 00000 n 
+0000011080 00000 n 
+0000011189 00000 n 
+0000011298 00000 n 
+0000011407 00000 n 
+0000011518 00000 n 
+0000011624 00000 n 
+0000011816 00000 n 
+0000011850 00000 n 
+0000022444 00000 n 
+0000022660 00000 n 
+0000022841 00000 n 
+0000022949 00000 n 
+0000023057 00000 n 
+0000023165 00000 n 
+0000023273 00000 n 
+0000023381 00000 n 
+0000023491 00000 n 
+0000023601 00000 n 
+0000023711 00000 n 
+0000023821 00000 n 
+0000023931 00000 n 
+0000024040 00000 n 
+0000024151 00000 n 
+0000024257 00000 n 
+0000024449 00000 n 
+0000024483 00000 n 
+0000039368 00000 n 
+0000039584 00000 n 
+0000039934 00000 n 
+0000046289 00000 n 
+0000138314 00000 n 
+0000138422 00000 n 
+0000138530 00000 n 
+0000138640 00000 n 
+0000138749 00000 n 
+0000138858 00000 n 
+0000138968 00000 n 
+0000139079 00000 n 
+0000139271 00000 n 
+0000139305 00000 n 
+0000158086 00000 n 
+0000158302 00000 n 
+0000158494 00000 n 
+0000158528 00000 n 
+0000170697 00000 n 
+0000170913 00000 n 
+0000171031 00000 n 
+0000171139 00000 n 
+0000171247 00000 n 
+0000171355 00000 n 
+0000171465 00000 n 
+0000171575 00000 n 
+0000171685 00000 n 
+0000171794 00000 n 
+trailer
+<<
+/Size 62
+/Root 3 0 R
+/Info 1 0 R
+>>
+startxref
+171905
+%%EOF

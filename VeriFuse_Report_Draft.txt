@@ -1,0 +1,79 @@
+VERIFUSE: MULTIMODAL IMAGE–TEXT CONSISTENCY CLASSIFICATION
+Plain-text research report draft for review and personalization
+
+AUTHOR DETAILS
+Student name(s): [Add your name(s)]
+Student ID(s): [Add ID(s)]
+Affiliation: Bennett University
+
+NOTE FOR THE AUTHOR
+This draft summarizes the implementation and measured results recorded in the project files. Before submission, check every statement against your own work, revise the explanation in your own words, complete the author details, and confirm the required IEEE template and page limit. The synthetic and real-media experiments below are distinct evaluations; their scores should not be compared as if they came from one common test set.
+
+ABSTRACT
+This project examines whether combining image and text evidence can help identify mismatches between a visual post and its accompanying caption. The work uses two data settings. First, a controlled synthetic dataset contains 864 image-caption pairs generated from simple colored-shape scenes. Second, a real-media subset derived from a community mirror of Fakeddit contains 8,585 retained post-image pairs after duplicate checks. For the real-media experiment, a text classifier uses train-fitted TF-IDF features and logistic regression, while the image classifier uses frozen CLIP ViT-B/32 features with a separately trained logistic-regression head. Their feature-level fusion reached 83.39% accuracy, 0.9040 F1 for the FAKE class, and 0.8520 ROC-AUC on the held-out test partition. The real-data labels are inherited from subreddit-based distant supervision and are not independent fact checks. On the separate synthetic experiment, explicit cross-modal consistency features achieved perfect classification on the controlled test set and on a held-out count-manipulation set. Those results reflect the simplicity of the generated scenes and do not establish performance on natural misinformation. The experiments suggest that joint image-text features can improve classification on these datasets, while class imbalance, label quality, domain shift, and limited validation remain important constraints.
+
+Index Terms—multimodal classification, image-text analysis, misinformation, CLIP, TF-IDF, data quality.
+
+1. INTRODUCTION
+Online posts often combine a picture with a short caption. The two pieces can each appear reasonable while referring to different things. A system that reads only the caption or only the image may miss this relationship, which motivates studying image and text together.
+
+This project implements VeriFuse, a local image-text classification prototype. The work includes a controlled synthetic study and a separate experiment using a real-media dataset subset. The synthetic study makes it possible to test whether a model can detect deliberately introduced color, shape, or count contradictions. The real-media study tests text and image classifiers on posts labeled by the source dataset. These settings answer different questions: the synthetic labels indicate whether a caption matches a generated scene, while the real-data labels inherit broader source categories.
+
+The real-data pipeline trains a text model from TF-IDF word and bigram features and an image model from frozen CLIP visual features. Each modality has its own logistic-regression classifier. The project also evaluates feature-level and decision-level fusion. The goal is to measure whether combining the learned representations improves held-out classification, not to certify the truth of a post or establish that an image was manipulated.
+
+2. LITERATURE SURVEY
+Fakeddit introduced a large multimodal dataset for fine-grained fake-news research and used labels derived through distant supervision from Reddit communities [1]. This is useful background for the present real-data experiment, but source-community labels should not be treated as direct verification of every claim or image. The local experiment uses a community mirror and documents limitations in its partition provenance.
+
+CLIP learns visual representations from image-text supervision and supports transfer to a range of visual tasks [2]. In this project, CLIP ViT-B/32 is used as a frozen image feature extractor; a logistic-regression head is fitted on the project training partition. The project does not fine-tune CLIP. The text branch instead uses TF-IDF features and logistic regression.
+
+Research on manipulated facial imagery, such as FaceForensics++, addresses a different problem from deciding whether a post caption is consistent with its image [3]. VeriFuse does not evaluate face swaps, video, audio, or general image forensics. This distinction matters because a model trained on post labels or simple scene mismatches cannot automatically be interpreted as a detector of image editing or real-world falsehoods.
+
+3. DATASET USED
+3.1 Real-media subset
+The real-data experiment uses image and text records from the ams-99/fakeddit_9k community mirror, pinned to the revision documented in the project files. Source label 0 is mapped to REAL. Source labels 1 through 5—satire, false connection, imposter, manipulated, and misleading content—are mapped to FAKE. These labels are inherited from the source taxonomy and are not new annotations made by this project.
+
+After duplicate and overlap checks, the dataset contains 8,585 retained pairs: 4,799 training examples, 2,371 validation examples, and 1,415 test examples. The test partition contains 278 REAL and 1,137 FAKE examples, so the classes are imbalanced. The audit removes 61 rows and reports no cross-split collisions for the checked source identifiers and exact image/text hashes. The mirror does not provide the original Reddit post identifiers or documented sampling and split provenance; near-duplicate events and overlap with CLIP pretraining cannot be ruled out.
+
+3.2 Controlled synthetic dataset
+The separate synthetic experiment contains 864 generated pairs from 432 source scenes. Each image contains one to three objects of a single shape and color. REAL pairs use a matching caption; FAKE pairs introduce one controlled contradiction in either the caption or image. The training, validation, and in-distribution test sets contain 432, 144, and 144 pairs, respectively. A further 144-pair test set uses count contradictions withheld from training. All variants of each source scene remain within a single split. The synthetic set is balanced, with equal REAL and FAKE counts.
+
+The synthetic and real-media experiments have different labels, distributions, and task definitions. Their results are reported separately and are not pooled.
+
+4. PROPOSED METHODOLOGY
+4.1 Text classifier
+Text is represented with TF-IDF features formed from words and adjacent bigrams. Vocabulary and inverse-document-frequency values are fit on the training data only. An L2-regularized logistic-regression classifier estimates the REAL and FAKE source labels. The real-media text model is trained on the real-media training partition. The synthetic study has its own text baseline trained on the synthetic training partition; the two text models are not one model trained jointly across both datasets.
+
+4.2 Image classifier
+For the real-media experiment, each image is encoded with the frozen CLIP ViT-B/32 vision encoder. A separate logistic-regression classifier is trained on the resulting image features. The encoder is not fine-tuned on the project data. For the controlled synthetic experiment, a separate image baseline uses pixel-derived attributes such as object color, shape, and count. These branches serve the respective dataset experiments and should not be conflated.
+
+4.3 Fusion and training protocol
+Feature-level fusion concatenates the text and image representations and fits a classifier over the combined vector. In the synthetic study, additional explicit features measure color, shape, and count agreement between the caption and detected scene. Decision-level fusion combines separate modality scores using a weight selected on validation data. Regularization and fusion settings are selected without using test labels. The real-data decision threshold is 0.5. Because labels are imbalanced, the report includes class-wise and macro metrics in addition to accuracy and FAKE-class F1.
+
+4.4 Evaluation measures
+The project reports accuracy, precision, recall, F1, ROC-AUC, and average precision where available. It also reports confusion matrices, macro F1, and balanced accuracy for the real-media experiment. All reported test metrics are computed on held-out partitions. Scores are uncalibrated estimates of dataset labels; they should not be read as probabilities that a post is true or false in the world.
+
+5. EXPERIMENTAL RESULTS
+5.1 Real-media experiment
+On the held-out real-media test partition, feature-level fusion achieved 0.8339 accuracy, 0.9040 FAKE-class F1, 0.6452 macro F1, 0.8520 ROC-AUC, and 0.9587 average precision. The text-only model achieved 0.8177 accuracy and 0.8963 FAKE-class F1. The image-only model achieved 0.8085 accuracy and 0.8914 FAKE-class F1. Decision-level fusion achieved 0.8071 accuracy and 0.8909 FAKE-class F1. A majority-class baseline achieved 0.8035 accuracy, which illustrates why accuracy alone is not sufficient for this imbalanced dataset.
+
+For the selected feature-fusion model, the confusion matrix in REAL-then-FAKE order is [[74, 204], [31, 1106]]. The model identifies many FAKE-labeled examples but has low recall for REAL examples: REAL recall is 0.2662, while FAKE recall is 0.9727. Balanced accuracy is 0.6195. Thus, the higher overall accuracy and FAKE F1 do not mean the classifier performs equally well on both classes.
+
+5.2 Synthetic experiment
+On the controlled synthetic test set, the feature-fusion model achieved accuracy and F1 of 1.000. Text-only and image-only F1 were 0.476 and 0.548, respectively. Feature fusion also achieved F1 of 1.000 on the held-out count-manipulation set. This test withholds count contradiction examples during fitting, but retains the same simple drawing domain and uses general agreement features. Therefore, it tests a narrow form of within-domain transfer rather than generalization to natural photographs or news events.
+
+5.3 Interpretation
+The real-media experiment shows an improvement in several reported metrics for feature-level fusion compared with the individual models and decision-level fusion. The real-media comparison is limited by inherited labels, class imbalance, mirror provenance, and possible source or pretraining overlap. The synthetic study demonstrates that explicit image-caption comparison can solve the generated task, where the relevant attributes are simple and controlled. It does not provide independent evidence of real-world misinformation detection. The metrics from these two datasets should not be compared directly because the data and targets differ.
+
+6. CONCLUSION AND FUTURE WORK
+VeriFuse implements separate text and image classifiers and evaluates their combination on a real-media subset, alongside a distinct controlled synthetic study. On the real-media test partition, feature-level fusion provides the strongest reported results among the evaluated models, although its REAL-class recall remains low. On synthetic data, explicit consistency features solve the generated mismatch task, but the controlled setting limits what can be concluded.
+
+Future work should validate on a better-documented dataset with event- and source-separated splits, obtain expert or independently verified labels, address class imbalance, and evaluate the model on a separate external corpus. Further work could compare fine-tuned encoders with frozen features, calibrate scores, examine error cases in both classes, and test explanation quality with human reviewers. Any deployment should use human review and should not treat a model prediction as proof that content is true, false, or intentionally deceptive.
+
+REFERENCES
+[1] K. Nakamura, S. Levy, and W. Y. Wang, “Fakeddit: A New Multimodal Benchmark Dataset for Fine-grained Fake News Detection,” in Proc. LREC, 2020, pp. 6149–6157. [Online]. Available: https://aclanthology.org/2020.lrec-1.755/
+
+[2] A. Radford et al., “Learning Transferable Visual Models From Natural Language Supervision,” in Proc. International Conference on Machine Learning, 2021. [Online]. Available: https://arxiv.org/abs/2103.00020
+
+[3] A. Rössler et al., “FaceForensics++: Learning to Detect Manipulated Facial Images,” in Proc. IEEE/CVF International Conference on Computer Vision, 2019. [Online]. Available: https://arxiv.org/abs/1901.08971
+
+Additional dataset and implementation records are documented in the project files, including docs/REAL_DATASET.md, results/real/report.md, docs/DATASET.md, and results/REPORT.md. Add citations for any other sources consulted during your revision.

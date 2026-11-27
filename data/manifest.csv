@@ -1,0 +1,865 @@
+id,group_id,split,label,text,image_path,manipulation,altered_modality
+scene-0000-real,scene-0000,train,REAL,This image shows two yellow triangles.,data/images/scene-0000.png,none,none
+scene-0000-fake,scene-0000,train,FAKE,This image shows two blue triangles.,data/images/scene-0000.png,color,text
+scene-0001-real,scene-0001,train,REAL,Visible in the image: one green triangle.,data/images/scene-0001.png,none,none
+scene-0001-fake,scene-0001,train,FAKE,Visible in the image: one green circle.,data/images/scene-0001.png,shape,text
+scene-0002-real,scene-0002,train,REAL,A picture of three red triangles.,data/images/scene-0002.png,none,none
+scene-0002-fake,scene-0002,train,FAKE,A picture of three red triangles.,data/images/scene-0002-altered.png,color,image
+scene-0003-real,scene-0003,train,REAL,Visible in the image: one yellow triangle.,data/images/scene-0003.png,none,none
+scene-0003-fake,scene-0003,train,FAKE,Visible in the image: one yellow triangle.,data/images/scene-0003-altered.png,shape,image
+scene-0004-real,scene-0004,train,REAL,A picture of three red circles.,data/images/scene-0004.png,none,none
+scene-0004-fake,scene-0004,train,FAKE,A picture of three yellow circles.,data/images/scene-0004.png,color,text
+scene-0005-real,scene-0005,train,REAL,Visible in the image: one yellow triangle.,data/images/scene-0005.png,none,none
+scene-0005-fake,scene-0005,train,FAKE,Visible in the image: one yellow circle.,data/images/scene-0005.png,shape,text
+scene-0006-real,scene-0006,train,REAL,This image shows three green triangles.,data/images/scene-0006.png,none,none
+scene-0006-fake,scene-0006,train,FAKE,This image shows three green triangles.,data/images/scene-0006-altered.png,color,image
+scene-0007-real,scene-0007,train,REAL,A picture of two green circles.,data/images/scene-0007.png,none,none
+scene-0007-fake,scene-0007,train,FAKE,A picture of two green circles.,data/images/scene-0007-altered.png,shape,image
+scene-0008-real,scene-0008,train,REAL,This image shows one red triangle.,data/images/scene-0008.png,none,none
+scene-0008-fake,scene-0008,train,FAKE,This image shows one yellow triangle.,data/images/scene-0008.png,color,text
+scene-0009-real,scene-0009,train,REAL,A picture of one red square.,data/images/scene-0009.png,none,none
+scene-0009-fake,scene-0009,train,FAKE,A picture of one red triangle.,data/images/scene-0009.png,shape,text
+scene-0010-real,scene-0010,train,REAL,The scene contains one red square on a light background.,data/images/scene-0010.png,none,none
+scene-0010-fake,scene-0010,train,FAKE,The scene contains one red square on a light background.,data/images/scene-0010-altered.png,color,image
+scene-0011-real,scene-0011,train,REAL,A picture of three green triangles.,data/images/scene-0011.png,none,none
+scene-0011-fake,scene-0011,train,FAKE,A picture of three green triangles.,data/images/scene-0011-altered.png,shape,image
+scene-0012-real,scene-0012,train,REAL,This image shows two yellow squares.,data/images/scene-0012.png,none,none
+scene-0012-fake,scene-0012,train,FAKE,This image shows two blue squares.,data/images/scene-0012.png,color,text
+scene-0013-real,scene-0013,train,REAL,Visible in the image: three blue circles.,data/images/scene-0013.png,none,none
+scene-0013-fake,scene-0013,train,FAKE,Visible in the image: three blue squares.,data/images/scene-0013.png,shape,text
+scene-0014-real,scene-0014,train,REAL,A picture of two blue circles.,data/images/scene-0014.png,none,none
+scene-0014-fake,scene-0014,train,FAKE,A picture of two blue circles.,data/images/scene-0014-altered.png,color,image
+scene-0015-real,scene-0015,train,REAL,A picture of three blue circles.,data/images/scene-0015.png,none,none
+scene-0015-fake,scene-0015,train,FAKE,A picture of three blue circles.,data/images/scene-0015-altered.png,shape,image
+scene-0016-real,scene-0016,train,REAL,This image shows three green circles.,data/images/scene-0016.png,none,none
+scene-0016-fake,scene-0016,train,FAKE,This image shows three yellow circles.,data/images/scene-0016.png,color,text
+scene-0017-real,scene-0017,train,REAL,This image shows two red squares.,data/images/scene-0017.png,none,none
+scene-0017-fake,scene-0017,train,FAKE,This image shows two red triangles.,data/images/scene-0017.png,shape,text
+scene-0018-real,scene-0018,train,REAL,The scene contains one blue triangle on a light background.,data/images/scene-0018.png,none,none
+scene-0018-fake,scene-0018,train,FAKE,The scene contains one blue triangle on a light background.,data/images/scene-0018-altered.png,color,image
+scene-0019-real,scene-0019,train,REAL,The scene contains one yellow square on a light background.,data/images/scene-0019.png,none,none
+scene-0019-fake,scene-0019,train,FAKE,The scene contains one yellow square on a light background.,data/images/scene-0019-altered.png,shape,image
+scene-0020-real,scene-0020,train,REAL,A picture of two yellow triangles.,data/images/scene-0020.png,none,none
+scene-0020-fake,scene-0020,train,FAKE,A picture of two green triangles.,data/images/scene-0020.png,color,text
+scene-0021-real,scene-0021,train,REAL,Visible in the image: one red triangle.,data/images/scene-0021.png,none,none
+scene-0021-fake,scene-0021,train,FAKE,Visible in the image: one red circle.,data/images/scene-0021.png,shape,text
+scene-0022-real,scene-0022,train,REAL,The scene contains three red circles on a light background.,data/images/scene-0022.png,none,none
+scene-0022-fake,scene-0022,train,FAKE,The scene contains three red circles on a light background.,data/images/scene-0022-altered.png,color,image
+scene-0023-real,scene-0023,train,REAL,The scene contains three red circles on a light background.,data/images/scene-0023.png,none,none
+scene-0023-fake,scene-0023,train,FAKE,The scene contains three red circles on a light background.,data/images/scene-0023-altered.png,shape,image
+scene-0024-real,scene-0024,train,REAL,This image shows three yellow squares.,data/images/scene-0024.png,none,none
+scene-0024-fake,scene-0024,train,FAKE,This image shows three blue squares.,data/images/scene-0024.png,color,text
+scene-0025-real,scene-0025,train,REAL,This image shows two yellow circles.,data/images/scene-0025.png,none,none
+scene-0025-fake,scene-0025,train,FAKE,This image shows two yellow squares.,data/images/scene-0025.png,shape,text
+scene-0026-real,scene-0026,train,REAL,The scene contains two blue circles on a light background.,data/images/scene-0026.png,none,none
+scene-0026-fake,scene-0026,train,FAKE,The scene contains two blue circles on a light background.,data/images/scene-0026-altered.png,color,image
+scene-0027-real,scene-0027,train,REAL,Visible in the image: three red squares.,data/images/scene-0027.png,none,none
+scene-0027-fake,scene-0027,train,FAKE,Visible in the image: three red squares.,data/images/scene-0027-altered.png,shape,image
+scene-0028-real,scene-0028,train,REAL,A picture of one yellow circle.,data/images/scene-0028.png,none,none
+scene-0028-fake,scene-0028,train,FAKE,A picture of one red circle.,data/images/scene-0028.png,color,text
+scene-0029-real,scene-0029,train,REAL,Visible in the image: two red circles.,data/images/scene-0029.png,none,none
+scene-0029-fake,scene-0029,train,FAKE,Visible in the image: two red squares.,data/images/scene-0029.png,shape,text
+scene-0030-real,scene-0030,train,REAL,This image shows two green circles.,data/images/scene-0030.png,none,none
+scene-0030-fake,scene-0030,train,FAKE,This image shows two green circles.,data/images/scene-0030-altered.png,color,image
+scene-0031-real,scene-0031,train,REAL,The scene contains one blue square on a light background.,data/images/scene-0031.png,none,none
+scene-0031-fake,scene-0031,train,FAKE,The scene contains one blue square on a light background.,data/images/scene-0031-altered.png,shape,image
+scene-0032-real,scene-0032,train,REAL,Visible in the image: two red circles.,data/images/scene-0032.png,none,none
+scene-0032-fake,scene-0032,train,FAKE,Visible in the image: two yellow circles.,data/images/scene-0032.png,color,text
+scene-0033-real,scene-0033,train,REAL,A picture of one green circle.,data/images/scene-0033.png,none,none
+scene-0033-fake,scene-0033,train,FAKE,A picture of one green square.,data/images/scene-0033.png,shape,text
+scene-0034-real,scene-0034,train,REAL,A picture of one green square.,data/images/scene-0034.png,none,none
+scene-0034-fake,scene-0034,train,FAKE,A picture of one green square.,data/images/scene-0034-altered.png,color,image
+scene-0035-real,scene-0035,train,REAL,A picture of one red triangle.,data/images/scene-0035.png,none,none
+scene-0035-fake,scene-0035,train,FAKE,A picture of one red triangle.,data/images/scene-0035-altered.png,shape,image
+scene-0036-real,scene-0036,train,REAL,Visible in the image: three yellow triangles.,data/images/scene-0036.png,none,none
+scene-0036-fake,scene-0036,train,FAKE,Visible in the image: three green triangles.,data/images/scene-0036.png,color,text
+scene-0037-real,scene-0037,train,REAL,The scene contains three green squares on a light background.,data/images/scene-0037.png,none,none
+scene-0037-fake,scene-0037,train,FAKE,The scene contains three green circles on a light background.,data/images/scene-0037.png,shape,text
+scene-0038-real,scene-0038,train,REAL,A picture of one red circle.,data/images/scene-0038.png,none,none
+scene-0038-fake,scene-0038,train,FAKE,A picture of one red circle.,data/images/scene-0038-altered.png,color,image
+scene-0039-real,scene-0039,train,REAL,The scene contains one blue circle on a light background.,data/images/scene-0039.png,none,none
+scene-0039-fake,scene-0039,train,FAKE,The scene contains one blue circle on a light background.,data/images/scene-0039-altered.png,shape,image
+scene-0040-real,scene-0040,train,REAL,Visible in the image: two yellow triangles.,data/images/scene-0040.png,none,none
+scene-0040-fake,scene-0040,train,FAKE,Visible in the image: two green triangles.,data/images/scene-0040.png,color,text
+scene-0041-real,scene-0041,train,REAL,This image shows three blue triangles.,data/images/scene-0041.png,none,none
+scene-0041-fake,scene-0041,train,FAKE,This image shows three blue circles.,data/images/scene-0041.png,shape,text
+scene-0042-real,scene-0042,train,REAL,Visible in the image: one blue circle.,data/images/scene-0042.png,none,none
+scene-0042-fake,scene-0042,train,FAKE,Visible in the image: one blue circle.,data/images/scene-0042-altered.png,color,image
+scene-0043-real,scene-0043,train,REAL,This image shows two red triangles.,data/images/scene-0043.png,none,none
+scene-0043-fake,scene-0043,train,FAKE,This image shows two red triangles.,data/images/scene-0043-altered.png,shape,image
+scene-0044-real,scene-0044,train,REAL,Visible in the image: three red circles.,data/images/scene-0044.png,none,none
+scene-0044-fake,scene-0044,train,FAKE,Visible in the image: three yellow circles.,data/images/scene-0044.png,color,text
+scene-0045-real,scene-0045,train,REAL,The scene contains one red circle on a light background.,data/images/scene-0045.png,none,none
+scene-0045-fake,scene-0045,train,FAKE,The scene contains one red triangle on a light background.,data/images/scene-0045.png,shape,text
+scene-0046-real,scene-0046,train,REAL,This image shows three yellow triangles.,data/images/scene-0046.png,none,none
+scene-0046-fake,scene-0046,train,FAKE,This image shows three yellow triangles.,data/images/scene-0046-altered.png,color,image
+scene-0047-real,scene-0047,train,REAL,The scene contains one red circle on a light background.,data/images/scene-0047.png,none,none
+scene-0047-fake,scene-0047,train,FAKE,The scene contains one red circle on a light background.,data/images/scene-0047-altered.png,shape,image
+scene-0048-real,scene-0048,train,REAL,A picture of one blue triangle.,data/images/scene-0048.png,none,none
+scene-0048-fake,scene-0048,train,FAKE,A picture of one green triangle.,data/images/scene-0048.png,color,text
+scene-0049-real,scene-0049,train,REAL,Visible in the image: two red circles.,data/images/scene-0049.png,none,none
+scene-0049-fake,scene-0049,train,FAKE,Visible in the image: two red triangles.,data/images/scene-0049.png,shape,text
+scene-0050-real,scene-0050,train,REAL,The scene contains three red triangles on a light background.,data/images/scene-0050.png,none,none
+scene-0050-fake,scene-0050,train,FAKE,The scene contains three red triangles on a light background.,data/images/scene-0050-altered.png,color,image
+scene-0051-real,scene-0051,train,REAL,This image shows two blue triangles.,data/images/scene-0051.png,none,none
+scene-0051-fake,scene-0051,train,FAKE,This image shows two blue triangles.,data/images/scene-0051-altered.png,shape,image
+scene-0052-real,scene-0052,train,REAL,Visible in the image: three green circles.,data/images/scene-0052.png,none,none
+scene-0052-fake,scene-0052,train,FAKE,Visible in the image: three red circles.,data/images/scene-0052.png,color,text
+scene-0053-real,scene-0053,train,REAL,A picture of two blue triangles.,data/images/scene-0053.png,none,none
+scene-0053-fake,scene-0053,train,FAKE,A picture of two blue squares.,data/images/scene-0053.png,shape,text
+scene-0054-real,scene-0054,train,REAL,A picture of two yellow circles.,data/images/scene-0054.png,none,none
+scene-0054-fake,scene-0054,train,FAKE,A picture of two yellow circles.,data/images/scene-0054-altered.png,color,image
+scene-0055-real,scene-0055,train,REAL,The scene contains three red triangles on a light background.,data/images/scene-0055.png,none,none
+scene-0055-fake,scene-0055,train,FAKE,The scene contains three red triangles on a light background.,data/images/scene-0055-altered.png,shape,image
+scene-0056-real,scene-0056,train,REAL,Visible in the image: two red triangles.,data/images/scene-0056.png,none,none
+scene-0056-fake,scene-0056,train,FAKE,Visible in the image: two blue triangles.,data/images/scene-0056.png,color,text
+scene-0057-real,scene-0057,train,REAL,A picture of two blue squares.,data/images/scene-0057.png,none,none
+scene-0057-fake,scene-0057,train,FAKE,A picture of two blue circles.,data/images/scene-0057.png,shape,text
+scene-0058-real,scene-0058,train,REAL,A picture of two red triangles.,data/images/scene-0058.png,none,none
+scene-0058-fake,scene-0058,train,FAKE,A picture of two red triangles.,data/images/scene-0058-altered.png,color,image
+scene-0059-real,scene-0059,train,REAL,A picture of two green circles.,data/images/scene-0059.png,none,none
+scene-0059-fake,scene-0059,train,FAKE,A picture of two green circles.,data/images/scene-0059-altered.png,shape,image
+scene-0060-real,scene-0060,train,REAL,The scene contains two yellow circles on a light background.,data/images/scene-0060.png,none,none
+scene-0060-fake,scene-0060,train,FAKE,The scene contains two green circles on a light background.,data/images/scene-0060.png,color,text
+scene-0061-real,scene-0061,train,REAL,A picture of one blue triangle.,data/images/scene-0061.png,none,none
+scene-0061-fake,scene-0061,train,FAKE,A picture of one blue circle.,data/images/scene-0061.png,shape,text
+scene-0062-real,scene-0062,train,REAL,The scene contains one yellow circle on a light background.,data/images/scene-0062.png,none,none
+scene-0062-fake,scene-0062,train,FAKE,The scene contains one yellow circle on a light background.,data/images/scene-0062-altered.png,color,image
+scene-0063-real,scene-0063,train,REAL,This image shows two red squares.,data/images/scene-0063.png,none,none
+scene-0063-fake,scene-0063,train,FAKE,This image shows two red squares.,data/images/scene-0063-altered.png,shape,image
+scene-0064-real,scene-0064,train,REAL,This image shows two blue circles.,data/images/scene-0064.png,none,none
+scene-0064-fake,scene-0064,train,FAKE,This image shows two red circles.,data/images/scene-0064.png,color,text
+scene-0065-real,scene-0065,train,REAL,A picture of two red triangles.,data/images/scene-0065.png,none,none
+scene-0065-fake,scene-0065,train,FAKE,A picture of two red squares.,data/images/scene-0065.png,shape,text
+scene-0066-real,scene-0066,train,REAL,The scene contains one blue triangle on a light background.,data/images/scene-0066.png,none,none
+scene-0066-fake,scene-0066,train,FAKE,The scene contains one blue triangle on a light background.,data/images/scene-0066-altered.png,color,image
+scene-0067-real,scene-0067,train,REAL,Visible in the image: two green triangles.,data/images/scene-0067.png,none,none
+scene-0067-fake,scene-0067,train,FAKE,Visible in the image: two green triangles.,data/images/scene-0067-altered.png,shape,image
+scene-0068-real,scene-0068,train,REAL,This image shows two green circles.,data/images/scene-0068.png,none,none
+scene-0068-fake,scene-0068,train,FAKE,This image shows two blue circles.,data/images/scene-0068.png,color,text
+scene-0069-real,scene-0069,train,REAL,This image shows two blue triangles.,data/images/scene-0069.png,none,none
+scene-0069-fake,scene-0069,train,FAKE,This image shows two blue circles.,data/images/scene-0069.png,shape,text
+scene-0070-real,scene-0070,train,REAL,The scene contains one red circle on a light background.,data/images/scene-0070.png,none,none
+scene-0070-fake,scene-0070,train,FAKE,The scene contains one red circle on a light background.,data/images/scene-0070-altered.png,color,image
+scene-0071-real,scene-0071,train,REAL,This image shows one green triangle.,data/images/scene-0071.png,none,none
+scene-0071-fake,scene-0071,train,FAKE,This image shows one green triangle.,data/images/scene-0071-altered.png,shape,image
+scene-0072-real,scene-0072,train,REAL,The scene contains one yellow square on a light background.,data/images/scene-0072.png,none,none
+scene-0072-fake,scene-0072,train,FAKE,The scene contains one red square on a light background.,data/images/scene-0072.png,color,text
+scene-0073-real,scene-0073,train,REAL,A picture of one red triangle.,data/images/scene-0073.png,none,none
+scene-0073-fake,scene-0073,train,FAKE,A picture of one red circle.,data/images/scene-0073.png,shape,text
+scene-0074-real,scene-0074,train,REAL,This image shows three blue squares.,data/images/scene-0074.png,none,none
+scene-0074-fake,scene-0074,train,FAKE,This image shows three blue squares.,data/images/scene-0074-altered.png,color,image
+scene-0075-real,scene-0075,train,REAL,A picture of three blue triangles.,data/images/scene-0075.png,none,none
+scene-0075-fake,scene-0075,train,FAKE,A picture of three blue triangles.,data/images/scene-0075-altered.png,shape,image
+scene-0076-real,scene-0076,train,REAL,The scene contains two red squares on a light background.,data/images/scene-0076.png,none,none
+scene-0076-fake,scene-0076,train,FAKE,The scene contains two yellow squares on a light background.,data/images/scene-0076.png,color,text
+scene-0077-real,scene-0077,train,REAL,The scene contains one red circle on a light background.,data/images/scene-0077.png,none,none
+scene-0077-fake,scene-0077,train,FAKE,The scene contains one red square on a light background.,data/images/scene-0077.png,shape,text
+scene-0078-real,scene-0078,train,REAL,A picture of one green square.,data/images/scene-0078.png,none,none
+scene-0078-fake,scene-0078,train,FAKE,A picture of one green square.,data/images/scene-0078-altered.png,color,image
+scene-0079-real,scene-0079,train,REAL,Visible in the image: three green squares.,data/images/scene-0079.png,none,none
+scene-0079-fake,scene-0079,train,FAKE,Visible in the image: three green squares.,data/images/scene-0079-altered.png,shape,image
+scene-0080-real,scene-0080,train,REAL,Visible in the image: three green squares.,data/images/scene-0080.png,none,none
+scene-0080-fake,scene-0080,train,FAKE,Visible in the image: three red squares.,data/images/scene-0080.png,color,text
+scene-0081-real,scene-0081,train,REAL,A picture of three yellow squares.,data/images/scene-0081.png,none,none
+scene-0081-fake,scene-0081,train,FAKE,A picture of three yellow triangles.,data/images/scene-0081.png,shape,text
+scene-0082-real,scene-0082,train,REAL,This image shows three red triangles.,data/images/scene-0082.png,none,none
+scene-0082-fake,scene-0082,train,FAKE,This image shows three red triangles.,data/images/scene-0082-altered.png,color,image
+scene-0083-real,scene-0083,train,REAL,Visible in the image: two blue triangles.,data/images/scene-0083.png,none,none
+scene-0083-fake,scene-0083,train,FAKE,Visible in the image: two blue triangles.,data/images/scene-0083-altered.png,shape,image
+scene-0084-real,scene-0084,train,REAL,This image shows three red triangles.,data/images/scene-0084.png,none,none
+scene-0084-fake,scene-0084,train,FAKE,This image shows three blue triangles.,data/images/scene-0084.png,color,text
+scene-0085-real,scene-0085,train,REAL,The scene contains two yellow circles on a light background.,data/images/scene-0085.png,none,none
+scene-0085-fake,scene-0085,train,FAKE,The scene contains two yellow triangles on a light background.,data/images/scene-0085.png,shape,text
+scene-0086-real,scene-0086,train,REAL,This image shows one blue triangle.,data/images/scene-0086.png,none,none
+scene-0086-fake,scene-0086,train,FAKE,This image shows one blue triangle.,data/images/scene-0086-altered.png,color,image
+scene-0087-real,scene-0087,train,REAL,This image shows one red triangle.,data/images/scene-0087.png,none,none
+scene-0087-fake,scene-0087,train,FAKE,This image shows one red triangle.,data/images/scene-0087-altered.png,shape,image
+scene-0088-real,scene-0088,train,REAL,The scene contains one blue circle on a light background.,data/images/scene-0088.png,none,none
+scene-0088-fake,scene-0088,train,FAKE,The scene contains one red circle on a light background.,data/images/scene-0088.png,color,text
+scene-0089-real,scene-0089,train,REAL,Visible in the image: three yellow triangles.,data/images/scene-0089.png,none,none
+scene-0089-fake,scene-0089,train,FAKE,Visible in the image: three yellow squares.,data/images/scene-0089.png,shape,text
+scene-0090-real,scene-0090,train,REAL,Visible in the image: one red circle.,data/images/scene-0090.png,none,none
+scene-0090-fake,scene-0090,train,FAKE,Visible in the image: one red circle.,data/images/scene-0090-altered.png,color,image
+scene-0091-real,scene-0091,train,REAL,Visible in the image: one blue circle.,data/images/scene-0091.png,none,none
+scene-0091-fake,scene-0091,train,FAKE,Visible in the image: one blue circle.,data/images/scene-0091-altered.png,shape,image
+scene-0092-real,scene-0092,train,REAL,The scene contains three red circles on a light background.,data/images/scene-0092.png,none,none
+scene-0092-fake,scene-0092,train,FAKE,The scene contains three green circles on a light background.,data/images/scene-0092.png,color,text
+scene-0093-real,scene-0093,train,REAL,A picture of two green triangles.,data/images/scene-0093.png,none,none
+scene-0093-fake,scene-0093,train,FAKE,A picture of two green squares.,data/images/scene-0093.png,shape,text
+scene-0094-real,scene-0094,train,REAL,The scene contains two yellow squares on a light background.,data/images/scene-0094.png,none,none
+scene-0094-fake,scene-0094,train,FAKE,The scene contains two yellow squares on a light background.,data/images/scene-0094-altered.png,color,image
+scene-0095-real,scene-0095,train,REAL,Visible in the image: two green circles.,data/images/scene-0095.png,none,none
+scene-0095-fake,scene-0095,train,FAKE,Visible in the image: two green circles.,data/images/scene-0095-altered.png,shape,image
+scene-0096-real,scene-0096,train,REAL,A picture of two yellow squares.,data/images/scene-0096.png,none,none
+scene-0096-fake,scene-0096,train,FAKE,A picture of two green squares.,data/images/scene-0096.png,color,text
+scene-0097-real,scene-0097,train,REAL,Visible in the image: one red square.,data/images/scene-0097.png,none,none
+scene-0097-fake,scene-0097,train,FAKE,Visible in the image: one red triangle.,data/images/scene-0097.png,shape,text
+scene-0098-real,scene-0098,train,REAL,Visible in the image: two yellow triangles.,data/images/scene-0098.png,none,none
+scene-0098-fake,scene-0098,train,FAKE,Visible in the image: two yellow triangles.,data/images/scene-0098-altered.png,color,image
+scene-0099-real,scene-0099,train,REAL,The scene contains two blue squares on a light background.,data/images/scene-0099.png,none,none
+scene-0099-fake,scene-0099,train,FAKE,The scene contains two blue squares on a light background.,data/images/scene-0099-altered.png,shape,image
+scene-0100-real,scene-0100,train,REAL,A picture of three green circles.,data/images/scene-0100.png,none,none
+scene-0100-fake,scene-0100,train,FAKE,A picture of three yellow circles.,data/images/scene-0100.png,color,text
+scene-0101-real,scene-0101,train,REAL,Visible in the image: two red circles.,data/images/scene-0101.png,none,none
+scene-0101-fake,scene-0101,train,FAKE,Visible in the image: two red squares.,data/images/scene-0101.png,shape,text
+scene-0102-real,scene-0102,train,REAL,The scene contains two green triangles on a light background.,data/images/scene-0102.png,none,none
+scene-0102-fake,scene-0102,train,FAKE,The scene contains two green triangles on a light background.,data/images/scene-0102-altered.png,color,image
+scene-0103-real,scene-0103,train,REAL,Visible in the image: two yellow squares.,data/images/scene-0103.png,none,none
+scene-0103-fake,scene-0103,train,FAKE,Visible in the image: two yellow squares.,data/images/scene-0103-altered.png,shape,image
+scene-0104-real,scene-0104,train,REAL,A picture of two yellow squares.,data/images/scene-0104.png,none,none
+scene-0104-fake,scene-0104,train,FAKE,A picture of two green squares.,data/images/scene-0104.png,color,text
+scene-0105-real,scene-0105,train,REAL,A picture of three blue triangles.,data/images/scene-0105.png,none,none
+scene-0105-fake,scene-0105,train,FAKE,A picture of three blue squares.,data/images/scene-0105.png,shape,text
+scene-0106-real,scene-0106,train,REAL,This image shows three green squares.,data/images/scene-0106.png,none,none
+scene-0106-fake,scene-0106,train,FAKE,This image shows three green squares.,data/images/scene-0106-altered.png,color,image
+scene-0107-real,scene-0107,train,REAL,The scene contains one red triangle on a light background.,data/images/scene-0107.png,none,none
+scene-0107-fake,scene-0107,train,FAKE,The scene contains one red triangle on a light background.,data/images/scene-0107-altered.png,shape,image
+scene-0108-real,scene-0108,train,REAL,A picture of two blue squares.,data/images/scene-0108.png,none,none
+scene-0108-fake,scene-0108,train,FAKE,A picture of two yellow squares.,data/images/scene-0108.png,color,text
+scene-0109-real,scene-0109,train,REAL,A picture of one red square.,data/images/scene-0109.png,none,none
+scene-0109-fake,scene-0109,train,FAKE,A picture of one red circle.,data/images/scene-0109.png,shape,text
+scene-0110-real,scene-0110,train,REAL,This image shows one yellow circle.,data/images/scene-0110.png,none,none
+scene-0110-fake,scene-0110,train,FAKE,This image shows one yellow circle.,data/images/scene-0110-altered.png,color,image
+scene-0111-real,scene-0111,train,REAL,Visible in the image: two blue squares.,data/images/scene-0111.png,none,none
+scene-0111-fake,scene-0111,train,FAKE,Visible in the image: two blue squares.,data/images/scene-0111-altered.png,shape,image
+scene-0112-real,scene-0112,train,REAL,A picture of one blue square.,data/images/scene-0112.png,none,none
+scene-0112-fake,scene-0112,train,FAKE,A picture of one green square.,data/images/scene-0112.png,color,text
+scene-0113-real,scene-0113,train,REAL,Visible in the image: two yellow triangles.,data/images/scene-0113.png,none,none
+scene-0113-fake,scene-0113,train,FAKE,Visible in the image: two yellow circles.,data/images/scene-0113.png,shape,text
+scene-0114-real,scene-0114,train,REAL,Visible in the image: one yellow triangle.,data/images/scene-0114.png,none,none
+scene-0114-fake,scene-0114,train,FAKE,Visible in the image: one yellow triangle.,data/images/scene-0114-altered.png,color,image
+scene-0115-real,scene-0115,train,REAL,The scene contains two green circles on a light background.,data/images/scene-0115.png,none,none
+scene-0115-fake,scene-0115,train,FAKE,The scene contains two green circles on a light background.,data/images/scene-0115-altered.png,shape,image
+scene-0116-real,scene-0116,train,REAL,A picture of one yellow square.,data/images/scene-0116.png,none,none
+scene-0116-fake,scene-0116,train,FAKE,A picture of one green square.,data/images/scene-0116.png,color,text
+scene-0117-real,scene-0117,train,REAL,The scene contains three red squares on a light background.,data/images/scene-0117.png,none,none
+scene-0117-fake,scene-0117,train,FAKE,The scene contains three red triangles on a light background.,data/images/scene-0117.png,shape,text
+scene-0118-real,scene-0118,train,REAL,The scene contains three blue squares on a light background.,data/images/scene-0118.png,none,none
+scene-0118-fake,scene-0118,train,FAKE,The scene contains three blue squares on a light background.,data/images/scene-0118-altered.png,color,image
+scene-0119-real,scene-0119,train,REAL,Visible in the image: three blue circles.,data/images/scene-0119.png,none,none
+scene-0119-fake,scene-0119,train,FAKE,Visible in the image: three blue circles.,data/images/scene-0119-altered.png,shape,image
+scene-0120-real,scene-0120,train,REAL,A picture of one blue circle.,data/images/scene-0120.png,none,none
+scene-0120-fake,scene-0120,train,FAKE,A picture of one green circle.,data/images/scene-0120.png,color,text
+scene-0121-real,scene-0121,train,REAL,A picture of three yellow triangles.,data/images/scene-0121.png,none,none
+scene-0121-fake,scene-0121,train,FAKE,A picture of three yellow squares.,data/images/scene-0121.png,shape,text
+scene-0122-real,scene-0122,train,REAL,A picture of one blue square.,data/images/scene-0122.png,none,none
+scene-0122-fake,scene-0122,train,FAKE,A picture of one blue square.,data/images/scene-0122-altered.png,color,image
+scene-0123-real,scene-0123,train,REAL,The scene contains three green triangles on a light background.,data/images/scene-0123.png,none,none
+scene-0123-fake,scene-0123,train,FAKE,The scene contains three green triangles on a light background.,data/images/scene-0123-altered.png,shape,image
+scene-0124-real,scene-0124,train,REAL,The scene contains two green squares on a light background.,data/images/scene-0124.png,none,none
+scene-0124-fake,scene-0124,train,FAKE,The scene contains two blue squares on a light background.,data/images/scene-0124.png,color,text
+scene-0125-real,scene-0125,train,REAL,A picture of two red triangles.,data/images/scene-0125.png,none,none
+scene-0125-fake,scene-0125,train,FAKE,A picture of two red circles.,data/images/scene-0125.png,shape,text
+scene-0126-real,scene-0126,train,REAL,This image shows two blue circles.,data/images/scene-0126.png,none,none
+scene-0126-fake,scene-0126,train,FAKE,This image shows two blue circles.,data/images/scene-0126-altered.png,color,image
+scene-0127-real,scene-0127,train,REAL,Visible in the image: three red squares.,data/images/scene-0127.png,none,none
+scene-0127-fake,scene-0127,train,FAKE,Visible in the image: three red squares.,data/images/scene-0127-altered.png,shape,image
+scene-0128-real,scene-0128,train,REAL,Visible in the image: three blue triangles.,data/images/scene-0128.png,none,none
+scene-0128-fake,scene-0128,train,FAKE,Visible in the image: three green triangles.,data/images/scene-0128.png,color,text
+scene-0129-real,scene-0129,train,REAL,This image shows three green circles.,data/images/scene-0129.png,none,none
+scene-0129-fake,scene-0129,train,FAKE,This image shows three green squares.,data/images/scene-0129.png,shape,text
+scene-0130-real,scene-0130,train,REAL,The scene contains one green triangle on a light background.,data/images/scene-0130.png,none,none
+scene-0130-fake,scene-0130,train,FAKE,The scene contains one green triangle on a light background.,data/images/scene-0130-altered.png,color,image
+scene-0131-real,scene-0131,train,REAL,Visible in the image: one green square.,data/images/scene-0131.png,none,none
+scene-0131-fake,scene-0131,train,FAKE,Visible in the image: one green square.,data/images/scene-0131-altered.png,shape,image
+scene-0132-real,scene-0132,train,REAL,The scene contains one blue circle on a light background.,data/images/scene-0132.png,none,none
+scene-0132-fake,scene-0132,train,FAKE,The scene contains one yellow circle on a light background.,data/images/scene-0132.png,color,text
+scene-0133-real,scene-0133,train,REAL,The scene contains one yellow square on a light background.,data/images/scene-0133.png,none,none
+scene-0133-fake,scene-0133,train,FAKE,The scene contains one yellow triangle on a light background.,data/images/scene-0133.png,shape,text
+scene-0134-real,scene-0134,train,REAL,Visible in the image: one green square.,data/images/scene-0134.png,none,none
+scene-0134-fake,scene-0134,train,FAKE,Visible in the image: one green square.,data/images/scene-0134-altered.png,color,image
+scene-0135-real,scene-0135,train,REAL,Visible in the image: one red square.,data/images/scene-0135.png,none,none
+scene-0135-fake,scene-0135,train,FAKE,Visible in the image: one red square.,data/images/scene-0135-altered.png,shape,image
+scene-0136-real,scene-0136,train,REAL,Visible in the image: three blue squares.,data/images/scene-0136.png,none,none
+scene-0136-fake,scene-0136,train,FAKE,Visible in the image: three yellow squares.,data/images/scene-0136.png,color,text
+scene-0137-real,scene-0137,train,REAL,This image shows three blue circles.,data/images/scene-0137.png,none,none
+scene-0137-fake,scene-0137,train,FAKE,This image shows three blue squares.,data/images/scene-0137.png,shape,text
+scene-0138-real,scene-0138,train,REAL,Visible in the image: three red triangles.,data/images/scene-0138.png,none,none
+scene-0138-fake,scene-0138,train,FAKE,Visible in the image: three red triangles.,data/images/scene-0138-altered.png,color,image
+scene-0139-real,scene-0139,train,REAL,Visible in the image: two red squares.,data/images/scene-0139.png,none,none
+scene-0139-fake,scene-0139,train,FAKE,Visible in the image: two red squares.,data/images/scene-0139-altered.png,shape,image
+scene-0140-real,scene-0140,train,REAL,A picture of two blue circles.,data/images/scene-0140.png,none,none
+scene-0140-fake,scene-0140,train,FAKE,A picture of two red circles.,data/images/scene-0140.png,color,text
+scene-0141-real,scene-0141,train,REAL,The scene contains three red squares on a light background.,data/images/scene-0141.png,none,none
+scene-0141-fake,scene-0141,train,FAKE,The scene contains three red circles on a light background.,data/images/scene-0141.png,shape,text
+scene-0142-real,scene-0142,train,REAL,The scene contains three blue triangles on a light background.,data/images/scene-0142.png,none,none
+scene-0142-fake,scene-0142,train,FAKE,The scene contains three blue triangles on a light background.,data/images/scene-0142-altered.png,color,image
+scene-0143-real,scene-0143,train,REAL,This image shows three green circles.,data/images/scene-0143.png,none,none
+scene-0143-fake,scene-0143,train,FAKE,This image shows three green circles.,data/images/scene-0143-altered.png,shape,image
+scene-0144-real,scene-0144,train,REAL,A picture of one yellow square.,data/images/scene-0144.png,none,none
+scene-0144-fake,scene-0144,train,FAKE,A picture of one red square.,data/images/scene-0144.png,color,text
+scene-0145-real,scene-0145,train,REAL,This image shows one green circle.,data/images/scene-0145.png,none,none
+scene-0145-fake,scene-0145,train,FAKE,This image shows one green triangle.,data/images/scene-0145.png,shape,text
+scene-0146-real,scene-0146,train,REAL,The scene contains two yellow circles on a light background.,data/images/scene-0146.png,none,none
+scene-0146-fake,scene-0146,train,FAKE,The scene contains two yellow circles on a light background.,data/images/scene-0146-altered.png,color,image
+scene-0147-real,scene-0147,train,REAL,This image shows one blue square.,data/images/scene-0147.png,none,none
+scene-0147-fake,scene-0147,train,FAKE,This image shows one blue square.,data/images/scene-0147-altered.png,shape,image
+scene-0148-real,scene-0148,train,REAL,Visible in the image: three yellow squares.,data/images/scene-0148.png,none,none
+scene-0148-fake,scene-0148,train,FAKE,Visible in the image: three blue squares.,data/images/scene-0148.png,color,text
+scene-0149-real,scene-0149,train,REAL,The scene contains one yellow circle on a light background.,data/images/scene-0149.png,none,none
+scene-0149-fake,scene-0149,train,FAKE,The scene contains one yellow triangle on a light background.,data/images/scene-0149.png,shape,text
+scene-0150-real,scene-0150,train,REAL,A picture of two green triangles.,data/images/scene-0150.png,none,none
+scene-0150-fake,scene-0150,train,FAKE,A picture of two green triangles.,data/images/scene-0150-altered.png,color,image
+scene-0151-real,scene-0151,train,REAL,Visible in the image: one green square.,data/images/scene-0151.png,none,none
+scene-0151-fake,scene-0151,train,FAKE,Visible in the image: one green square.,data/images/scene-0151-altered.png,shape,image
+scene-0152-real,scene-0152,train,REAL,The scene contains one yellow square on a light background.,data/images/scene-0152.png,none,none
+scene-0152-fake,scene-0152,train,FAKE,The scene contains one red square on a light background.,data/images/scene-0152.png,color,text
+scene-0153-real,scene-0153,train,REAL,This image shows two green triangles.,data/images/scene-0153.png,none,none
+scene-0153-fake,scene-0153,train,FAKE,This image shows two green squares.,data/images/scene-0153.png,shape,text
+scene-0154-real,scene-0154,train,REAL,The scene contains three yellow triangles on a light background.,data/images/scene-0154.png,none,none
+scene-0154-fake,scene-0154,train,FAKE,The scene contains three yellow triangles on a light background.,data/images/scene-0154-altered.png,color,image
+scene-0155-real,scene-0155,train,REAL,Visible in the image: one green circle.,data/images/scene-0155.png,none,none
+scene-0155-fake,scene-0155,train,FAKE,Visible in the image: one green circle.,data/images/scene-0155-altered.png,shape,image
+scene-0156-real,scene-0156,train,REAL,A picture of one yellow triangle.,data/images/scene-0156.png,none,none
+scene-0156-fake,scene-0156,train,FAKE,A picture of one green triangle.,data/images/scene-0156.png,color,text
+scene-0157-real,scene-0157,train,REAL,A picture of three yellow squares.,data/images/scene-0157.png,none,none
+scene-0157-fake,scene-0157,train,FAKE,A picture of three yellow circles.,data/images/scene-0157.png,shape,text
+scene-0158-real,scene-0158,train,REAL,This image shows one green circle.,data/images/scene-0158.png,none,none
+scene-0158-fake,scene-0158,train,FAKE,This image shows one green circle.,data/images/scene-0158-altered.png,color,image
+scene-0159-real,scene-0159,train,REAL,This image shows three red circles.,data/images/scene-0159.png,none,none
+scene-0159-fake,scene-0159,train,FAKE,This image shows three red circles.,data/images/scene-0159-altered.png,shape,image
+scene-0160-real,scene-0160,train,REAL,This image shows one blue square.,data/images/scene-0160.png,none,none
+scene-0160-fake,scene-0160,train,FAKE,This image shows one red square.,data/images/scene-0160.png,color,text
+scene-0161-real,scene-0161,train,REAL,This image shows three green triangles.,data/images/scene-0161.png,none,none
+scene-0161-fake,scene-0161,train,FAKE,This image shows three green squares.,data/images/scene-0161.png,shape,text
+scene-0162-real,scene-0162,train,REAL,A picture of three yellow circles.,data/images/scene-0162.png,none,none
+scene-0162-fake,scene-0162,train,FAKE,A picture of three yellow circles.,data/images/scene-0162-altered.png,color,image
+scene-0163-real,scene-0163,train,REAL,The scene contains three blue circles on a light background.,data/images/scene-0163.png,none,none
+scene-0163-fake,scene-0163,train,FAKE,The scene contains three blue circles on a light background.,data/images/scene-0163-altered.png,shape,image
+scene-0164-real,scene-0164,train,REAL,A picture of two red triangles.,data/images/scene-0164.png,none,none
+scene-0164-fake,scene-0164,train,FAKE,A picture of two green triangles.,data/images/scene-0164.png,color,text
+scene-0165-real,scene-0165,train,REAL,Visible in the image: two green squares.,data/images/scene-0165.png,none,none
+scene-0165-fake,scene-0165,train,FAKE,Visible in the image: two green circles.,data/images/scene-0165.png,shape,text
+scene-0166-real,scene-0166,train,REAL,This image shows two red squares.,data/images/scene-0166.png,none,none
+scene-0166-fake,scene-0166,train,FAKE,This image shows two red squares.,data/images/scene-0166-altered.png,color,image
+scene-0167-real,scene-0167,train,REAL,Visible in the image: two yellow circles.,data/images/scene-0167.png,none,none
+scene-0167-fake,scene-0167,train,FAKE,Visible in the image: two yellow circles.,data/images/scene-0167-altered.png,shape,image
+scene-0168-real,scene-0168,train,REAL,A picture of one blue triangle.,data/images/scene-0168.png,none,none
+scene-0168-fake,scene-0168,train,FAKE,A picture of one green triangle.,data/images/scene-0168.png,color,text
+scene-0169-real,scene-0169,train,REAL,The scene contains two blue triangles on a light background.,data/images/scene-0169.png,none,none
+scene-0169-fake,scene-0169,train,FAKE,The scene contains two blue circles on a light background.,data/images/scene-0169.png,shape,text
+scene-0170-real,scene-0170,train,REAL,Visible in the image: three yellow squares.,data/images/scene-0170.png,none,none
+scene-0170-fake,scene-0170,train,FAKE,Visible in the image: three yellow squares.,data/images/scene-0170-altered.png,color,image
+scene-0171-real,scene-0171,train,REAL,This image shows three yellow circles.,data/images/scene-0171.png,none,none
+scene-0171-fake,scene-0171,train,FAKE,This image shows three yellow circles.,data/images/scene-0171-altered.png,shape,image
+scene-0172-real,scene-0172,train,REAL,A picture of three green triangles.,data/images/scene-0172.png,none,none
+scene-0172-fake,scene-0172,train,FAKE,A picture of three blue triangles.,data/images/scene-0172.png,color,text
+scene-0173-real,scene-0173,train,REAL,A picture of three yellow circles.,data/images/scene-0173.png,none,none
+scene-0173-fake,scene-0173,train,FAKE,A picture of three yellow triangles.,data/images/scene-0173.png,shape,text
+scene-0174-real,scene-0174,train,REAL,Visible in the image: one green circle.,data/images/scene-0174.png,none,none
+scene-0174-fake,scene-0174,train,FAKE,Visible in the image: one green circle.,data/images/scene-0174-altered.png,color,image
+scene-0175-real,scene-0175,train,REAL,The scene contains one yellow circle on a light background.,data/images/scene-0175.png,none,none
+scene-0175-fake,scene-0175,train,FAKE,The scene contains one yellow circle on a light background.,data/images/scene-0175-altered.png,shape,image
+scene-0176-real,scene-0176,train,REAL,This image shows two red circles.,data/images/scene-0176.png,none,none
+scene-0176-fake,scene-0176,train,FAKE,This image shows two blue circles.,data/images/scene-0176.png,color,text
+scene-0177-real,scene-0177,train,REAL,A picture of three green squares.,data/images/scene-0177.png,none,none
+scene-0177-fake,scene-0177,train,FAKE,A picture of three green circles.,data/images/scene-0177.png,shape,text
+scene-0178-real,scene-0178,train,REAL,Visible in the image: three green triangles.,data/images/scene-0178.png,none,none
+scene-0178-fake,scene-0178,train,FAKE,Visible in the image: three green triangles.,data/images/scene-0178-altered.png,color,image
+scene-0179-real,scene-0179,train,REAL,The scene contains one yellow triangle on a light background.,data/images/scene-0179.png,none,none
+scene-0179-fake,scene-0179,train,FAKE,The scene contains one yellow triangle on a light background.,data/images/scene-0179-altered.png,shape,image
+scene-0180-real,scene-0180,train,REAL,The scene contains two green squares on a light background.,data/images/scene-0180.png,none,none
+scene-0180-fake,scene-0180,train,FAKE,The scene contains two yellow squares on a light background.,data/images/scene-0180.png,color,text
+scene-0181-real,scene-0181,train,REAL,The scene contains three blue squares on a light background.,data/images/scene-0181.png,none,none
+scene-0181-fake,scene-0181,train,FAKE,The scene contains three blue circles on a light background.,data/images/scene-0181.png,shape,text
+scene-0182-real,scene-0182,train,REAL,A picture of one green square.,data/images/scene-0182.png,none,none
+scene-0182-fake,scene-0182,train,FAKE,A picture of one green square.,data/images/scene-0182-altered.png,color,image
+scene-0183-real,scene-0183,train,REAL,Visible in the image: three blue squares.,data/images/scene-0183.png,none,none
+scene-0183-fake,scene-0183,train,FAKE,Visible in the image: three blue squares.,data/images/scene-0183-altered.png,shape,image
+scene-0184-real,scene-0184,train,REAL,A picture of three red squares.,data/images/scene-0184.png,none,none
+scene-0184-fake,scene-0184,train,FAKE,A picture of three green squares.,data/images/scene-0184.png,color,text
+scene-0185-real,scene-0185,train,REAL,A picture of three yellow circles.,data/images/scene-0185.png,none,none
+scene-0185-fake,scene-0185,train,FAKE,A picture of three yellow squares.,data/images/scene-0185.png,shape,text
+scene-0186-real,scene-0186,train,REAL,The scene contains two red squares on a light background.,data/images/scene-0186.png,none,none
+scene-0186-fake,scene-0186,train,FAKE,The scene contains two red squares on a light background.,data/images/scene-0186-altered.png,color,image
+scene-0187-real,scene-0187,train,REAL,A picture of two yellow squares.,data/images/scene-0187.png,none,none
+scene-0187-fake,scene-0187,train,FAKE,A picture of two yellow squares.,data/images/scene-0187-altered.png,shape,image
+scene-0188-real,scene-0188,train,REAL,Visible in the image: three blue circles.,data/images/scene-0188.png,none,none
+scene-0188-fake,scene-0188,train,FAKE,Visible in the image: three red circles.,data/images/scene-0188.png,color,text
+scene-0189-real,scene-0189,train,REAL,This image shows three blue squares.,data/images/scene-0189.png,none,none
+scene-0189-fake,scene-0189,train,FAKE,This image shows three blue triangles.,data/images/scene-0189.png,shape,text
+scene-0190-real,scene-0190,train,REAL,Visible in the image: two blue triangles.,data/images/scene-0190.png,none,none
+scene-0190-fake,scene-0190,train,FAKE,Visible in the image: two blue triangles.,data/images/scene-0190-altered.png,color,image
+scene-0191-real,scene-0191,train,REAL,The scene contains one green triangle on a light background.,data/images/scene-0191.png,none,none
+scene-0191-fake,scene-0191,train,FAKE,The scene contains one green triangle on a light background.,data/images/scene-0191-altered.png,shape,image
+scene-0192-real,scene-0192,train,REAL,This image shows one red square.,data/images/scene-0192.png,none,none
+scene-0192-fake,scene-0192,train,FAKE,This image shows one yellow square.,data/images/scene-0192.png,color,text
+scene-0193-real,scene-0193,train,REAL,The scene contains three blue triangles on a light background.,data/images/scene-0193.png,none,none
+scene-0193-fake,scene-0193,train,FAKE,The scene contains three blue circles on a light background.,data/images/scene-0193.png,shape,text
+scene-0194-real,scene-0194,train,REAL,The scene contains three yellow circles on a light background.,data/images/scene-0194.png,none,none
+scene-0194-fake,scene-0194,train,FAKE,The scene contains three yellow circles on a light background.,data/images/scene-0194-altered.png,color,image
+scene-0195-real,scene-0195,train,REAL,This image shows one blue square.,data/images/scene-0195.png,none,none
+scene-0195-fake,scene-0195,train,FAKE,This image shows one blue square.,data/images/scene-0195-altered.png,shape,image
+scene-0196-real,scene-0196,train,REAL,A picture of two red circles.,data/images/scene-0196.png,none,none
+scene-0196-fake,scene-0196,train,FAKE,A picture of two yellow circles.,data/images/scene-0196.png,color,text
+scene-0197-real,scene-0197,train,REAL,A picture of three yellow squares.,data/images/scene-0197.png,none,none
+scene-0197-fake,scene-0197,train,FAKE,A picture of three yellow circles.,data/images/scene-0197.png,shape,text
+scene-0198-real,scene-0198,train,REAL,The scene contains three red squares on a light background.,data/images/scene-0198.png,none,none
+scene-0198-fake,scene-0198,train,FAKE,The scene contains three red squares on a light background.,data/images/scene-0198-altered.png,color,image
+scene-0199-real,scene-0199,train,REAL,This image shows two blue circles.,data/images/scene-0199.png,none,none
+scene-0199-fake,scene-0199,train,FAKE,This image shows two blue circles.,data/images/scene-0199-altered.png,shape,image
+scene-0200-real,scene-0200,train,REAL,A picture of two green squares.,data/images/scene-0200.png,none,none
+scene-0200-fake,scene-0200,train,FAKE,A picture of two red squares.,data/images/scene-0200.png,color,text
+scene-0201-real,scene-0201,train,REAL,Visible in the image: three yellow circles.,data/images/scene-0201.png,none,none
+scene-0201-fake,scene-0201,train,FAKE,Visible in the image: three yellow squares.,data/images/scene-0201.png,shape,text
+scene-0202-real,scene-0202,train,REAL,The scene contains one green circle on a light background.,data/images/scene-0202.png,none,none
+scene-0202-fake,scene-0202,train,FAKE,The scene contains one green circle on a light background.,data/images/scene-0202-altered.png,color,image
+scene-0203-real,scene-0203,train,REAL,The scene contains two yellow triangles on a light background.,data/images/scene-0203.png,none,none
+scene-0203-fake,scene-0203,train,FAKE,The scene contains two yellow triangles on a light background.,data/images/scene-0203-altered.png,shape,image
+scene-0204-real,scene-0204,train,REAL,Visible in the image: one green triangle.,data/images/scene-0204.png,none,none
+scene-0204-fake,scene-0204,train,FAKE,Visible in the image: one red triangle.,data/images/scene-0204.png,color,text
+scene-0205-real,scene-0205,train,REAL,This image shows two blue squares.,data/images/scene-0205.png,none,none
+scene-0205-fake,scene-0205,train,FAKE,This image shows two blue circles.,data/images/scene-0205.png,shape,text
+scene-0206-real,scene-0206,train,REAL,A picture of three green circles.,data/images/scene-0206.png,none,none
+scene-0206-fake,scene-0206,train,FAKE,A picture of three green circles.,data/images/scene-0206-altered.png,color,image
+scene-0207-real,scene-0207,train,REAL,A picture of one yellow triangle.,data/images/scene-0207.png,none,none
+scene-0207-fake,scene-0207,train,FAKE,A picture of one yellow triangle.,data/images/scene-0207-altered.png,shape,image
+scene-0208-real,scene-0208,train,REAL,A picture of two green squares.,data/images/scene-0208.png,none,none
+scene-0208-fake,scene-0208,train,FAKE,A picture of two blue squares.,data/images/scene-0208.png,color,text
+scene-0209-real,scene-0209,train,REAL,A picture of three yellow triangles.,data/images/scene-0209.png,none,none
+scene-0209-fake,scene-0209,train,FAKE,A picture of three yellow squares.,data/images/scene-0209.png,shape,text
+scene-0210-real,scene-0210,train,REAL,A picture of one green triangle.,data/images/scene-0210.png,none,none
+scene-0210-fake,scene-0210,train,FAKE,A picture of one green triangle.,data/images/scene-0210-altered.png,color,image
+scene-0211-real,scene-0211,train,REAL,Visible in the image: one yellow circle.,data/images/scene-0211.png,none,none
+scene-0211-fake,scene-0211,train,FAKE,Visible in the image: one yellow circle.,data/images/scene-0211-altered.png,shape,image
+scene-0212-real,scene-0212,train,REAL,The scene contains two blue squares on a light background.,data/images/scene-0212.png,none,none
+scene-0212-fake,scene-0212,train,FAKE,The scene contains two yellow squares on a light background.,data/images/scene-0212.png,color,text
+scene-0213-real,scene-0213,train,REAL,The scene contains two green triangles on a light background.,data/images/scene-0213.png,none,none
+scene-0213-fake,scene-0213,train,FAKE,The scene contains two green squares on a light background.,data/images/scene-0213.png,shape,text
+scene-0214-real,scene-0214,train,REAL,A picture of two green squares.,data/images/scene-0214.png,none,none
+scene-0214-fake,scene-0214,train,FAKE,A picture of two green squares.,data/images/scene-0214-altered.png,color,image
+scene-0215-real,scene-0215,train,REAL,This image shows three green squares.,data/images/scene-0215.png,none,none
+scene-0215-fake,scene-0215,train,FAKE,This image shows three green squares.,data/images/scene-0215-altered.png,shape,image
+scene-0216-real,scene-0216,val,REAL,The scene contains two blue squares on a light background.,data/images/scene-0216.png,none,none
+scene-0216-fake,scene-0216,val,FAKE,The scene contains two red squares on a light background.,data/images/scene-0216.png,color,text
+scene-0217-real,scene-0217,val,REAL,This image shows one red circle.,data/images/scene-0217.png,none,none
+scene-0217-fake,scene-0217,val,FAKE,This image shows one red square.,data/images/scene-0217.png,shape,text
+scene-0218-real,scene-0218,val,REAL,This image shows two green triangles.,data/images/scene-0218.png,none,none
+scene-0218-fake,scene-0218,val,FAKE,This image shows two green triangles.,data/images/scene-0218-altered.png,color,image
+scene-0219-real,scene-0219,val,REAL,Visible in the image: three blue circles.,data/images/scene-0219.png,none,none
+scene-0219-fake,scene-0219,val,FAKE,Visible in the image: three blue circles.,data/images/scene-0219-altered.png,shape,image
+scene-0220-real,scene-0220,val,REAL,This image shows three red circles.,data/images/scene-0220.png,none,none
+scene-0220-fake,scene-0220,val,FAKE,This image shows three green circles.,data/images/scene-0220.png,color,text
+scene-0221-real,scene-0221,val,REAL,This image shows two red triangles.,data/images/scene-0221.png,none,none
+scene-0221-fake,scene-0221,val,FAKE,This image shows two red squares.,data/images/scene-0221.png,shape,text
+scene-0222-real,scene-0222,val,REAL,Visible in the image: two blue squares.,data/images/scene-0222.png,none,none
+scene-0222-fake,scene-0222,val,FAKE,Visible in the image: two blue squares.,data/images/scene-0222-altered.png,color,image
+scene-0223-real,scene-0223,val,REAL,This image shows one green circle.,data/images/scene-0223.png,none,none
+scene-0223-fake,scene-0223,val,FAKE,This image shows one green circle.,data/images/scene-0223-altered.png,shape,image
+scene-0224-real,scene-0224,val,REAL,This image shows three yellow triangles.,data/images/scene-0224.png,none,none
+scene-0224-fake,scene-0224,val,FAKE,This image shows three green triangles.,data/images/scene-0224.png,color,text
+scene-0225-real,scene-0225,val,REAL,A picture of three yellow circles.,data/images/scene-0225.png,none,none
+scene-0225-fake,scene-0225,val,FAKE,A picture of three yellow triangles.,data/images/scene-0225.png,shape,text
+scene-0226-real,scene-0226,val,REAL,A picture of one blue triangle.,data/images/scene-0226.png,none,none
+scene-0226-fake,scene-0226,val,FAKE,A picture of one blue triangle.,data/images/scene-0226-altered.png,color,image
+scene-0227-real,scene-0227,val,REAL,A picture of three yellow squares.,data/images/scene-0227.png,none,none
+scene-0227-fake,scene-0227,val,FAKE,A picture of three yellow squares.,data/images/scene-0227-altered.png,shape,image
+scene-0228-real,scene-0228,val,REAL,This image shows two yellow circles.,data/images/scene-0228.png,none,none
+scene-0228-fake,scene-0228,val,FAKE,This image shows two blue circles.,data/images/scene-0228.png,color,text
+scene-0229-real,scene-0229,val,REAL,Visible in the image: one yellow circle.,data/images/scene-0229.png,none,none
+scene-0229-fake,scene-0229,val,FAKE,Visible in the image: one yellow triangle.,data/images/scene-0229.png,shape,text
+scene-0230-real,scene-0230,val,REAL,A picture of one blue square.,data/images/scene-0230.png,none,none
+scene-0230-fake,scene-0230,val,FAKE,A picture of one blue square.,data/images/scene-0230-altered.png,color,image
+scene-0231-real,scene-0231,val,REAL,This image shows two blue triangles.,data/images/scene-0231.png,none,none
+scene-0231-fake,scene-0231,val,FAKE,This image shows two blue triangles.,data/images/scene-0231-altered.png,shape,image
+scene-0232-real,scene-0232,val,REAL,The scene contains one blue circle on a light background.,data/images/scene-0232.png,none,none
+scene-0232-fake,scene-0232,val,FAKE,The scene contains one red circle on a light background.,data/images/scene-0232.png,color,text
+scene-0233-real,scene-0233,val,REAL,Visible in the image: two yellow triangles.,data/images/scene-0233.png,none,none
+scene-0233-fake,scene-0233,val,FAKE,Visible in the image: two yellow squares.,data/images/scene-0233.png,shape,text
+scene-0234-real,scene-0234,val,REAL,This image shows one green triangle.,data/images/scene-0234.png,none,none
+scene-0234-fake,scene-0234,val,FAKE,This image shows one green triangle.,data/images/scene-0234-altered.png,color,image
+scene-0235-real,scene-0235,val,REAL,A picture of three green squares.,data/images/scene-0235.png,none,none
+scene-0235-fake,scene-0235,val,FAKE,A picture of three green squares.,data/images/scene-0235-altered.png,shape,image
+scene-0236-real,scene-0236,val,REAL,The scene contains three blue squares on a light background.,data/images/scene-0236.png,none,none
+scene-0236-fake,scene-0236,val,FAKE,The scene contains three red squares on a light background.,data/images/scene-0236.png,color,text
+scene-0237-real,scene-0237,val,REAL,This image shows two red squares.,data/images/scene-0237.png,none,none
+scene-0237-fake,scene-0237,val,FAKE,This image shows two red triangles.,data/images/scene-0237.png,shape,text
+scene-0238-real,scene-0238,val,REAL,This image shows one red square.,data/images/scene-0238.png,none,none
+scene-0238-fake,scene-0238,val,FAKE,This image shows one red square.,data/images/scene-0238-altered.png,color,image
+scene-0239-real,scene-0239,val,REAL,Visible in the image: three green circles.,data/images/scene-0239.png,none,none
+scene-0239-fake,scene-0239,val,FAKE,Visible in the image: three green circles.,data/images/scene-0239-altered.png,shape,image
+scene-0240-real,scene-0240,val,REAL,A picture of two yellow squares.,data/images/scene-0240.png,none,none
+scene-0240-fake,scene-0240,val,FAKE,A picture of two blue squares.,data/images/scene-0240.png,color,text
+scene-0241-real,scene-0241,val,REAL,The scene contains one yellow triangle on a light background.,data/images/scene-0241.png,none,none
+scene-0241-fake,scene-0241,val,FAKE,The scene contains one yellow circle on a light background.,data/images/scene-0241.png,shape,text
+scene-0242-real,scene-0242,val,REAL,The scene contains two red triangles on a light background.,data/images/scene-0242.png,none,none
+scene-0242-fake,scene-0242,val,FAKE,The scene contains two red triangles on a light background.,data/images/scene-0242-altered.png,color,image
+scene-0243-real,scene-0243,val,REAL,This image shows one yellow square.,data/images/scene-0243.png,none,none
+scene-0243-fake,scene-0243,val,FAKE,This image shows one yellow square.,data/images/scene-0243-altered.png,shape,image
+scene-0244-real,scene-0244,val,REAL,The scene contains two blue triangles on a light background.,data/images/scene-0244.png,none,none
+scene-0244-fake,scene-0244,val,FAKE,The scene contains two yellow triangles on a light background.,data/images/scene-0244.png,color,text
+scene-0245-real,scene-0245,val,REAL,The scene contains one red triangle on a light background.,data/images/scene-0245.png,none,none
+scene-0245-fake,scene-0245,val,FAKE,The scene contains one red circle on a light background.,data/images/scene-0245.png,shape,text
+scene-0246-real,scene-0246,val,REAL,The scene contains three red squares on a light background.,data/images/scene-0246.png,none,none
+scene-0246-fake,scene-0246,val,FAKE,The scene contains three red squares on a light background.,data/images/scene-0246-altered.png,color,image
+scene-0247-real,scene-0247,val,REAL,Visible in the image: one yellow triangle.,data/images/scene-0247.png,none,none
+scene-0247-fake,scene-0247,val,FAKE,Visible in the image: one yellow triangle.,data/images/scene-0247-altered.png,shape,image
+scene-0248-real,scene-0248,val,REAL,A picture of three blue squares.,data/images/scene-0248.png,none,none
+scene-0248-fake,scene-0248,val,FAKE,A picture of three yellow squares.,data/images/scene-0248.png,color,text
+scene-0249-real,scene-0249,val,REAL,Visible in the image: three green circles.,data/images/scene-0249.png,none,none
+scene-0249-fake,scene-0249,val,FAKE,Visible in the image: three green triangles.,data/images/scene-0249.png,shape,text
+scene-0250-real,scene-0250,val,REAL,A picture of three red triangles.,data/images/scene-0250.png,none,none
+scene-0250-fake,scene-0250,val,FAKE,A picture of three red triangles.,data/images/scene-0250-altered.png,color,image
+scene-0251-real,scene-0251,val,REAL,The scene contains three green triangles on a light background.,data/images/scene-0251.png,none,none
+scene-0251-fake,scene-0251,val,FAKE,The scene contains three green triangles on a light background.,data/images/scene-0251-altered.png,shape,image
+scene-0252-real,scene-0252,val,REAL,A picture of three green triangles.,data/images/scene-0252.png,none,none
+scene-0252-fake,scene-0252,val,FAKE,A picture of three red triangles.,data/images/scene-0252.png,color,text
+scene-0253-real,scene-0253,val,REAL,This image shows three yellow circles.,data/images/scene-0253.png,none,none
+scene-0253-fake,scene-0253,val,FAKE,This image shows three yellow squares.,data/images/scene-0253.png,shape,text
+scene-0254-real,scene-0254,val,REAL,A picture of one blue triangle.,data/images/scene-0254.png,none,none
+scene-0254-fake,scene-0254,val,FAKE,A picture of one blue triangle.,data/images/scene-0254-altered.png,color,image
+scene-0255-real,scene-0255,val,REAL,Visible in the image: one yellow square.,data/images/scene-0255.png,none,none
+scene-0255-fake,scene-0255,val,FAKE,Visible in the image: one yellow square.,data/images/scene-0255-altered.png,shape,image
+scene-0256-real,scene-0256,val,REAL,Visible in the image: two red squares.,data/images/scene-0256.png,none,none
+scene-0256-fake,scene-0256,val,FAKE,Visible in the image: two green squares.,data/images/scene-0256.png,color,text
+scene-0257-real,scene-0257,val,REAL,Visible in the image: one blue circle.,data/images/scene-0257.png,none,none
+scene-0257-fake,scene-0257,val,FAKE,Visible in the image: one blue square.,data/images/scene-0257.png,shape,text
+scene-0258-real,scene-0258,val,REAL,Visible in the image: three red triangles.,data/images/scene-0258.png,none,none
+scene-0258-fake,scene-0258,val,FAKE,Visible in the image: three red triangles.,data/images/scene-0258-altered.png,color,image
+scene-0259-real,scene-0259,val,REAL,A picture of two yellow circles.,data/images/scene-0259.png,none,none
+scene-0259-fake,scene-0259,val,FAKE,A picture of two yellow circles.,data/images/scene-0259-altered.png,shape,image
+scene-0260-real,scene-0260,val,REAL,The scene contains one red circle on a light background.,data/images/scene-0260.png,none,none
+scene-0260-fake,scene-0260,val,FAKE,The scene contains one blue circle on a light background.,data/images/scene-0260.png,color,text
+scene-0261-real,scene-0261,val,REAL,A picture of three red circles.,data/images/scene-0261.png,none,none
+scene-0261-fake,scene-0261,val,FAKE,A picture of three red triangles.,data/images/scene-0261.png,shape,text
+scene-0262-real,scene-0262,val,REAL,This image shows one red square.,data/images/scene-0262.png,none,none
+scene-0262-fake,scene-0262,val,FAKE,This image shows one red square.,data/images/scene-0262-altered.png,color,image
+scene-0263-real,scene-0263,val,REAL,A picture of three yellow triangles.,data/images/scene-0263.png,none,none
+scene-0263-fake,scene-0263,val,FAKE,A picture of three yellow triangles.,data/images/scene-0263-altered.png,shape,image
+scene-0264-real,scene-0264,val,REAL,The scene contains two blue circles on a light background.,data/images/scene-0264.png,none,none
+scene-0264-fake,scene-0264,val,FAKE,The scene contains two yellow circles on a light background.,data/images/scene-0264.png,color,text
+scene-0265-real,scene-0265,val,REAL,A picture of two green triangles.,data/images/scene-0265.png,none,none
+scene-0265-fake,scene-0265,val,FAKE,A picture of two green circles.,data/images/scene-0265.png,shape,text
+scene-0266-real,scene-0266,val,REAL,The scene contains two green squares on a light background.,data/images/scene-0266.png,none,none
+scene-0266-fake,scene-0266,val,FAKE,The scene contains two green squares on a light background.,data/images/scene-0266-altered.png,color,image
+scene-0267-real,scene-0267,val,REAL,A picture of two green circles.,data/images/scene-0267.png,none,none
+scene-0267-fake,scene-0267,val,FAKE,A picture of two green circles.,data/images/scene-0267-altered.png,shape,image
+scene-0268-real,scene-0268,val,REAL,This image shows one blue square.,data/images/scene-0268.png,none,none
+scene-0268-fake,scene-0268,val,FAKE,This image shows one green square.,data/images/scene-0268.png,color,text
+scene-0269-real,scene-0269,val,REAL,This image shows three blue triangles.,data/images/scene-0269.png,none,none
+scene-0269-fake,scene-0269,val,FAKE,This image shows three blue circles.,data/images/scene-0269.png,shape,text
+scene-0270-real,scene-0270,val,REAL,Visible in the image: two red circles.,data/images/scene-0270.png,none,none
+scene-0270-fake,scene-0270,val,FAKE,Visible in the image: two red circles.,data/images/scene-0270-altered.png,color,image
+scene-0271-real,scene-0271,val,REAL,The scene contains one green circle on a light background.,data/images/scene-0271.png,none,none
+scene-0271-fake,scene-0271,val,FAKE,The scene contains one green circle on a light background.,data/images/scene-0271-altered.png,shape,image
+scene-0272-real,scene-0272,val,REAL,This image shows two red circles.,data/images/scene-0272.png,none,none
+scene-0272-fake,scene-0272,val,FAKE,This image shows two green circles.,data/images/scene-0272.png,color,text
+scene-0273-real,scene-0273,val,REAL,Visible in the image: one green triangle.,data/images/scene-0273.png,none,none
+scene-0273-fake,scene-0273,val,FAKE,Visible in the image: one green square.,data/images/scene-0273.png,shape,text
+scene-0274-real,scene-0274,val,REAL,This image shows two green squares.,data/images/scene-0274.png,none,none
+scene-0274-fake,scene-0274,val,FAKE,This image shows two green squares.,data/images/scene-0274-altered.png,color,image
+scene-0275-real,scene-0275,val,REAL,Visible in the image: three red squares.,data/images/scene-0275.png,none,none
+scene-0275-fake,scene-0275,val,FAKE,Visible in the image: three red squares.,data/images/scene-0275-altered.png,shape,image
+scene-0276-real,scene-0276,val,REAL,A picture of three blue triangles.,data/images/scene-0276.png,none,none
+scene-0276-fake,scene-0276,val,FAKE,A picture of three green triangles.,data/images/scene-0276.png,color,text
+scene-0277-real,scene-0277,val,REAL,A picture of two green circles.,data/images/scene-0277.png,none,none
+scene-0277-fake,scene-0277,val,FAKE,A picture of two green squares.,data/images/scene-0277.png,shape,text
+scene-0278-real,scene-0278,val,REAL,This image shows one yellow circle.,data/images/scene-0278.png,none,none
+scene-0278-fake,scene-0278,val,FAKE,This image shows one yellow circle.,data/images/scene-0278-altered.png,color,image
+scene-0279-real,scene-0279,val,REAL,The scene contains two blue circles on a light background.,data/images/scene-0279.png,none,none
+scene-0279-fake,scene-0279,val,FAKE,The scene contains two blue circles on a light background.,data/images/scene-0279-altered.png,shape,image
+scene-0280-real,scene-0280,val,REAL,This image shows three blue circles.,data/images/scene-0280.png,none,none
+scene-0280-fake,scene-0280,val,FAKE,This image shows three green circles.,data/images/scene-0280.png,color,text
+scene-0281-real,scene-0281,val,REAL,The scene contains one green square on a light background.,data/images/scene-0281.png,none,none
+scene-0281-fake,scene-0281,val,FAKE,The scene contains one green circle on a light background.,data/images/scene-0281.png,shape,text
+scene-0282-real,scene-0282,val,REAL,Visible in the image: two yellow squares.,data/images/scene-0282.png,none,none
+scene-0282-fake,scene-0282,val,FAKE,Visible in the image: two yellow squares.,data/images/scene-0282-altered.png,color,image
+scene-0283-real,scene-0283,val,REAL,Visible in the image: three green squares.,data/images/scene-0283.png,none,none
+scene-0283-fake,scene-0283,val,FAKE,Visible in the image: three green squares.,data/images/scene-0283-altered.png,shape,image
+scene-0284-real,scene-0284,val,REAL,A picture of one green square.,data/images/scene-0284.png,none,none
+scene-0284-fake,scene-0284,val,FAKE,A picture of one red square.,data/images/scene-0284.png,color,text
+scene-0285-real,scene-0285,val,REAL,The scene contains two yellow triangles on a light background.,data/images/scene-0285.png,none,none
+scene-0285-fake,scene-0285,val,FAKE,The scene contains two yellow circles on a light background.,data/images/scene-0285.png,shape,text
+scene-0286-real,scene-0286,val,REAL,The scene contains three yellow squares on a light background.,data/images/scene-0286.png,none,none
+scene-0286-fake,scene-0286,val,FAKE,The scene contains three yellow squares on a light background.,data/images/scene-0286-altered.png,color,image
+scene-0287-real,scene-0287,val,REAL,A picture of one red triangle.,data/images/scene-0287.png,none,none
+scene-0287-fake,scene-0287,val,FAKE,A picture of one red triangle.,data/images/scene-0287-altered.png,shape,image
+scene-0288-real,scene-0288,test,REAL,The scene contains one yellow circle on a light background.,data/images/scene-0288.png,none,none
+scene-0288-fake,scene-0288,test,FAKE,The scene contains one blue circle on a light background.,data/images/scene-0288.png,color,text
+scene-0289-real,scene-0289,test,REAL,A picture of three red triangles.,data/images/scene-0289.png,none,none
+scene-0289-fake,scene-0289,test,FAKE,A picture of three red squares.,data/images/scene-0289.png,shape,text
+scene-0290-real,scene-0290,test,REAL,A picture of three yellow triangles.,data/images/scene-0290.png,none,none
+scene-0290-fake,scene-0290,test,FAKE,A picture of three yellow triangles.,data/images/scene-0290-altered.png,color,image
+scene-0291-real,scene-0291,test,REAL,The scene contains three red squares on a light background.,data/images/scene-0291.png,none,none
+scene-0291-fake,scene-0291,test,FAKE,The scene contains three red squares on a light background.,data/images/scene-0291-altered.png,shape,image
+scene-0292-real,scene-0292,test,REAL,A picture of three yellow squares.,data/images/scene-0292.png,none,none
+scene-0292-fake,scene-0292,test,FAKE,A picture of three green squares.,data/images/scene-0292.png,color,text
+scene-0293-real,scene-0293,test,REAL,The scene contains two green triangles on a light background.,data/images/scene-0293.png,none,none
+scene-0293-fake,scene-0293,test,FAKE,The scene contains two green squares on a light background.,data/images/scene-0293.png,shape,text
+scene-0294-real,scene-0294,test,REAL,This image shows two yellow circles.,data/images/scene-0294.png,none,none
+scene-0294-fake,scene-0294,test,FAKE,This image shows two yellow circles.,data/images/scene-0294-altered.png,color,image
+scene-0295-real,scene-0295,test,REAL,This image shows three blue circles.,data/images/scene-0295.png,none,none
+scene-0295-fake,scene-0295,test,FAKE,This image shows three blue circles.,data/images/scene-0295-altered.png,shape,image
+scene-0296-real,scene-0296,test,REAL,This image shows three green circles.,data/images/scene-0296.png,none,none
+scene-0296-fake,scene-0296,test,FAKE,This image shows three red circles.,data/images/scene-0296.png,color,text
+scene-0297-real,scene-0297,test,REAL,A picture of one blue triangle.,data/images/scene-0297.png,none,none
+scene-0297-fake,scene-0297,test,FAKE,A picture of one blue square.,data/images/scene-0297.png,shape,text
+scene-0298-real,scene-0298,test,REAL,A picture of one yellow square.,data/images/scene-0298.png,none,none
+scene-0298-fake,scene-0298,test,FAKE,A picture of one yellow square.,data/images/scene-0298-altered.png,color,image
+scene-0299-real,scene-0299,test,REAL,A picture of three blue squares.,data/images/scene-0299.png,none,none
+scene-0299-fake,scene-0299,test,FAKE,A picture of three blue squares.,data/images/scene-0299-altered.png,shape,image
+scene-0300-real,scene-0300,test,REAL,Visible in the image: one green circle.,data/images/scene-0300.png,none,none
+scene-0300-fake,scene-0300,test,FAKE,Visible in the image: one yellow circle.,data/images/scene-0300.png,color,text
+scene-0301-real,scene-0301,test,REAL,A picture of three blue circles.,data/images/scene-0301.png,none,none
+scene-0301-fake,scene-0301,test,FAKE,A picture of three blue squares.,data/images/scene-0301.png,shape,text
+scene-0302-real,scene-0302,test,REAL,The scene contains two green circles on a light background.,data/images/scene-0302.png,none,none
+scene-0302-fake,scene-0302,test,FAKE,The scene contains two green circles on a light background.,data/images/scene-0302-altered.png,color,image
+scene-0303-real,scene-0303,test,REAL,Visible in the image: three red circles.,data/images/scene-0303.png,none,none
+scene-0303-fake,scene-0303,test,FAKE,Visible in the image: three red circles.,data/images/scene-0303-altered.png,shape,image
+scene-0304-real,scene-0304,test,REAL,Visible in the image: three yellow circles.,data/images/scene-0304.png,none,none
+scene-0304-fake,scene-0304,test,FAKE,Visible in the image: three blue circles.,data/images/scene-0304.png,color,text
+scene-0305-real,scene-0305,test,REAL,The scene contains two red circles on a light background.,data/images/scene-0305.png,none,none
+scene-0305-fake,scene-0305,test,FAKE,The scene contains two red triangles on a light background.,data/images/scene-0305.png,shape,text
+scene-0306-real,scene-0306,test,REAL,A picture of two yellow squares.,data/images/scene-0306.png,none,none
+scene-0306-fake,scene-0306,test,FAKE,A picture of two yellow squares.,data/images/scene-0306-altered.png,color,image
+scene-0307-real,scene-0307,test,REAL,This image shows one red triangle.,data/images/scene-0307.png,none,none
+scene-0307-fake,scene-0307,test,FAKE,This image shows one red triangle.,data/images/scene-0307-altered.png,shape,image
+scene-0308-real,scene-0308,test,REAL,A picture of one blue circle.,data/images/scene-0308.png,none,none
+scene-0308-fake,scene-0308,test,FAKE,A picture of one yellow circle.,data/images/scene-0308.png,color,text
+scene-0309-real,scene-0309,test,REAL,This image shows one red square.,data/images/scene-0309.png,none,none
+scene-0309-fake,scene-0309,test,FAKE,This image shows one red triangle.,data/images/scene-0309.png,shape,text
+scene-0310-real,scene-0310,test,REAL,The scene contains three green squares on a light background.,data/images/scene-0310.png,none,none
+scene-0310-fake,scene-0310,test,FAKE,The scene contains three green squares on a light background.,data/images/scene-0310-altered.png,color,image
+scene-0311-real,scene-0311,test,REAL,This image shows two blue squares.,data/images/scene-0311.png,none,none
+scene-0311-fake,scene-0311,test,FAKE,This image shows two blue squares.,data/images/scene-0311-altered.png,shape,image
+scene-0312-real,scene-0312,test,REAL,This image shows two yellow squares.,data/images/scene-0312.png,none,none
+scene-0312-fake,scene-0312,test,FAKE,This image shows two blue squares.,data/images/scene-0312.png,color,text
+scene-0313-real,scene-0313,test,REAL,The scene contains two blue circles on a light background.,data/images/scene-0313.png,none,none
+scene-0313-fake,scene-0313,test,FAKE,The scene contains two blue triangles on a light background.,data/images/scene-0313.png,shape,text
+scene-0314-real,scene-0314,test,REAL,Visible in the image: three green triangles.,data/images/scene-0314.png,none,none
+scene-0314-fake,scene-0314,test,FAKE,Visible in the image: three green triangles.,data/images/scene-0314-altered.png,color,image
+scene-0315-real,scene-0315,test,REAL,The scene contains one yellow triangle on a light background.,data/images/scene-0315.png,none,none
+scene-0315-fake,scene-0315,test,FAKE,The scene contains one yellow triangle on a light background.,data/images/scene-0315-altered.png,shape,image
+scene-0316-real,scene-0316,test,REAL,This image shows two red squares.,data/images/scene-0316.png,none,none
+scene-0316-fake,scene-0316,test,FAKE,This image shows two blue squares.,data/images/scene-0316.png,color,text
+scene-0317-real,scene-0317,test,REAL,A picture of two green triangles.,data/images/scene-0317.png,none,none
+scene-0317-fake,scene-0317,test,FAKE,A picture of two green squares.,data/images/scene-0317.png,shape,text
+scene-0318-real,scene-0318,test,REAL,A picture of three green squares.,data/images/scene-0318.png,none,none
+scene-0318-fake,scene-0318,test,FAKE,A picture of three green squares.,data/images/scene-0318-altered.png,color,image
+scene-0319-real,scene-0319,test,REAL,Visible in the image: three red circles.,data/images/scene-0319.png,none,none
+scene-0319-fake,scene-0319,test,FAKE,Visible in the image: three red circles.,data/images/scene-0319-altered.png,shape,image
+scene-0320-real,scene-0320,test,REAL,The scene contains two blue triangles on a light background.,data/images/scene-0320.png,none,none
+scene-0320-fake,scene-0320,test,FAKE,The scene contains two yellow triangles on a light background.,data/images/scene-0320.png,color,text
+scene-0321-real,scene-0321,test,REAL,A picture of two green squares.,data/images/scene-0321.png,none,none
+scene-0321-fake,scene-0321,test,FAKE,A picture of two green triangles.,data/images/scene-0321.png,shape,text
+scene-0322-real,scene-0322,test,REAL,A picture of two blue triangles.,data/images/scene-0322.png,none,none
+scene-0322-fake,scene-0322,test,FAKE,A picture of two blue triangles.,data/images/scene-0322-altered.png,color,image
+scene-0323-real,scene-0323,test,REAL,The scene contains three yellow triangles on a light background.,data/images/scene-0323.png,none,none
+scene-0323-fake,scene-0323,test,FAKE,The scene contains three yellow triangles on a light background.,data/images/scene-0323-altered.png,shape,image
+scene-0324-real,scene-0324,test,REAL,Visible in the image: three yellow circles.,data/images/scene-0324.png,none,none
+scene-0324-fake,scene-0324,test,FAKE,Visible in the image: three blue circles.,data/images/scene-0324.png,color,text
+scene-0325-real,scene-0325,test,REAL,A picture of one green circle.,data/images/scene-0325.png,none,none
+scene-0325-fake,scene-0325,test,FAKE,A picture of one green triangle.,data/images/scene-0325.png,shape,text
+scene-0326-real,scene-0326,test,REAL,The scene contains two red triangles on a light background.,data/images/scene-0326.png,none,none
+scene-0326-fake,scene-0326,test,FAKE,The scene contains two red triangles on a light background.,data/images/scene-0326-altered.png,color,image
+scene-0327-real,scene-0327,test,REAL,The scene contains three blue triangles on a light background.,data/images/scene-0327.png,none,none
+scene-0327-fake,scene-0327,test,FAKE,The scene contains three blue triangles on a light background.,data/images/scene-0327-altered.png,shape,image
+scene-0328-real,scene-0328,test,REAL,This image shows one green triangle.,data/images/scene-0328.png,none,none
+scene-0328-fake,scene-0328,test,FAKE,This image shows one blue triangle.,data/images/scene-0328.png,color,text
+scene-0329-real,scene-0329,test,REAL,This image shows three blue triangles.,data/images/scene-0329.png,none,none
+scene-0329-fake,scene-0329,test,FAKE,This image shows three blue squares.,data/images/scene-0329.png,shape,text
+scene-0330-real,scene-0330,test,REAL,The scene contains one yellow square on a light background.,data/images/scene-0330.png,none,none
+scene-0330-fake,scene-0330,test,FAKE,The scene contains one yellow square on a light background.,data/images/scene-0330-altered.png,color,image
+scene-0331-real,scene-0331,test,REAL,Visible in the image: two yellow circles.,data/images/scene-0331.png,none,none
+scene-0331-fake,scene-0331,test,FAKE,Visible in the image: two yellow circles.,data/images/scene-0331-altered.png,shape,image
+scene-0332-real,scene-0332,test,REAL,This image shows three red squares.,data/images/scene-0332.png,none,none
+scene-0332-fake,scene-0332,test,FAKE,This image shows three green squares.,data/images/scene-0332.png,color,text
+scene-0333-real,scene-0333,test,REAL,This image shows one red square.,data/images/scene-0333.png,none,none
+scene-0333-fake,scene-0333,test,FAKE,This image shows one red triangle.,data/images/scene-0333.png,shape,text
+scene-0334-real,scene-0334,test,REAL,Visible in the image: one blue square.,data/images/scene-0334.png,none,none
+scene-0334-fake,scene-0334,test,FAKE,Visible in the image: one blue square.,data/images/scene-0334-altered.png,color,image
+scene-0335-real,scene-0335,test,REAL,Visible in the image: one yellow triangle.,data/images/scene-0335.png,none,none
+scene-0335-fake,scene-0335,test,FAKE,Visible in the image: one yellow triangle.,data/images/scene-0335-altered.png,shape,image
+scene-0336-real,scene-0336,test,REAL,Visible in the image: one blue circle.,data/images/scene-0336.png,none,none
+scene-0336-fake,scene-0336,test,FAKE,Visible in the image: one yellow circle.,data/images/scene-0336.png,color,text
+scene-0337-real,scene-0337,test,REAL,A picture of two yellow triangles.,data/images/scene-0337.png,none,none
+scene-0337-fake,scene-0337,test,FAKE,A picture of two yellow squares.,data/images/scene-0337.png,shape,text
+scene-0338-real,scene-0338,test,REAL,This image shows three yellow squares.,data/images/scene-0338.png,none,none
+scene-0338-fake,scene-0338,test,FAKE,This image shows three yellow squares.,data/images/scene-0338-altered.png,color,image
+scene-0339-real,scene-0339,test,REAL,Visible in the image: two red squares.,data/images/scene-0339.png,none,none
+scene-0339-fake,scene-0339,test,FAKE,Visible in the image: two red squares.,data/images/scene-0339-altered.png,shape,image
+scene-0340-real,scene-0340,test,REAL,This image shows three blue squares.,data/images/scene-0340.png,none,none
+scene-0340-fake,scene-0340,test,FAKE,This image shows three red squares.,data/images/scene-0340.png,color,text
+scene-0341-real,scene-0341,test,REAL,This image shows two green circles.,data/images/scene-0341.png,none,none
+scene-0341-fake,scene-0341,test,FAKE,This image shows two green squares.,data/images/scene-0341.png,shape,text
+scene-0342-real,scene-0342,test,REAL,The scene contains two green squares on a light background.,data/images/scene-0342.png,none,none
+scene-0342-fake,scene-0342,test,FAKE,The scene contains two green squares on a light background.,data/images/scene-0342-altered.png,color,image
+scene-0343-real,scene-0343,test,REAL,Visible in the image: one yellow circle.,data/images/scene-0343.png,none,none
+scene-0343-fake,scene-0343,test,FAKE,Visible in the image: one yellow circle.,data/images/scene-0343-altered.png,shape,image
+scene-0344-real,scene-0344,test,REAL,Visible in the image: three red triangles.,data/images/scene-0344.png,none,none
+scene-0344-fake,scene-0344,test,FAKE,Visible in the image: three yellow triangles.,data/images/scene-0344.png,color,text
+scene-0345-real,scene-0345,test,REAL,Visible in the image: two yellow triangles.,data/images/scene-0345.png,none,none
+scene-0345-fake,scene-0345,test,FAKE,Visible in the image: two yellow circles.,data/images/scene-0345.png,shape,text
+scene-0346-real,scene-0346,test,REAL,The scene contains two red triangles on a light background.,data/images/scene-0346.png,none,none
+scene-0346-fake,scene-0346,test,FAKE,The scene contains two red triangles on a light background.,data/images/scene-0346-altered.png,color,image
+scene-0347-real,scene-0347,test,REAL,Visible in the image: one red circle.,data/images/scene-0347.png,none,none
+scene-0347-fake,scene-0347,test,FAKE,Visible in the image: one red circle.,data/images/scene-0347-altered.png,shape,image
+scene-0348-real,scene-0348,test,REAL,A picture of one red triangle.,data/images/scene-0348.png,none,none
+scene-0348-fake,scene-0348,test,FAKE,A picture of one yellow triangle.,data/images/scene-0348.png,color,text
+scene-0349-real,scene-0349,test,REAL,The scene contains one green triangle on a light background.,data/images/scene-0349.png,none,none
+scene-0349-fake,scene-0349,test,FAKE,The scene contains one green circle on a light background.,data/images/scene-0349.png,shape,text
+scene-0350-real,scene-0350,test,REAL,A picture of two blue squares.,data/images/scene-0350.png,none,none
+scene-0350-fake,scene-0350,test,FAKE,A picture of two blue squares.,data/images/scene-0350-altered.png,color,image
+scene-0351-real,scene-0351,test,REAL,Visible in the image: three green triangles.,data/images/scene-0351.png,none,none
+scene-0351-fake,scene-0351,test,FAKE,Visible in the image: three green triangles.,data/images/scene-0351-altered.png,shape,image
+scene-0352-real,scene-0352,test,REAL,A picture of one red circle.,data/images/scene-0352.png,none,none
+scene-0352-fake,scene-0352,test,FAKE,A picture of one blue circle.,data/images/scene-0352.png,color,text
+scene-0353-real,scene-0353,test,REAL,The scene contains two red circles on a light background.,data/images/scene-0353.png,none,none
+scene-0353-fake,scene-0353,test,FAKE,The scene contains two red squares on a light background.,data/images/scene-0353.png,shape,text
+scene-0354-real,scene-0354,test,REAL,A picture of three green circles.,data/images/scene-0354.png,none,none
+scene-0354-fake,scene-0354,test,FAKE,A picture of three green circles.,data/images/scene-0354-altered.png,color,image
+scene-0355-real,scene-0355,test,REAL,This image shows one green square.,data/images/scene-0355.png,none,none
+scene-0355-fake,scene-0355,test,FAKE,This image shows one green square.,data/images/scene-0355-altered.png,shape,image
+scene-0356-real,scene-0356,test,REAL,Visible in the image: one green square.,data/images/scene-0356.png,none,none
+scene-0356-fake,scene-0356,test,FAKE,Visible in the image: one red square.,data/images/scene-0356.png,color,text
+scene-0357-real,scene-0357,test,REAL,This image shows one blue triangle.,data/images/scene-0357.png,none,none
+scene-0357-fake,scene-0357,test,FAKE,This image shows one blue square.,data/images/scene-0357.png,shape,text
+scene-0358-real,scene-0358,test,REAL,A picture of one blue square.,data/images/scene-0358.png,none,none
+scene-0358-fake,scene-0358,test,FAKE,A picture of one blue square.,data/images/scene-0358-altered.png,color,image
+scene-0359-real,scene-0359,test,REAL,The scene contains two blue circles on a light background.,data/images/scene-0359.png,none,none
+scene-0359-fake,scene-0359,test,FAKE,The scene contains two blue circles on a light background.,data/images/scene-0359-altered.png,shape,image
+scene-0360-real,scene-0360,ood_test,REAL,Visible in the image: three red circles.,data/images/scene-0360.png,none,none
+scene-0360-fake,scene-0360,ood_test,FAKE,Visible in the image: two red circles.,data/images/scene-0360.png,count,text
+scene-0361-real,scene-0361,ood_test,REAL,The scene contains three green squares on a light background.,data/images/scene-0361.png,none,none
+scene-0361-fake,scene-0361,ood_test,FAKE,The scene contains one green square on a light background.,data/images/scene-0361.png,count,text
+scene-0362-real,scene-0362,ood_test,REAL,Visible in the image: one yellow triangle.,data/images/scene-0362.png,none,none
+scene-0362-fake,scene-0362,ood_test,FAKE,Visible in the image: one yellow triangle.,data/images/scene-0362-altered.png,count,image
+scene-0363-real,scene-0363,ood_test,REAL,The scene contains two blue triangles on a light background.,data/images/scene-0363.png,none,none
+scene-0363-fake,scene-0363,ood_test,FAKE,The scene contains two blue triangles on a light background.,data/images/scene-0363-altered.png,count,image
+scene-0364-real,scene-0364,ood_test,REAL,This image shows three blue triangles.,data/images/scene-0364.png,none,none
+scene-0364-fake,scene-0364,ood_test,FAKE,This image shows two blue triangles.,data/images/scene-0364.png,count,text
+scene-0365-real,scene-0365,ood_test,REAL,This image shows one blue square.,data/images/scene-0365.png,none,none
+scene-0365-fake,scene-0365,ood_test,FAKE,This image shows three blue squares.,data/images/scene-0365.png,count,text
+scene-0366-real,scene-0366,ood_test,REAL,The scene contains one red circle on a light background.,data/images/scene-0366.png,none,none
+scene-0366-fake,scene-0366,ood_test,FAKE,The scene contains one red circle on a light background.,data/images/scene-0366-altered.png,count,image
+scene-0367-real,scene-0367,ood_test,REAL,The scene contains two blue circles on a light background.,data/images/scene-0367.png,none,none
+scene-0367-fake,scene-0367,ood_test,FAKE,The scene contains two blue circles on a light background.,data/images/scene-0367-altered.png,count,image
+scene-0368-real,scene-0368,ood_test,REAL,A picture of one green circle.,data/images/scene-0368.png,none,none
+scene-0368-fake,scene-0368,ood_test,FAKE,A picture of three green circles.,data/images/scene-0368.png,count,text
+scene-0369-real,scene-0369,ood_test,REAL,A picture of one red square.,data/images/scene-0369.png,none,none
+scene-0369-fake,scene-0369,ood_test,FAKE,A picture of three red squares.,data/images/scene-0369.png,count,text
+scene-0370-real,scene-0370,ood_test,REAL,A picture of one green square.,data/images/scene-0370.png,none,none
+scene-0370-fake,scene-0370,ood_test,FAKE,A picture of one green square.,data/images/scene-0370-altered.png,count,image
+scene-0371-real,scene-0371,ood_test,REAL,The scene contains three blue triangles on a light background.,data/images/scene-0371.png,none,none
+scene-0371-fake,scene-0371,ood_test,FAKE,The scene contains three blue triangles on a light background.,data/images/scene-0371-altered.png,count,image
+scene-0372-real,scene-0372,ood_test,REAL,Visible in the image: two blue squares.,data/images/scene-0372.png,none,none
+scene-0372-fake,scene-0372,ood_test,FAKE,Visible in the image: one blue square.,data/images/scene-0372.png,count,text
+scene-0373-real,scene-0373,ood_test,REAL,A picture of two green circles.,data/images/scene-0373.png,none,none
+scene-0373-fake,scene-0373,ood_test,FAKE,A picture of three green circles.,data/images/scene-0373.png,count,text
+scene-0374-real,scene-0374,ood_test,REAL,Visible in the image: one red square.,data/images/scene-0374.png,none,none
+scene-0374-fake,scene-0374,ood_test,FAKE,Visible in the image: one red square.,data/images/scene-0374-altered.png,count,image
+scene-0375-real,scene-0375,ood_test,REAL,The scene contains three yellow triangles on a light background.,data/images/scene-0375.png,none,none
+scene-0375-fake,scene-0375,ood_test,FAKE,The scene contains three yellow triangles on a light background.,data/images/scene-0375-altered.png,count,image
+scene-0376-real,scene-0376,ood_test,REAL,The scene contains one green square on a light background.,data/images/scene-0376.png,none,none
+scene-0376-fake,scene-0376,ood_test,FAKE,The scene contains two green squares on a light background.,data/images/scene-0376.png,count,text
+scene-0377-real,scene-0377,ood_test,REAL,Visible in the image: one green triangle.,data/images/scene-0377.png,none,none
+scene-0377-fake,scene-0377,ood_test,FAKE,Visible in the image: two green triangles.,data/images/scene-0377.png,count,text
+scene-0378-real,scene-0378,ood_test,REAL,The scene contains two blue squares on a light background.,data/images/scene-0378.png,none,none
+scene-0378-fake,scene-0378,ood_test,FAKE,The scene contains two blue squares on a light background.,data/images/scene-0378-altered.png,count,image
+scene-0379-real,scene-0379,ood_test,REAL,This image shows three yellow squares.,data/images/scene-0379.png,none,none
+scene-0379-fake,scene-0379,ood_test,FAKE,This image shows three yellow squares.,data/images/scene-0379-altered.png,count,image
+scene-0380-real,scene-0380,ood_test,REAL,Visible in the image: three yellow circles.,data/images/scene-0380.png,none,none
+scene-0380-fake,scene-0380,ood_test,FAKE,Visible in the image: two yellow circles.,data/images/scene-0380.png,count,text
+scene-0381-real,scene-0381,ood_test,REAL,The scene contains three green circles on a light background.,data/images/scene-0381.png,none,none
+scene-0381-fake,scene-0381,ood_test,FAKE,The scene contains two green circles on a light background.,data/images/scene-0381.png,count,text
+scene-0382-real,scene-0382,ood_test,REAL,A picture of three blue circles.,data/images/scene-0382.png,none,none
+scene-0382-fake,scene-0382,ood_test,FAKE,A picture of three blue circles.,data/images/scene-0382-altered.png,count,image
+scene-0383-real,scene-0383,ood_test,REAL,This image shows three green triangles.,data/images/scene-0383.png,none,none
+scene-0383-fake,scene-0383,ood_test,FAKE,This image shows three green triangles.,data/images/scene-0383-altered.png,count,image
+scene-0384-real,scene-0384,ood_test,REAL,A picture of one red triangle.,data/images/scene-0384.png,none,none
+scene-0384-fake,scene-0384,ood_test,FAKE,A picture of two red triangles.,data/images/scene-0384.png,count,text
+scene-0385-real,scene-0385,ood_test,REAL,This image shows two yellow squares.,data/images/scene-0385.png,none,none
+scene-0385-fake,scene-0385,ood_test,FAKE,This image shows three yellow squares.,data/images/scene-0385.png,count,text
+scene-0386-real,scene-0386,ood_test,REAL,This image shows two red triangles.,data/images/scene-0386.png,none,none
+scene-0386-fake,scene-0386,ood_test,FAKE,This image shows two red triangles.,data/images/scene-0386-altered.png,count,image
+scene-0387-real,scene-0387,ood_test,REAL,A picture of two yellow triangles.,data/images/scene-0387.png,none,none
+scene-0387-fake,scene-0387,ood_test,FAKE,A picture of two yellow triangles.,data/images/scene-0387-altered.png,count,image
+scene-0388-real,scene-0388,ood_test,REAL,This image shows three red triangles.,data/images/scene-0388.png,none,none
+scene-0388-fake,scene-0388,ood_test,FAKE,This image shows two red triangles.,data/images/scene-0388.png,count,text
+scene-0389-real,scene-0389,ood_test,REAL,Visible in the image: two green triangles.,data/images/scene-0389.png,none,none
+scene-0389-fake,scene-0389,ood_test,FAKE,Visible in the image: one green triangle.,data/images/scene-0389.png,count,text
+scene-0390-real,scene-0390,ood_test,REAL,A picture of three blue squares.,data/images/scene-0390.png,none,none
+scene-0390-fake,scene-0390,ood_test,FAKE,A picture of three blue squares.,data/images/scene-0390-altered.png,count,image
+scene-0391-real,scene-0391,ood_test,REAL,Visible in the image: two yellow circles.,data/images/scene-0391.png,none,none
+scene-0391-fake,scene-0391,ood_test,FAKE,Visible in the image: two yellow circles.,data/images/scene-0391-altered.png,count,image
+scene-0392-real,scene-0392,ood_test,REAL,A picture of three red squares.,data/images/scene-0392.png,none,none
+scene-0392-fake,scene-0392,ood_test,FAKE,A picture of two red squares.,data/images/scene-0392.png,count,text
+scene-0393-real,scene-0393,ood_test,REAL,A picture of two green squares.,data/images/scene-0393.png,none,none
+scene-0393-fake,scene-0393,ood_test,FAKE,A picture of one green square.,data/images/scene-0393.png,count,text
+scene-0394-real,scene-0394,ood_test,REAL,This image shows two red squares.,data/images/scene-0394.png,none,none
+scene-0394-fake,scene-0394,ood_test,FAKE,This image shows two red squares.,data/images/scene-0394-altered.png,count,image
+scene-0395-real,scene-0395,ood_test,REAL,Visible in the image: three green circles.,data/images/scene-0395.png,none,none
+scene-0395-fake,scene-0395,ood_test,FAKE,Visible in the image: three green circles.,data/images/scene-0395-altered.png,count,image
+scene-0396-real,scene-0396,ood_test,REAL,The scene contains two red circles on a light background.,data/images/scene-0396.png,none,none
+scene-0396-fake,scene-0396,ood_test,FAKE,The scene contains three red circles on a light background.,data/images/scene-0396.png,count,text
+scene-0397-real,scene-0397,ood_test,REAL,The scene contains one green triangle on a light background.,data/images/scene-0397.png,none,none
+scene-0397-fake,scene-0397,ood_test,FAKE,The scene contains three green triangles on a light background.,data/images/scene-0397.png,count,text
+scene-0398-real,scene-0398,ood_test,REAL,Visible in the image: three red circles.,data/images/scene-0398.png,none,none
+scene-0398-fake,scene-0398,ood_test,FAKE,Visible in the image: three red circles.,data/images/scene-0398-altered.png,count,image
+scene-0399-real,scene-0399,ood_test,REAL,The scene contains two yellow triangles on a light background.,data/images/scene-0399.png,none,none
+scene-0399-fake,scene-0399,ood_test,FAKE,The scene contains two yellow triangles on a light background.,data/images/scene-0399-altered.png,count,image
+scene-0400-real,scene-0400,ood_test,REAL,A picture of one red triangle.,data/images/scene-0400.png,none,none
+scene-0400-fake,scene-0400,ood_test,FAKE,A picture of three red triangles.,data/images/scene-0400.png,count,text
+scene-0401-real,scene-0401,ood_test,REAL,Visible in the image: two green squares.,data/images/scene-0401.png,none,none
+scene-0401-fake,scene-0401,ood_test,FAKE,Visible in the image: three green squares.,data/images/scene-0401.png,count,text
+scene-0402-real,scene-0402,ood_test,REAL,The scene contains one blue circle on a light background.,data/images/scene-0402.png,none,none
+scene-0402-fake,scene-0402,ood_test,FAKE,The scene contains one blue circle on a light background.,data/images/scene-0402-altered.png,count,image
+scene-0403-real,scene-0403,ood_test,REAL,A picture of three blue squares.,data/images/scene-0403.png,none,none
+scene-0403-fake,scene-0403,ood_test,FAKE,A picture of three blue squares.,data/images/scene-0403-altered.png,count,image
+scene-0404-real,scene-0404,ood_test,REAL,The scene contains one blue triangle on a light background.,data/images/scene-0404.png,none,none
+scene-0404-fake,scene-0404,ood_test,FAKE,The scene contains three blue triangles on a light background.,data/images/scene-0404.png,count,text
+scene-0405-real,scene-0405,ood_test,REAL,Visible in the image: three blue circles.,data/images/scene-0405.png,none,none
+scene-0405-fake,scene-0405,ood_test,FAKE,Visible in the image: one blue circle.,data/images/scene-0405.png,count,text
+scene-0406-real,scene-0406,ood_test,REAL,The scene contains one blue square on a light background.,data/images/scene-0406.png,none,none
+scene-0406-fake,scene-0406,ood_test,FAKE,The scene contains one blue square on a light background.,data/images/scene-0406-altered.png,count,image
+scene-0407-real,scene-0407,ood_test,REAL,This image shows one blue triangle.,data/images/scene-0407.png,none,none
+scene-0407-fake,scene-0407,ood_test,FAKE,This image shows one blue triangle.,data/images/scene-0407-altered.png,count,image
+scene-0408-real,scene-0408,ood_test,REAL,A picture of three yellow triangles.,data/images/scene-0408.png,none,none
+scene-0408-fake,scene-0408,ood_test,FAKE,A picture of two yellow triangles.,data/images/scene-0408.png,count,text
+scene-0409-real,scene-0409,ood_test,REAL,This image shows two red triangles.,data/images/scene-0409.png,none,none
+scene-0409-fake,scene-0409,ood_test,FAKE,This image shows one red triangle.,data/images/scene-0409.png,count,text
+scene-0410-real,scene-0410,ood_test,REAL,A picture of two green circles.,data/images/scene-0410.png,none,none
+scene-0410-fake,scene-0410,ood_test,FAKE,A picture of two green circles.,data/images/scene-0410-altered.png,count,image
+scene-0411-real,scene-0411,ood_test,REAL,Visible in the image: three yellow circles.,data/images/scene-0411.png,none,none
+scene-0411-fake,scene-0411,ood_test,FAKE,Visible in the image: three yellow circles.,data/images/scene-0411-altered.png,count,image
+scene-0412-real,scene-0412,ood_test,REAL,A picture of three yellow squares.,data/images/scene-0412.png,none,none
+scene-0412-fake,scene-0412,ood_test,FAKE,A picture of one yellow square.,data/images/scene-0412.png,count,text
+scene-0413-real,scene-0413,ood_test,REAL,The scene contains one yellow circle on a light background.,data/images/scene-0413.png,none,none
+scene-0413-fake,scene-0413,ood_test,FAKE,The scene contains three yellow circles on a light background.,data/images/scene-0413.png,count,text
+scene-0414-real,scene-0414,ood_test,REAL,Visible in the image: one yellow circle.,data/images/scene-0414.png,none,none
+scene-0414-fake,scene-0414,ood_test,FAKE,Visible in the image: one yellow circle.,data/images/scene-0414-altered.png,count,image
+scene-0415-real,scene-0415,ood_test,REAL,Visible in the image: one blue circle.,data/images/scene-0415.png,none,none
+scene-0415-fake,scene-0415,ood_test,FAKE,Visible in the image: one blue circle.,data/images/scene-0415-altered.png,count,image
+scene-0416-real,scene-0416,ood_test,REAL,Visible in the image: two red circles.,data/images/scene-0416.png,none,none
+scene-0416-fake,scene-0416,ood_test,FAKE,Visible in the image: three red circles.,data/images/scene-0416.png,count,text
+scene-0417-real,scene-0417,ood_test,REAL,The scene contains three red squares on a light background.,data/images/scene-0417.png,none,none
+scene-0417-fake,scene-0417,ood_test,FAKE,The scene contains one red square on a light background.,data/images/scene-0417.png,count,text
+scene-0418-real,scene-0418,ood_test,REAL,A picture of three green squares.,data/images/scene-0418.png,none,none
+scene-0418-fake,scene-0418,ood_test,FAKE,A picture of three green squares.,data/images/scene-0418-altered.png,count,image
+scene-0419-real,scene-0419,ood_test,REAL,A picture of one yellow square.,data/images/scene-0419.png,none,none
+scene-0419-fake,scene-0419,ood_test,FAKE,A picture of one yellow square.,data/images/scene-0419-altered.png,count,image
+scene-0420-real,scene-0420,ood_test,REAL,The scene contains two blue triangles on a light background.,data/images/scene-0420.png,none,none
+scene-0420-fake,scene-0420,ood_test,FAKE,The scene contains three blue triangles on a light background.,data/images/scene-0420.png,count,text
+scene-0421-real,scene-0421,ood_test,REAL,The scene contains two green triangles on a light background.,data/images/scene-0421.png,none,none
+scene-0421-fake,scene-0421,ood_test,FAKE,The scene contains one green triangle on a light background.,data/images/scene-0421.png,count,text
+scene-0422-real,scene-0422,ood_test,REAL,A picture of one red circle.,data/images/scene-0422.png,none,none
+scene-0422-fake,scene-0422,ood_test,FAKE,A picture of one red circle.,data/images/scene-0422-altered.png,count,image
+scene-0423-real,scene-0423,ood_test,REAL,This image shows two red squares.,data/images/scene-0423.png,none,none
+scene-0423-fake,scene-0423,ood_test,FAKE,This image shows two red squares.,data/images/scene-0423-altered.png,count,image
+scene-0424-real,scene-0424,ood_test,REAL,The scene contains two yellow squares on a light background.,data/images/scene-0424.png,none,none
+scene-0424-fake,scene-0424,ood_test,FAKE,The scene contains three yellow squares on a light background.,data/images/scene-0424.png,count,text
+scene-0425-real,scene-0425,ood_test,REAL,The scene contains two yellow circles on a light background.,data/images/scene-0425.png,none,none
+scene-0425-fake,scene-0425,ood_test,FAKE,The scene contains one yellow circle on a light background.,data/images/scene-0425.png,count,text
+scene-0426-real,scene-0426,ood_test,REAL,The scene contains one yellow triangle on a light background.,data/images/scene-0426.png,none,none
+scene-0426-fake,scene-0426,ood_test,FAKE,The scene contains one yellow triangle on a light background.,data/images/scene-0426-altered.png,count,image
+scene-0427-real,scene-0427,ood_test,REAL,This image shows three red triangles.,data/images/scene-0427.png,none,none
+scene-0427-fake,scene-0427,ood_test,FAKE,This image shows three red triangles.,data/images/scene-0427-altered.png,count,image
+scene-0428-real,scene-0428,ood_test,REAL,This image shows one yellow square.,data/images/scene-0428.png,none,none
+scene-0428-fake,scene-0428,ood_test,FAKE,This image shows three yellow squares.,data/images/scene-0428.png,count,text
+scene-0429-real,scene-0429,ood_test,REAL,Visible in the image: one green circle.,data/images/scene-0429.png,none,none
+scene-0429-fake,scene-0429,ood_test,FAKE,Visible in the image: two green circles.,data/images/scene-0429.png,count,text
+scene-0430-real,scene-0430,ood_test,REAL,This image shows two blue circles.,data/images/scene-0430.png,none,none
+scene-0430-fake,scene-0430,ood_test,FAKE,This image shows two blue circles.,data/images/scene-0430-altered.png,count,image
+scene-0431-real,scene-0431,ood_test,REAL,A picture of three green triangles.,data/images/scene-0431.png,none,none
+scene-0431-fake,scene-0431,ood_test,FAKE,A picture of three green triangles.,data/images/scene-0431-altered.png,count,image

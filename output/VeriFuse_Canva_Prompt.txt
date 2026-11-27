@@ -1,0 +1,14 @@
+Create an editable 16-slide, 16:9 academic project presentation for Bennett University, CSET 346 Natural Language Processing. Use the uploaded "nlp demo ppt.pdf" as the visual reference and the exact slide content below as the factual source.
+
+The project is VeriFuse. Its official course title is "Multimodal NLP for Deepfake Detection and Explainable Content Verification." Add the subtitle "Implemented study: image-text misinformation classification." Keep student names and enrollment IDs as [Student Name] and [Enrollment ID]. Use "Guide: Dr. Sakshi."
+
+Match the reference's near-black background, soft cobalt-blue gradient washes, occasional muted bronze highlights, large white uppercase headings, light-gray body text, thin beige rules, and restrained white line icons. Use Poppins or a similar geometric sans serif. Keep generous margins and whitespace. Use approximately 36–44 pt slide headings, 22–28 pt body text, and readable table labels. Use the authentic Bennett University logo only if supplied; otherwise use the institution's name as text. Keep gradients subtle behind text. Do not make every slide a grid of cards.
+
+Use a restrained academic layout: a minimal cover, two-column explanation slides, editable tables, an editable architecture diagram, one measured-results chart, a labeled confusion matrix, and a real application screenshot. All chart axes must have units and an honest scale. Use a zero baseline for bar charts. Create tables and charts from the exact supplied values. Use the actual project screenshot when supplied; otherwise leave a labeled screenshot placeholder. Keep all body text and evidence editable.
+
+Present the completed system as frozen CLIP ViT-B/32 image and text encoders with trained logistic regression heads. Compare text-only, image-only, feature fusion, and decision fusion. State that the dataset contains 8,585 retained image-text pairs from a Fakeddit community mirror. The selected model achieved 88.62% accuracy, 0.7943 macro F1, and 0.9159 ROC-AUC on 1,415 held-out examples. Show the lower REAL-class recall of 55.40% alongside the headline accuracy.
+
+Follow the 16-slide order below. Keep the synthetic pilot's generalization and perturbation tests separate from real-data results. Label incomplete real-data evaluations clearly. Do not invent ResNet50 training, video/audio detection, face-swap accuracy, Grad-CAM, token heatmaps, external fact retrieval, a calibrated confidence score, or statistical significance. Do not reuse the reference's unsupported time-series graph. Keep results as measured, including weaknesses.
+
+Place the supplied speaker notes in presenter notes, not in the slide body. Add concise source footers to dataset and results slides. Use minimal transitions. Finish with conclusions, next experiments, and references.
+

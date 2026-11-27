@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="660" viewBox="0 0 1600 660">
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M1 1 L11 6 L1 11 Z" fill="#30485f"/></marker>
+    <style>
+      .box{fill:#f5f8fb;stroke:#294a68;stroke-width:3;rx:18}
+      .joint{fill:#eef4f7;stroke:#315b78;stroke-width:3;rx:18}
+      .output{fill:#f5f1e8;stroke:#8c7046;stroke-width:3;rx:18}
+      .title{font:700 27px Arial,sans-serif;fill:#172d42;text-anchor:middle}
+      .small{font:22px Arial,sans-serif;fill:#33495d;text-anchor:middle}
+      .arrow{stroke:#30485f;stroke-width:4;fill:none;marker-end:url(#arrow)}
+      .label{font:20px Arial,sans-serif;fill:#53697d;text-anchor:middle}
+    </style>
+  </defs>
+  <rect width="1600" height="660" fill="white"/>
+  <rect class="box" x="45" y="88" width="205" height="135"/>
+  <text class="title" x="147" y="145">Caption</text><text class="small" x="147" y="184">post text</text>
+  <rect class="box" x="45" y="420" width="205" height="135"/>
+  <text class="title" x="147" y="477">Image</text><text class="small" x="147" y="516">post picture</text>
+  <rect class="box" x="330" y="88" width="310" height="135"/>
+  <text class="title" x="485" y="145">Text branch</text><text class="small" x="485" y="184">TF-IDF (word + bigram)</text>
+  <rect class="box" x="330" y="420" width="310" height="135"/>
+  <text class="title" x="485" y="477">Vision branch</text><text class="small" x="485" y="516">Frozen CLIP ViT-B/32</text>
+  <rect class="joint" x="735" y="88" width="250" height="135"/>
+  <text class="title" x="860" y="145">Text features</text><text class="small" x="860" y="184">up to 2,048</text>
+  <rect class="joint" x="735" y="420" width="250" height="135"/>
+  <text class="title" x="860" y="477">Image features</text><text class="small" x="860" y="516">512 dimensions</text>
+  <rect class="joint" x="1060" y="210" width="245" height="220"/>
+  <text class="title" x="1182" y="275">Feature fusion</text>
+  <text class="small" x="1182" y="319">Concatenate text,</text><text class="small" x="1182" y="351">image, and interaction</text><text class="small" x="1182" y="383">features</text>
+  <rect class="output" x="1370" y="252" width="190" height="140"/>
+  <text class="title" x="1465" y="305">Logistic</text><text class="title" x="1465" y="338">classifier</text><text class="small" x="1465" y="371">REAL / FAKE</text>
+  <path class="arrow" d="M250 155 H322"/><path class="arrow" d="M250 487 H322"/>
+  <path class="arrow" d="M640 155 H727"/><path class="arrow" d="M640 487 H727"/>
+  <path class="arrow" d="M985 155 C1020 155 1025 242 1052 270"/>
+  <path class="arrow" d="M985 487 C1020 487 1025 400 1052 370"/>
+  <path class="arrow" d="M1305 320 H1362"/>
+  <text class="label" x="800" y="622">Train-only text and classifier fitting · frozen image encoder · validation-selected settings</text>
+</svg>
